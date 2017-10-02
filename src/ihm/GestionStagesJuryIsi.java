@@ -33,15 +33,27 @@ import java.awt.event.ActionEvent;
  * @version 1.0
  */
 public class GestionStagesJuryIsi {
-
+	/*TODO Ameliorer la recherche de fichier*/
+	/*TODO pour le choix des fichier faire en sorte de memoriser le workspace*/
+	/*TODO faire la gestion d'exception pour le click des boutons notament*/
+	
 	private JFrame frmGestionStagesJury;
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField sourcePDF;
 	private JRadioButton isi1, isi2, isi3;
-	JButton exit, findPDF conversionTxt_Csv, conversionPdf_Txt
+	private JButton exit, findPDF conversionTxt_Csv, conversionPdf_Txt;
 
+	
+	/**
+	 * Creation de l'application.
+	 */
+	public GestionStagesJuryIsi() {
+		initialize();
+		addListener();
+	}
+	
 	/**
 	 * conversion d'un PDF en une chaine de caract�res
 	 * @param pdfFile pointeur vers le fichier PDF 
@@ -52,9 +64,6 @@ public class GestionStagesJuryIsi {
 	    PDDocument doc = PDDocument.load(pdfFile);
 	    return new PDFTextStripper().getText(doc);
 	}
-	
-	/*TODO pour le choix des fichier faire en sorte de memoriser le workspace*/
-	/*TODO faire la gestion d'exception pour le click des boutons notament*/
 
 	/**
 	 * conversion d'un fichier PDF en un fichier TXT
@@ -77,15 +86,6 @@ public class GestionStagesJuryIsi {
 	    }
 	}
 
-
-	/**
-	 * Creation de l'application.
-	 */
-	public GestionStagesJuryIsi() {
-		initialize();
-		addListener();
-	}
-
 	/**
 	 * Initialisation du contenu de la fen�tre.
 	 */
@@ -96,13 +96,13 @@ public class GestionStagesJuryIsi {
 		frmGestionStagesJury.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGestionStagesJury.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Source TXT");
-		lblNewLabel.setBounds(10, 65, 88, 14);
-		frmGestionStagesJury.getContentPane().add(lblNewLabel);
+		JLabel lblTxt = new JLabel("Source TXT");
+		lblTxt.setBounds(10, 65, 88, 14);
+		frmGestionStagesJury.getContentPane().add(lblTxt);
 		
-		JLabel lblNewLabel_1 = new JLabel("Cible CSV");
-		lblNewLabel_1.setBounds(10, 115, 88, 14);
-		frmGestionStagesJury.getContentPane().add(lblNewLabel_1);
+		JLabel lblCsv = new JLabel("Cible CSV");
+		lblCsv.setBounds(10, 115, 88, 14);
+		frmGestionStagesJury.getContentPane().add(lblCsv);
 		
 		sourceTXT = new JTextField();
 		sourceTXT.setBounds(108, 59, 627, 20);
@@ -114,8 +114,9 @@ public class GestionStagesJuryIsi {
 		frmGestionStagesJury.getContentPane().add(cibleCSV);
 		cibleCSV.setColumns(10);
 		
-		new JLabel("Niveau ISI").setBounds(10, 153, 88, 14);
-		frmGestionStagesJury.getContentPane().add(new JLabel("Niveau ISI"));
+		JLabel isiLevel = new JLabel("Niveau ISI");
+		isiLevel.setBounds(10, 153, 88, 14);
+		frmGestionStagesJury.getContentPane().add(isiLevel);
 		
 		isi1 = new JRadioButton("Isi 1");
 		isi1.setSelected(true);
@@ -135,17 +136,11 @@ public class GestionStagesJuryIsi {
 		
 		// Bouton lançant la conversion TXT --> "Filtrage" --> CSV 
 		conversionTxt_Csv = new JButton("Conversion  TXT -> CSV");
-		conversionButtonTxtCsv.setBounds(296, 79, 176, 23);
+		conversionTxt_Csv.setBounds(296, 79, 176, 23);
 		frmGestionStagesJury.getContentPane().add(conversionButtonTxtCsv);
 		
 		// Bouton pour quitter l'application
 		exit = new JButton("Quitter");
-		exit.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				System.exit(0);
-			}
-		});
 		exit.setBounds(664, 169, 109, 23);
 		frmGestionStagesJury.getContentPane().add(exit);
 		
@@ -189,7 +184,7 @@ public class GestionStagesJuryIsi {
 	
 	/** Methode qui ajoute les listeners aux boutons*/
 	private void addListener(){
-		conversionButtonTxtCsv.addMouseListener(new MouseAdapter() {
+		conversionTxtCsv.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.out.println(isi1.isSelected());/*TODO a enlever*/
@@ -226,7 +221,13 @@ public class GestionStagesJuryIsi {
 			      }
 			}
 		});
-		
+		exit.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				System.exit(0);
+			}
+		});
+	
 	}
 
 
