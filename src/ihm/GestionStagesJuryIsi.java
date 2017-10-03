@@ -22,24 +22,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import java.awt.Font;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 /**
- * GestionStagesJuryIsi cr�e une fen�tre graphique pour s�lectionner le pv de jury ISI au format PDF
+ * GestionStagesJuryIsi crée une fenétre graphique pour sélectionner le pv de jury ISI au format PDF
  * puis permet de construire le fichier TXT contenant le texte du PDF
- * puis permet d'avoir le r�sultat de l'�tude faite par la Classe Filtrage dans un fichier CSV 
+ * puis permet d'avoir le résultat de l'étude faite par la Classe Filtrage dans un fichier CSV 
  * @author nigro
  * @version 1.0
  */
-public class GestionStagesJuryIsi {
+public class GestionStagesJuryIsi extends JFrame{
 	/*TODO Ameliorer la recherche de fichier*/
 	/*TODO pour le choix des fichier faire en sorte de memoriser le workspace*/
 	/*TODO faire la gestion d'exception pour le click des boutons notament*/
 	/*TODO faire la javadoc pour les getter et setter*/
+	/*TODO faire des fonctions pour les evenements*/
 	
-
-	private JFrame frmGestionStagesJury;
+	private static final long serialVersionUID = 1L;
+	
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
@@ -52,6 +51,7 @@ public class GestionStagesJuryIsi {
 	 * Creation de l'application.
 	 */
 	public GestionStagesJuryIsi() {
+		new JFrame();
 		initialize();
 		addListener();
 	}
@@ -92,79 +92,79 @@ public class GestionStagesJuryIsi {
 	 * Initialisation du contenu de la fen�tre.
 	 */
 	private void initialize() {
-		frmGestionStagesJury = new JFrame();
-		frmGestionStagesJury.setTitle("Gestion Stages Jury ISI");
-		frmGestionStagesJury.setBounds(100, 100, 799, 241);
-		frmGestionStagesJury.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmGestionStagesJury.getContentPane().setLayout(null);
+		this.setTitle("Gestion Stages Jury ISI");
+		this.setBounds(100, 100, 799, 241);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.getContentPane().setLayout(null);
 
 		JLabel lblTxt = new JLabel("Source TXT");
 		lblTxt.setBounds(10, 65, 88, 14);
-		frmGestionStagesJury.getContentPane().add(lblTxt);
+		this.getContentPane().add(lblTxt);
 
 		JLabel lblCsv = new JLabel("Cible CSV");
 		lblCsv.setBounds(10, 115, 88, 14);
-		frmGestionStagesJury.getContentPane().add(lblCsv);
+		this.getContentPane().add(lblCsv);
 
 		sourceTXT = new JTextField();
 		sourceTXT.setBounds(108, 59, 627, 20);
-		frmGestionStagesJury.getContentPane().add(sourceTXT);
 		sourceTXT.setColumns(10);
+		this.getContentPane().add(sourceTXT);
 
 		cibleCSV = new JTextField();
 		cibleCSV.setBounds(108, 112, 627, 20);
-		frmGestionStagesJury.getContentPane().add(cibleCSV);
 		cibleCSV.setColumns(10);
+		this.getContentPane().add(cibleCSV);
 
 		JLabel isiLevel = new JLabel("Niveau ISI");
 		isiLevel.setBounds(10, 153, 88, 14);
-		frmGestionStagesJury.getContentPane().add(isiLevel);
+		this.getContentPane().add(isiLevel);
 
 		isi1 = new JRadioButton("Isi 1");
 		isi1.setSelected(true);
 		buttonGroup.add(isi1);
 		isi1.setBounds(107, 149, 63, 23);
-		frmGestionStagesJury.getContentPane().add(isi1);
+		this.getContentPane().add(isi1);
 
 		isi2 = new JRadioButton("Isi 2");
 		buttonGroup.add(isi2);
 		isi2.setBounds(188, 149, 57, 23);
-		frmGestionStagesJury.getContentPane().add(isi2);
+		this.getContentPane().add(isi2);
 
 		isi3 = new JRadioButton("Isi 3");
 		buttonGroup.add(isi3);
 		isi3.setBounds(276, 149, 109, 23);
-		frmGestionStagesJury.getContentPane().add(isi3);
+		this.getContentPane().add(isi3);
 
 		// Bouton lançant la conversion TXT --> "Filtrage" --> CSV 
 		conversionTxt_Csv = new JButton("Conversion  TXT -> CSV");
 		conversionTxt_Csv.setBounds(296, 79, 176, 23);
-		frmGestionStagesJury.getContentPane().add(conversionButtonTxtCsv);
+		this.getContentPane().add(conversionTxt_Csv);
 
 		// Bouton pour quitter l'application
 		exit = new JButton("Quitter");
 		exit.setBounds(664, 169, 109, 23);
-		frmGestionStagesJury.getContentPane().add(exit);
+		this.getContentPane().add(exit);
 
 		// Bouton pour le chargement du fichier PDF 
 		findPDF = new JButton("...");
 		findPDF.setFont(new Font("Tahoma", Font.BOLD, 11));
 		findPDF.setBounds(740, 7, 33, 23);
-		frmGestionStagesJury.getContentPane().add(findPDF);
+		this.getContentPane().add(findPDF);
 
 		JLabel lblNewLabel_3 = new JLabel("Source PDF");
 		lblNewLabel_3.setBounds(10, 11, 77, 14);
-		frmGestionStagesJury.getContentPane().add(lblNewLabel_3);
+		this.getContentPane().add(lblNewLabel_3);
 
 		sourcePDF = new JTextField();
 		sourcePDF.setBounds(108, 8, 627, 20);
-		frmGestionStagesJury.getContentPane().add(sourcePDF);
 		sourcePDF.setColumns(10);
+		this.getContentPane().add(sourcePDF);
 
 		// Bouton de convertion PDF --> TXT 
 		conversionPdf_Txt = new JButton("Conversion  PDF >- TXT");
 		conversionPdf_Txt.setBounds(296, 28, 176, 23);
-		frmGestionStagesJury.getContentPane().add(conversionPdf_Txt);
+		this.getContentPane().add(conversionPdf_Txt);
+	}
 
 		/** Methode qui ajoute les listeners aux boutons*/
 		private void addListener(){
@@ -225,17 +225,7 @@ public class GestionStagesJuryIsi {
 					System.exit(0);
 				}
 			});
-
 		}
-
-		public JFrame getFrmGestionStagesJury() {
-			return frmGestionStagesJury;
-		}
-
-		public void setFrmGestionStagesJury(JFrame frmGestionStagesJury) {
-			this.frmGestionStagesJury = frmGestionStagesJury;
-		}
-
 
 		public JTextField getSourceTXT() {
 			return sourceTXT;

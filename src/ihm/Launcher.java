@@ -13,7 +13,7 @@ public class Launcher {
 			public void run() {
 				try {
 					GestionStagesJuryIsi window = new GestionStagesJuryIsi();
-					window.getFrmGestionStagesJury().setVisible(true);
+					window.setVisible(true);
 					/*TODO regarder mes anciennes interfaces pour placer, redimesionner la fenetres*/
 				} catch (Exception e) {
 					e.printStackTrace();
