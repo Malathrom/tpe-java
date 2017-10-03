@@ -25,4 +25,8 @@ public class Module {
 	public void setCredit(int credit) {
 		this.credit = credit;
 	}
+	
+	public String toString(){
+		return nom + " " + credit; 
+	}
 }
