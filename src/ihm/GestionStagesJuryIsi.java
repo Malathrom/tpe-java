@@ -49,7 +49,6 @@ public class GestionStagesJuryIsi extends JFrame{
 	private JRadioButton isi1, isi2, isi3;
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
 
-
 	/**
 	 * Creation de l'application.
 	 */
@@ -92,7 +91,7 @@ public class GestionStagesJuryIsi extends JFrame{
 	}
 
 	/**
-	 * Initialisation du contenu de la fen�tre.
+	 * Initialisation du contenu de la fenêtre.
 	 */
 	private void initialize() {
 		this.setTitle("Gestion Stages Jury ISI");
