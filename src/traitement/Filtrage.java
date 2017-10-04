@@ -13,8 +13,8 @@ import modules.LectureModules;
 import modules.Module;
 
 /**
- * Filtrage est une classe Java qui permet d'�crire dans un fichier CSV des propositions de d�cisions de Jury du d�partement ISI.
- * Elle se base sur un PV de jury �crit au format texte TXT
+ * Filtrage est une classe Java qui permet d'écrire dans un fichier CSV des propositions de décisions de Jury du département ISI.
+ * Elle se base sur un PV de jury écrit au format texte TXT
  * @author nigro
  * @version 1.0
  */
@@ -23,67 +23,67 @@ public class Filtrage {
 	
 	private static List<Module> modules = new ArrayList<Module>();
 	/**
-	 * sortieExcelCSV contient le nom du fichier CVS contenant les propositions de d�cisions 
+	 * sortieExcelCSV contient le nom du fichier CVS contenant les propositions de décisions 
 	 */
 	private String sortieExcelCSV;
 	/**
-	 * rechercheStage contient les valeurs "oui" ou "non" indiquant si l'�tudiant peut rechercher un stage au prochain semestre
+	 * rechercheStage contient les valeurs "oui" ou "non" indiquant si l'étudiant peut rechercher un stage au prochain semestre
 	 */
 	private String rechercheStage;
 	/**
-	 * nomPrenom contient une cha�ne de caract�res contenant le nom et pr�nom de l'�tudiant ou "" si le nom et pr�nom de l'�tudiant ne sont pas encore trouv�s
+	 * nomPrenom contient une cha�ne de caract�res contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
 	 */
 	private String nomPrenom;
 	/**
-	 * nomZone contient une chaine de caract�res indiquant la zone du PV de jury o� le filtrage est en train de travailler
-	 * "inconnue" : signifie qu'on se trouve dans la zone de description de l'�tudiant
-	 * "TC" : signifie qu'on se trouve dans la zone formation Tronc Commun de l'�tudiant
-	 * "ISI" : signifie qu'on se trouve dans la zone formation ISI de l'�tudiant
-	 * "Master" : signifie qu'on se trouve dans la zone formation Master de l'�tudiant
+	 * nomZone contient une chaine de caractéres indiquant la zone du PV de jury où le filtrage est en train de travailler
+	 * "inconnue" : signifie qu'on se trouve dans la zone de description de l'étudiant
+	 * "TC" : signifie qu'on se trouve dans la zone formation Tronc Commun de l'étudiant
+	 * "ISI" : signifie qu'on se trouve dans la zone formation ISI de l'étudiant
+	 * "Master" : signifie qu'on se trouve dans la zone formation Master de l'étudiant
 	 */
 	private String nomZone;
 	/**
-	 * st09 est vrai lorsque l'�tudiant a valid� son ST09
+	 * st09 est vrai lorsque l'étudiant a validé son ST09
 	 */
 	private boolean st09;
 	/**
-	 * st10 est vrai lorsque l'�tudiant a valid� son ST10
+	 * st10 est vrai lorsque l'étudiant a validé son ST10
 	 */
 	private boolean st10;
 	/**
-	 * st30 est vrai lorsque l'�tudiant a valid� son ST30
+	 * st30 est vrai lorsque l'étudiant a validé son ST30
 	 */
 	private boolean st30;
 	/**
-	 * estPasseParTC est vrai lorsque l'�tudiant a fait un TC
+	 * estPasseParTC est vrai lorsque l'étudiant a fait un TC
 	 */
 	private boolean estPasseParTC;
 	/**
-	 * estPasseParISI est vrai lorsque l'�tudiant a fait le cursus ISI
+	 * estPasseParISI est vrai lorsque l'étudiant a fait le cursus ISI
 	 */
 	private boolean estPasseParISI;
 	/**
-	 * estPasseParMaster est vrai lorsque l'�tudiant a fait le cursus Master
+	 * estPasseParMaster est vrai lorsque l'étudiant a fait le cursus Master
 	 */
 	private boolean estPasseParMaster;
 	/**
-	 * universiteChinoise est vrai lorsque l'�tudiant est un �tudiant Chinois (gestion particuli�re)
+	 * universiteChinoise est vrai lorsque l'étudiant est un étudiant Chinois (gestion particuliére)
 	 */
 	private boolean universiteChinoise;
 	/**
-	 * st09_st10_st30 contient "st09", "st10" ou "st30" si le prochain stage � valider est respectivement un stage "st09", "st10" ou "st30"
+	 * st09_st10_st30 contient "st09", "st10" ou "st30" si le prochain stage à valider est respectivement un stage "st09", "st10" ou "st30"
 	 */
 	private String st09_st10_st30;
 	/**
-	 * totalCSTM compte le nombre de CS+TM de TC de branche obtenus par l'�tudiant au cours du TC ou du TC de branche ISI.  
+	 * totalCSTM compte le nombre de CS+TM de TC de branche obtenus par l'étudiant au cours du TC ou du TC de branche ISI.  
 	 */
 	private int totalCSTM;
 
 	/**
 	 * Constructeur : Lance la lecture du fichier texte 
-	 * @param nomFichierTexte Chaine de caract�res repr�sentant le fichier texte � analyser
-	 * @param nomFichierCSV Chaine de caract�res repr�sentant le fichier CSV de sortie (r�sultat)
-	 * @param niveauIsi entier repr�sentant le niveau de l'�tudiant dans le formation ISI
+	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
+	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
+	 * @param niveauIsi entier représentant le niveau de l'étudiant dans le formation ISI
 	 */
 	public Filtrage (String nomFichierTexte, String nomFichierCSV, int niveauIsi){
 		try {
@@ -97,11 +97,11 @@ public class Filtrage {
 	}
 
 	/**
-	 * Prend en compte les nouvelles r�gles A17 pour les stages : pour les �tudiant ISI 1, on compte les CS+TM, ils peuvent chercher un stage que si CS+TM (Hors equivalence) est sup�rieur strictement � 2
-	 * La m�thode lit le fichier TXT ligne par ligne pour extraire les informations relatives aux �tudiants et utiles pour le jury
-	 * @param nomFichierTexte Chaine de caract�res repr�sentant le fichier texte � analyser
-	 * @param nomFichierCSV Chaine de caract�res repr�sentant le fichier CSV de sortie (r�sultat)
-	 * @param niveauIsi  Entier repr�sentant le niveau de l'�tudiant dans le formation ISI
+	 * Prend en compte les nouvelles régles A17 pour les stages : pour les étudiant ISI 1, on compte les CS+TM, ils peuvent chercher un stage que si CS+TM (Hors equivalence) est sup�rieur strictement � 2
+	 * La méthode lit le fichier TXT ligne par ligne pour extraire les informations relatives aux étudiants et utiles pour le jury
+	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
+	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
+	 * @param niveauIsi  Entier représentant le niveau de l'étudiant dans le formation ISI
 	 * @throws IOException Erreur d'ouverture de fichier
 	 */
 	public void lireFichier (String nomFichierTexte, String nomFichierCSV, int niveauIsi) throws IOException{
@@ -112,8 +112,8 @@ public class Filtrage {
 
 		try {lecteurAvecBuffer = new BufferedReader(new FileReader(nomFichierTexte));
 		ecritureAvecBuffer = new BufferedWriter(new FileWriter(nomFichierCSV));
-		ecritureAvecBuffer.write("Contrainte ISI 1 : �tudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la l�gende
-		ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Pr�nom1;Pr�nom2;pr�nom3\n");// la l�gende
+		ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la l�gende
+		ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la l�gende
 
 		// Initialisation
 		initialiseRecherche();
@@ -194,7 +194,7 @@ public class Filtrage {
 		else rechercheStage="oui";
 
 		if (st10 || st30) {
-			st09_st10_st30="Stages d�j� effectu�s";
+			st09_st10_st30="Stages déjà effectués";
 			rechercheStage="---";
 		}
 		else {
@@ -210,14 +210,14 @@ public class Filtrage {
 			else st09_st10_st30="ST09";
 		}
 
-		// Formatage de la ligne � �crire. Puis on l'�crit 
+		// Formatage de la ligne à écrire. Puis on l'écrit 
 		sortieExcelCSV=sortieExcelCSV+totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+"\n";
 	}
 
 	/**
-	 * Renvoie une chaine de caract�res avec le nom et pr�nom, s'il ne le trouve pas renvoie la chaine vide ""
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return une chaine de caract�res contenant le nom suivi des pr�noms de l'�tudiant. Sinon renvoie ""
+	 * Renvoie une chaine de caractéres avec le nom et prénom, s'il ne le trouve pas renvoie la chaine vide ""
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return une chaine de caractéres contenant le nom suivi des prénoms de l'étudiant. Sinon renvoie ""
 	 */
 	public String trouveNomPrenom(String tabMots[]){
 		String nomPrenom="";
@@ -232,9 +232,9 @@ public class Filtrage {
 	}
 
 	/**
-	 * Comptabilise les cr�dits des UE TC de branche ISI (pour une ligne de texte)
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return le total des CS+TM trouv�s dans tabMots
+	 * Comptabilise les crédits des UE TC de branche ISI (pour une ligne de texte)
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return le total des CS+TM trouvés dans tabMots
 	 */
 	public int compteCSTM (String tabMots[]){
 		int i, credits;
@@ -275,8 +275,8 @@ public class Filtrage {
 	}
 
 	/**
-	 * Indique si le mot cl� "ST09" ou "TN09" (stage interm�diaire) se trouve dans le tableau
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
+	 * Indique si le mot clé "ST09" ou "TN09" (stage intermédiaire) se trouve dans le tableau
+	 * @param tabMots tableau de mots composant une ligne de texte å analyser
 	 * @return true si le tableau tabMots contient le stage "st09", sinon false
 	 */
 	public boolean trouveST09 (String tabMots[]){
@@ -290,8 +290,8 @@ public class Filtrage {
 	}
 
 	/**
-	 * Indique si le mot cl� "ST10" ou "TN10" (stage Fin d'�tude) se trouve dans le tableau
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
+	 * Indique si le mot clé "ST10" ou "TN10" (stage Fin d'étude) se trouve dans le tableau
+	 * @param tabMots tableau de mots composant une ligne de texte å analyser
 	 * @return true si le tableau tabMots contient le stage "st10", sinon false
 	 */
 	public boolean trouveST10 (String tabMots[]){
@@ -305,8 +305,8 @@ public class Filtrage {
 	}
 
 	/**
-	 * Indique si le mot cl� "ST30" ou "TN30" (stage Master) se trouve dans le tableau
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
+	 * Indique si le mot clé "ST30" ou "TN30" (stage Master) se trouve dans le tableau
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
 	 * @return true si le tableau tabMots contient le stage "st10", sinon false
 	 */
 	public boolean trouveST30 (String tabMots[]){
@@ -321,9 +321,9 @@ public class Filtrage {
 
 	/**
 	 * Indique si le tableau de mots contient "ISI"
-	 * Cela permet de rep�rer que l'on est dans la partie "ISI" du PV d'un �tudiant
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return true si le tableau tabMots contient le mot cl� "ISI", sinon false
+	 * Cela permet de repérer que l'on est dans la partie "ISI" du PV d'un étudiant
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient le mot clé "ISI", sinon false
 	 */
 	public boolean enZoneISI (String tabMots[]){
 		int i;
@@ -337,9 +337,9 @@ public class Filtrage {
 
 	/**
 	 * Indique si le tableau de mots contient "TC"
-	 * Cela permet de rep�rer que l'on est dans la partie "Tronc commun" du PV d'un �tudiant
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return true si le tableau tabMots contient le mot cl� "TC", sinon false
+	 * Cela permet de repérer que l'on est dans la partie "Tronc commun" du PV d'un étudiant
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient le mot clé "TC", sinon false
 	 */
 	public boolean enZoneTC (String tabMots[]){
 		int i;
@@ -353,9 +353,9 @@ public class Filtrage {
 
 	/**
 	 * Indique si le tableau de mots contient "Master"
-	 * Cela permet de rep�rer que l'on est dans la partie "Master" du PV d'un �tudiant
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return true si le tableau tabMots contient le mot cl� "Master", sinon false
+	 * Cela permet de repérer que l'on est dans la partie "Master" du PV d'un étudiant
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient le mot clé "Master", sinon false
 	 */
 	public boolean enZoneMaster (String tabMots[]){
 		int i;
@@ -367,10 +367,10 @@ public class Filtrage {
 	}
 
 	/**
-	 * Indique si le tableau de mots contient "�tablissement"
-	 * Cela permet de rep�rer que l'on d�marre l'analyse d'un autre �tudiant
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return true si le tableau tabMots contient le mot cl� "�tablissement", sinon false
+	 * Indique si le tableau de mots contient "établissement"
+	 * Cela permet de repérer que l'on démarre l'analyse d'un autre étudiant
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient le mot clé "établissement", sinon false
 	 */
 	public boolean enZoneInconnue (String tabMots[]){
 		int i;
@@ -410,76 +410,61 @@ public class Filtrage {
 		return nomZone;
 	}
 
-
 	public void setNomZone(String nomZone) {
 		this.nomZone = nomZone;
 	}
-
 
 	public boolean isSt09() {
 		return st09;
 	}
 
-
 	public void setSt09(boolean st09) {
 		this.st09 = st09;
 	}
-
 
 	public boolean isSt10() {
 		return st10;
 	}
 
-
 	public void setSt10(boolean st10) {
 		this.st10 = st10;
 	}
-
 
 	public boolean isSt30() {
 		return st30;
 	}
 
-
 	public void setSt30(boolean st30) {
 		this.st30 = st30;
 	}
-
 
 	public boolean isEstPasseParTC() {
 		return estPasseParTC;
 	}
 
-
 	public void setEstPasseParTC(boolean estPasseParTC) {
 		this.estPasseParTC = estPasseParTC;
 	}
-
 
 	public boolean isEstPasseParISI() {
 		return estPasseParISI;
 	}
 
-
 	public void setEstPasseParISI(boolean estPasseParISI) {
 		this.estPasseParISI = estPasseParISI;
 	}
-
 
 	public boolean isEstPasseParMaster() {
 		return estPasseParMaster;
 	}
 
-
 	public void setEstPasseParMaster(boolean estPasseParMaster) {
 		this.estPasseParMaster = estPasseParMaster;
 	}
 
-
 	public boolean isUniversiteChinoise() {
 		return universiteChinoise;
 	}
-
 
 	public void setUniversiteChinoise(boolean universiteChinoise) {
 		this.universiteChinoise = universiteChinoise;
@@ -490,16 +475,13 @@ public class Filtrage {
 		return st09_st10_st30;
 	}
 
-
 	public void setSt09_st10_st30(String st09_st10_st30) {
 		this.st09_st10_st30 = st09_st10_st30;
 	}
 
-
 	public int getTotalCSTM() {
 		return totalCSTM;
 	}
-
 
 	public void setTotalCSTM(int totalCSTM) {
 		this.totalCSTM = totalCSTM;
