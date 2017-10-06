@@ -7,6 +7,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import operation.data.Module;
+
+
 /**TODO a commenter*/
 public class LectureModules {
 

@@ -37,6 +37,12 @@ public class Module{
 		this.credit = credit;
 	}
 	
+	/** construteur pour le fichier texte*/
+	public Module(String nom, int credit){
+		this.nom = nom;
+		this.credit = credit;
+	}
+	
 	public String getNom() {
 		return nom;
 	}
