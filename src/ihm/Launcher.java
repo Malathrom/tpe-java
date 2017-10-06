@@ -4,12 +4,14 @@ import java.awt.EventQueue;
 
 import modules.LectureModules;
 import operation.CalculNote;
+import operation.Note;
+import operation.data.Module;
 
 public class Launcher {
 	
 	/**
 	 * Le programme principal
-	 * @param args Param�tre non utilis�
+	 * @param args Paramètre non utilisé
 	 */
 	public static void main(String[] args) {
 		
@@ -34,6 +36,7 @@ public class Launcher {
 			
 		case 3:
 			new CalculNote().recuperationNotes();
+			Module if26 = new Module("IF26", "TM", "ISI", 2, Note.A, 6);
 			break;
 		default:
 			break;
