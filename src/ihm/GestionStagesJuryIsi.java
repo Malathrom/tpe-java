@@ -8,7 +8,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
-import traitement.Filtrage;
+import io.Filtrage;
 
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -189,8 +189,8 @@ public class GestionStagesJuryIsi extends JFrame{
 			public void mouseClicked(MouseEvent e) {
 				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()==""))
 					try {
-						maConversionPDFtoText (sourcePDF.getText(), sourceTXT.getText());
-						System.out.println("Conversion PDF --> TXT termin�e");
+						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+						System.out.println("Conversion PDF --> TXT terminée");
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();

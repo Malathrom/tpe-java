@@ -1,4 +1,4 @@
-package traitement;
+package io;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -11,6 +11,7 @@ import java.util.List;
 import ihm.GestionStagesJuryIsi;
 import modules.LectureModules;
 import modules.Module;
+import operation.CalculNote;
 
 /**
  * Filtrage est une classe Java qui permet d'écrire dans un fichier CSV des propositions de décisions de Jury du département ISI.
@@ -20,7 +21,7 @@ import modules.Module;
  */
 public class Filtrage {
 
-	
+
 	private static List<Module> modules = new ArrayList<Module>();
 	/**
 	 * sortieExcelCSV contient le nom du fichier CVS contenant les propositions de décisions 
@@ -83,7 +84,7 @@ public class Filtrage {
 	 * Constructeur : Lance la lecture du fichier texte 
 	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
 	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
-	 * @param niveauIsi entier représentant le niveau de l'étudiant dans le formation ISI
+	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
 	 */
 	public Filtrage (String nomFichierTexte, String nomFichierCSV, int niveauIsi){
 		try {
@@ -97,7 +98,8 @@ public class Filtrage {
 	}
 
 	/**
-	 * Prend en compte les nouvelles régles A17 pour les stages : pour les étudiant ISI 1, on compte les CS+TM, ils peuvent chercher un stage que si CS+TM (Hors equivalence) est sup�rieur strictement � 2
+	 * Prend en compte les nouvelles régles A17 pour les stages : pour les étudiant ISI 1, on compte les CS+TM, 
+	 * ils peuvent chercher un stage que si CS+TM (Hors equivalence) est supérieur strictement à 2
 	 * La méthode lit le fichier TXT ligne par ligne pour extraire les informations relatives aux étudiants et utiles pour le jury
 	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
 	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
@@ -110,50 +112,53 @@ public class Filtrage {
 		String ligne;
 		String listeMots[];
 
-		try {lecteurAvecBuffer = new BufferedReader(new FileReader(nomFichierTexte));
-		ecritureAvecBuffer = new BufferedWriter(new FileWriter(nomFichierCSV));
-		ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la l�gende
-		ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la l�gende
+		try {
+			lecteurAvecBuffer = new BufferedReader(new FileReader(nomFichierTexte));
+			ecritureAvecBuffer = new BufferedWriter(new FileWriter(nomFichierCSV));
+			ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la l�gende
+			ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la l�gende
 
-		// Initialisation
-		initialiseRecherche();
+			// Initialisation
+			initialiseRecherche();
 
-		// Parcours toutes les lignes du fichier texte
-		while ((ligne = lecteurAvecBuffer.readLine()) != null){
-			listeMots=ligne.split(" ");
+			// Parcours toutes les lignes du fichier texte
+			while ((ligne = lecteurAvecBuffer.readLine()) != null){
+				listeMots=ligne.split(" ");
+				if (enZoneInconnue(listeMots)) {nomZone="inconnue";}
+				if (enZoneMaster(listeMots))   {nomZone="Master";estPasseParMaster=true;}
+				if (enZoneISI(listeMots))      {nomZone="ISI";estPasseParISI=true;}
+				if (enZoneTC(listeMots))       {nomZone="TC";estPasseParTC=true;}
 
-			if (enZoneInconnue(listeMots)) {nomZone="inconnue";}
-			if (enZoneMaster(listeMots))   {nomZone="Master";estPasseParMaster=true;}
-			if (enZoneISI(listeMots))      {nomZone="ISI";estPasseParISI=true;}
-			if (enZoneTC(listeMots))       {nomZone="TC";estPasseParTC=true;}
+				totalCSTM=totalCSTM+compteCSTM(listeMots);
 
-			totalCSTM=totalCSTM+compteCSTM(listeMots);
+				st10=trouveST10(listeMots)||st10;
+				st09=trouveST09(listeMots)||st09;
+				st30=trouveST30(listeMots)||st30;
+				universiteChinoise=trouveUniversiteChinoise(listeMots)||universiteChinoise;
 
-			st10=trouveST10(listeMots)||st10;
-			st09=trouveST09(listeMots)||st09;
-			st30=trouveST30(listeMots)||st30;
-			universiteChinoise=trouveUniversiteChinoise(listeMots)||universiteChinoise;
+				// M�morisation du nom et prénom de l'étudiant
+				if (nomPrenom.equals("")) {
+					nomPrenom=trouveNomPrenom(listeMots);
+				}
 
-			// M�morisation du nom et prénom de l'étudiant
-			if (nomPrenom.equals("")) {
-				nomPrenom=trouveNomPrenom(listeMots);
+				// On a trait� toutes les lignes du PV d'un �tudiant. On d�clenche la d�cision
+				if (!nomPrenom.equals("") && nomZone.equals("inconnue")){
+					System.out.println(nomPrenom + "=" + Integer.toString(totalCSTM));
+
+					decisionsJury();
+					ecritureAvecBuffer.write(sortieExcelCSV);
+
+					// Ré-initialisation des variables pour le traitement
+					
+					initialiseRecherche();
+				}
+
 			}
-
-			// On a trait� toutes les lignes du PV d'un �tudiant. On d�clenche la d�cision
-			if (!nomPrenom.equals("") && nomZone.equals("inconnue")){
-				System.out.println(nomPrenom + "=" + Integer.toString(totalCSTM));
-
-				decisionsJury();
-				ecritureAvecBuffer.write(sortieExcelCSV);
-
-				// Ré-initialisation des variables pour le traitement
-				initialiseRecherche();
-			}
-
-		}
-		// Traitement du dernier �tudiant du fichier
-		decisionsJury();
-		ecritureAvecBuffer.write(sortieExcelCSV); 
+			// Traitement du dernier étudiant du fichier
+			decisionsJury();
+			///////////////////////////////////////////////////////////METHODE OU On lance les calculs/////////////////////////////////////////////
+			CalculNote.calculsemestre(sortieExcelCSV);
+			ecritureAvecBuffer.write(sortieExcelCSV); 
 		}
 		catch(FileNotFoundException exc) {
 			System.out.println("Erreur d'ouverture");

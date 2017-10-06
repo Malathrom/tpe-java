@@ -3,6 +3,7 @@ package ihm;
 import java.awt.EventQueue;
 
 import modules.LectureModules;
+import operation.CalculNote;
 
 public class Launcher {
 	
@@ -12,7 +13,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 		
-		switch (1) {
+		switch (3) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -31,6 +32,9 @@ public class Launcher {
 			new LectureModules();
 			break;
 			
+		case 3:
+			new CalculNote().recuperationNotes();
+			break;
 		default:
 			break;
 		}

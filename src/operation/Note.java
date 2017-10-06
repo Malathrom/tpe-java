@@ -1,4 +1,4 @@
-package traitement;
+package operation;
 /** Enumeration represenatnt les notes possibles pour une UV*/
 public enum Note {
 	A,
