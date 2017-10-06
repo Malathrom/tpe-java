@@ -48,6 +48,10 @@ public class GestionStagesJuryIsi extends JFrame{
 	private JTextField sourcePDF;
 	private JRadioButton isi1, isi2, isi3;
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
+	
+	/**sauvegarder le repertoire lors du choix du fichier*/
+	/*TODO A voir si il veut que on la sauvegarde dans un fichier dans le cas ou l'appli est quitter*/
+	String path = "";
 
 	/**
 	 * Creation de l'application.
@@ -204,12 +208,21 @@ public class GestionStagesJuryIsi extends JFrame{
 				String nomFichierPDF;
 				String nomFichierTXT;
 				String nomFichierCSV;
-				JFileChooser chooser = new JFileChooser();
+				JFileChooser chooser;
+				if(path.equals("")){
+					chooser = new JFileChooser();
+				}else{
+					chooser = new JFileChooser(new File(path));
+				}
+				
 				FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
 				chooser.setFileFilter(filter);
 				chooser.setMultiSelectionEnabled(false);
 				int returnVal = chooser.showOpenDialog(null);
 				if(returnVal == JFileChooser.APPROVE_OPTION) {
+					
+					System.out.println(chooser.getSelectedFile().getAbsolutePath());
+					path = chooser.getSelectedFile().getAbsolutePath();
 					nomFichierPDF=chooser.getSelectedFile().getAbsolutePath();
 					nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
 					nomFichierCSV=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".csv";

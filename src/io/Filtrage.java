@@ -1,5 +1,6 @@
 package io;
 import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,8 +11,8 @@ import java.util.List;
 
 import ihm.GestionStagesJuryIsi;
 import modules.LectureModules;
-import modules.Module;
 import operation.CalculNote;
+import operation.data.Module;
 
 /**
  * Filtrage est une classe Java qui permet d'écrire dans un fichier CSV des propositions de décisions de Jury du département ISI.
