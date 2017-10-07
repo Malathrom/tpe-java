@@ -20,7 +20,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.util.Stack;
 import java.awt.Font;
 
 /**
@@ -36,9 +36,7 @@ public class GestionStagesJuryIsi extends JFrame{
 	/*TODO faire la gestion d'exception pour le click des boutons notament*/
 	/*TODO faire la javadoc pour les getter et setter*/
 	/*TODO faire des fonctions pour les evenements*/
-	/*TODO faire des sysout sur les actions de la methode mouseListener pour comprendre*/
 	/*TODO lire en detail la classe filtrage*/
-	/*TODO regler l'encodage*/
 
 	private static final long serialVersionUID = 1L;
 
@@ -48,10 +46,13 @@ public class GestionStagesJuryIsi extends JFrame{
 	private JTextField sourcePDF;
 	private JRadioButton isi1, isi2, isi3;
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
-	
+
 	/**sauvegarder le repertoire lors du choix du fichier*/
 	/*TODO A voir si il veut que on la sauvegarde dans un fichier dans le cas ou l'appli est quitter*/
 	String path = "";
+
+	/**Ensemble des chemins deja parcouru*/
+	Stack<String> paths = new Stack<String>();
 
 	/**
 	 * Creation de l'application.
@@ -65,7 +66,7 @@ public class GestionStagesJuryIsi extends JFrame{
 	/**
 	 * conversion d'un PDF en une chaine de caract�res
 	 * @param pdfFile pointeur vers le fichier PDF 
-	 * @return Une chaine de caract�res avec le texte du fichier PDF
+	 * @return Une chaine de caractères avec le texte du fichier PDF
 	 * @throws IOException erreur d'ouverture du PDF
 	 */
 	static String getText(File pdfFile) throws IOException {
@@ -76,8 +77,8 @@ public class GestionStagesJuryIsi extends JFrame{
 	/**
 	 * conversion d'un fichier PDF en un fichier TXT
 	 * @param sourcePDF nom du fichier PDF
-	 * @param destinationTXT nom du fichier r�sultat TXT
-	 * @throws IOException erreur d'ouverture ou d'�criture
+	 * @param destinationTXT nom du fichier résultat TXT
+	 * @throws IOException erreur d'ouverture ou d'écriture
 	 */
 	static void maConversionPDFtoText (String sourcePDF, String destinationTXT) throws IOException{
 		BufferedWriter ecritureAvecBuffer= null;
@@ -174,17 +175,10 @@ public class GestionStagesJuryIsi extends JFrame{
 
 	/** Methode qui ajoute les listeners aux boutons*/
 	private void addListener(){
-		conversionTxt_Csv.addMouseListener(new MouseAdapter() {
+		findPDF.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				System.out.println(isi1.isSelected());/*TODO a enlever*/
-				if (isi1.isSelected()) 
-				{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 1);}
-				if (isi2.isSelected()) 
-				{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 2);}
-				if (isi3.isSelected()) 
-				{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 3);}
-				System.out.println("Conversion TXT --> CSV termin�e");
+			public void mouseClicked(MouseEvent arg0) {
+				choixFichier();
 			}
 		});
 
@@ -194,45 +188,19 @@ public class GestionStagesJuryIsi extends JFrame{
 				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()==""))
 					try {
 						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-						System.out.println("Conversion PDF --> TXT terminée");
+						System.out.println("Conversion PDF --> TXT terminée");/**TODO a enlever*/
 					} catch (IOException e1) {
-						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
 			}
 		});
-
-		findPDF.addMouseListener(new MouseAdapter() {
+		conversionTxt_Csv.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				String nomFichierPDF;
-				String nomFichierTXT;
-				String nomFichierCSV;
-				JFileChooser chooser;
-				if(path.equals("")){
-					chooser = new JFileChooser();
-				}else{
-					chooser = new JFileChooser(new File(path));
-				}
-				
-				FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
-				chooser.setFileFilter(filter);
-				chooser.setMultiSelectionEnabled(false);
-				int returnVal = chooser.showOpenDialog(null);
-				if(returnVal == JFileChooser.APPROVE_OPTION) {
-					
-					System.out.println(chooser.getSelectedFile().getAbsolutePath());
-					path = chooser.getSelectedFile().getAbsolutePath();
-					nomFichierPDF=chooser.getSelectedFile().getAbsolutePath();
-					nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
-					nomFichierCSV=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".csv";
-					sourcePDF.setText(nomFichierPDF);
-					sourceTXT.setText(nomFichierTXT);
-					cibleCSV.setText(nomFichierCSV);
-					System.out.println(nomFichierTXT+"\n"+nomFichierTXT+"\n"+nomFichierCSV);
-				}
+			public void mouseClicked(MouseEvent e) {
+				conversion_TXT_CSV();
 			}
 		});
+
 
 		exit.addMouseListener(new MouseAdapter() {
 			@Override
@@ -242,67 +210,109 @@ public class GestionStagesJuryIsi extends JFrame{
 		});
 	}
 
-	public JTextField getSourceTXT() {
-		return sourceTXT;
+	/**Methode qui convertit un fichier txt en format csv*/
+	private void conversion_TXT_CSV() {
+		System.out.println(isi1.isSelected());/*TODO a enlever*/
+		if (isi1.isSelected()) 
+		{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 1);}
+		if (isi2.isSelected()) 
+		{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 2);}
+		if (isi3.isSelected()) 
+		{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 3);}
+		System.out.println("Conversion TXT --> CSV terminée");
+
 	}
 
 
-	public void setSourceTXT(JTextField sourceTXT) {
-		this.sourceTXT = sourceTXT;
+	private void choixFichier(){
+		String nomFichierPDF;
+		String nomFichierTXT;
+		String nomFichierCSV;
+		JFileChooser chooser;
+		if(path.equals("")){
+			chooser = new JFileChooser();
+		}else{
+			chooser = new JFileChooser(new File(path));
+		}
+
+		FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
+		chooser.setFileFilter(filter);
+		chooser.setMultiSelectionEnabled(false);
+		int returnVal = chooser.showOpenDialog(null);
+		if(returnVal == JFileChooser.APPROVE_OPTION) {
+
+			System.out.println(chooser.getSelectedFile().getAbsolutePath());
+			path = chooser.getSelectedFile().getAbsolutePath();
+			nomFichierPDF=chooser.getSelectedFile().getAbsolutePath();
+			nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
+			nomFichierCSV=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".csv";
+			sourcePDF.setText(nomFichierPDF);
+			sourceTXT.setText(nomFichierTXT);
+			cibleCSV.setText(nomFichierCSV);
+			System.out.println(nomFichierTXT+"\n"+nomFichierTXT+"\n"+nomFichierCSV);
+		}
+
+		public JTextField getSourceTXT() {
+			return sourceTXT;
+		}
+
+
+		public void setSourceTXT(JTextField sourceTXT) {
+			this.sourceTXT = sourceTXT;
+		}
+
+
+		public JTextField getCibleCSV() {
+			return cibleCSV;
+		}
+
+
+		public void setCibleCSV(JTextField cibleCSV) {
+			this.cibleCSV = cibleCSV;
+		}
+
+
+		public JTextField getSourcePDF() {
+			return sourcePDF;
+		}
+
+
+		public void setSourcePDF(JTextField sourcePDF) {
+			this.sourcePDF = sourcePDF;
+		}
+
+
+		public JRadioButton getIsi1() {
+			return isi1;
+		}
+
+
+		public void setIsi1(JRadioButton isi1) {
+			this.isi1 = isi1;
+		}
+
+
+		public JRadioButton getIsi2() {
+			return isi2;
+		}
+
+
+		public void setIsi2(JRadioButton isi2) {
+			this.isi2 = isi2;
+		}
+
+
+		public JRadioButton getIsi3() {
+			return isi3;
+		}
+
+
+		public void setIsi3(JRadioButton isi3) {
+			this.isi3 = isi3;
+		}
+
+
+		public ButtonGroup getButtonGroup() {
+			return buttonGroup;
+		}
 	}
-
-
-	public JTextField getCibleCSV() {
-		return cibleCSV;
-	}
-
-
-	public void setCibleCSV(JTextField cibleCSV) {
-		this.cibleCSV = cibleCSV;
-	}
-
-
-	public JTextField getSourcePDF() {
-		return sourcePDF;
-	}
-
-
-	public void setSourcePDF(JTextField sourcePDF) {
-		this.sourcePDF = sourcePDF;
-	}
-
-
-	public JRadioButton getIsi1() {
-		return isi1;
-	}
-
-
-	public void setIsi1(JRadioButton isi1) {
-		this.isi1 = isi1;
-	}
-
-
-	public JRadioButton getIsi2() {
-		return isi2;
-	}
-
-
-	public void setIsi2(JRadioButton isi2) {
-		this.isi2 = isi2;
-	}
-
-
-	public JRadioButton getIsi3() {
-		return isi3;
-	}
-
-
-	public void setIsi3(JRadioButton isi3) {
-		this.isi3 = isi3;
-	}
-
-
-	public ButtonGroup getButtonGroup() {
-		return buttonGroup;
-	}
-}
