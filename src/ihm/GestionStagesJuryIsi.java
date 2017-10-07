@@ -2,13 +2,14 @@ package ihm;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
-import io.Filtrage;
+import io.Conversion;
 
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -31,12 +32,8 @@ import java.awt.Font;
  * @version 1.0
  */
 public class GestionStagesJuryIsi extends JFrame{
-	/*TODO Ameliorer la recherche de fichier*/
-	/*TODO pour le choix des fichier faire en sorte de memoriser le workspace*/
 	/*TODO faire la gestion d'exception pour le click des boutons notament*/
 	/*TODO faire la javadoc pour les getter et setter*/
-	/*TODO faire des fonctions pour les evenements*/
-	/*TODO lire en detail la classe filtrage*/
 
 	private static final long serialVersionUID = 1L;
 
@@ -185,22 +182,35 @@ public class GestionStagesJuryIsi extends JFrame{
 		conversionPdf_Txt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()==""))
+				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()=="")){
 					try {
-						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-						System.out.println("Conversion PDF --> TXT terminée");/**TODO a enlever*/
+						if(confirmation_conversion(sourceTXT.getText())){
+							maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\na été converti en "+ sourceTXT.getText(), "Info",  JOptionPane.INFORMATION_MESSAGE);
+						}
+						else{
+							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  JOptionPane.ERROR_MESSAGE);
+						}
 					} catch (IOException e1) {
+						JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  JOptionPane.ERROR_MESSAGE);
 						e1.printStackTrace();
 					}
-			}
-		});
-		conversionTxt_Csv.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				conversion_TXT_CSV();
+				}
 			}
 		});
 
+		conversionTxt_Csv.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(confirmation_conversion(cibleCSV.getText())){
+					conversion_TXT_CSV();
+					JOptionPane.showMessageDialog(null, "le fichier " + sourceTXT.getText() +"\na été converti en"+ cibleCSV.getText(), "Info",  JOptionPane.INFORMATION_MESSAGE);
+				}
+				else{
+					JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
 
 		exit.addMouseListener(new MouseAdapter() {
 			@Override
@@ -210,19 +220,38 @@ public class GestionStagesJuryIsi extends JFrame{
 		});
 	}
 
+	//TODO a commenter methode qui test le fichier si il peut etre converti
+	private boolean confirmation_conversion(String fileString) {
+		//On regarde si le ficher existe deja
+		System.out.println("bonne methode1");
+		if(new File(fileString).exists()){
+			//on demande si on veut l'ecraser
+			System.out.println("bonne methode2");
+			int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileString +" ?", "Confirmation de la suppression", 
+					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+			this.requestFocus();
+			if(option == JOptionPane.OK_OPTION){
+				System.out.println("bonne methode3");
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		return true;
+	}
+
 	/**Methode qui convertit un fichier txt en format csv*/
 	private void conversion_TXT_CSV() {
-		System.out.println(isi1.isSelected());/*TODO a enlever*/
 		if (isi1.isSelected()) 
-		{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 1);}
+		{new Conversion(sourceTXT.getText(),cibleCSV.getText(), 1);}
 		if (isi2.isSelected()) 
-		{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 2);}
+		{new Conversion(sourceTXT.getText(),cibleCSV.getText(), 2);}
 		if (isi3.isSelected()) 
-		{new Filtrage(sourceTXT.getText(),cibleCSV.getText(), 3);}
+		{new Conversion(sourceTXT.getText(),cibleCSV.getText(), 3);}
 		System.out.println("Conversion TXT --> CSV terminée");
 
 	}
-
 
 	private void choixFichier(){
 		String nomFichierPDF;
@@ -251,68 +280,67 @@ public class GestionStagesJuryIsi extends JFrame{
 			cibleCSV.setText(nomFichierCSV);
 			System.out.println(nomFichierTXT+"\n"+nomFichierTXT+"\n"+nomFichierCSV);
 		}
-
-		public JTextField getSourceTXT() {
-			return sourceTXT;
-		}
-
-
-		public void setSourceTXT(JTextField sourceTXT) {
-			this.sourceTXT = sourceTXT;
-		}
-
-
-		public JTextField getCibleCSV() {
-			return cibleCSV;
-		}
-
-
-		public void setCibleCSV(JTextField cibleCSV) {
-			this.cibleCSV = cibleCSV;
-		}
-
-
-		public JTextField getSourcePDF() {
-			return sourcePDF;
-		}
-
-
-		public void setSourcePDF(JTextField sourcePDF) {
-			this.sourcePDF = sourcePDF;
-		}
-
-
-		public JRadioButton getIsi1() {
-			return isi1;
-		}
-
-
-		public void setIsi1(JRadioButton isi1) {
-			this.isi1 = isi1;
-		}
-
-
-		public JRadioButton getIsi2() {
-			return isi2;
-		}
-
-
-		public void setIsi2(JRadioButton isi2) {
-			this.isi2 = isi2;
-		}
-
-
-		public JRadioButton getIsi3() {
-			return isi3;
-		}
-
-
-		public void setIsi3(JRadioButton isi3) {
-			this.isi3 = isi3;
-		}
-
-
-		public ButtonGroup getButtonGroup() {
-			return buttonGroup;
-		}
 	}
+
+	public JTextField getSourceTXT() {
+		return sourceTXT;
+	}
+
+
+	public void setSourceTXT(JTextField sourceTXT) {
+		this.sourceTXT = sourceTXT;
+	}
+
+
+	public JTextField getCibleCSV() {
+		return cibleCSV;
+	}
+
+	public void setCibleCSV(JTextField cibleCSV) {
+		this.cibleCSV = cibleCSV;
+	}
+
+	public JTextField getSourcePDF() {
+		return sourcePDF;
+	}
+
+
+	public void setSourcePDF(JTextField sourcePDF) {
+		this.sourcePDF = sourcePDF;
+	}
+
+
+	public JRadioButton getIsi1() {
+		return isi1;
+	}
+
+
+	public void setIsi1(JRadioButton isi1) {
+		this.isi1 = isi1;
+	}
+
+
+	public JRadioButton getIsi2() {
+		return isi2;
+	}
+
+
+	public void setIsi2(JRadioButton isi2) {
+		this.isi2 = isi2;
+	}
+
+
+	public JRadioButton getIsi3() {
+		return isi3;
+	}
+
+
+	public void setIsi3(JRadioButton isi3) {
+		this.isi3 = isi3;
+	}
+
+
+	public ButtonGroup getButtonGroup() {
+		return buttonGroup;
+	}
+}
