@@ -1,17 +1,9 @@
 package io;
-import java.io.BufferedReader;
 
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-
-import ihm.GestionStagesJuryIsi;
 import modules.LectureModules;
-import operation.CalculNote;
 import operation.data.Module;
 
 /**
@@ -22,18 +14,16 @@ import operation.data.Module;
  */
 public class Filtrage {
 
+	//TODO faire des sysout pour voir si la sepeartion filtrage/conversion est bonne
 
+	/**
+	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
+	 * */
 	private static List<Module> modules = new ArrayList<Module>();
-	/**
-	 * sortieExcelCSV contient le nom du fichier CVS contenant les propositions de décisions 
-	 */
-	private String sortieExcelCSV;
-	/**
-	 * rechercheStage contient les valeurs "oui" ou "non" indiquant si l'étudiant peut rechercher un stage au prochain semestre
-	 */
+
 	private String rechercheStage;
 	/**
-	 * nomPrenom contient une cha�ne de caract�res contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
+	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
 	 */
 	private String nomPrenom;
 	/**
@@ -81,93 +71,14 @@ public class Filtrage {
 	 */
 	private int totalCSTM;
 
-	/**
+
+	/** TODO commentaire A modifier
 	 * Constructeur : Lance la lecture du fichier texte 
-	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
-	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
 	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
 	 */
-	public Filtrage (String nomFichierTexte, String nomFichierCSV, int niveauIsi){
-		try {
-			lireFichier(nomFichierTexte, nomFichierCSV, niveauIsi);
-			modules = LectureModules.lireModules();
-			System.out.println(modules);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Prend en compte les nouvelles régles A17 pour les stages : pour les étudiant ISI 1, on compte les CS+TM, 
-	 * ils peuvent chercher un stage que si CS+TM (Hors equivalence) est supérieur strictement à 2
-	 * La méthode lit le fichier TXT ligne par ligne pour extraire les informations relatives aux étudiants et utiles pour le jury
-	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
-	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
-	 * @param niveauIsi  Entier représentant le niveau de l'étudiant dans le formation ISI
-	 * @throws IOException Erreur d'ouverture de fichier
-	 */
-	public void lireFichier (String nomFichierTexte, String nomFichierCSV, int niveauIsi) throws IOException{
-		BufferedReader lecteurAvecBuffer = null;
-		BufferedWriter ecritureAvecBuffer= null;
-		String ligne;
-		String listeMots[];
-
-		try {
-			lecteurAvecBuffer = new BufferedReader(new FileReader(nomFichierTexte));
-			ecritureAvecBuffer = new BufferedWriter(new FileWriter(nomFichierCSV));
-			ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la l�gende
-			ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la l�gende
-
-			// Initialisation
-			initialiseRecherche();
-
-			// Parcours toutes les lignes du fichier texte
-			while ((ligne = lecteurAvecBuffer.readLine()) != null){
-				listeMots=ligne.split(" ");
-				if (enZoneInconnue(listeMots)) {nomZone="inconnue";}
-				if (enZoneMaster(listeMots))   {nomZone="Master";estPasseParMaster=true;}
-				if (enZoneISI(listeMots))      {nomZone="ISI";estPasseParISI=true;}
-				if (enZoneTC(listeMots))       {nomZone="TC";estPasseParTC=true;}
-
-				totalCSTM=totalCSTM+compteCSTM(listeMots);
-
-				st10=trouveST10(listeMots)||st10;
-				st09=trouveST09(listeMots)||st09;
-				st30=trouveST30(listeMots)||st30;
-				universiteChinoise=trouveUniversiteChinoise(listeMots)||universiteChinoise;
-
-				// M�morisation du nom et prénom de l'étudiant
-				if (nomPrenom.equals("")) {
-					nomPrenom=trouveNomPrenom(listeMots);
-				}
-
-				// On a trait� toutes les lignes du PV d'un �tudiant. On d�clenche la d�cision
-				if (!nomPrenom.equals("") && nomZone.equals("inconnue")){
-					System.out.println(nomPrenom + "=" + Integer.toString(totalCSTM));
-
-					decisionsJury();
-					ecritureAvecBuffer.write(sortieExcelCSV);
-
-					// Ré-initialisation des variables pour le traitement
-					
-					initialiseRecherche();
-				}
-
-			}
-			// Traitement du dernier étudiant du fichier
-			decisionsJury();
-			///////////////////////////////////////////////////////////METHODE OU On lance les calculs/////////////////////////////////////////////
-			CalculNote.calculsemestre(sortieExcelCSV);
-			ecritureAvecBuffer.write(sortieExcelCSV); 
-		}
-		catch(FileNotFoundException exc) {
-			System.out.println("Erreur d'ouverture");
-		}
-		finally {
-			lecteurAvecBuffer.close();
-			ecritureAvecBuffer.close();
-		}
+	public Filtrage(){
+		modules = LectureModules.lireModules();
+		System.out.println(modules);
 	}
 
 	/**
@@ -178,12 +89,11 @@ public class Filtrage {
 		st09=false;
 		st10=false;
 		st30=false;
-		universiteChinoise=false;
-		estPasseParTC     =false;
-		estPasseParISI    =false;
-		estPasseParMaster =false;
-		st09_st10_st30="";		     
-		sortieExcelCSV="";
+		universiteChinoise = false;
+		estPasseParTC     = false;
+		estPasseParISI    = false;
+		estPasseParMaster = false;
+		st09_st10_st30="";
 		nomPrenom="";
 		nomZone="inconnue";
 	}
@@ -191,8 +101,9 @@ public class Filtrage {
 	/**
 	 * Codage du raisonnement du jury
 	 * Le résultat est stocké dans la chaine de caractéres sortieExcelCSV au format CSV
+	 * @return 
 	 */
-	public void decisionsJury(){
+	public String decisionsJury(){
 		if (totalCSTM<=12) {
 			System.out.println("Pas de recherche de stage-->"+nomPrenom);
 			rechercheStage="non";
@@ -216,12 +127,12 @@ public class Filtrage {
 			else st09_st10_st30="ST09";
 		}
 
-		// Formatage de la ligne à écrire. Puis on l'écrit 
-		sortieExcelCSV=sortieExcelCSV+totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+"\n";
+		// Formatage de la ligne à écrire. Puis on l'écrit
+		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+"\n";
 	}
 
 	/**
-	 * Renvoie une chaine de caractéres avec le nom et prénom, s'il ne le trouve pas renvoie la chaine vide ""
+	 * Renvoie une chaine de caractères avec le nom et prénom, s'il ne le trouve pas renvoie la chaine vide ""
 	 * @param tabMots tableau de mots composant une ligne de texte à analyser
 	 * @return une chaine de caractéres contenant le nom suivi des prénoms de l'étudiant. Sinon renvoie ""
 	 */
@@ -246,7 +157,21 @@ public class Filtrage {
 		int i, credits;
 		credits=0;
 		i=0;
+		Iterator<Module> it = modules.iterator();
 		while (i<tabMots.length){
+
+			/**			while (it.hasNext()){
+				Module mod = it.next();
+				if(mod.getNom().equals(tabMots[i])){
+					if ((i+5<tabMots.length) && (tabMots[i+5].equals("6")))
+						System.out.println("c'est equal");
+					credits=credits+6;
+					i=i+6;
+				}
+				else i=i+1;
+			}*/
+
+
 			if ((tabMots[i].equals("NF16")) || (tabMots[i].equals("EG23")) ||
 					(tabMots[i].equals("GL02")) || (tabMots[i].equals("NF20")) ||
 					(tabMots[i].equals("IF07")) || (tabMots[i].equals("IF09")) ||
@@ -256,7 +181,9 @@ public class Filtrage {
 					(tabMots[i].equals("LO07")) || (tabMots[i].equals("NF19"))
 					) {
 				if ((i+5<tabMots.length) && (tabMots[i+5].equals("6")))
-					credits=credits+6;
+					//System.out.println("tab" + tabMots);/*TODO a enlever*/
+					System.out.println(nomPrenom + " " +totalCSTM);/*TODO a enlever*/
+				credits=credits+6;
 				i=i+6;
 			}
 			else i=i+1;
@@ -265,10 +192,10 @@ public class Filtrage {
 	}
 
 	/**
-	 * Indique si le mot cl� "Jiaotong" se trouve dans le tableau
-	 * Ces �tudiants chinois ne font qu'un ST09 et pas de ST10
-	 * @param tabMots tableau de mots composant une ligne de texte � analyser
-	 * @return true si le tableau tabMots contient une universit� Chinoise (Jiaotong), sinon false
+	 * Indique si le mot clé "Jiaotong" se trouve dans le tableau
+	 * Ces étudiants chinois ne font qu'un ST09 et pas de ST10
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient une université Chinoise (Jiaotong), sinon false
 	 */
 	public boolean trouveUniversiteChinoise (String tabMots[]){
 		int i;
@@ -276,7 +203,6 @@ public class Filtrage {
 		while ((i<tabMots.length) && (! (tabMots[i].equals("Jiaotong"))) ) {
 			i=i+1;
 		}
-
 		return (i<tabMots.length);	
 	}
 
@@ -291,7 +217,6 @@ public class Filtrage {
 		while ((i<tabMots.length) && (! (tabMots[i].equals("ST09"))) && (!(tabMots[i].equals("TN09")))) {
 			i=i+1;
 		}
-
 		return (i<tabMots.length);	
 	}
 
@@ -306,7 +231,6 @@ public class Filtrage {
 		while ((i<tabMots.length) && (!tabMots[i].equals("ST10")) && (!tabMots[i].equals("TN10"))) {
 			i=i+1;
 		}
-
 		return (i<tabMots.length);	
 	}
 
@@ -321,8 +245,37 @@ public class Filtrage {
 		while ((i<tabMots.length) && (!tabMots[i].equals("ST30")) && (!tabMots[i].equals("TN30"))) {
 			i=i+1;
 		}
-
 		return (i<tabMots.length);	
+	}
+
+	/**TODO A commenter mieux Methode qui recherche si l'etudiant est en stage ST09, ST10, ST30*/
+	public boolean enStage(String[] listeMots){
+		if(trouveST09(listeMots) || isSt09())
+			return true;
+		if(trouveST10(listeMots) || isSt10())
+			return true;
+		if(trouveST30(listeMots) || isSt30())
+			return true;
+		return false;
+	}
+
+	/*TODO a commeneter en gros la methode recherche dans quelle zone on est*/
+	public void rechercheZone(String[] listeMots){
+		if (enZoneInconnue(listeMots)){
+			setNomZone("inconnue");
+		}
+		if (enZoneMaster(listeMots)){
+			setNomZone("Master");
+			setEstPasseParMaster(true);
+		}
+		if (enZoneISI(listeMots)){
+			setNomZone("ISI");
+			setEstPasseParISI(true);
+		}
+		if (enZoneTC(listeMots)){
+			setNomZone("TC");
+			setEstPasseParTC(true);
+		}
 	}
 
 	/**
@@ -353,7 +306,6 @@ public class Filtrage {
 		while ((i<tabMots.length) && (!tabMots[i].equals("TC"))) {
 			i=i+1;
 		}
-
 		return (i<tabMots.length)&&(i<4);	
 	}
 
@@ -384,16 +336,7 @@ public class Filtrage {
 		while ((i<tabMots.length) && (!tabMots[i].equals("établissement"))) {
 			i=i+1;
 		}
-
 		return (i<tabMots.length);	
-	}
-
-	public String getSortieExcelCSV() {
-		return sortieExcelCSV;
-	}
-
-	public void setSortieExcelCSV(String sortieExcelCSV) {
-		this.sortieExcelCSV = sortieExcelCSV;
 	}
 
 	public String getRechercheStage() {
