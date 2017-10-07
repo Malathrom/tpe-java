@@ -15,7 +15,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 		
-		switch (3) {
+		switch (1) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -37,6 +37,7 @@ public class Launcher {
 		case 3:
 			new CalculNote().recuperationNotes();
 			Module if26 = new Module("IF26", "TM", "ISI", 2, Note.A, 6);
+			System.out.println(if26);
 			break;
 		default:
 			break;

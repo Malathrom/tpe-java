@@ -1,7 +1,7 @@
+
 package modules;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import operation.data.Module;
 public class LectureModules {
 
 	/**TODO a commenter*/
-	private static String file = "src/texte/modules.txt";
+	private static String file = "src/files/modules.txt";
 
 	/**TODO a commenter*/
 	public LectureModules(){}

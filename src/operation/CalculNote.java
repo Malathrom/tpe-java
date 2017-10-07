@@ -13,9 +13,14 @@ public class CalculNote{
 	/**TODO a commenter*/
 	private static String file = "src/texte/etudiant_test.txt";
 
-	/*FAir une classe Etudiant avec un nom, un prenom , uneArrayList UV
-	Faire Une Classe UV avec un semestre et un Note
-	faire une LISTE D'ETUDIANT*/
+	
+	/**TODO Faire un fichier repertoire courant qui stocke l'ensmeble des repertoires cournst utilisables puis dans la claase 
+	 * filtrage associer a la variable path le premier repertoire courant
+	 * et a chaque fois qu'on change on ecrit a la premier ligne donc on recuperer dans une chaine tous le fichier on ecrit le 
+	 * nouveau repertoire puis la chaine qui contenait tout ce qui avait avant
+	 * A METTRE DANS LES TACHES
+	 * 
+	 * TODO faire une LISTE D'ETUDIANT*/
 	
 
 	public CalculNote(){}
@@ -34,9 +39,11 @@ public class CalculNote{
 			lecteurAvecBuffer = new BufferedReader(new FileReader(new File(file)));
 			while ((ligne = lecteurAvecBuffer.readLine()) != null){
 				listeMots=ligne.split(" ");
-				for (String str : listeMots) {
-					System.out.println(str);
+				System.out.print("ligne:"+ ++i + "   ");////////////////////////////////////////////////////////////////////////////////////////////////////////
+				for (String mot : listeMots) {
+					System.out.print(mot + ";");////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				}
+				System.out.println();//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			}
 			lecteurAvecBuffer.close();
 		} catch (IOException e) {

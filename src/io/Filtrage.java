@@ -182,7 +182,7 @@ public class Filtrage {
 					) {
 				if ((i+5<tabMots.length) && (tabMots[i+5].equals("6")))
 					//System.out.println("tab" + tabMots);/*TODO a enlever*/
-					System.out.println(nomPrenom + " " +totalCSTM);/*TODO a enlever*/
+					//System.out.println(nomPrenom + " " +totalCSTM);/*TODO a enlever*/
 				credits=credits+6;
 				i=i+6;
 			}

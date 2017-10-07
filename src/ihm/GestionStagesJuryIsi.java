@@ -186,13 +186,16 @@ public class GestionStagesJuryIsi extends JFrame{
 					try {
 						if(confirmation_conversion(sourceTXT.getText())){
 							maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\na été converti en "+ sourceTXT.getText(), "Info",  JOptionPane.INFORMATION_MESSAGE);
+							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\na été converti en "+ sourceTXT.getText(), "Info",  
+									JOptionPane.INFORMATION_MESSAGE);
 						}
 						else{
-							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  
+									JOptionPane.ERROR_MESSAGE);
 						}
 					} catch (IOException e1) {
-						JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  
+								JOptionPane.ERROR_MESSAGE);
 						e1.printStackTrace();
 					}
 				}
@@ -204,10 +207,12 @@ public class GestionStagesJuryIsi extends JFrame{
 			public void mouseClicked(MouseEvent e) {
 				if(confirmation_conversion(cibleCSV.getText())){
 					conversion_TXT_CSV();
-					JOptionPane.showMessageDialog(null, "le fichier " + sourceTXT.getText() +"\na été converti en"+ cibleCSV.getText(), "Info",  JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "le fichier " + sourceTXT.getText() +"\na été converti en"+ cibleCSV.getText(), "Info",  
+							JOptionPane.INFORMATION_MESSAGE);
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  
+							JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

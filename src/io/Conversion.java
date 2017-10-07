@@ -10,7 +10,9 @@ import operation.CalculNote;
 
 public class Conversion {
 	
-	//TODO voir si la decision de jury reste dans la classe filtrage
+	//TODO tester la classe pour voir si le fichier final est ok
+	//TODO Mettre les différents répertoires dans une pile qui recupera l’ensemble des chemins qui sauvegardés dans un fichier texte
+	//TODO finir la méthode CompteCSTM avec l’arrayList modules
 	
 	/**mise en place du filtre*/
 	private Filtrage filtre = new Filtrage();
@@ -53,8 +55,8 @@ public class Conversion {
 		try {
 			lecteurAvecBuffer = new BufferedReader(new FileReader(nomFichierTexte));
 			ecritureAvecBuffer = new BufferedWriter(new FileWriter(nomFichierCSV));
-			ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la l�gende
-			ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la l�gende
+			ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la légende
+			ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la légende
 			
 			filtre.initialiseRecherche();// Initialisation
 
@@ -73,16 +75,13 @@ public class Conversion {
 
 				// On a traité toutes les lignes du PV d'un étudiant. On déclenche la décision
 				if (!filtre.getNomPrenom().equals("") && filtre.getNomZone().equals("inconnue")){
-					System.out.println(filtre.getNomPrenom() + "=" + Integer.toString(filtre.getTotalCSTM()));//TODO a enlever
 					setDecisionCSV(getDecisionCSV()+filtre.decisionsJury()); //On stocke la decision final
-					ecritureAvecBuffer.write(getDecisionCSV()); //on ecrit la decicion final de l'etudiant
-					
 					// Ré-initialisation des variables pour le traitement de l'etudiant suivant
 					filtre.initialiseRecherche();
 				}
-
 			}
 			// Traitement du dernier étudiant du fichier
+			System.out.println("lectur2 "+filtre.getNomPrenom() + "=" + Integer.toString(filtre.getTotalCSTM()));//TODO a enlever
 			setDecisionCSV(getDecisionCSV()+filtre.decisionsJury()); //On stocke la decision final
 			ecritureAvecBuffer.write(getDecisionCSV()); //on ecrit la decicion final de l'etudiant
 			
