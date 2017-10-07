@@ -39,6 +39,8 @@ public class Launcher {
 			Module if26 = new Module("IF26", "TM", "ISI", 2, Note.A, 6);
 			System.out.println(if26);
 			break;
+		
+			
 		default:
 			break;
 		}

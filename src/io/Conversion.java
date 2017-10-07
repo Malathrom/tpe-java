@@ -67,6 +67,7 @@ public class Conversion {
 				filtre.enStage(listeMots);// recherche si l'etudnaint est en stage
 				filtre.setUniversiteChinoise(filtre.trouveUniversiteChinoise(listeMots)||filtre.isUniversiteChinoise()); //recherche si l'etudiant est chinois
 				filtre.setTotalCSTM(filtre.getTotalCSTM() + filtre.compteCSTM(listeMots));//Compte les credits de l'etudiants
+				filtre.setNbA(filtre.trouveNbA(listeMots)+filtre.getNbA());
 
 				// Mémorisation du nom et prénom de l'étudiant
 				if (filtre.getNomPrenom().equals("")) {

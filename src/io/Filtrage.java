@@ -70,6 +70,12 @@ public class Filtrage {
 	 * totalCSTM compte le nombre de CS+TM de TC de branche obtenus par l'étudiant au cours du TC ou du TC de branche ISI.  
 	 */
 	private int totalCSTM;
+	/**
+	 * nbA désigne le nombre de A obtenus par un élève.
+	 */
+	private int nbA;
+	
+
 
 
 	/** TODO commentaire A modifier
@@ -96,6 +102,7 @@ public class Filtrage {
 		st09_st10_st30="";
 		nomPrenom="";
 		nomZone="inconnue";
+		nbA=0;
 	}
 
 	/**
@@ -128,7 +135,7 @@ public class Filtrage {
 		}
 
 		// Formatage de la ligne à écrire. Puis on l'écrit
-		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+"\n";
+		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+";"+nbA+" A obtenus"+"\n";
 	}
 
 	/**
@@ -338,6 +345,41 @@ public class Filtrage {
 		}
 		return (i<tabMots.length);	
 	}
+	/**
+	 * indique si str est une chaine de charactères numériques.
+	 * @param str
+	 * @return true si str est un nombre, false sinon
+	 */
+	public static boolean isNumeric(String str)  
+	{  
+	  try  
+	  {  
+	    double d = Double.parseDouble(str);  
+	  }  
+	  catch(NumberFormatException nfe)  
+	  {  
+	    return false;  
+	  }  
+	  return true;  
+	}
+	/**
+	 * Compte le nombre de A
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return le nombre de A de l'élève
+	 */
+	public int trouveNbA (String tabMots[]){
+		int i=0;
+		int compteur=0;
+		while(i<tabMots.length){
+			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3])){
+				compteur++;
+				
+			}
+			i++;
+		}
+		
+		return compteur;
+	}
 
 	public String getRechercheStage() {
 		return rechercheStage;
@@ -434,5 +476,13 @@ public class Filtrage {
 
 	public void setTotalCSTM(int totalCSTM) {
 		this.totalCSTM = totalCSTM;
+	}
+
+	public int getNbA() {
+		return nbA;
+	}
+
+	public void setNbA(int nbA) {
+		this.nbA = nbA;
 	}
 }
