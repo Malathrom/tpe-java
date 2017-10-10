@@ -6,5 +6,6 @@ public enum Note {
 	C,
 	D,
 	E,
-	F;
+	F,
+	NULL;
 }

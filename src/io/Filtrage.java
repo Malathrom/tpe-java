@@ -84,7 +84,7 @@ public class Filtrage {
 	 */
 	public Filtrage(){
 		modules = LectureModules.lireModules();
-		System.out.println(modules);
+		System.out.println(modules);//TODO a enlever
 	}
 
 	/**

@@ -28,18 +28,12 @@ public class Module{
 	/**Credit de l'UV*/
 	private int credit;
 
-	public Module(String nom, String categorie, String parcours, int semestre, Note note, int credit) {
+	public Module(String nom, String categorie, String parcours, int credit, int semestre, Note note) {
 		this.nom = nom;
 		this.categorie = categorie;
 		this.semestre = semestre; 
 		this.note = note;
 		this.parcours = parcours;
-		this.credit = credit;
-	}
-	
-	/** construteur pour le fichier texte*/
-	public Module(String nom, int credit){
-		this.nom = nom;
 		this.credit = credit;
 	}
 	

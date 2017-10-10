@@ -228,15 +228,12 @@ public class GestionStagesJuryIsi extends JFrame{
 	//TODO a commenter methode qui test le fichier si il peut etre converti
 	private boolean confirmation_conversion(String fileString) {
 		//On regarde si le ficher existe deja
-		System.out.println("bonne methode1");
 		if(new File(fileString).exists()){
 			//on demande si on veut l'ecraser
-			System.out.println("bonne methode2");
 			int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileString +" ?", "Confirmation de la suppression", 
 					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 			this.requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-				System.out.println("bonne methode3");
 				return true;
 			}
 			else{

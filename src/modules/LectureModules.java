@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import operation.Note;
 import operation.data.Module;
 
 
@@ -29,7 +31,7 @@ public class LectureModules {
 		//Represente les mots d'une ligne 
 		String listeMots[];
 
-		String nomModule;
+		String nomModule, parcoursModule, categorieModule;
 		int creditModule;
 
 		// Parcours toutes les lignes du fichier texte
@@ -39,7 +41,10 @@ public class LectureModules {
 				listeMots=ligne.split(" ");
 				nomModule = listeMots[0];
 				creditModule = Integer.valueOf(listeMots[1]);
-				modules.add(new Module(nomModule, creditModule));
+				nomModule = listeMots[0];
+				categorieModule = listeMots[2];
+				parcoursModule = listeMots[3];
+				modules.add(new Module(nomModule, categorieModule, parcoursModule, creditModule, 0, Note.NULL));
 			}
 			lecteurAvecBuffer.close();
 		} catch (IOException e) {
