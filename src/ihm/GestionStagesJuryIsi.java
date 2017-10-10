@@ -34,6 +34,8 @@ import java.awt.Font;
 public class GestionStagesJuryIsi extends JFrame{
 	/*TODO faire la gestion d'exception pour le click des boutons notament*/
 	/*TODO faire la javadoc pour les getter et setter*/
+	/*TODO A voir si il veut que on la sauvegarde dans un fichier dans le cas ou l'appli est quitter*/
+	/*faire le filtrage des noms et prenoms des etudiants et des notes*/
 
 	private static final long serialVersionUID = 1L;
 
@@ -45,7 +47,6 @@ public class GestionStagesJuryIsi extends JFrame{
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
 
 	/**sauvegarder le repertoire lors du choix du fichier*/
-	/*TODO A voir si il veut que on la sauvegarde dans un fichier dans le cas ou l'appli est quitter*/
 	String path = "";
 
 	/**Ensemble des chemins deja parcouru*/

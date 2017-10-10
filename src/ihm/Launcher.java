@@ -1,6 +1,7 @@
 package ihm;
 
 import java.awt.EventQueue;
+import java.io.File;
 
 import modules.LectureModules;
 import operation.CalculNote;
@@ -38,6 +39,10 @@ public class Launcher {
 			new CalculNote().recuperationNotes();
 			Module if26 = new Module("IF26", "TM", "ISI", 6, 2, Note.A);
 			System.out.println(if26);
+			break;
+			
+		case 4:
+			File file = new File("/Users/lucasnoga/Desktop/UTT/TX/pdf jury/PV ISI 2.txt");
 			break;
 		
 			

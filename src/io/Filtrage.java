@@ -74,9 +74,6 @@ public class Filtrage {
 	 * nbA désigne le nombre de A obtenus par un élève.
 	 */
 	private int nbA;
-	
-
-
 
 	/** TODO commentaire A modifier
 	 * Constructeur : Lance la lecture du fichier texte 
@@ -371,6 +368,10 @@ public class Filtrage {
 		int i=0;
 		int compteur=0;
 		while(i<tabMots.length){
+			for (String string : tabMots) {
+				System.out.println("tab "+ string);
+			}
+			System.out.println("tab2 " + tabMots[i+3]);
 			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3])){
 				compteur++;
 				
