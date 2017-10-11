@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.text.AbstractDocument.BranchElement;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -17,10 +18,16 @@ import javax.swing.JFileChooser;
 import javax.swing.ButtonGroup;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Stack;
 import java.awt.Font;
 
@@ -35,7 +42,6 @@ public class GestionStagesJuryIsi extends JFrame{
 	/*TODO faire la gestion d'exception pour le click des boutons notament*/
 	/*TODO faire la javadoc pour les getter et setter*/
 	/*TODO A voir si il veut que on la sauvegarde dans un fichier dans le cas ou l'appli est quitter*/
-	/*faire le filtrage des noms et prenoms des etudiants et des notes*/
 
 	private static final long serialVersionUID = 1L;
 
@@ -43,14 +49,16 @@ public class GestionStagesJuryIsi extends JFrame{
 	private JTextField cibleCSV;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField sourcePDF;
-	private JRadioButton isi1, isi2, isi3;
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
 
 	/**sauvegarder le repertoire lors du choix du fichier*/
 	String path = "";
 
 	/**Ensemble des chemins deja parcouru*/
-	Stack<String> paths = new Stack<String>();
+	List<String> paths = new ArrayList<String>();
+
+	/**chemin vers le fichier contenant les paths*/
+	String pathFile = "src/files/paths.txt";
 
 	/**
 	 * Creation de l'application.
@@ -123,22 +131,6 @@ public class GestionStagesJuryIsi extends JFrame{
 		JLabel isiLevel = new JLabel("Niveau ISI");
 		isiLevel.setBounds(10, 153, 88, 14);
 		this.getContentPane().add(isiLevel);
-
-		isi1 = new JRadioButton("Isi 1");
-		isi1.setSelected(true);
-		buttonGroup.add(isi1);
-		isi1.setBounds(107, 149, 63, 23);
-		this.getContentPane().add(isi1);
-
-		isi2 = new JRadioButton("Isi 2");
-		buttonGroup.add(isi2);
-		isi2.setBounds(188, 149, 57, 23);
-		this.getContentPane().add(isi2);
-
-		isi3 = new JRadioButton("Isi 3");
-		buttonGroup.add(isi3);
-		isi3.setBounds(276, 149, 109, 23);
-		this.getContentPane().add(isi3);
 
 		// Bouton lançant la conversion TXT --> "Filtrage" --> CSV 
 		conversionTxt_Csv = new JButton("Conversion  TXT -> CSV");
@@ -246,25 +238,19 @@ public class GestionStagesJuryIsi extends JFrame{
 
 	/**Methode qui convertit un fichier txt en format csv*/
 	private void conversion_TXT_CSV() {
-		if (isi1.isSelected()) 
-		{new Conversion(sourceTXT.getText(),cibleCSV.getText(), 1);}
-		if (isi2.isSelected()) 
-		{new Conversion(sourceTXT.getText(),cibleCSV.getText(), 2);}
-		if (isi3.isSelected()) 
-		{new Conversion(sourceTXT.getText(),cibleCSV.getText(), 3);}
-		System.out.println("Conversion TXT --> CSV terminée");
-
+		new Conversion(sourceTXT.getText(),cibleCSV.getText());
 	}
 
+	//TODO a commenter methode qui choiist le repertoire par defaut pour choisir un fichier
 	private void choixFichier(){
-		String nomFichierPDF;
-		String nomFichierTXT;
-		String nomFichierCSV;
 		JFileChooser chooser;
-		if(path.equals("")){
+		if(paths.isEmpty()){
 			chooser = new JFileChooser();
+			System.out.println("YO");
 		}else{
-			chooser = new JFileChooser(new File(path));
+			//TODO Faire les traitements pour voir si les chemins existent
+			chooser = new JFileChooser(new File(paths.get(paths.size())));
+			System.out.println("YO2");
 		}
 
 		FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
@@ -272,17 +258,60 @@ public class GestionStagesJuryIsi extends JFrame{
 		chooser.setMultiSelectionEnabled(false);
 		int returnVal = chooser.showOpenDialog(null);
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
+			sauvegardeRepertoire(chooser);
 
-			System.out.println(chooser.getSelectedFile().getAbsolutePath());
-			path = chooser.getSelectedFile().getAbsolutePath();
-			nomFichierPDF=chooser.getSelectedFile().getAbsolutePath();
-			nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
-			nomFichierCSV=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".csv";
-			sourcePDF.setText(nomFichierPDF);
-			sourceTXT.setText(nomFichierTXT);
-			cibleCSV.setText(nomFichierCSV);
-			System.out.println(nomFichierTXT+"\n"+nomFichierTXT+"\n"+nomFichierCSV);
+			affichageFichier(chooser);
 		}
+	}
+
+	/**TODO A commenter methode qui sotcke dans un fichier les chemins visites*/
+	private void sauvegardeRepertoire(JFileChooser chooser) {
+		String ligne;
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+
+		try {
+			br = new BufferedReader(new FileReader(new File(pathFile)));
+
+			//on stocke tous les chemins dans la pile
+			System.out.println("Avant");
+			while ((ligne = br.readLine()) != null){
+				System.out.println(ligne);
+				paths.add(ligne);//on recupere les anciens repertoires
+			}
+
+			paths.add(chooser.getSelectedFile().getParent());//on recupere le rep selectionne
+
+			Iterator<String> it = paths.iterator();
+			bw = new BufferedWriter(new FileWriter(new File(pathFile)));
+			while(it.hasNext()){
+				String str = it.next();
+				bw.write(str);
+			}
+			System.out.println("Apres");
+			while ((ligne = br.readLine()) != null){
+				System.out.println(ligne);
+				paths.add(ligne);//on recupere les anciens repertoires
+			}
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**TODO a commenter methode qui affiche sur l'ihm les chemins des fichiers*/
+	private void affichageFichier(JFileChooser chooser) {
+		String nomFichierPDF= chooser.getSelectedFile().getAbsolutePath();
+		String nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
+		String nomFichierCSV=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".csv";
+		sourcePDF.setText(nomFichierPDF);
+		sourceTXT.setText(nomFichierTXT);
+		cibleCSV.setText(nomFichierCSV);
+
 	}
 
 	public JTextField getSourceTXT() {
@@ -310,40 +339,5 @@ public class GestionStagesJuryIsi extends JFrame{
 
 	public void setSourcePDF(JTextField sourcePDF) {
 		this.sourcePDF = sourcePDF;
-	}
-
-
-	public JRadioButton getIsi1() {
-		return isi1;
-	}
-
-
-	public void setIsi1(JRadioButton isi1) {
-		this.isi1 = isi1;
-	}
-
-
-	public JRadioButton getIsi2() {
-		return isi2;
-	}
-
-
-	public void setIsi2(JRadioButton isi2) {
-		this.isi2 = isi2;
-	}
-
-
-	public JRadioButton getIsi3() {
-		return isi3;
-	}
-
-
-	public void setIsi3(JRadioButton isi3) {
-		this.isi3 = isi3;
-	}
-
-
-	public ButtonGroup getButtonGroup() {
-		return buttonGroup;
 	}
 }

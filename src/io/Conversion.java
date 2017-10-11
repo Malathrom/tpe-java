@@ -28,12 +28,8 @@ public class Conversion {
 	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
 	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
 	 */
-	public Conversion (String nomFichierTexte, String nomFichierCSV, int niveauIsi){
-		try {
-			lireFichier(nomFichierTexte, nomFichierCSV, niveauIsi);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public Conversion (String nomFichierTexte, String nomFichierCSV){
+		lireFichier(nomFichierTexte, nomFichierCSV);
 	}
 	
 	/**
@@ -45,7 +41,7 @@ public class Conversion {
 	 * @param niveauIsi  Entier représentant le niveau de l'étudiant dans le formation ISI
 	 * @throws IOException Erreur d'ouverture de fichier
 	 */
-	public void lireFichier (String nomFichierTexte, String nomFichierCSV, int niveauIsi) throws IOException{
+	public void lireFichier (String nomFichierTexte, String nomFichierCSV){
 		BufferedReader lecteurAvecBuffer = null;
 		BufferedWriter ecritureAvecBuffer= null;
 		String ligne;
@@ -89,12 +85,14 @@ public class Conversion {
 			CalculNote.calculsemestre(decisionCSV);
 			ecritureAvecBuffer.write(decisionCSV); 
 		}
-		catch(FileNotFoundException exc) {
-			System.out.println("Erreur d'ouverture");
-		}
+		catch(FileNotFoundException exc) {System.out.println("Erreur d'ouverture");} 
+		catch (IOException e) {e.printStackTrace();}
 		finally {
-			lecteurAvecBuffer.close();
-			ecritureAvecBuffer.close();
+			try {
+				lecteurAvecBuffer.close();
+				ecritureAvecBuffer.close();
+			} 
+			catch (IOException e) {e.printStackTrace();}
 		}
 	}
 	
