@@ -365,14 +365,11 @@ public class Filtrage {
 	 * @param str
 	 * @return true si str est un nombre, false sinon
 	 */
-	public static boolean isNumeric(String str)  
-	{  
-		try  
-		{  
-			double d = Double.parseDouble(str);  
+	public static boolean isNumeric(String str){  
+		try{  
+			Double.parseDouble(str);  
 		}  
-		catch(NumberFormatException nfe)  
-		{  
+		catch(NumberFormatException nfe){  
 			return false;  
 		}  
 		return true;  
@@ -499,5 +496,21 @@ public class Filtrage {
 
 	public void setNbA(int nbA) {
 		this.nbA = nbA;
+	}
+
+	public static List<Module> getModules() {
+		return modules;
+	}
+
+	public static void setModules(List<Module> modules) {
+		Filtrage.modules = modules;
+	}
+
+	public List<Etudiant> getEtudiants() {
+		return etudiants;
+	}
+
+	public void setEtudiants(List<Etudiant> etudiants) {
+		this.etudiants = etudiants;
 	}
 }
