@@ -8,11 +8,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
+import javax.swing.JFileChooser;
 
 import io.Filtrage;
 import io.LectureModules;
+import io.SauvegardeRepertoire;
 import operation.CalculNote;
 import operation.Note;
 import operation.data.Module;
@@ -25,7 +30,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (4) {
+		switch (1) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -95,11 +100,9 @@ public class Launcher {
 				e.printStackTrace();
 			}
 			break;
-
-		default:
+		
+		case 5:
 			break;
 		}
-
 	}
-
 }

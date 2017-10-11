@@ -14,7 +14,9 @@ public class Conversion {
 	//TODO Mettre les différents répertoires dans une pile qui recupera l’ensemble des chemins qui sauvegardés dans un fichier texte
 	//TODO finir la méthode CompteCSTM avec l’arrayList modules
 	
-	/**TODO a commenter mise en place du filtre de la decision de jury*/
+	/**
+	 * filtre pour filtrer les decisions de jury
+	 */
 	private Filtrage filtre = new Filtrage();
 
 	/**
@@ -50,6 +52,7 @@ public class Conversion {
 		try {
 			lecteurAvecBuffer = new BufferedReader(new FileReader(nomFichierTexte));
 			ecritureAvecBuffer = new BufferedWriter(new FileWriter(nomFichierCSV));
+			System.out.println("nomFichierCSV "+ nomFichierCSV);
 			ecritureAvecBuffer.write("Contrainte ISI 1 : étudiant ne cherchant pas de stage au prochain semestre = (CS+TM<=12)\n");// la légende
 			ecritureAvecBuffer.write("CS+TM<=12;Niveau stage;Recherche stage;Nom;Prénom1;Prénom2;prénom3\n");// la légende
 			

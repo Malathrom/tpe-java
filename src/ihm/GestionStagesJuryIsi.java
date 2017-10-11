@@ -11,6 +11,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import io.Conversion;
+import io.SauvegardeRepertoire;
 
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -47,18 +48,8 @@ public class GestionStagesJuryIsi extends JFrame{
 
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
-	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField sourcePDF;
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
-
-	/**sauvegarder le repertoire lors du choix du fichier*/
-	String path = "";
-
-	/**Ensemble des chemins deja parcouru*/
-	List<String> paths = new ArrayList<String>();
-
-	/**chemin vers le fichier contenant les paths*/
-	String pathFile = "src/files/paths.txt";
 
 	/**
 	 * Creation de l'application.
@@ -243,14 +234,29 @@ public class GestionStagesJuryIsi extends JFrame{
 
 	//TODO a commenter methode qui choiist le repertoire par defaut pour choisir un fichier
 	private void choixFichier(){
+		String path = ""; //Chemin a parcourir
 		JFileChooser chooser;
-		if(paths.isEmpty()){
+		
+		if(SauvegardeRepertoire.getPaths().isEmpty()){//Si la liste des repertoires est vide
 			chooser = new JFileChooser();
-			System.out.println("YO");
-		}else{
-			//TODO Faire les traitements pour voir si les chemins existent
-			chooser = new JFileChooser(new File(paths.get(paths.size())));
-			System.out.println("YO2");
+		}
+		else{//si elle n'est pas vide
+			Iterator<String> it = SauvegardeRepertoire.getPaths().iterator();
+			while (it.hasNext() && path.equals("")) {
+				String str = (String) it.next();
+				File file = new File(str);
+				
+				if (file.exists()) {//on recupere le premier repertoire possible	
+					path = file.getAbsolutePath();
+				}
+			}
+			
+			if(path.equals("")){//si on a pas trouvé de chemin coherent
+				chooser = new JFileChooser();
+			}
+			else{
+				chooser = new JFileChooser(path);
+			}
 		}
 
 		FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
@@ -258,50 +264,12 @@ public class GestionStagesJuryIsi extends JFrame{
 		chooser.setMultiSelectionEnabled(false);
 		int returnVal = chooser.showOpenDialog(null);
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
-			sauvegardeRepertoire(chooser);
-
+			new SauvegardeRepertoire(chooser);//permet de sauvegarder les repertoires
 			affichageFichier(chooser);
 		}
 	}
 
-	/**TODO A commenter methode qui sotcke dans un fichier les chemins visites*/
-	private void sauvegardeRepertoire(JFileChooser chooser) {
-		String ligne;
-		BufferedReader br = null;
-		BufferedWriter bw = null;
 
-		try {
-			br = new BufferedReader(new FileReader(new File(pathFile)));
-
-			//on stocke tous les chemins dans la pile
-			System.out.println("Avant");
-			while ((ligne = br.readLine()) != null){
-				System.out.println(ligne);
-				paths.add(ligne);//on recupere les anciens repertoires
-			}
-
-			paths.add(chooser.getSelectedFile().getParent());//on recupere le rep selectionne
-
-			Iterator<String> it = paths.iterator();
-			bw = new BufferedWriter(new FileWriter(new File(pathFile)));
-			while(it.hasNext()){
-				String str = it.next();
-				bw.write(str);
-			}
-			System.out.println("Apres");
-			while ((ligne = br.readLine()) != null){
-				System.out.println(ligne);
-				paths.add(ligne);//on recupere les anciens repertoires
-			}
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 
 	/**TODO a commenter methode qui affiche sur l'ihm les chemins des fichiers*/
 	private void affichageFichier(JFileChooser chooser) {
