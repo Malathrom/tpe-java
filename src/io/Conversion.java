@@ -14,9 +14,8 @@ public class Conversion {
 	//TODO Mettre les différents répertoires dans une pile qui recupera l’ensemble des chemins qui sauvegardés dans un fichier texte
 	//TODO finir la méthode CompteCSTM avec l’arrayList modules
 	
-	/**mise en place du filtre*/
+	/**TODO a commenter mise en place du filtre de la decision de jury*/
 	private Filtrage filtre = new Filtrage();
-	
 
 	/**
 	 * decisionCSV contient le nom du fichier CVS contenant les propositions de décisions 
@@ -76,14 +75,14 @@ public class Conversion {
 
 				// On a traité toutes les lignes du PV d'un étudiant. On déclenche la décision
 				if (!filtre.getNomPrenom().equals("") && filtre.getNomZone().equals("inconnue")){
-					setDecisionCSV(getDecisionCSV()+filtre.decisionsJury()); //On stocke la decision final
+					setDecisionCSV(getDecisionCSV()+filtre.decisionJury()); //On stocke la decision final
 					// Ré-initialisation des variables pour le traitement de l'etudiant suivant
 					filtre.initialiseRecherche();
 				}
 			}
 			// Traitement du dernier étudiant du fichier
 			System.out.println("lectur2 "+filtre.getNomPrenom() + "=" + Integer.toString(filtre.getTotalCSTM()));//TODO a enlever
-			setDecisionCSV(getDecisionCSV()+filtre.decisionsJury()); //On stocke la decision final
+			setDecisionCSV(getDecisionCSV()+filtre.decisionJury()); //On stocke la decision final
 			ecritureAvecBuffer.write(getDecisionCSV()); //on ecrit la decicion final de l'etudiant
 			
 			///////////////////////////////////////////////////////////METHODE OU On lance les calculs/////////////////////////////////////////////

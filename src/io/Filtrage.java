@@ -3,7 +3,8 @@ package io;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import modules.LectureModules;
+
+import operation.data.Etudiant;
 import operation.data.Module;
 
 /**
@@ -21,7 +22,9 @@ public class Filtrage {
 	 * */
 	private static List<Module> modules = new ArrayList<Module>();
 
-	private String rechercheStage;
+	/**TODO a commener*/
+	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
+
 	/**
 	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
 	 */
@@ -66,6 +69,10 @@ public class Filtrage {
 	 * st09_st10_st30 contient "st09", "st10" ou "st30" si le prochain stage à valider est respectivement un stage "st09", "st10" ou "st30"
 	 */
 	private String st09_st10_st30;
+
+	/** TODO a commenter*/
+	private String rechercheStage;
+
 	/**
 	 * totalCSTM compte le nombre de CS+TM de TC de branche obtenus par l'étudiant au cours du TC ou du TC de branche ISI.  
 	 */
@@ -75,13 +82,13 @@ public class Filtrage {
 	 */
 	private int nbA;
 
+
 	/** TODO commentaire A modifier
 	 * Constructeur : Lance la lecture du fichier texte 
 	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
 	 */
 	public Filtrage(){
 		modules = LectureModules.lireModules();
-		System.out.println(modules);//TODO a enlever
 	}
 
 	/**
@@ -107,7 +114,7 @@ public class Filtrage {
 	 * Le résultat est stocké dans la chaine de caractéres sortieExcelCSV au format CSV
 	 * @return 
 	 */
-	public String decisionsJury(){
+	public String decisionJury(){
 		if (totalCSTM<=12) {
 			System.out.println("Pas de recherche de stage-->"+nomPrenom);
 			rechercheStage="non";
@@ -160,40 +167,51 @@ public class Filtrage {
 	public int compteCSTM (String tabMots[]){
 		int i, credits;
 		credits=0;
+		Module module = null;
 		i=0;
 		Iterator<Module> it = modules.iterator();
 		while (i<tabMots.length){
-
-			/**			while (it.hasNext()){
-				Module mod = it.next();
-				if(mod.getNom().equals(tabMots[i])){
-					if ((i+5<tabMots.length) && (tabMots[i+5].equals("6")))
-						System.out.println("c'est equal");
-					credits=credits+6;
-					i=i+6;
+			while(it.hasNext()){
+				module = it.next();
+				if (tabMots[i].equals(module.getNom())) {
+					credits+=module.getCredit();
 				}
-				else i=i+1;
-			}*/
-
-
-			if ((tabMots[i].equals("NF16")) || (tabMots[i].equals("EG23")) ||
-					(tabMots[i].equals("GL02")) || (tabMots[i].equals("NF20")) ||
-					(tabMots[i].equals("IF07")) || (tabMots[i].equals("IF09")) ||
-					(tabMots[i].equals("IF14")) || (tabMots[i].equals("LO02")) ||
-					(tabMots[i].equals("IF02")) || (tabMots[i].equals("LO12")) ||
-					(tabMots[i].equals("RE04")) || (tabMots[i].equals("IF03")) ||
-					(tabMots[i].equals("LO07")) || (tabMots[i].equals("NF19"))
-					) {
-				if ((i+5<tabMots.length) && (tabMots[i+5].equals("6")))
-					//System.out.println("tab" + tabMots);/*TODO a enlever*/
-					//System.out.println(nomPrenom + " " +totalCSTM);/*TODO a enlever*/
-				credits=credits+6;
-				i=i+6;
+				else{
+				}
 			}
-			else i=i+1;
+			i+=1;
 		}
 		return credits;
-	}
+	}	
+
+	/**TODO Ancienne version de la methode compteCSTM*/
+	/**
+	-	 * Comptabilise les crédits des UE TC de branche ISI (pour une ligne de texte)
+	-	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	-	 * @return le total des CS+TM trouvés dans tabMots
+	-	 
+	-	public int compteCSTM (String tabMots[]){
+	-		int i, credits;
+	-		credits=0;
+	-		i=0;
+	-		while (i<tabMots.length){
+	-			if ((tabMots[i].equals("NF16")) || (tabMots[i].equals("EG23")) ||
+	-				(tabMots[i].equals("GL02")) || (tabMots[i].equals("NF20")) ||
+	-				(tabMots[i].equals("IF07")) || (tabMots[i].equals("IF09")) ||
+	-				(tabMots[i].equals("IF14")) || (tabMots[i].equals("LO02")) ||
+	-				(tabMots[i].equals("IF02")) || (tabMots[i].equals("LO12")) ||
+	-				(tabMots[i].equals("RE04")) || (tabMots[i].equals("IF03")) ||
+	-				(tabMots[i].equals("LO07")) || (tabMots[i].equals("NF19"))
+	-			   ){
+	-				if ((i+5<tabMots.length) && (tabMots[i+5].equals("6")))
+	-					credits=credits+6;
+	-				i=i+6;
+	-			}
+	-			else i=i+1;
+	-		}
+	-			
+	-		return credits;
+	-	}
 
 	/**
 	 * Indique si le mot clé "Jiaotong" se trouve dans le tableau
@@ -349,15 +367,15 @@ public class Filtrage {
 	 */
 	public static boolean isNumeric(String str)  
 	{  
-	  try  
-	  {  
-	    double d = Double.parseDouble(str);  
-	  }  
-	  catch(NumberFormatException nfe)  
-	  {  
-	    return false;  
-	  }  
-	  return true;  
+		try  
+		{  
+			double d = Double.parseDouble(str);  
+		}  
+		catch(NumberFormatException nfe)  
+		{  
+			return false;  
+		}  
+		return true;  
 	}
 	/**
 	 * Compte le nombre de A
@@ -368,17 +386,13 @@ public class Filtrage {
 		int i=0;
 		int compteur=0;
 		while(i<tabMots.length){
-			for (String string : tabMots) {
-				System.out.println("tab "+ string);
-			}
-			System.out.println("tab2 " + tabMots[i+3]);
 			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3])){
 				compteur++;
-				
+
 			}
 			i++;
 		}
-		
+
 		return compteur;
 	}
 
