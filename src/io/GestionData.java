@@ -11,10 +11,20 @@ import java.util.List;
 
 import operation.data.Etudiant;
 import operation.data.Module;
+//Classe qui gere les donnees des fichiers
+public class GestionData {
 
-public class GestionEtudiants {
+	//TODO commenter tosu les getters et setters de cette classe
+	//TODO qui va lire le fichier texte et créer les étudiants et de cette classe on créer les méthodes de comptage de notes par semestre, par type etc
 
-	//TODO faire des sysout pour voir si la sepeartion filtrage/conversion est bonne
+	//TODO A commenter represente le nombre lignes necessaires dans une matrice pour stocker les donnees d'un etudiant
+	private final static int LIGNE = 69;
+
+	//TODO A commenter represente le nombre colonne necessaires dans une matrice pour stocker les donnees d'un etudiant
+	private final static int COLONNE = 33;
+	
+	//TODO a commenter represente le delimieter entre 2 etudiants dans le fichier
+	private final static String delimiter = " ";
 
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
@@ -23,6 +33,12 @@ public class GestionEtudiants {
 
 	/**TODO a commener*/
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
+
+	//TODO attribut qui conetient toutes les donnees non fomattees sur un etudiant
+	private String[][] dataEtudiant = new String[LIGNE][COLONNE];
+
+	//TODO a commenter compte le nombre d'etudiant present dans le fichier
+	private int nbEtudiants = 1;
 
 	/**
 	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
@@ -42,17 +58,18 @@ public class GestionEtudiants {
 	 * Constructeur : Lance la lecture du fichier texte 
 	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
 	 */
-	public GestionEtudiants(){
+	public GestionData(){
 		modules = LectureModules.lireModules();
 	}
 
 	/**
-	 * Initialisation des attributs de la classe.
+	 * Ireirnitailisation des donnees pour un nouvel etudiant
 	 */
-	public void initialiseRecherche(){
+	public void reset(){
 		totalCSTM=0;
 		nomPrenom="";
 		nbA=0;
+		dataEtudiant = new String[LIGNE][COLONNE];
 	}
 
 	/**
@@ -72,40 +89,70 @@ public class GestionEtudiants {
 		return nomPrenom;
 	}
 
-	public void traitement(){
-		File file = new File("src/test/etudiant_test.txt");
-
-		initialiseRecherche();// Initialisation
+	//TODO a commenter
+	public void lireFichier(){
+		//File file = new File("src/test/etudiant_test.txt");//Fichier de test
+		File file = new File("src/test/4etudiants.txt");//Fichier de test 2
+		BufferedReader lecteurAvecBuffer;
+		reset();// Initialisation
 		try {
-			BufferedReader lecteurAvecBuffer = new BufferedReader(new FileReader(file));
-			String ligne;
+			lecteurAvecBuffer = new BufferedReader(new FileReader(file));
+			String contenu;
 			String listeMots[];
-			while ((ligne = lecteurAvecBuffer.readLine()) != null){
-				listeMots=ligne.split(" ");
-				setTotalCSTM(getTotalCSTM() + compteCSTM(listeMots));//Compte les credits de l'etudiants
-				setNbA(trouveNbA(listeMots)+getNbA());
-
-				lecteurAvecBuffer = new BufferedReader(new FileReader(file));
-
-				setNomPrenom(trouveNomPrenom(listeMots));
-
-				// Parcours toutes les lignes du fichier texte
-				while ((ligne = lecteurAvecBuffer.readLine()) != null){
-					listeMots=ligne.split(" ");
-					for (String string : listeMots) {
-						System.out.println("String "+string);
-
-						//TODO recuperer le donnees sur l'etudiant et l'instancier et le mettre dans la liste etudiant;
-						//TODO recuperer les donnees sur les UVs, note categorie etc
-						//TODO envoyer ces donnes a une classe GestionNotes
-					}
+			int i = 0, j = 0;
+			while ((contenu = lecteurAvecBuffer.readLine()) != null){
+				listeMots = contenu.split(" ");
+				if (i==67) {
+				
+				
+					if(contenu.equals(" "))
+						System.out.println("slaut3");
 				}
+				if(isNouvelEtudiant(contenu, delimiter)){//permet de savoir si on change d'etudiant
+					reset();
+					System.out.println("New etudiant");
+					i = 0;
+					////////TODO on lance les methodes pour instancier les UV et l'etudiant
+					nbEtudiants++;
+				}
+				j = 0;
+				for (String string : listeMots) {
+					System.out.println(i+ ":" + j +" " + string);
+					dataEtudiant[i][j++]=string;
+				}
+				
+				i++; //on passe a la ligne suivante
+
+				//setTotalCSTM(getTotalCSTM() + compteCSTM(listeMots));//Compte les credits de l'etudiants
+				//setNbA(trouveNbA(listeMots)+getNbA());
+				//setNomPrenom(trouveNomPrenom(listeMots));
+
+				//TODO METHDOE A CHANGER IL FAUT SAVOIR COMMENT DETECTER LES SAUTS DE LIGNES DANS UN FICHIER
+				//TODO Recuperer la ligne et l'index de listeMots pour trouver les infos
+				//TODO recuperer les donnees sur l'etudiant et l'instancier et le mettre dans la liste etudiant;
+				//TODO recuperer les donnees sur les UVs, note categorie etc
+				//TODO envoyer ces donnes a une classe GestionNotes
 			}
+			System.out.println(nbEtudiants);
 		}
 		catch(FileNotFoundException exc) {
 			System.out.println("Erreur d'ouverture");
 		} 
 		catch (IOException e) {e.printStackTrace();}
+	}
+
+	//TODO a commenter permet de savoir quand on passe a un nouvel etudiant dans le fichier
+	//contenu correspond a la ligne en cours dans le fichier
+	//delimiter correspond a la chaine qui delimite 2 etudiants dans le fichier
+	private boolean isNouvelEtudiant(String contenu, String delimiter) {
+		if (contenu.equals(delimiter))
+			return true;
+		return false;
+	}
+
+	//TODO methode a faire qui permet de creer un etudiant a appeler quand la methode ligneNull retourne true et que la variable 
+	private void creationEtudiant(){
+		//Etudiant etudiant = new Etudiant(nom, prenom, modules);
 	}
 
 	/**
@@ -171,10 +218,8 @@ public class GestionEtudiants {
 		return modules;
 	}
 
-
-
 	public static void setModules(List<Module> modules) {
-		GestionEtudiants.modules = modules;
+		GestionData.modules = modules;
 	}
 
 

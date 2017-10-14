@@ -1,7 +1,8 @@
 package ihm;
 
 import java.awt.EventQueue;
-import io.GestionEtudiants;
+
+import io.GestionData;
 import io.LectureModules;
 
 
@@ -13,7 +14,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (4) {
+		switch (3) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -36,7 +37,7 @@ public class Launcher {
 			//TODO TEST DES NOTES DE L'ETUDIANT
 			//TODO Tester avec le fichier 4 etudiant
 			//File file = new File("/Users/lucasnoga/Desktop/UTT/TX/pdf jury/PV ISI 2.txt");
-			new GestionEtudiants().traitement();
+			new GestionData().lireFichier();
 			break;
 
 

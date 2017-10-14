@@ -1,17 +1,16 @@
 package io;
 
 import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import operation.CalculNote;
 
 public class Conversion {
 	
 	//TODO tester la classe pour voir si le fichier final est ok
-	//TODO Mettre les différents répertoires dans une pile qui recupera l’ensemble des chemins qui sauvegardés dans un fichier texte
 	//TODO finir la méthode CompteCSTM avec l’arrayList modules
 	
 	/**
@@ -84,8 +83,7 @@ public class Conversion {
 			setDecisionCSV(getDecisionCSV()+filtre.decisionJury()); //On stocke la decision final
 			ecritureAvecBuffer.write(getDecisionCSV()); //on ecrit la decicion final de l'etudiant
 			
-			///////////////////////////////////////////////////////////METHODE OU On lance les calculs/////////////////////////////////////////////
-			CalculNote.calculsemestre(decisionCSV);
+			//TODO ON appelle la methode GetsionEtudiany////////METHODE OU On lance les calculs/////////////////////////////////////////////
 			ecritureAvecBuffer.write(decisionCSV); 
 		}
 		catch(FileNotFoundException exc) {System.out.println("Erreur d'ouverture");} 

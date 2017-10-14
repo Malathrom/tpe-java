@@ -15,14 +15,12 @@ import operation.data.Module;
  */
 public class Filtrage {
 
-	//TODO faire des sysout pour voir si la sepeartion filtrage/conversion est bonne
-
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
-	 * */
+	 */
 	private static List<Module> modules = new ArrayList<Module>();
 
-	/**TODO a commener*/
+	/**TODO a commenter*/
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
 	/**
