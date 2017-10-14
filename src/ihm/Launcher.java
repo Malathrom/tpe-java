@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import io.GestionData;
 import io.LectureModules;
 
-
 public class Launcher {
 
 	/**
