@@ -8,7 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+import io.Filtrage;
+import operation.Note;
 import operation.data.Etudiant;
 import operation.data.Module;
 //TODO a commenter Classe qui gere les donnees des fichiers
@@ -199,6 +200,25 @@ public class GestionData {
 		}
 
 		return compteur;
+	}
+	
+	public ArrayList<Module> ueEtudiant(String tabMots[]){
+		ArrayList<Module> mods = new ArrayList<Module>();
+		int i, credits;
+		credits=0;
+		i=0;
+		while (i<tabMots.length){
+			
+			if (Filtrage.isISI(tabMots[i])){
+				Module mod = new Module("yo", 6,6,Note.A);
+			}
+			
+			i++;
+		}
+		
+		
+		
+		return mods;
 	}
 
 

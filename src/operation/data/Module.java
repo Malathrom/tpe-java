@@ -37,6 +37,13 @@ public class Module{
 		this.credit = credit;
 	}
 	
+	public Module(String nom, int credit, int semestre, Note note){
+		this.nom = nom;
+		this.semestre = semestre; 
+		this.note = note;
+		this.credit = credit;
+	}
+	
 	public String getNom() {
 		return nom;
 	}

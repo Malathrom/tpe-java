@@ -157,6 +157,30 @@ public class Filtrage {
 		return nomPrenom;
 	}
 
+	
+	
+	
+	
+	/**
+	 * Teste si le string en entrée est une CS/TM de la branche ISI
+	 * @param le nom de l'UE
+	 * @return true si c'est le cas, false sinon
+	 */
+	public static boolean isISI (String str){
+		boolean out=false;
+		Module module = null;
+		Iterator<Module> it = modules.iterator();
+		while(it.hasNext()){
+			module = it.next();			
+			if (str.equals(module.getNom())) {
+				out=true;
+			}
+		}
+		return out;
+	}
+	
+	
+	
 	/**
 	 * Comptabilise les crédits des UE TC de branche ISI (pour une ligne de texte)
 	 * @param tabMots tableau de mots composant une ligne de texte à analyser
@@ -373,7 +397,7 @@ public class Filtrage {
 		return true;  
 	}
 	/**
-	 * Compte le nombre de A
+	 * Compte le nombre de A obtenus sur l'ensemble du parcours
 	 * @param tabMots tableau de mots composant une ligne de texte à analyser
 	 * @return le nombre de A de l'élève
 	 */
@@ -381,9 +405,8 @@ public class Filtrage {
 		int i=0;
 		int compteur=0;
 		while(i<tabMots.length){
-			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3])){
+			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3]) && isISI(tabMots[i])){
 				compteur++;
-
 			}
 			i++;
 		}
