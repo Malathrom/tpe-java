@@ -7,5 +7,8 @@ public enum Note {
 	D,
 	E,
 	F,
+	FX,
+	EQU,
+	ABS,
 	NULL;
 }
