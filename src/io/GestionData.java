@@ -148,6 +148,7 @@ public class GestionData {
 	private List<String> recupereUEs(){
 		List<String> ues = new ArrayList<String>();
 		String[][] semestreUE = new String[10][5];
+		//ArrayList<Module> module = ueEtudiant()
 		//pour recuperer les semstres ca commenrce par CS TM ST EC ME CT HP NPML Observations
 		// entre les semestres il y a Total semestre
 		// la fin commence par TOTAUX
@@ -155,6 +156,7 @@ public class GestionData {
 		//TODO recuperer les donnees sur les UVs, note categorie etc
 		int semestre = recupereSemestre();
 		String typeSemestre = recupereTypeSemestre();
+		
 		System.out.println("typesemestre "+ typeSemestre);
 		System.out.println("semestre "+ semestre);
 		return null;
@@ -188,8 +190,7 @@ public class GestionData {
 	 */
 	public ArrayList<Module> ueEtudiant(String tabMots[]){
 		ArrayList<Module> mods = new ArrayList<Module>();
-		int i, credits;
-		credits=0;
+		int i;
 		i=0;
 		int semestre=1;
 		while (i<tabMots.length){
@@ -198,13 +199,12 @@ public class GestionData {
 				mods.add(mod);
 			}
 			i++;
-		}
-		
-		
-		
+		}	
+		System.out.println(mods);
 		return mods;
 	}
-
+	
+	
 
 	public static List<Module> getModules() {
 		return modules;
@@ -214,49 +214,33 @@ public class GestionData {
 		GestionData.modules = modules;
 	}
 
-
-
 	public List<Etudiant> getEtudiants() {
 		return etudiants;
 	}
-
-
 
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
 	}
 
-
-
 	public String getNomPrenom() {
 		return nomPrenom;
 	}
-
-
 
 	public void setNomPrenom(String nomPrenom) {
 		this.nomPrenom = nomPrenom;
 	}
 
-
-
 	public int getTotalCSTM() {
 		return totalCSTM;
 	}
-
-
 
 	public void setTotalCSTM(int totalCSTM) {
 		this.totalCSTM = totalCSTM;
 	}
 
-
-
 	public int getNbA() {
 		return nbA;
 	}
-
-
 
 	public void setNbA(int nbA) {
 		this.nbA = nbA;
