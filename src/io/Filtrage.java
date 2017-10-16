@@ -137,7 +137,7 @@ public class Filtrage {
 		}
 
 		// Formatage de la ligne à écrire. Puis on l'écrit
-		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+";"+nbA+" A obtenus"+"\n";
+		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+"\n";
 	}
 
 	/**
@@ -405,7 +405,7 @@ public class Filtrage {
 		int i=0;
 		int compteur=0;
 		while(i<tabMots.length){
-			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3]) && isISI(tabMots[i])){
+			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3]) && isISI(tabMots[i-2])){
 				compteur++;
 			}
 			i++;
@@ -413,6 +413,8 @@ public class Filtrage {
 
 		return compteur;
 	}
+	
+	
 
 	public String getRechercheStage() {
 		return rechercheStage;
