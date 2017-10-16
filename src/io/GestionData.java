@@ -8,7 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+import io.Filtrage;
+import operation.Note;
 import operation.data.Etudiant;
 import operation.data.Module;
 //TODO a commenter Classe qui gere les donnees des fichiers
@@ -167,38 +168,41 @@ public class GestionData {
 	private int recupereSemestre(){
 		return Integer.valueOf(dataEtudiant[7][2]);
 	}
-
 	/**
-	 * indique si str est une chaine de charactères numériques.
-	 * @param str
-	 * @return true si str est un nombre, false sinon
+	 * Teste si un string est contenu dans une enum
+	 * @param value
+	 * @param enumClass
+	 * @return
 	 */
-	public static boolean isNumeric(String str){  
-		try{  
-			Double.parseDouble(str);  
-		}  
-		catch(NumberFormatException nfe){  
-			return false;  
-		}  
-		return true;  
-	}
+	public <E extends Enum<E>> boolean isInEnum(String value, Class<E> enumClass) {
+		  for (E e : enumClass.getEnumConstants()) {
+		    if(e.name().equals(value)) { return true; }
+		  }
+		  return false;
+		}
+	
 	/**
-	 * Compte le nombre de A
-	 * @param tabMots tableau de mots composant une ligne de texte à analyser
-	 * @return le nombre de A de l'élève
+	 * renvois une liste constitué des ue d'un étudiant
+	 * @param tabMots
+	 * @return
 	 */
-	public int trouveNbA (String tabMots[]){
-		int i=0;
-		int compteur=0;
-		while(i<tabMots.length){
-			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3])){
-				compteur++;
-
+	public ArrayList<Module> ueEtudiant(String tabMots[]){
+		ArrayList<Module> mods = new ArrayList<Module>();
+		int i, credits;
+		credits=0;
+		i=0;
+		int semestre=1;
+		while (i<tabMots.length){
+			if (isInEnum(tabMots[i], Note.class)){
+				Module mod = new Module(tabMots[i-2], Integer.valueOf(tabMots[i+3]), semestre, Note.valueOf(tabMots[i]));
+				mods.add(mod);
 			}
 			i++;
 		}
-
-		return compteur;
+		
+		
+		
+		return mods;
 	}
 
 
