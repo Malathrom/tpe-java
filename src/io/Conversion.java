@@ -83,7 +83,7 @@ public class Conversion {
 			setDecisionCSV(getDecisionCSV()+filtre.decisionJury()); //On stocke la decision final
 			ecritureAvecBuffer.write(getDecisionCSV()); //on ecrit la decicion final de l'etudiant
 			
-			//TODO ON appelle la methode GetsionEtudiany////////METHODE OU On lance les calculs/////////////////////////////////////////////
+			//TODO ON appelle la methode GestionData
 			ecritureAvecBuffer.write(decisionCSV); 
 		}
 		catch(FileNotFoundException exc) {System.out.println("Erreur d'ouverture");} 

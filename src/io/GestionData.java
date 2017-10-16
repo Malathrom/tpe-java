@@ -30,7 +30,7 @@ public class GestionData {
 	 * */
 	private static List<Module> modules = new ArrayList<Module>();
 
-	/**TODO a commener*/
+	/**TODO a commenter*/
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
 	//TODO attribut qui conetient toutes les donnees non fomattees sur un etudiant
