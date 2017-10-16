@@ -150,7 +150,7 @@ public class Filtrage {
 		}
 
 		// Formatage de la ligne à écrire. Puis on l'écrit
-		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+";"+nbA+" A obtenus"+"\n";
+		return totalCSTM+";"+st09_st10_st30+";"+rechercheStage+nomPrenom+"\n";
 	}
 
 	/**

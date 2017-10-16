@@ -220,20 +220,18 @@ public class GestionData {
 	 * @param tabMots //TODO a definir tabmots
 	 * @return //TODO dire ce que ca retourne
 	 */
-	public ArrayList<Module> ueEtudiant(String tabMots[]){
-		ArrayList<Module> mods = new ArrayList<Module>();
+	public void ueEtudiant(String tabMots[], Etudiant etu){
 		int i;
 		i=0;
 		int semestre=1;
 		while (i<tabMots.length){
-			if (isInEnum(tabMots[i], Note.class)){
+			if (isInEnum(tabMots[i], Note.class)&& Filtrage.isNumeric(tabMots[i+3])){
 				Module mod = new Module(tabMots[i-2], Integer.valueOf(tabMots[i+3]), semestre, Note.valueOf(tabMots[i]));
-				mods.add(mod);
+				etu.getModules().add(mod);
 			}
 			i++;
 		}	
-		System.out.println(mods);
-		return mods;
+		System.out.println(etu.getModules());
 	}
 	
 	public static List<Module> getModules() {
