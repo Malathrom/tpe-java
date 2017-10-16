@@ -13,7 +13,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (3) {
+		switch (2) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -29,14 +29,11 @@ public class Launcher {
 			break;
 
 		case 2:
-			new LectureModules();
+			System.out.println(LectureModules.lireModules());//Test sur les modules
 			break;
 
 		case 3:
-			//TODO TEST DES NOTES DE L'ETUDIANT
-			//TODO Tester avec le fichier 4 etudiant
-			//File file = new File("/Users/lucasnoga/Desktop/UTT/TX/pdf jury/PV ISI 2.txt");
-			new GestionData().lireFichier();
+			new GestionData().lireFichier();//Test sur les fichiers etudiants
 			break;
 
 

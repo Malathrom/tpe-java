@@ -12,18 +12,18 @@ import operation.Note;
 import operation.data.Module;
 
 
-/**TODO a commenter*/
+/**LectureModule permet de connaitre les modules d'ISI avec leur credit, leur categorie et leur type*/
 public class LectureModules {
 
-	/**TODO a commenter*/
+	/** file contient le chemin du fichier texte ou sont contenus les donnees sur les modules*/
 	private static String file = "src/files/modules.txt";
 
-	/**TODO a commenter*/
-	public LectureModules(){}
 
-	/**TODO a commenter*/
+	/**
+	 * lireModules est la methode qui le le fichier ou sont contenus les modules et les instancie en objet java
+	 * @return la liste des modules qui sont consideres comme des modules de type ISI
+	 */
 	public static List<Module> lireModules(){
-
 		List<Module> modules = new ArrayList<Module>();
 		BufferedReader lecteurAvecBuffer = null;
 		String ligne;

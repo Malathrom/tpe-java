@@ -20,13 +20,16 @@ public class Filtrage {
 	 */
 	private static List<Module> modules = new ArrayList<Module>();
 
-	/**TODO a commenter*/
+	/**
+	 * etudiants est la liste des objets de type Etudiant que nous sommes en train de traiter dans le fichier
+	 */
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
 	/**
 	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
 	 */
 	private String nomPrenom;
+	
 	/**
 	 * nomZone contient une chaine de caractéres indiquant la zone du PV de jury où le filtrage est en train de travailler
 	 * "inconnue" : signifie qu'on se trouve dans la zone de description de l'étudiant
@@ -35,55 +38,65 @@ public class Filtrage {
 	 * "Master" : signifie qu'on se trouve dans la zone formation Master de l'étudiant
 	 */
 	private String nomZone;
+	
 	/**
 	 * st09 est vrai lorsque l'étudiant a validé son ST09
 	 */
 	private boolean st09;
+	
 	/**
 	 * st10 est vrai lorsque l'étudiant a validé son ST10
 	 */
 	private boolean st10;
+	
 	/**
 	 * st30 est vrai lorsque l'étudiant a validé son ST30
 	 */
 	private boolean st30;
+	
 	/**
 	 * estPasseParTC est vrai lorsque l'étudiant a fait un TC
 	 */
 	private boolean estPasseParTC;
+	
 	/**
 	 * estPasseParISI est vrai lorsque l'étudiant a fait le cursus ISI
 	 */
 	private boolean estPasseParISI;
+	
 	/**
 	 * estPasseParMaster est vrai lorsque l'étudiant a fait le cursus Master
 	 */
 	private boolean estPasseParMaster;
+	
 	/**
 	 * universiteChinoise est vrai lorsque l'étudiant est un étudiant Chinois (gestion particuliére)
 	 */
 	private boolean universiteChinoise;
+	
 	/**
 	 * st09_st10_st30 contient "st09", "st10" ou "st30" si le prochain stage à valider est respectivement un stage "st09", "st10" ou "st30"
 	 */
 	private String st09_st10_st30;
-
-	/** TODO a commenter*/
+	
+	/**
+	 * rechercheStage contient soit Oui si l'etudiant recherche un stage soit non si l'etudiant ne recherche pas de stage
+	 */
 	private String rechercheStage;
 
 	/**
 	 * totalCSTM compte le nombre de CS+TM de TC de branche obtenus par l'étudiant au cours du TC ou du TC de branche ISI.  
 	 */
 	private int totalCSTM;
+	
 	/**
 	 * nbA désigne le nombre de A obtenus par un élève.
 	 */
 	private int nbA;
 
 
-	/** TODO commentaire A modifier
-	 * Constructeur : Lance la lecture du fichier texte 
-	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
+	/** 
+	 * Constructeur : Lance la lecture des modules existant en ISI qui se trouve dans le fichier /files/module.txt
 	 */
 	public Filtrage(){
 		modules = LectureModules.lireModules();
@@ -143,7 +156,7 @@ public class Filtrage {
 	/**
 	 * Renvoie une chaine de caractères avec le nom et prénom, s'il ne le trouve pas renvoie la chaine vide ""
 	 * @param tabMots tableau de mots composant une ligne de texte à analyser
-	 * @return une chaine de caractéres contenant le nom suivi des prénoms de l'étudiant. Sinon renvoie ""
+	 * @return une chaine de caractères contenant le nom suivi des prénoms de l'étudiant. Sinon renvoie ""
 	 */
 	public String trouveNomPrenom(String tabMots[]){
 		String nomPrenom="";
@@ -156,10 +169,6 @@ public class Filtrage {
 		}
 		return nomPrenom;
 	}
-
-	
-	
-	
 	
 	/**
 	 * Teste si le string en entrée est une CS/TM de la branche ISI
@@ -292,18 +301,25 @@ public class Filtrage {
 		return (i<tabMots.length);	
 	}
 
-	/**TODO A commenter mieux Methode qui recherche si l'etudiant est en stage ST09, ST10, ST30*/
-	public boolean enStage(String[] listeMots){
-		if(trouveST09(listeMots) || isSt09())
+	/**
+	 * enStage recherche si l'etudiant est soit en stage ST09, soit en ST10, soit ST30
+	 * tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient le stage "st09" ou "st10" ou "st30", sinon false
+	 */
+	public boolean enStage(String[] tabMots){
+		if(trouveST09(tabMots) || isSt09())
 			return true;
-		if(trouveST10(listeMots) || isSt10())
+		if(trouveST10(tabMots) || isSt10())
 			return true;
-		if(trouveST30(listeMots) || isSt30())
+		if(trouveST30(tabMots) || isSt30())
 			return true;
 		return false;
 	}
 
-	/*TODO a commeneter en gros la methode recherche dans quelle zone on est*/
+	/**
+	 * Recherque quel type de semestre nous faisons entre TC, ISI, Master
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 */
 	public void rechercheZone(String[] listeMots){
 		if (enZoneInconnue(listeMots)){
 			setNomZone("inconnue");
@@ -413,7 +429,7 @@ public class Filtrage {
 
 		return compteur;
 	}
-
+	
 	public String getRechercheStage() {
 		return rechercheStage;
 	}

@@ -79,11 +79,11 @@ public class Conversion {
 				}
 			}
 			// Traitement du dernier étudiant du fichier
-			System.out.println("lectur2 "+filtre.getNomPrenom() + "=" + Integer.toString(filtre.getTotalCSTM()));//TODO a enlever
 			setDecisionCSV(getDecisionCSV()+filtre.decisionJury()); //On stocke la decision final
 			ecritureAvecBuffer.write(getDecisionCSV()); //on ecrit la decicion final de l'etudiant
 			
-			//TODO ON appelle la methode GestionData
+			//TODO ON appelle la methode GestionData/////////////////////////////////////////////////////////////////////////
+			//new GestionData().lireFichier();/////////////////////////////////////////////////////////////////////////////
 			ecritureAvecBuffer.write(decisionCSV); 
 		}
 		catch(FileNotFoundException exc) {System.out.println("Erreur d'ouverture");} 

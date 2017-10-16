@@ -12,7 +12,7 @@ import java.util.List;
 
 import javax.swing.JFileChooser;
 
-/**classe qui sauvegarder les repertoires parcouru*/
+/**SauvegardeRepertoire sauvegarde les repertoires parcouru dans le JFileChooser*/
 public class SauvegardeRepertoire {
 
 	/**Ensemble des chemins deja parcouru*/
@@ -21,7 +21,10 @@ public class SauvegardeRepertoire {
 	/**chemin vers le fichier contenant les paths*/
 	private static File pathFile = new File("src/files/paths.txt");
 
-	/**TODO A commenter methode qui sotcke dans un fichier les chemins visites*/
+	/**
+	 * SauvegardeRepertoire stocke dans un fichier les chemins visites par l'utilisateur dans le JFileChooser
+	 * @param chooser JFileChooser qui définit le répertoire ou l'utilisateur recherche les fichier
+	 */
 	public SauvegardeRepertoire(JFileChooser chooser){
 		String ligne;
 		BufferedReader br = null;

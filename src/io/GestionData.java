@@ -1,43 +1,52 @@
 package io;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import io.Filtrage;
 import operation.Note;
 import operation.data.Etudiant;
 import operation.data.Module;
-//TODO a commenter Classe qui gere les donnees des fichiers
+/**GestionData gere les donnees des fichiers des etudiants*/
 public class GestionData {
 
-	//TODO commenter tous les getters et setters de cette classe
-
-	//TODO A commenter represente le nombre lignes necessaires dans une matrice pour stocker les donnees d'un etudiant
+	/**
+	 * LIGNE représente le nombre lignes necessaires dans une matrice pour stocker les données d'un seul etudiant
+	 */
 	private final static int LIGNE = 100;
 
-	//TODO A commenter represente le nombre colonne necessaires dans une matrice pour stocker les donnees d'un etudiant
+	/**
+	 * COLONNE représente le nombre colonne necessaires dans une matrice pour stocker les donnees d'un seul etudiant
+	 */
 	private final static int COLONNE = 50;
 
-	//TODO a commenter represente le delimieter entre 2 etudiants dans le fichier
+	/**
+	 * delimiter représente le delimiteur entre 2 etudiants dans le fichier texte
+	 */
 	private final static String delimiter = " ";
 
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
-	 * */
+	 */
 	private static List<Module> modules = new ArrayList<Module>();
 
-	/**TODO a commenter*/
+	/**
+	 * etudiants est la liste des objets de type Etudiant que nous sommes en train de traiter dans le fichier
+	 */
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
-	//TODO attribut qui conetient toutes les donnees non fomattees sur un etudiant
+	/**
+	 * dataEtudiant contient les données texte nom formates sur un etudiant (nom, prenomm Ues, notes)
+	 */
 	private String[][] dataEtudiant = new String[LIGNE][COLONNE];
 
-	//TODO a commenter compte le nombre d'etudiant present dans le fichier
+	/**
+	 * nbEtudiant représente le nombre d'etudiant present dans le fichier
+	 */
 	private int nbEtudiants = 0;
 
 	/**
@@ -54,9 +63,8 @@ public class GestionData {
 	 */
 	private int nbA;
 
-	/** TODO commentaire A modifier
-	 * Constructeur : Lance la lecture du fichier texte 
-	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
+	/** 
+	 * Constructeur : Lance la lecture des modules existant en ISI qui se trouve dans le fichier /files/module.txt
 	 */
 	public GestionData(){
 		modules = LectureModules.lireModules();
@@ -72,7 +80,9 @@ public class GestionData {
 		dataEtudiant = new String[LIGNE][COLONNE];
 	}
 
-	//TODO a commenter
+	/**
+	 * lireFichier traite le fichier txt des etudiants et permet d;instncier les etudaints et les modules pour pouvoir les manipuler en java
+	 */
 	public void lireFichier(){
 		File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
 		//File file2 = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
@@ -112,16 +122,21 @@ public class GestionData {
 		catch (IOException e) {e.printStackTrace();}
 	}
 
-	//TODO a commenter permet de savoir quand on passe a un nouvel etudiant dans le fichier
-	//contenu correspond a la ligne en cours dans le fichier
-	//delimiter correspond a la chaine qui delimite 2 etudiants dans le fichier
+	/**
+	 * IsNouvelEtudiant permet de savoir quand on passe a un nouvel etudiant dans le fichier txt
+	 * @param contenu correspond a la ligne en cours dans le fichier
+	 * @param delimiter correspond à la chaine qui delimite 2 etudiants dans le fichier
+	 * @return true si on passe a un nouvel etudiant dans le fichier sinon false
+	 */
 	private boolean isNouvelEtudiant(String contenu, String delimiter) {
 		if (contenu.equals(delimiter))
 			return true;
 		return false;
 	}
 
-	//TODO methode a faire qui permet de creer un etudiant 
+	/**
+	 * creationEtudiant permet de créer l'etudiant en objet Java et de l'ajouter à la liste des etudiants deja instanciées 
+	 */
 	private void creationEtudiant(){
 		//on recupere les donnees
 		String nom = recupereNom();
@@ -134,17 +149,26 @@ public class GestionData {
 		//Etudiant etudiant = new Etudiant(nom, prenom, modules);
 	}
 
-	//TODO a commenter recupere le nom de l'etudiant dans la matrice data
+	/**
+	 * recupereNom recupere le nom de l'etudiant dans la matrice data
+	 * @return retourne le nom de l'etudiant
+	 */
 	private String recupereNom(){
 		return dataEtudiant[1][2];
 	}
 
-	//TODO a commenter recupere le prenom de l'etudiant dans la matrice data
+	/**
+	 * recuperePrenom recupere le prenom de l'etudiant dans la matrice data
+	 * @return retourne le prenom de l'etudiant
+	 */
 	private String recuperePrenom(){
 		return dataEtudiant[1][1];
 	}
 
-	//TODO methode a faire qui permet de creer une Ue
+	/**
+	 * recuperUEs recupere la liste des UEs de l'etudiant dans la matrice data
+	 * @return retourne la liste des UEs de l'etudiant
+	 */
 	private List<String> recupereUEs(){
 		List<String> ues = new ArrayList<String>();
 		String[][] semestreUE = new String[10][5];
@@ -161,19 +185,27 @@ public class GestionData {
 		System.out.println("semestre "+ semestre);
 		return null;
 	}
-	
-	//TODO a commenter recupere ISI ou TC ou MASTER
+	 
+	/**
+	 * recupereTypeSemestre recupere le type de semestre de l'etudiant dans la matrice data entre ISI ou TC ou MASTER
+	 * @return retourne le type de semestre de l'etudiant
+	 */
 	private String recupereTypeSemestre(){
 		return dataEtudiant[7][1];
 	}
 	
+	/**
+	 * recupereSemestre recupere le numero de semestre de l'etudiant dans la matrice data
+	 * @return retourne le numero de semestre de l'etudiant
+	 */
 	private int recupereSemestre(){
 		return Integer.valueOf(dataEtudiant[7][2]);
 	}
+	
 	/**
 	 * Teste si un string est contenu dans une enum
-	 * @param value
-	 * @param enumClass
+	 * @param value //TODO a definir value
+	 * @param enumClass //TODO a definir enumClass
 	 * @return
 	 */
 	public <E extends Enum<E>> boolean isInEnum(String value, Class<E> enumClass) {
@@ -185,8 +217,8 @@ public class GestionData {
 	
 	/**
 	 * renvois une liste constitué des ue d'un étudiant
-	 * @param tabMots
-	 * @return
+	 * @param tabMots //TODO a definir tabmots
+	 * @return //TODO dire ce que ca retourne
 	 */
 	public ArrayList<Module> ueEtudiant(String tabMots[]){
 		ArrayList<Module> mods = new ArrayList<Module>();
@@ -204,8 +236,6 @@ public class GestionData {
 		return mods;
 	}
 	
-	
-
 	public static List<Module> getModules() {
 		return modules;
 	}

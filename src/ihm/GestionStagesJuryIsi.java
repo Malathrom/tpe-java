@@ -1,11 +1,11 @@
 package ihm;
 
 import javax.swing.JFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.AbstractDocument.BranchElement;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -13,23 +13,15 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import io.Conversion;
 import io.SauvegardeRepertoire;
 
-import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
-import javax.swing.ButtonGroup;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Stack;
 import java.awt.Font;
 
 /**
@@ -40,9 +32,8 @@ import java.awt.Font;
  * @version 1.0
  */
 public class GestionStagesJuryIsi extends JFrame{
-	/*TODO faire la gestion d'exception pour le click des boutons notament*/
-	/*TODO faire la javadoc pour les getter et setter*/
-	/*TODO A voir si il veut que on la sauvegarde dans un fichier dans le cas ou l'appli est quitter*/
+	
+	//TODO faire la gestion d'exception pour le click des boutons notament*/
 	//TODO voir si c’est possible de faire un aperçu d’un pdf dans un Panel en java
 
 	private static final long serialVersionUID = 1L;
@@ -160,7 +151,7 @@ public class GestionStagesJuryIsi extends JFrame{
 		findPDF.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				choixFichier();
+				choixRepertoire();
 			}
 		});
 
@@ -169,7 +160,7 @@ public class GestionStagesJuryIsi extends JFrame{
 			public void mouseClicked(MouseEvent e) {
 				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()=="")){
 					try {
-						if(confirmation_conversion(sourceTXT.getText())){
+						if(confirmationConversion(sourceTXT.getText())){
 							maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
 							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\na été converti en "+ sourceTXT.getText(), "Info",  
 									JOptionPane.INFORMATION_MESSAGE);
@@ -190,7 +181,7 @@ public class GestionStagesJuryIsi extends JFrame{
 		conversionTxt_Csv.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(confirmation_conversion(cibleCSV.getText())){
+				if(confirmationConversion(cibleCSV.getText())){
 					conversion_TXT_CSV();
 					JOptionPane.showMessageDialog(null, "le fichier " + sourceTXT.getText() +"\na été converti en"+ cibleCSV.getText(), "Info",  
 							JOptionPane.INFORMATION_MESSAGE);
@@ -210,8 +201,12 @@ public class GestionStagesJuryIsi extends JFrame{
 		});
 	}
 
-	//TODO a commenter methode qui test le fichier si il peut etre converti
-	private boolean confirmation_conversion(String fileString) {
+	/**
+	 * confirmationConversion teste si le fichier peut etre convertit ou non
+	 * @param fileString le chemin du fichier qui va etre crée
+	 * @return oui si le fichier a été créer non si il ne l'a pas été
+	 */
+	private boolean confirmationConversion(String fileString) {
 		//On regarde si le ficher existe deja
 		if(new File(fileString).exists()){
 			//on demande si on veut l'ecraser
@@ -233,8 +228,10 @@ public class GestionStagesJuryIsi extends JFrame{
 		new Conversion(sourceTXT.getText(),cibleCSV.getText());
 	}
 
-	//TODO a commenter methode qui choiist le repertoire par defaut pour choisir un fichier
-	private void choixFichier(){
+	/**
+	 * ChoixRepertoire permet de definir le repertoire le plus adequat pour le JFileChooser
+	 */
+	private void choixRepertoire(){
 		String path = ""; //Chemin a parcourir
 		JFileChooser chooser;
 		
@@ -270,9 +267,10 @@ public class GestionStagesJuryIsi extends JFrame{
 		}
 	}
 
-
-
-	/**TODO a commenter methode qui affiche sur l'ihm les chemins des fichiers*/
+	/**
+	 * affichageFichier affiche sur l'ihm les chemins des fichiers pdf, csv, txt
+	 * @param chooser le JFileChooser lors du choix des fichiers
+	 */
 	private void affichageFichier(JFileChooser chooser) {
 		String nomFichierPDF= chooser.getSelectedFile().getAbsolutePath();
 		String nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
@@ -280,18 +278,16 @@ public class GestionStagesJuryIsi extends JFrame{
 		sourcePDF.setText(nomFichierPDF);
 		sourceTXT.setText(nomFichierTXT);
 		cibleCSV.setText(nomFichierCSV);
-
 	}
 
+	/*TODO faire la javadoc pour les getter et setter*/
 	public JTextField getSourceTXT() {
 		return sourceTXT;
 	}
 
-
 	public void setSourceTXT(JTextField sourceTXT) {
 		this.sourceTXT = sourceTXT;
 	}
-
 
 	public JTextField getCibleCSV() {
 		return cibleCSV;
@@ -304,7 +300,6 @@ public class GestionStagesJuryIsi extends JFrame{
 	public JTextField getSourcePDF() {
 		return sourcePDF;
 	}
-
 
 	public void setSourcePDF(JTextField sourcePDF) {
 		this.sourcePDF = sourcePDF;
