@@ -30,6 +30,11 @@ public class GestionData {
 	private final static String delimiter = " ";
 
 	/**
+	 * file represente le fichier qui va etre traité
+	 */
+	private File file = null;
+	
+	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
 	 */
 	private static List<Module> modules = new ArrayList<Module>();
@@ -65,8 +70,18 @@ public class GestionData {
 
 	/** 
 	 * Constructeur : Lance la lecture des modules existant en ISI qui se trouve dans le fichier /files/module.txt
+	 * @param file chemin du fichier qui traité
 	 */
-	public GestionData(){
+	public GestionData(String file){
+		this.file = new File(file);
+		modules = LectureModules.lireModules();
+	}
+	/** 
+	 * Constructeur : Lance la lecture des modules existant en ISI qui se trouve dans le fichier /files/module.txt
+	 * @param file le fichier qui va etre traité
+	 */
+	public GestionData(File file){
+		this.file = file;
 		modules = LectureModules.lireModules();
 	}
 
@@ -84,9 +99,6 @@ public class GestionData {
 	 * lireFichier traite le fichier txt des etudiants et permet d;instncier les etudaints et les modules pour pouvoir les manipuler en java
 	 */
 	public void lireFichier(){
-		File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
-		//File file2 = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
-		//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
 		BufferedReader lecteurAvecBuffer;
 		reset();// Initialisation
 		try {

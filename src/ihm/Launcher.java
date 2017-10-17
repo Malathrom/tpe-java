@@ -1,6 +1,7 @@
 package ihm;
 
 import java.awt.EventQueue;
+import java.io.File;
 
 import io.GestionData;
 import io.LectureModules;
@@ -13,7 +14,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (2) {
+		switch (3) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -33,7 +34,10 @@ public class Launcher {
 			break;
 
 		case 3:
-			new GestionData().lireFichier();//Test sur les fichiers etudiants
+			File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
+			//File file2 = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
+			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
+			new GestionData(file).lireFichier();//Test sur les fichiers etudiants
 			break;
 
 
