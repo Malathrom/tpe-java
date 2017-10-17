@@ -33,7 +33,7 @@ public class GestionData {
 	 * file represente le fichier qui va etre traité
 	 */
 	private File file = null;
-	
+
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
 	 */
@@ -108,7 +108,7 @@ public class GestionData {
 			int i = 0, j = 0;
 			while ((contenu = lecteurAvecBuffer.readLine()) != null){
 				listeMots = contenu.split(" ");
-				
+
 				if(isNouvelEtudiant(contenu, delimiter)){//permet de savoir si on change d'etudiant
 					creationEtudiant();//on creer l'ancien etudiant
 					reset();
@@ -183,21 +183,65 @@ public class GestionData {
 	 */
 	private List<String> recupereUEs(){
 		List<String> ues = new ArrayList<String>();
-		String[][] semestreUE = new String[10][5];
-		//ArrayList<Module> module = ueEtudiant()
-		//pour recuperer les semstres ca commenrce par CS TM ST EC ME CT HP NPML Observations
-		// entre les semestres il y a Total semestre
-		// la fin commence par TOTAUX
-		//TODO creer un matrice UE en testant si la ligne est P+un nombre ou A+plus un nombre on met donc la suite dans la matrice
-		//TODO recuperer les donnees sur les UVs, note categorie etc
+		String[][] semestresUE = recuperesDonneesSemestres();
+
+
 		int semestre = recupereSemestre();
 		String typeSemestre = recupereTypeSemestre();
-		
+
 		System.out.println("typesemestre "+ typeSemestre);
 		System.out.println("semestre "+ semestre);
 		return null;
 	}
-	 
+
+	//TODO a commenter //on stocke les donnees des semestres uniquement
+	private String[][] recuperesDonneesSemestres() {
+		String[][] semestresUE = new String[100][50];
+		System.out.println("observation" +dataEtudiant[6][8]);//la ou commence la les Uvs
+		int i, j, i2 = 0, j2 = 0;
+		//TODO il faut que i2 et j2 soitles curseurs pour la matrice////////////////////////////////////////////////////////////////////////////////////////////
+		boolean enSemestre = false;//permet desavoir si on parcourt les semestres
+
+		//on parcourt les donnees
+		for(i=0; i<dataEtudiant.length; i++) {
+			for(j=0; j<dataEtudiant[i].length; j++) {
+				if(dataEtudiant[i][j]!=null) {//si le champ n'est pas null
+					if(dataEtudiant[i][j].equals("Observations")){//le mot Observations est le dernier mot avant les semestres
+						enSemestre=true;
+					}
+				}
+				
+				if(enSemestre){//si on est dans la partie semestres
+					if(dataEtudiant[i][j]!=null) {//si le champ n'est pas null//si il y a plus rien sur la ligne on passe a la suite
+						if(!dataEtudiant[i][j].equals("TOTAUX")){//si on a pas fini les semestres
+							semestresUE[i2][j2]=dataEtudiant[i][j];//TODO creer les semestres ICI
+						}
+						else //si on est a la ligne TOTAUX on a fini les semestres
+							enSemestre=false;
+					}
+				}
+			}
+		}
+		// entre les semestres il y a Total semestre
+		// la fin commence par TOTAUX
+		//ArrayList<Module> module = ueEtudiant()
+		//TODO creer un matrice UE en testant si la ligne est P+un nombre ou A+plus un nombre on met donc la suite dans la matrice
+		//TODO recuperer les donnees sur les UVs, note categorie etc
+		System.out.println("debut");
+		for(i=0; i<semestresUE.length; i++) {
+			for(j=0; j<semestresUE[i].length; j++) {
+				if(semestresUE[i][j]!=null){//si il y a plus rien sur la ligne on passe a la suite
+					System.out.print(semestresUE[i][j]+ " ");
+					if(semestresUE[i][j].equals("Total") && semestresUE[i][j++].equals("semestre")){//si on a pas fini les semestres
+						System.out.println("nouveau semestre");
+					}
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("fin");
+		return null;
+	}
 	/**
 	 * recupereTypeSemestre recupere le type de semestre de l'etudiant dans la matrice data entre ISI ou TC ou MASTER
 	 * @return retourne le type de semestre de l'etudiant
@@ -205,7 +249,7 @@ public class GestionData {
 	private String recupereTypeSemestre(){
 		return dataEtudiant[7][1];
 	}
-	
+
 	/**
 	 * recupereSemestre recupere le numero de semestre de l'etudiant dans la matrice data
 	 * @return retourne le numero de semestre de l'etudiant
@@ -213,7 +257,7 @@ public class GestionData {
 	private int recupereSemestre(){
 		return Integer.valueOf(dataEtudiant[7][2]);
 	}
-	
+
 	/**
 	 * Teste si un string est contenu dans une enum
 	 * @param value //TODO a definir value
@@ -221,12 +265,12 @@ public class GestionData {
 	 * @return
 	 */
 	public <E extends Enum<E>> boolean isInEnum(String value, Class<E> enumClass) {
-		  for (E e : enumClass.getEnumConstants()) {
-		    if(e.name().equals(value)) { return true; }
-		  }
-		  return false;
+		for (E e : enumClass.getEnumConstants()) {
+			if(e.name().equals(value)) { return true; }
 		}
-	
+		return false;
+	}
+
 	/**
 	 * renvois une liste constitué des ue d'un étudiant
 	 * @param tabMots //TODO a definir tabmots
@@ -245,7 +289,7 @@ public class GestionData {
 		}	
 		System.out.println(etu.getModules());
 	}
-	
+
 	public static List<Module> getModules() {
 		return modules;
 	}

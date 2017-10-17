@@ -38,6 +38,7 @@ public class Launcher {
 			//File file2 = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
 			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
 			new GestionData(file).lireFichier();//Test sur les fichiers etudiants
+			//TODO on recupera ici les etudiants et les modules
 			break;
 
 
