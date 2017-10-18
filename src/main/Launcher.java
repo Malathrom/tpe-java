@@ -1,8 +1,11 @@
-package ihm;
+package main;
 
 import java.awt.EventQueue;
 import java.io.File;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import ihm.GestionStagesJuryIsi;
 import io.LectureModules;
 import operation.GestionData;
 
@@ -19,9 +22,7 @@ public class Launcher {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					try {
-						GestionStagesJuryIsi window = new GestionStagesJuryIsi();
-						window.setVisible(true);
-						/*TODO regarder mes anciennes interfaces pour placer, redimesionner la fenetres*/
+						new GestionStagesJuryIsi();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -34,15 +35,16 @@ public class Launcher {
 			break;
 
 		case 3:
-			File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
-			//File file2 = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
+			//File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
+			File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
 			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
 			new GestionData(file).lireFichier();//Test sur les fichiers etudiants
 			//TODO on recupera ici les etudiants et les modules
 			break;
 
-
 		case 4:
+			boolean b = Pattern.matches("[0-9]{2}/[0-9]{2}/20[0-9]{2}", "03/10/2017");//si c'est un nouvelle etudiant
+			System.out.println(b);
 			break;
 		}
 	}

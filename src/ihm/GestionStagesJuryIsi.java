@@ -33,7 +33,8 @@ import java.awt.Font;
  */
 public class GestionStagesJuryIsi extends JFrame{
 	
-	//TODO faire la gestion d'exception pour le click des boutons notament*/
+	//TODO faire la gestion d'exception pour le click des boutons notament
+	//TODO regarder mes anciennes interfaces pour placer, redimesionner la fenetres
 	//TODO voir si c’est possible de faire un aperçu d’un pdf dans un Panel en java
 
 	private static final long serialVersionUID = 1L;
@@ -88,6 +89,7 @@ public class GestionStagesJuryIsi extends JFrame{
 	 * Initialisation du contenu de la fenêtre.
 	 */
 	private void initialize() {
+		this.setVisible(true);
 		this.setTitle("Gestion Stages Jury ISI");
 		this.setBounds(100, 100, 799, 241);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

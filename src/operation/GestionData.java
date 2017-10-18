@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import io.Filtrage;
 import io.LectureModules;
@@ -16,6 +17,8 @@ import operation.data.Etudiant;
 import operation.data.Module;
 /**GestionData gere les donnees des fichiers des etudiants*/
 public class GestionData {
+
+	//TODO si on a le temps on modifie le type de DataETudian en ArrayLIST
 
 	/**
 	 * LIGNE représente le nombre lignes necessaires dans une matrice pour stocker les données d'un seul etudiant
@@ -28,9 +31,14 @@ public class GestionData {
 	private final static int COLONNE = 50;
 
 	/**
-	 * delimiter représente le delimiteur entre 2 etudiants dans le fichier texte
+	 * sepEtdudiant représente la date qui separe les etudiants dans le fichier
 	 */
-	private final static String delimiter = " ";
+	private final static String sepEtudiant = "[0-9]{2}/[0-9]{2}20[0-9]{2}";
+
+	/**
+	 * sepSemestre est une regex qui permet de savoir quand dans le fichier on est dans un nouveau semestres
+	 */
+	private final String sepSemestre = "(A|P)[0-9]{2}";
 
 	/**
 	 * file represente le fichier qui va etre traité
@@ -48,19 +56,17 @@ public class GestionData {
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
 	/**
-	 * dataEtudiant contient les données texte nom formates sur un etudiant (nom, prenomm Ues, notes)
-	 */
-	private String[][] dataEtudiant = new String[LIGNE][COLONNE];
-
-	/**
-	 * nbEtudiant représente le nombre d'etudiant present dans le fichier
-	 */
-	private int nbEtudiants = 0;
-
-	/**
 	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
 	 */
 	private String nomPrenom;
+
+	/**
+	 * dataEtudiant va contenir les donnees de l'etudiant a traiter
+	 */
+	List<String> dataEtudiant = new ArrayList<String>();
+	
+	//TODO a commenter
+	private int nbEtudiant = 0;
 
 	/**
 	 * totalCSTM compte le nombre de CS+TM de TC de branche obtenus par l'étudiant au cours du TC ou du TC de branche ISI.  
@@ -95,7 +101,7 @@ public class GestionData {
 		totalCSTM=0;
 		nomPrenom="";
 		nbA=0;
-		dataEtudiant = new String[LIGNE][COLONNE];
+		dataEtudiant = new ArrayList<String>();//on remet les donnes de l'etudiant a 0
 	}
 
 	/**
@@ -103,48 +109,77 @@ public class GestionData {
 	 */
 	public void lireFichier(){
 		BufferedReader lecteurAvecBuffer;
+		List<String> datas = new ArrayList<String>();//TOUTES LES DONNEES DU FICHIER
 		reset();// Initialisation
 		try {
 			lecteurAvecBuffer = new BufferedReader(new FileReader(file));
 			String contenu;
 			String listeMots[];
-			int i = 0, j = 0;
 			while ((contenu = lecteurAvecBuffer.readLine()) != null){
 				listeMots = contenu.split(" ");
 
-				if(isNouvelEtudiant(contenu, delimiter)){//permet de savoir si on change d'etudiant
-					creationEtudiant();//on creer l'ancien etudiant
-					reset();
-					System.out.println("New etudiant");// TODO a enlever
-					i = 0;
-					////////TODO on lance les methodes pour instancier les UV et l'etudiant
-					//TODO qui va lire le fichier texte et créer les étudiants et de cette classe on créer les méthodes de comptage de notes par semestre, par type etc
-					//TODO quand on recuperera les matieres il faudra tester si elles font parties de l'ISI
-					nbEtudiants++;
-				}
-				j = 0;
+				//Ajout des donnees du fichier dans une liste
 				for (String string : listeMots) {
-					//System.out.println(i+ ":" + j +" " + string);//TODO a enlever
-					dataEtudiant[i][j++]=string;
+					datas.add(string);
 				}
-				i++; //on passe a la ligne suivante
 			}
-			System.out.println(nbEtudiants);//TODO A enlever un moment
+
 		}
 		catch(FileNotFoundException exc) {
 			System.out.println("Erreur d'ouverture");
 		} 
 		catch (IOException e) {e.printStackTrace();}
+		//On creer les etudiants
+		creationListeEtudiants(datas);
 	}
 
-	/**
-	 * IsNouvelEtudiant permet de savoir quand on passe a un nouvel etudiant dans le fichier txt
-	 * @param contenu correspond a la ligne en cours dans le fichier
-	 * @param delimiter correspond à la chaine qui delimite 2 etudiants dans le fichier
-	 * @return true si on passe a un nouvel etudiant dans le fichier sinon false
-	 */
-	private boolean isNouvelEtudiant(String contenu, String delimiter) {
-		if (contenu.equals(delimiter))
+	//TODO a commenter on va traite etudiant par etudiant
+	private void creationListeEtudiants(List<String> datas){
+		datas = suppressionElements(datas); //On supprime les elements inutile
+		
+		Iterator<String> it = datas.iterator();
+		while (it.hasNext()) {//on parcourt les donnees
+			String data = it.next();
+			//TODO trouver un moyen de stocker les doonnees et des que l'on change d'etudiant on bloque le process et on creer l'etudiant 
+			//System.out.println(data);
+			if(startDataEtudiant(data)){	//si on change d'etudiant on reste les donnees concernant l'ancien etudiant
+				reset();
+				nbEtudiant++;
+				
+			}
+			else{//si on a pas changer d'etudiant on stocke ces donnees
+				
+				if(endDataEtudiant(data)){//on est a la fin des donnes on crrer l'etudiant
+					creationEtudiant();
+					reset();
+					//etudiants.add(etudiant);//TODO on ajoute l'ancien etudiant dans la liste
+				}
+				else{
+					dataEtudiant.add(data);//on est pas a la fin on attemd
+				}
+				
+				
+				
+					
+			}
+			//TODO a voir si il faut appellet creationEtuidant pour le dernier etudiant de la liste
+			//System.out.println(dataEtudiant.size()+1);
+			
+		}
+		System.out.println(nbEtudiant);
+		
+	}
+
+	/*TODO a commenter methode pour s'avoir quand commence les donnees d;un etudiant*/
+	private boolean startDataEtudiant(String contenu) {
+		if ("PV".equals(contenu))//si c'est un nouvelle etudiant
+			return true;
+		return false;
+	}
+	
+	/*TODO a commenter methode pour s'avoir quand termine les donnees d;un etudiant*/
+	private boolean endDataEtudiant(String contenu) {
+		if ("Global".equals(contenu))//si c'est un nouvelle etudiant
 			return true;
 		return false;
 	}
@@ -153,15 +188,20 @@ public class GestionData {
 	 * creationEtudiant permet de créer l'etudiant en objet Java et de l'ajouter à la liste des etudiants deja instanciées 
 	 */
 	private void creationEtudiant(){
-		//on recupere les donnees
+	
+		//on recupere le nom et prenom de l'etudiant traité
 		String nom = recupereNom();
 		String prenom = recuperePrenom();
 		System.out.println("nom "+ nom);
 		System.out.println("prenom "+ prenom);
-		recupereUEs();
+
+
+		//TODO A APPELERrecupereUEs(dataEtudiant);
+
 		//TODO recuperer les donnees sur l'etudiant et l'instancier et le mettre dans la liste etudiant;
 		//TODO envoyer ces donnees a une classe GestionNotes
 		//Etudiant etudiant = new Etudiant(nom, prenom, modules);
+
 	}
 
 	/**
@@ -169,7 +209,7 @@ public class GestionData {
 	 * @return retourne le nom de l'etudiant
 	 */
 	private String recupereNom(){
-		return dataEtudiant[1][2];
+		return dataEtudiant.get(8);
 	}
 
 	/**
@@ -177,7 +217,7 @@ public class GestionData {
 	 * @return retourne le prenom de l'etudiant
 	 */
 	private String recuperePrenom(){
-		return dataEtudiant[1][1];
+		return dataEtudiant.get(7);
 	}
 
 	/**
@@ -185,95 +225,93 @@ public class GestionData {
 	 * @return retourne la liste des UEs de l'etudiant
 	 */
 	private List<String> recupereUEs(){
-		List<String> semestresEtudiant = recuperesDonneesSemestres();
+		List<String> semestresEtudiant = recuperesDonneesSemestres(dataEtudiant);
 
-		int semestre = recupereSemestre();
-		String typeSemestre = recupereTypeSemestre();
-
-		System.out.println("typesemestre "+ typeSemestre);
-		System.out.println("semestre "+ semestre);
+		creationsUE(semestresEtudiant);//Creation des UE de l'etudiant
 		return null;
 	}
 
 	//TODO a commenter //on stocke les donnees des semestres uniquement
-	private List<String> recuperesDonneesSemestres() {
+	private List<String> recuperesDonneesSemestres(List<String> dataEtudiant) {
 		List<String> semestresUE = new ArrayList<String>();
-		int i, j;
 		boolean enSemestre = false;//permet desavoir si on parcourt les semestres
 
 		//on parcourt les donnees
-		for(i=0; i<dataEtudiant.length; i++) {
-			for(j=0; j<dataEtudiant[i].length; j++) {
-				if(dataEtudiant[i][j]!=null) {//si le champ n'est pas null
-					if(dataEtudiant[i][j].equals("Observations")){//le mot Observations est le dernier mot avant les semestres
-						enSemestre=true;
-						break;
-					}
+		Iterator<String> it = dataEtudiant.iterator();
+		int debut = dataEtudiant.indexOf("Observations");//indique la position du debut des semestres
+		int fin = dataEtudiant.indexOf("TOTAUX");//indique la position de la fin des semestres
+		System.out.println(debut + "  " + fin);//TODO a enlever
+		int index = ++debut;
+		while (index < fin) {
+			semestresUE.add(dataEtudiant.get(index));
+			index++;
+		}
 
-					else if(enSemestre){//si on est dans la partie semestres
-						if(dataEtudiant[i][j]!=null) {//si le champ n'est pas null//si il y a plus rien sur la ligne on passe a la suite
-							if(!dataEtudiant[i][j].equals("TOTAUX")){//si on a pas fini les semestres
-								semestresUE.add(dataEtudiant[i][j]);
-								//TODO creer les semestres ICI
-							}
-						}
-					}
-					else //si on est a la ligne TOTAUX on a fini les semestres
-						enSemestre=false;
+		//verification
+		System.out.println("verification" + semestresUE.get(0));
+		System.out.println("verification2" + semestresUE.get(semestresUE.size()-1));
+
+		//Suppression des elements vide de l'ArrayList
+		semestresUE = suppressionElements(semestresUE);
+		return semestresUE;
+	}
+
+	//TODO a commenter Creation des Uv de l'etudiant
+	private List<Module> creationsUE(List<String> semestresData) {
+		List<Module> Module = new ArrayList<Module>();
+		String semestre;
+		boolean first = true;
+		List<String> semestreEnCours = new ArrayList<String>();
+		Iterator<String> it = semestresData.iterator();
+		while (it.hasNext()) {//on parcourt la liste qui contient les semestres
+			String data = (String) it.next();
+			if (Pattern.matches(sepSemestre, data)) {//si c'est un nouveau semestre
+				if (first) {
+					first = false; //Ce ne sera plus le premier semestre
+					semestre = data;
+					semestreEnCours = new ArrayList<String>();// on relance la liste	
+					semestreEnCours.add(data);
+				}else{
+
+					//On instancie les modules du semestres puis on reste la liste
+					int numSemestre = recupereSemestre(semestreEnCours);
+					String typeSemestre = recupereTypeSemestre(semestreEnCours);
+					System.out.println(numSemestre);
+					System.out.println(typeSemestre);
+
+					//Nouveau semestre
+					System.out.println();
+					System.out.println("Semestre " + data);
+					semestreEnCours = new ArrayList<String>();// on relance la liste	
+					semestreEnCours.add(data);
 				}
 			}
+			else{//si ce n'est pas un nouveau semestre on ajoute dans les data
+				semestreEnCours.add(data);
+			}
 		}
-		
+		//Utiliser la fonctions matches pour retourevr A15 ou P22
 		//TODO faire des sous ArrayList pour chque semestres ils sont separes par Total semestre
 		//TODO creer un matrice UE en testant si la ligne est P+un nombre ou A+plus un nombre on met donc la suite dans la matrice
 		//TODO recuperer les donnees sur les UVs, note categorie etc
 		//ArrayList<Module> module = ueEtudiant()
-		
-
-		semestresUE = suppressionElements(semestresUE);//Suppression des elements vide de l'ArrayList
-
-		System.out.println("debut");
-		Iterator<String> it = semestresUE.iterator();
-		while (it.hasNext()) {
-			String str = it.next();
-
-			if (str.equals("■")) {
-				System.out.print("carre");
-			}
-			System.out.println(semestresUE.indexOf(str) + " "+ str);
-		}
-		System.out.println(semestresUE.size());
-		System.out.println("fin");
 		return null;
 	}
 
-	//TODO a commenter //Suppression des elements inutiles (vide, ■) se trouvant dans la liste
-	public List<String> suppressionElements(List<String> liste){
-		String vide = "";
-		String carre = "■";
-		while (liste.contains(vide)) {//on supprime les chaines vide
-			liste.remove(vide);
-		}
-		while (liste.contains(carre)) {//on supprime les carre
-			liste.remove(carre);
-		}
-		return liste;
-	}
-
 	/**
-	 * recupereTypeSemestre recupere le type de semestre de l'etudiant dans la matrice data entre ISI ou TC ou MASTER
+	 * recupereTypeSemestre recupere le type de semestre de l'etudiant dans la la liste des semestres
 	 * @return retourne le type de semestre de l'etudiant
 	 */
-	private String recupereTypeSemestre(){
-		return dataEtudiant[7][1];
+	private String recupereTypeSemestre(List<String> liste){
+		return liste.get(1);
 	}
 
 	/**
 	 * recupereSemestre recupere le numero de semestre de l'etudiant dans la matrice data
 	 * @return retourne le numero de semestre de l'etudiant
 	 */
-	private int recupereSemestre(){
-		return Integer.valueOf(dataEtudiant[7][2]);
+	private int recupereSemestre(List<String> liste){
+		return Integer.valueOf(liste.get(2));
 	}
 
 	/**
@@ -288,7 +326,25 @@ public class GestionData {
 		}
 		return false;
 	}
+	
+	//TODO a commenter //Suppression des elements inutiles (vide, ■) se trouvant dans la liste
+		public List<String> suppressionElements(List<String> liste){
+			String vide = "";
+			String carre = "■";
+			String triangle = "▲";
+			while (liste.contains(vide)) {//on supprime les chaines vide
+				liste.remove(vide);
+			}
+			while (liste.contains(carre)) {//on supprime les carre
+				liste.remove(carre);
+			}
+			while (liste.contains(triangle)) {//on supprime les carre
+				liste.remove(triangle);
+			}
+			return liste;
+		}	
 
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/**
 	 * renvois une liste constitué des ue d'un étudiant
 	 * @param tabMots //TODO a definir tabmots
@@ -307,7 +363,7 @@ public class GestionData {
 		}	
 		System.out.println(etu.getModules());
 	}
-
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public static List<Module> getModules() {
 		return modules;
 	}
@@ -348,31 +404,11 @@ public class GestionData {
 		this.nbA = nbA;
 	}
 
-	public String[][] getDataEtudiant() {
-		return dataEtudiant;
-	}
-
-	public void setDataEtudiant(String[][] dataEtudiant) {
-		this.dataEtudiant = dataEtudiant;
-	}
-
-	public int getNbEtudiants() {
-		return nbEtudiants;
-	}
-
-	public void setNbEtudiants(int nbEtudiants) {
-		this.nbEtudiants = nbEtudiants;
-	}
-
 	public static int getLigne() {
 		return LIGNE;
 	}
 
 	public static int getColonne() {
 		return COLONNE;
-	}
-
-	public static String getDelimiter() {
-		return delimiter;
 	}
 }
