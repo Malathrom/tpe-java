@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 import ihm.GestionStagesJuryIsi;
 import io.LectureModules;
 import operation.GestionData;
+import operation.GestionNote;
 
 public class Launcher {
 
@@ -35,8 +36,8 @@ public class Launcher {
 			break;
 
 		case 3:
-			//File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
-			File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
+			File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
+			//File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
 			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
 			new GestionData(file).lireFichier();//Test sur les fichiers etudiants
 			//TODO on recupera ici les etudiants et les modules
@@ -45,6 +46,19 @@ public class Launcher {
 		case 4:
 			boolean b = Pattern.matches("[0-9]{2}/[0-9]{2}/20[0-9]{2}", "03/10/2017");//si c'est un nouvelle etudiant
 			System.out.println(b);
+			break;
+
+		case 5:
+			String sepSemestre = "(A|P)[0-9]{2}";
+			String data = "A15";
+
+			if (Pattern.matches(sepSemestre, data))
+				System.out.println(sepSemestre.matches(data) + " " + data);
+			break;
+
+		case 6:
+			new GestionNote();
+			
 			break;
 		}
 	}

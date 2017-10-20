@@ -44,7 +44,7 @@ public class LectureModules {
 				nomModule = listeMots[0];
 				categorieModule = listeMots[2];
 				parcoursModule = listeMots[3];
-				modules.add(new Module(nomModule, categorieModule, parcoursModule, creditModule, 0, Note.NULL));
+				modules.add(new Module(nomModule, Note.NULL, 0, creditModule, categorieModule, parcoursModule));
 			}
 			lecteurAvecBuffer.close();
 		} catch (IOException e) {
