@@ -386,6 +386,7 @@ public class GestionData {
 			if (etu.getModules().get(i).getNote()==note && etu.getModules().get(i).getSemestre()==semestre){
 				nbNote++;
 			}
+			i++;
 		}
 		return nbNote;
 	}
@@ -401,6 +402,7 @@ public class GestionData {
 			if(etu.getModules().get(i).getSemestre()>maxSem){
 				maxSem=etu.getModules().get(i).getSemestre();
 			}
+			i++;
 		}		
 		return maxSem;
 	}
@@ -423,42 +425,27 @@ public class GestionData {
 	 * @return
 	 */
 	public int nombreUeSemestre(Etudiant etu, int sem){
-		int nbUe =0, i=0;
+		int nbUe=0, i=0;
 		while(i<etu.getModules().size()){
 			if(etu.getModules().get(i).getSemestre()==sem){
 				nbUe++;
+				System.out.println(etu.getModules().get(i));
 			}
+			i++;
 		}
 		return nbUe;
 	}
 	
 	/**
-	 * Teste si le string en entrée est une CS/TM de la branche ISI
-	 * @param le nom de l'UE
-	 * @return true si c'est le cas, false sinon
-	 */
-	public static boolean isISI (String str){
-		boolean out=false;
-		Module module = null;
-		Iterator<Module> it = modules.iterator();
-		while(it.hasNext()){
-			module = it.next();			
-			if (str.equals(module.getNom())) {
-				out=true;
-			}
-		}
-		return out;
-	}
-	
-	/**
 	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
 	 * @param l'étudiant choisis
-	 * @return l'avis de chaque semestre dans un tableau
+	 * @return l'avis de chaque semestre dans un tableau, chaque case représentant un semestre
 	 */
 	public ArrayList<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
 		int maxSem=maxSemestre(etu);
-		int sem=0;
+		System.out.println("max=" +maxSem);
+		int sem=1;
 		while(sem<maxSem){
 			String str="";
 			int nbA=compteNote(etu, Note.A, sem);
@@ -466,14 +453,17 @@ public class GestionData {
 			int nbD=compteNote(etu, Note.D, sem);
 			int nbE=compteNote(etu, Note.E, sem);
 			int nbUe=nombreUeSemestre(etu, sem);
-			int nbUeRatees =0, i=0, nbUeRateesCSTM=0;
+			System.out.println(etu.getModules().get(3));
+			System.out.println(nbUe);
+			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
 			while(i<etu.getModules().size()){
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !isISI(etu.getModules().get(i).getNom())){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
 					nbUeRatees++;
 				}
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && isISI(etu.getModules().get(i).getNom())){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
 					nbUeRateesCSTM++;
 				}
+				i++;
 			}
 			int nbUeRateesTotal=nbUeRatees+nbUeRateesCSTM;
 			if (nbUeRateesTotal==0){
@@ -492,9 +482,7 @@ public class GestionData {
 				}
 				else{
 					str+=", Semestre Moyen";
-				}
-				
-				
+				}		
 			}
 			if (nbUeRateesTotal==1){
 				str+="Poursuite avec Conseil";
@@ -504,7 +492,6 @@ public class GestionData {
 				else{
 					str+=", Semestre Médiocre";
 				}
-				
 			}
 			if (nbUeRateesTotal>=2){
 				str+="Poursuite avec Réserve";
@@ -518,8 +505,10 @@ public class GestionData {
 			
 			sem++;
 			out.add(str);
-		}		
-		return out;
+		}
+		ArrayList<String> a= new ArrayList<String>();
+		a.add("bleh");
+		return a;
 	}
 	
 	public static List<Module> getModules() {
@@ -569,4 +558,6 @@ public class GestionData {
 	public static int getColonne() {
 		return COLONNE;
 	}
+	
+	
 }
