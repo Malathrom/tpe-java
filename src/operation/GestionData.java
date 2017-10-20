@@ -411,8 +411,41 @@ public class GestionData {
 	 */
 	public boolean estRatee(Module mod){
 		boolean out=false;
-		if (mod.getNote()==Note.F || mod.getNote()==Note.ABS || mod.getNote()==Note.FX || mod.getNote()==Note.NULL){
+		if (mod.getCredit()==0){
 			out=true;
+		}
+		return out;
+	}
+	/**
+	 * retourne le nombre d'ue pour un étudiant et semestre donné
+	 * @param etu
+	 * @param sem
+	 * @return
+	 */
+	public int nombreUeSemestre(Etudiant etu, int sem){
+		int nbUe =0, i=0;
+		while(i<etu.getModules().size()){
+			if(etu.getModules().get(i).getSemestre()==sem){
+				nbUe++;
+			}
+		}
+		return nbUe;
+	}
+	
+	/**
+	 * Teste si le string en entrée est une CS/TM de la branche ISI
+	 * @param le nom de l'UE
+	 * @return true si c'est le cas, false sinon
+	 */
+	public static boolean isISI (String str){
+		boolean out=false;
+		Module module = null;
+		Iterator<Module> it = modules.iterator();
+		while(it.hasNext()){
+			module = it.next();			
+			if (str.equals(module.getNom())) {
+				out=true;
+			}
 		}
 		return out;
 	}
@@ -430,22 +463,62 @@ public class GestionData {
 			String str="";
 			int nbA=compteNote(etu, Note.A, sem);
 			int nbB=compteNote(etu, Note.B, sem);
-			int nbUeRatees =0, i=0;
+			int nbD=compteNote(etu, Note.D, sem);
+			int nbE=compteNote(etu, Note.E, sem);
+			int nbUe=nombreUeSemestre(etu, sem);
+			int nbUeRatees =0, i=0, nbUeRateesCSTM=0;
 			while(i<etu.getModules().size()){
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !isISI(etu.getModules().get(i).getNom())){
 					nbUeRatees++;
+				}
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && isISI(etu.getModules().get(i).getNom())){
+					nbUeRateesCSTM++;
+				}
+			}
+			int nbUeRateesTotal=nbUeRatees+nbUeRateesCSTM;
+			if (nbUeRateesTotal==0){
+				str+="Poursuite Normale";
+				if ((nbA+nbB)/nbUe>0.7){
+					str+=", Excellent Semestre";
+				}
+				else if ((nbA+nbB)/nbUe>0.6){
+					str+=", Très Bon Semestre";
+				}
+				else if ((nbA+nbB)/nbUe>0.5){
+					str+=", Bon Semestre";
+				}
+				else if ((nbE+nbD)/nbUe<0.5){
+					str+=", Assez Bon Semestre";
+				}
+				else{
+					str+=", Semestre Moyen";
+				}
+				
+				
+			}
+			if (nbUeRateesTotal==1){
+				str+="Poursuite avec Conseil";
+				if ((nbE+nbD)/nbUe<0.5){
+					str+=", Semestre Moyen";
+				}
+				else{
+					str+=", Semestre Médiocre";
+				}
+				
+			}
+			if (nbUeRateesTotal>=2){
+				str+="Poursuite avec Réserve";
+				if (nbUeRateesCSTM<=1){
+					str+=", Mauvais Semestre";
+				}
+				else{
+					str+=", Très Mauvais Semestre";
 				}
 			}
 			
 			sem++;
 			out.add(str);
-		}
-		
-		
-		
-		
-		
-		
+		}		
 		return out;
 	}
 	
