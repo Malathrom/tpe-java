@@ -373,6 +373,82 @@ public class GestionData {
 		System.out.println(etu.getModules());
 	}
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/**
+	 * retourne le nombre de note obtenues pour un étudiant et semestre donné.
+	 * @param etu
+	 * @param la note que l'on veut compter
+	 * @param le semestre
+	 * @return nbNote
+	 */
+	public int compteNote(Etudiant etu, Note note, int semestre){
+		int nbNote=0, i=0;
+		while(i<etu.getModules().size()){
+			if (etu.getModules().get(i).getNote()==note && etu.getModules().get(i).getSemestre()==semestre){
+				nbNote++;
+			}
+		}
+		return nbNote;
+	}
+	
+	/**
+	 * retourne le numero de semestre effectués pour un étudiant
+	 * @param etu
+	 * @return le nombre de semestres effectués
+	 */
+	public int maxSemestre(Etudiant etu){
+		int maxSem=0, i=0;
+		while(i<etu.getModules().size()){
+			if(etu.getModules().get(i).getSemestre()>maxSem){
+				maxSem=etu.getModules().get(i).getSemestre();
+			}
+		}		
+		return maxSem;
+	}
+	/**
+	 * indique si une UE est ratée
+	 * @param mod
+	 * @return true si c'est le cas, false sinon
+	 */
+	public boolean estRatee(Module mod){
+		boolean out=false;
+		if (mod.getNote()==Note.F || mod.getNote()==Note.ABS || mod.getNote()==Note.FX || mod.getNote()==Note.NULL){
+			out=true;
+		}
+		return out;
+	}
+	
+	/**
+	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
+	 * @param l'étudiant choisis
+	 * @return l'avis de chaque semestre dans un tableau
+	 */
+	public ArrayList<String> avisJury(Etudiant etu){
+		ArrayList<String> out= new ArrayList<String>();
+		int maxSem=maxSemestre(etu);
+		int sem=0;
+		while(sem<maxSem){
+			String str="";
+			int nbA=compteNote(etu, Note.A, sem);
+			int nbB=compteNote(etu, Note.B, sem);
+			int nbUeRatees =0, i=0;
+			while(i<etu.getModules().size()){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem){
+					nbUeRatees++;
+				}
+			}
+			
+			sem++;
+			out.add(str);
+		}
+		
+		
+		
+		
+		
+		
+		return out;
+	}
+	
 	public static List<Module> getModules() {
 		return modules;
 	}
