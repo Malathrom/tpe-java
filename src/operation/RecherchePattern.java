@@ -95,7 +95,6 @@ public class RecherchePattern {
 
 	public static int recupereSemestreModule(List<String> modulesData) {
 		String recupereParcours = recupereParcours(modulesData);// on recupere le parcours qui se trouve juste avant le semestre
-		System.out.println("PARCOURS" + recupereParcours);
 		int pos = modulesData.indexOf(recupereParcours);//on recupere la position
 		String semestre = modulesData.get(pos+1);//on recupere le semestre
 		return Integer.valueOf(semestre);

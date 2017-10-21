@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import io.LectureModules;
 import operation.data.Etudiant;
@@ -48,11 +47,6 @@ public class GestionData {
 	 * dataEtudiant va contenir les donnees de l'etudiant a traiter
 	 */
 	private List<String> dataEtudiant = new ArrayList<String>();
-
-	/**
-	 * modulesEtudiantsl iste de tous les modules de l'etudiant que nous sommes en train de traiter dans le fichier
-	 */
-	private List<Module> modulesEtudiant = new ArrayList<Module>();
 
 	/**
 	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
@@ -95,7 +89,6 @@ public class GestionData {
 		nomPrenom="";
 		nbA=0;
 		dataEtudiant = new ArrayList<String>();//on remet les donnees de l'etudiant a 0
-		modulesEtudiant = new ArrayList<Module>();
 		nbSemestreEtudiant = 0;
 	}
 
@@ -167,6 +160,7 @@ public class GestionData {
 
 	/**TODO a commenter*/
 	private List<Module> ajoutModulesEtudiant(){
+		List<Module> modules = new ArrayList<Module>();
 		List<String> dataSemestreEtudiant = new ArrayList<String>(); //donnees d'un semestre de l'etudiant
 		boolean enSemestre = false;
 		Iterator<String> it = dataEtudiant.iterator();
@@ -178,28 +172,27 @@ public class GestionData {
 			}
 			if(enSemestre){//si on est dans la zone de semestres
 				if(RecherchePattern.rechercheFinSemestre(data)){//si on est a la fin du semestre 
-					ajoutModules(dataSemestreEtudiant);//Ajout des modules du semestre
+					//ajoutModules(dataSemestreEtudiant);//Ajout des modules du semestre
+					modules.addAll(ajoutModules(dataSemestreEtudiant));
 					dataSemestreEtudiant = new ArrayList<String>();// on reset les donnees
 					enSemestre=false;
 				}
 				else{//si on est dans la zone semestre
 					dataSemestreEtudiant.add(data);
 				}
-
-			}
-			else{//sinon on n'a pas changer d'etudiant on stocke ces donnees
-				//dataSemestreEtudiant.add(data);//on ajoute le type de semestre (P15 ou A17)s
 			}
 		}
-		return modulesEtudiant;
+		return modules;
 	}
 
 	/**TODO a recommenter
 	 * Creation des UEs de l'etudiant pour un semestre
 	 * @param modulesData les donnees sur les UEs
 	 * @param semestre le semestre des UV que l'etudiant a fair
+	 * @return 
 	 */
-	private void ajoutModules(List<String> modulesData) {
+	private List<Module> ajoutModules(List<String> modulesData) {
+		List<Module> mods = new ArrayList<Module>();
 		nbSemestreEtudiant++;
 		String parcours = RecherchePattern.recupereParcours(modulesData);
 		int semestre = RecherchePattern.recupereSemestreModule(modulesData);
@@ -216,30 +209,24 @@ public class GestionData {
 				premierModule=true;
 			}
 			if (premierModule) {
-				if(RecherchePattern.recupereNomModule(str) != null){//tant qu'on a pas trouve un nom de module correct 
+				if(RecherchePattern.recupereNomModule(str) != null)//tant qu'on a pas trouve un nom de module correct 
 					nomModule=RecherchePattern.recupereNomModule(str);
-					System.out.print("nom" +nomModule + " ");
-					System.out.print("note" +note + " ");
-					System.out.print("cre" +credit + " ");
-					System.out.print("par" +parcours + " ");
-					System.out.println("sem" +semestre);
-				}
-				if(RecherchePattern.recupereNoteModule(str) != null){//tant qu'on a pas trouve une note de module correct 
+				if(RecherchePattern.recupereNoteModule(str) != null)//tant qu'on a pas trouve une note de module correct 
 					note=RecherchePattern.recupereNoteModule(str);	
-				}
-				if(RecherchePattern.recupereCreditModule(str) != 0){ //tant qu'on a pas trouve une note de module correct 
+				if(RecherchePattern.recupereCreditModule(str) != 0) //tant qu'on a pas trouve une note de module correct 
 					credit=RecherchePattern.recupereCreditModule(str);
-				}
+				
 				//si toutes les valeurs sont ok alors on creer le module
 				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
 					Module module = new Module(nomModule, note, credit, semestre, parcours, null);
-					modulesEtudiant.add(module);
+					mods.add(module);
 					nomModule = null;//on reset les donnees
 					note = null;//on reset les donnees
 					credit = 0;//on reset les donnees
 				}
 			}
 		}
+		return mods;
 	}
 
 	//TODO a commenter //Suppression des elements inutiles (vide, ■) se trouvant dans la liste
