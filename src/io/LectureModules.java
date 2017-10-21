@@ -40,10 +40,9 @@ public class LectureModules {
 			while ((ligne = lecteurAvecBuffer.readLine()) != null){
 				listeMots=ligne.split(" ");
 				nomModule = listeMots[0];
-				creditModule = Integer.valueOf(listeMots[1]);
-				nomModule = listeMots[0];
 				categorieModule = listeMots[2];
 				parcoursModule = listeMots[3];
+				creditModule = Integer.valueOf(listeMots[1]);
 				modules.add(new Module(nomModule, Note.NULL, 0, creditModule, categorieModule, parcoursModule));
 			}
 			lecteurAvecBuffer.close();
