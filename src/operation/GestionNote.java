@@ -28,7 +28,6 @@ public class GestionNote {
 		Module mod19 = new Module("TX10", Note.F, 4, 3);
 		Module mod20 = new Module("NF20", Note.A, 6, 2);
 		
-		
 		List<Module> modules1 = new ArrayList<Module>();
 		List<Module> modules2 = new ArrayList<Module>();
 		List<Module> modules3 = new ArrayList<Module>();

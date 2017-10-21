@@ -2,12 +2,7 @@ package operation.data;
 
 import operation.Note;
 
-/**La classe module représente un module de l'UTT
- * @auteur Noga Lucas
- * @version 2017
- */
-
-/*TODO se servir de la javadoc de cette classe*/
+/**La classe module représente un module de l'UTT*/
 public class Module{
 	
 	/**Nom du module*/
