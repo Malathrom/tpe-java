@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.io.PrintWriter;
@@ -50,29 +51,48 @@ public class Conversion {
 	 * @param niveauIsi  Entier représentant le niveau de l'étudiant dans le formation ISI
 	 * @throws IOException Erreur d'ouverture de fichier
 	 */
-	public List<Etudiant> lireFichier (String fileTxt, String nomFichierCSV){
+	public void lireFichier (String fileTxt, String nomFichierCSV){
 		String ligne;
 		String listeMots[];
 		File file = new File(nomFichierCSV);
 		try {
 			fw = new FileWriter(file);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		BufferedWriter bw;
 		PrintWriter pw;
 		bw = new BufferedWriter(fw);
 		pw = new PrintWriter(bw);
-
-		pw.println("AffectTP 4");
-		pw.println("AffectTP 5");
+		
+		GestionData g = new GestionData(new File(fileTxt));
+		List<Etudiant> etudiants = g.lireFichier();
+		Iterator<Etudiant> it = etudiants.iterator();
+		String entete="";
+		entete+="Nom;Prenom;";
+		int semSize= g.avisJury(etudiants.get(0)).size(), j=0;
+		while (j<semSize){
+			entete+="Avis Semestre "+(j+1)+";";
+			j++;
+		}
+		entete+="\n";
+		pw.print(entete);
+		
+		while (it.hasNext()) {
+			Etudiant etudiant = it.next();
+			String out="";
+			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
+			int i=0;
+			ArrayList<String> avisSem= g.avisJury(etudiant);
+			while(i<avisSem.size()){
+				out+= avisSem.get(i)+";";
+				i++;
+			}
+			pw.println(out);
+		}
+		pw.println(etudiants);
 		pw.close();
 		
-		
-
-		GestionData gData = new GestionData(new File(fileTxt));
-		return gData.lireFichier();
 	}
 	
 	

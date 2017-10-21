@@ -283,7 +283,7 @@ public class GestionData {
 	 */
 	public ArrayList<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
-		int maxSem=maxSemestre(etu);
+		int maxSem=maxSemestre(etu)+1;
 		int sem=1;
 		while(sem<maxSem+1){
 			String str="";
@@ -294,7 +294,7 @@ public class GestionData {
 			int nbUe=nombreUeSemestre(etu, sem);
 			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
 			while(i<etu.getModules().size()){
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem){
 					nbUeRatees++;
 				}
 				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){

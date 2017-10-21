@@ -45,15 +45,12 @@ public class Launcher {
 			GestionData g = new GestionData(file);
 			
 			List<Etudiant> etudiants = g.lireFichier();//Test sur les fichiers etudiants
-			/*Iterator<Etudiant> it = etudiants.iterator();
+			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {
 				Etudiant etudiant = it.next();
 				System.out.println(etudiant);
 				
 			}
-			System.out.println(etudiants.size());*/
-			System.out.println(etudiants.get(1));
-			System.out.println(g.avisJury(etudiants.get(1)));
 			//TODO on recupera ici les etudiants et les modules
 
 			break;
