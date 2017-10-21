@@ -28,7 +28,7 @@ public class Module{
 	/**Credit de l'UV*/
 	private int credit;
 
-	public Module(String nom, Note note, int credit, int semestre, String categorie, String parcours) {
+	public Module(String nom, Note note, int credit, int semestre, String parcours, String categorie) {
 		this.nom = nom;
 		this.categorie = categorie;
 		this.semestre = semestre; 
@@ -46,7 +46,7 @@ public class Module{
 	
 	@Override
 	public String toString() {
-		return "Module{" + "nom=" + nom + ", categorie=" + categorie + ", parcours=" + parcours + ",  semestre=" + semestre + ", Note=" + note + ", credit=" + credit + "}";
+		return "Module{ nom=" + nom + " parcours=" + parcours + " semestre: " + semestre + " Note=" + note + " credit=" + credit + " categorie=" + categorie + "}";
 	}
 	
 	public String getNom() {

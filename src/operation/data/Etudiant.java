@@ -1,6 +1,7 @@
 package operation.data;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Etudiant {
@@ -40,6 +41,16 @@ public class Etudiant {
 
 	public void setModules(List<Module> modules) {
 		this.modules = modules;
+	}
+	
+	public String toString(){
+		Iterator<Module> it = modules.iterator();
+		String chaine = nom + " "+ prenom + "\n";
+		while (it.hasNext()) {
+			Module module = (Module) it.next();
+			chaine+= module + "\n";
+		}
+		return chaine;
 	}
 
 	

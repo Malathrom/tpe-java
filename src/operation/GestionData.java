@@ -31,11 +31,6 @@ public class GestionData {
 	private final static int COLONNE = 50;
 
 	/**
-	 * sepSemestre est une regex qui permet de savoir quand dans le fichier on est dans un nouveau semestres
-	 */
-	private final String sepSemestre = "(A|P)[0-9]{2}";
-
-	/**
 	 * file represente le fichier qui va etre traité
 	 */
 	private File file = null;
@@ -49,12 +44,12 @@ public class GestionData {
 	 * etudiants est la liste des objets de type Etudiant que nous sommes en train de traiter dans le fichier
 	 */
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
-	
+
 	/**
 	 * dataEtudiant va contenir les donnees de l'etudiant a traiter
 	 */
 	private List<String> dataEtudiant = new ArrayList<String>();
-	
+
 	/**
 	 * modulesEtudiantsl iste de tous les modules de l'etudiant que nous sommes en train de traiter dans le fichier
 	 */
@@ -64,7 +59,7 @@ public class GestionData {
 	 * nomPrenom contient une chaîne de caractères contenant le nom et prénom de l'étudiant ou "" si le nom et prénom de l'étudiant ne sont pas encore trouvés
 	 */
 	private String nomPrenom;
-	
+
 	/*
 	 * nbSemestre indique le nombre de semestre qu'a fait l'etudiant
 	 */
@@ -140,13 +135,13 @@ public class GestionData {
 		Iterator<String> it = datas.iterator();
 		while (it.hasNext()) {//on parcourt les donnees
 			String data = it.next();
-			if(startDataEtudiant(data)){	//si on change d'etudiant on reste les donnees concernant l'ancien etudiant
+			if(RecherchePattern.rechercheDebutEtudiant(data)){	//si on change d'etudiant on reste les donnees concernant l'ancien etudiant
 				reset();
 				nbEtudiant++;
 			}
 			else{//si on a pas changer d'etudiant on stocke ces donnees
-				if(endDataEtudiant(data)){//si on est a la fin des donnees on creer l'etudiant
-					creationEtudiant();
+				if(RecherchePattern.rechercheFinEtudiant(data)){//si on est a la fin des donnees on creer l'etudiant
+					etudiants.add(AjoutEtudiant());
 					reset();
 					//etudiants.add(etudiant);//TODO on ajoute l'ancien etudiant dans la liste
 				}
@@ -157,129 +152,92 @@ public class GestionData {
 			//TODO a voir si il faut appellet creationEtuidant pour le dernier etudiant de la liste
 			//System.out.println(dataEtudiant.size()+1);
 		}
-		//System.out.println(nbEtudiant);//TODO a enlever
+		AffichageEtudiant();//TODO a enlever affichage pour voir si ca marche
+		System.out.println(nbEtudiant);//TODO a enlever
 	}
 
 	/**
-	 * creationEtudiant permet de créer l'etudiant en objet Java et de l'ajouter à la liste des etudiants deja instanciées 
+	 * ajoutEtudiant permet de créer l'etudiant en objet Java et de l'ajouter à la liste des etudiants deja instanciées 
+	 * @param dataEtudiant 
 	 */
-	private void creationEtudiant(){
-
+	private Etudiant AjoutEtudiant(){
 		//on recupere le nom et prenom de l'etudiant traité
-		String nom = recupereNom();
-		String prenom = recuperePrenom();
-		//System.out.println("nom "+ nom);//TODO a enlever
-		//System.out.println("prenom "+ prenom);//TODO a enlever
+		System.out.println("YO");
+		String nom = RecherchePattern.recupereNom(dataEtudiant);
+		String prenom = RecherchePattern.recuperePrenom(dataEtudiant);
+		System.out.println("nom "+ nom);//TODO a enlever
+		System.out.println("prenom "+ prenom);//TODO a enlever
 
-		List<Module> modulesEtu = creationModulesEtudiant();//on recupere les Ue d'un etudiant
-		System.out.println(modulesEtu.size());
-		System.out.println("l'etudiant "+ nom + " " + prenom + " avec les modules :");
-		Iterator<Module> it = modulesEtu.iterator();
-		while (it.hasNext()) {
-			Module module = (Module) it.next();
-			System.out.print(module.getNom() + " ");
-		}
+		List<Module> modulesEtudiant = AjoutModulesEtudiant();//on recupere les Ue d'un etudiant
 		//TODO recuperer les donnees sur l'etudiant et l'instancier et le mettre dans la liste etudiant;
 		//TODO envoyer ces donnees a une classe GestionNotes
-		//Etudiant etudiant = new Etudiant(nom, prenom, modules);
-
+		return new Etudiant(nom, prenom, modulesEtudiant);
 	}
 
-	/**
-	 * recupereNom recupere le nom de l'etudiant dans la matrice data
-	 * @return retourne le nom de l'etudiant
-	 */
-	private String recupereNom(){
-		return dataEtudiant.get(8);
-	}
-
-	/**
-	 * recuperePrenom recupere le prenom de l'etudiant dans la matrice data
-	 * @return retourne le prenom de l'etudiant
-	 */
-	private String recuperePrenom(){
-		return dataEtudiant.get(7);
-	}
-
-	/**
+	/**TODO a commenter
 	 * recuperUEs recupere la liste des UEs de l'etudiant dans la matrice data
 	 * @return retourne la liste des UEs de l'etudiant
 	 */
-	private List<Module> creationModulesEtudiant(){
+	private List<Module> AjoutModulesEtudiant(){
+		List<Module> modules = new ArrayList<Module>(); //donnees d'un semestre de l'etudiant
 		List<String> dataSemestreEtudiant = new ArrayList<String>(); //donnees d'un semestre de l'etudiant
 		int semestre = 0; //indique le semestre dans lequel l'etudiant a fait un module
 
 		Iterator<String> it = dataEtudiant.iterator();
 		while (it.hasNext()) {//on parcourt les donnees
 			String data = it.next();
-			
-			if(startDataSemestre(data)){	//si on change de semestre on creer les modules de l'ancien semestre
-				reset();
+
+			if(RecherchePattern.rechercheDebutSemestre(data)){	//si on est au debut d'un semestre
 				dataSemestreEtudiant = new ArrayList<String>();//on reset les donnees pour le nouveau semestres
 				dataSemestreEtudiant.add(data);//on ajoute le type de semestre (P15 ou A17)
 				semestre++;
 			}
 			else{//si on a pas changer d'etudiant on stocke ces donnees
-				if(endDataSemestre(data)){//si on est a la fin d'un smeestre on creer les modules de ce semestres
-					creationModulesSemestre(dataSemestreEtudiant, semestre);//Creation des modules du semestre en cours de traitement
-				}
+				if(RecherchePattern.rechercheFinSemestre(data))//si on est a la fin d'un smeestre 
+					modules = AjoutModulesSemestre(dataSemestreEtudiant, modules, semestre);//Ajout des modules du semestre
 				else{
 					dataSemestreEtudiant.add(data);//on est pas a la fin du semestre on ajoute le reste des donnees dans ce semestres
 				}
 			}
 		}
-		return null;
+		return modules;
 	}
 
-	//TODO a commenter Creation des Uv de l'etudiant pour un semestre
-	private void creationModulesSemestre(List<String> modulesData, int semestre) {
+	/**TODO a recommenter
+	 * Creation des UEs de l'etudiant pour un semestre
+	 * @param modulesData les donnees sur les UEs
+	 * @param semestre le semestre des UV que l'etudiant a fair
+	 */
+	private List<Module> AjoutModulesSemestre(List<String> modulesData, List<Module> m, int semestre) {
 		nbSemestreEtudiant++;
-		
-		Module mod1 = new Module(modulesData.get(3), Note.getNote(modulesData.get(4)), Integer.valueOf(modulesData.get(5)), semestre);
-		Module mod2 = new Module(modulesData.get(6), Note.getNote(modulesData.get(7)), Integer.valueOf(modulesData.get(8)), semestre);
-		Module mod3 = new Module(modulesData.get(9), Note.getNote(modulesData.get(10)), Integer.valueOf(modulesData.get(11)),  semestre);
-		Module mod4 = new Module(modulesData.get(12), Note.getNote(modulesData.get(13)), Integer.valueOf(modulesData.get(14)), semestre);
-		Module mod5 = new Module(modulesData.get(15), Note.getNote(modulesData.get(16)),  Integer.valueOf(modulesData.get(17)), semestre);
-		/*System.out.println("MOD1 :"+mod1);
-		System.out.println("MOD2 :"+mod2);
-		System.out.println("MOD3 :"+mod3);
-		System.out.println("MOD4 :"+mod4);
-		System.out.println("MOD5 :"+mod5);*/
-		modulesEtudiant.add(mod1);//on ajoute les modules a la liste total des modules
-		modulesEtudiant.add(mod2);
-		modulesEtudiant.add(mod3);
-		modulesEtudiant.add(mod4);
-		modulesEtudiant.add(mod5);
-		
+		String parcours = RecherchePattern.recupereParcours(modulesData);
 		Iterator<String> it = modulesData.iterator();
-		System.out.println(modulesEtudiant.size());
-		
-		//On fait un pattern.MAtch pour chaque donne qu\on parcourt des que ca colle avec un UV on parcourt suite 
-		while (it.hasNext()) {//on parcourt la liste qui contient les semestres
-			String data = (String) it.next();
-			//System.out.println("Semestre" + semestre + " " +modulesData.indexOf(data)+" "+data);
-		}
+		//TODO On fait un pattern.MAtch pour chaque donne qu\on parcourt des que ca colle avec un UV on parcourt suite
 		//Utiliser la fonctions matches pour retourevr A15 ou P22
 		//TODO faire des sous ArrayList pour chque semestres ils sont separes par Total semestre
 		//TODO creer un matrice UE en testant si la ligne est P+un nombre ou A+plus un nombre on met donc la suite dans la matrice
 		//TODO recuperer les donnees sur les UVs, note categorie etc
 		//ArrayList<Module> module = ueEtudiant()
-	}
+		//m.add(e)
 
-	/**
-	 * recupereTypeSemestre recupere le type de semestre de l'etudiant dans la la liste des semestres
-	 * @return retourne le type de semestre de l'etudiant
-	 */
-	private String recupereTypeSemestre(List<String> liste){
-		return liste.get(1);
-	}
 
-	/**
-	 * recupereSemestre recupere le numero de semestre de l'etudiant dans la matrice data
-	 * @return retourne le numero de semestre de l'etudiant
-	 */
-	private int recupereSemestre(List<String> liste){
-		return Integer.valueOf(liste.get(2));
+		Module mod1 = new Module(modulesData.get(3), Note.getNote(modulesData.get(4)), Integer.valueOf(modulesData.get(5)), semestre, parcours, null);
+		Module mod2 = new Module(modulesData.get(6), Note.getNote(modulesData.get(7)), Integer.valueOf(modulesData.get(8)), semestre,  parcours, null);
+		Module mod3 = new Module(modulesData.get(9), Note.getNote(modulesData.get(10)), Integer.valueOf(modulesData.get(11)),  semestre,  parcours, null);
+		Module mod4 = new Module(modulesData.get(12), Note.getNote(modulesData.get(13)), Integer.valueOf(modulesData.get(14)), semestre,  parcours, null);
+		Module mod5 = new Module(modulesData.get(15), Note.getNote(modulesData.get(16)),  Integer.valueOf(modulesData.get(17)), semestre,  parcours, null);
+		/*System.out.println("MOD1 :"+mod1);
+		System.out.println("MOD2 :"+mod2);
+		System.out.println("MOD3 :"+mod3);
+		System.out.println("MOD4 :"+mod4);
+		System.out.println("MOD5 :"+mod5);*/
+		m.add(mod1);//on ajoute les modules a la liste total des modules
+		m.add(mod2);
+		m.add(mod3);
+		m.add(mod4);
+		m.add(mod5);
+
+		return m;
 	}
 
 	//TODO a commenter //Suppression des elements inutiles (vide, ■) se trouvant dans la liste
@@ -299,32 +257,12 @@ public class GestionData {
 		return liste;
 	}	
 
-	/*TODO a commenter methode pour s'avoir quand commence les donnees d'un etudiant*/
-	private boolean startDataEtudiant(String contenu) {
-		if ("PV".equals(contenu))//si c'est un nouveau etudiant
-			return true;
-		return false;
-	}
-
-	/*TODO a commenter methode pour s'avoir quand se termine les donnees d'un etudiant*/
-	private boolean endDataEtudiant(String contenu) {
-		if ("Global".equals(contenu))
-			return true;
-		return false;
-	}
-
-	/*TODO a commenter methode pour s'avoir quand commence les donnees d'un semestre*/
-	private boolean startDataSemestre(String contenu) {
-		if (Pattern.matches(sepSemestre, contenu))
-			return true;
-		return false;
-	}
-
-	/*TODO a commenter methode pour s'avoir quand se termine les donnees d'un semestre*/
-	private boolean endDataSemestre(String contenu) {
-		if ("Total".equals(contenu))
-			return true;
-		return false;
+	//TODO a commenter
+	private void AffichageEtudiant() {
+		for (Iterator<Etudiant> iterator = etudiants.iterator(); iterator.hasNext();) {
+			Etudiant etu = (Etudiant) iterator.next();
+			System.out.println(etu);
+		}
 	}
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
@@ -340,7 +278,7 @@ public class GestionData {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * retourne le nombre de note obtenues pour un étudiant et semestre donné.
 	 * @param etu
@@ -358,7 +296,7 @@ public class GestionData {
 		}
 		return nbNote;
 	}
-	
+
 	/**
 	 * retourne le numero de semestre effectués pour un étudiant
 	 * @param etu
@@ -403,7 +341,7 @@ public class GestionData {
 		}
 		return nbUe;
 	}
-	
+
 	/**
 	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
 	 * @param l'étudiant choisis
@@ -470,25 +408,13 @@ public class GestionData {
 					str+=", Très Mauvais Semestre";
 				}
 			}
-			
+
 			sem++;
 			out.add(str);
 		}
 		ArrayList<String> a= new ArrayList<String>();
 		a.add("bleh");
 		return a;
-	}
-
-	public List<Module> getModulesEtudiants() {
-		return modulesEtudiant;
-	}
-	
-	public static List<Module> getModules() {
-		return modulesExistant;
-	}
-
-	public static void setModules(List<Module> modules) {
-		GestionData.modulesExistant = modules;
 	}
 
 	public List<Etudiant> getEtudiants() {
@@ -530,6 +456,6 @@ public class GestionData {
 	public static int getColonne() {
 		return COLONNE;
 	}
-	
-	
+
+
 }
