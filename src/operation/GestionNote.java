@@ -23,11 +23,7 @@ public class GestionNote {
 		Module mod10 = new Module("IF26", Note.C, 6, 2);
 		Module mod11 = new Module("JP00", Note.D, 4, 3);
 		Module mod12 = new Module("PO03", Note.E, 6, 2);
-		Module mod13 = new Module("GE12", Note.F, 6, 1);
 		Module mod14 = new Module("GE43", Note.A, 6, 1);
-		Module mod15 = new Module("IF07", Note.B, 4, 2);
-		Module mod16 = new Module("IF14", Note.C, 6, 1);
-		Module mod17 = new Module("", Note.D, 6, 3);
 		Module mod18 = new Module("IF10", Note.E, 6, 1);
 		Module mod19 = new Module("TX10", Note.F, 4, 3);
 		Module mod20 = new Module("NF20", Note.A, 6, 2);

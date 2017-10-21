@@ -1,15 +1,17 @@
 package main;
 
 import java.awt.EventQueue;
+
 import java.io.File;
-import java.util.regex.Matcher;
+import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import ihm.GestionStagesJuryIsi;
 import io.LectureModules;
 import operation.GestionData;
 import operation.GestionNote;
-import operation.data.*;
+import operation.data.Etudiant;
 
 public class Launcher {
 
@@ -38,10 +40,19 @@ public class Launcher {
 
 		case 3:
 			//File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
-			File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
-			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
+			//File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
+			File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever
 			GestionData g = new GestionData(file);
-			g.lireFichier();//Test sur les fichiers etudiants
+			
+			List<Etudiant> etudiants = g.lireFichier();//Test sur les fichiers etudiants
+			Iterator<Etudiant> it = etudiants.iterator();
+			while (it.hasNext()) {
+				Etudiant etudiant = it.next();
+				System.out.println(etudiant);
+				
+			}
+			System.out.println(etudiants.size());
+			
 			//TODO on recupera ici les etudiants et les modules
 
 			break;

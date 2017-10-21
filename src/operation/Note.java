@@ -1,6 +1,5 @@
 package operation;
-/** Enumeration represenatnt les notes possibles pour une UV*/
-//TODO a commenter
+/** Note represente la note possible pour une UV*/
 public enum Note{
 	A("A"),
 	B("B"),
@@ -13,16 +12,30 @@ public enum Note{
 	ABS("ABS"),
 	NULL("NULL");
 
+	/**Represente la note en chaine de caratères*/
 	private String note;
 
+	/**
+	 * Constructeur d'une note
+	 * @param note la note 
+	 */
 	Note(String note){
 		this.note = note;
 	}
 
+	/** 
+	 * Getter pour recuperer la note en chaine de caractère
+	 * @return la note
+	 */
 	public String getNote() {
 		return note;
 	}
 
+	/**
+	 * methode qui converti la chaine de la note en enumeration
+	 * @param note la note en chaine
+	 * @return la Note en enum
+	 */
 	public static Note getNote(String note) {
 		if(note.equals("A"))
 				return A;
