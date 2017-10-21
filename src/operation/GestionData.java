@@ -254,7 +254,7 @@ public class GestionData {
 	 */
 	public boolean estRatee(Module mod){
 		boolean out=false;
-		if (mod.getCredit()==0){
+		if (mod.getNote()==Note.F || mod.getNote()==Note.FX || mod.getNote()==Note.ABS){
 			out=true;
 		}
 		return out;
@@ -270,7 +270,6 @@ public class GestionData {
 		while(i<etu.getModules().size()){
 			if(etu.getModules().get(i).getSemestre()==sem){
 				nbUe++;
-				System.out.println(etu.getModules().get(i));
 			}
 			i++;
 		}
@@ -285,17 +284,14 @@ public class GestionData {
 	public ArrayList<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
 		int maxSem=maxSemestre(etu);
-		System.out.println("max=" +maxSem);
 		int sem=1;
-		while(sem<maxSem){
+		while(sem<maxSem+1){
 			String str="";
 			int nbA=compteNote(etu, Note.A, sem);
 			int nbB=compteNote(etu, Note.B, sem);
 			int nbD=compteNote(etu, Note.D, sem);
 			int nbE=compteNote(etu, Note.E, sem);
 			int nbUe=nombreUeSemestre(etu, sem);
-			System.out.println(etu.getModules().get(3));
-			System.out.println(nbUe);
 			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
 			while(i<etu.getModules().size()){
 				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
@@ -309,16 +305,16 @@ public class GestionData {
 			int nbUeRateesTotal=nbUeRatees+nbUeRateesCSTM;
 			if (nbUeRateesTotal==0){
 				str+="Poursuite Normale";
-				if ((nbA+nbB)/nbUe>0.7){
+				if (((float)nbA+nbB)/nbUe>0.7){
 					str+=", Excellent Semestre";
 				}
-				else if ((nbA+nbB)/nbUe>0.6){
+				else if (((float)nbA+nbB)/nbUe>0.6){
 					str+=", Très Bon Semestre";
 				}
-				else if ((nbA+nbB)/nbUe>0.5){
+				else if (((float)nbA+nbB)/nbUe>0.5){
 					str+=", Bon Semestre";
 				}
-				else if ((nbE+nbD)/nbUe<0.5){
+				else if (((float)nbE+nbD)/nbUe<0.5){
 					str+=", Assez Bon Semestre";
 				}
 				else{
@@ -327,7 +323,7 @@ public class GestionData {
 			}
 			if (nbUeRateesTotal==1){
 				str+="Poursuite avec Conseil";
-				if ((nbE+nbD)/nbUe<0.5){
+				if (((float)nbE+nbD)/nbUe<0.5){
 					str+=", Semestre Moyen";
 				}
 				else{
@@ -347,9 +343,7 @@ public class GestionData {
 			sem++;
 			out.add(str);
 		}
-		ArrayList<String> a= new ArrayList<String>();
-		a.add("bleh");
-		return a;
+		return out;
 	}
 
 	public List<Etudiant> getEtudiants() {
