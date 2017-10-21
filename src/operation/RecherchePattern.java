@@ -40,19 +40,6 @@ public class RecherchePattern {
 		return null;
 	}
 
-	//TODO a commenter
-	public static String recupereParcours(List<String> modulesData) {
-		Iterator<String> it = modulesData.iterator();
-		String regex = "ISI|TC|MASTER";
-		String contenu;
-		while(it.hasNext()){
-			contenu = it.next();
-			if (Pattern.matches(regex, contenu))//si c'est un nouveau etudiant
-				return contenu;
-		}
-		return null;
-	}
-
 	/*TODO a commenter methode pour s'avoir quand commence les donnees d'un etudiant*/
 	public static boolean rechercheDebutEtudiant(String contenu) {
 		String regex = "[0-9]{2}/[0-9]{2}/20[0-9]{2}";
@@ -79,9 +66,50 @@ public class RecherchePattern {
 
 	/*TODO a commenter methode pour s'avoir quand se termine les donnees d'un semestre*/
 	public static boolean rechercheFinSemestre(String contenu) {
-		String regex = "[0-9]{2}/[0-9]{2}";//Total
+		String regex = "Total";//Total
 		if (Pattern.matches(regex, contenu))
 			return true;
 		return false;
 	}
+
+	public static String recupereNomModule(String contenu) {
+		String regex = "[A-Z]{2,}[0-9]{2}";//un nom de module
+		if (Pattern.matches(regex, contenu))
+			return contenu;
+		return null;
+	}
+
+	public static Note recupereNoteModule(String contenu) {
+		String regex = "[A-F]|FX|EQU|ABS|NULL";//juste une lettre
+		if (Pattern.matches(regex, contenu))
+			return Note.getNote(contenu);
+		return null;
+	}
+
+	public static int recupereCreditModule(String contenu) {
+		String regex = "[0-9]";//juste un chiffre
+		if (Pattern.matches(regex, contenu))
+			return Integer.valueOf(contenu);
+		return 0;
+	}
+
+	public static int recupereSemestreModule(List<String> modulesData) {
+		String recupereParcours = recupereParcours(modulesData);// on recupere le parcours qui se trouve juste avant le semestre
+		System.out.println("PARCOURS" + recupereParcours);
+		int pos = modulesData.indexOf(recupereParcours);//on recupere la position
+		String semestre = modulesData.get(pos+1);//on recupere le semestre
+		return Integer.valueOf(semestre);
+	}
+	//TODO a commenter
+		public static String recupereParcours(List<String> modulesData) {
+			Iterator<String> it = modulesData.iterator();
+			String regex = "ISI|TC|MASTER";
+			String contenu;
+			while(it.hasNext()){
+				contenu = it.next();
+				if (Pattern.matches(regex, contenu))//si c'est un nouveau etudiant
+					return contenu;
+			}
+			return null;
+		}
 }
