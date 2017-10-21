@@ -10,11 +10,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 
 import operation.GestionData;
 import operation.data.Etudiant;
 
 public class Conversion {
+	FileWriter fw = null;
 	//TODO tester la classe pour voir si le fichier final est ok
 	//TODO finir la méthode CompteCSTM avec l’arrayList modules
 
@@ -48,10 +51,25 @@ public class Conversion {
 	 * @throws IOException Erreur d'ouverture de fichier
 	 */
 	public List<Etudiant> lireFichier (String fileTxt, String nomFichierCSV){
-		BufferedReader lecteurAvecBuffer = null;
-		BufferedWriter ecritureAvecBuffer= null;
 		String ligne;
 		String listeMots[];
+		File file = new File(nomFichierCSV);
+		try {
+			fw = new FileWriter(file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BufferedWriter bw;
+		PrintWriter pw;
+		bw = new BufferedWriter(fw);
+		pw = new PrintWriter(bw);
+
+		pw.println("AffectTP 4");
+		pw.println("AffectTP 5");
+		pw.close();
+		
+		
 
 		GestionData gData = new GestionData(new File(fileTxt));
 		return gData.lireFichier();
