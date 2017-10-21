@@ -213,26 +213,22 @@ public class GestionData {
 			String str = it.next();
 
 			if(RecherchePattern.recupereNomModule(str) != null){//des qu'on a le premier module 
-				nomModule=RecherchePattern.recupereNomModule(str);
 				premierModule=true;
 			}
 			if (premierModule) {
-				if(RecherchePattern.recupereNomModule(str) != null){
+				if(RecherchePattern.recupereNomModule(str) != null){//tant qu'on a pas trouve un nom de module correct 
 					nomModule=RecherchePattern.recupereNomModule(str);
-					//	if (nomModule!=null) { //tant qu'on a pas trouve un nom de module correct 
 					System.out.print("nom" +nomModule + " ");
 					System.out.print("note" +note + " ");
 					System.out.print("cre" +credit + " ");
 					System.out.print("par" +parcours + " ");
 					System.out.println("sem" +semestre);
 				}
-				if(RecherchePattern.recupereNoteModule(str) != null){
+				if(RecherchePattern.recupereNoteModule(str) != null){//tant qu'on a pas trouve une note de module correct 
 					note=RecherchePattern.recupereNoteModule(str);	
 				}
-				//if (note!=null) { //tant qu'on a pas trouve une note de module correct 
-				if(RecherchePattern.recupereCreditModule(str) != 0){ 
+				if(RecherchePattern.recupereCreditModule(str) != 0){ //tant qu'on a pas trouve une note de module correct 
 					credit=RecherchePattern.recupereCreditModule(str);
-					//if (credit!=0) { //tdes qu'on les credits de la note
 				}
 				//si toutes les valeurs sont ok alors on creer le module
 				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
@@ -244,31 +240,6 @@ public class GestionData {
 				}
 			}
 		}
-
-		/*System.out.println("GOOD");
-		System.out.println(modulesData.get(3));
-		System.out.println(modulesData.get(6));
-		System.out.println(modulesData.get(9));
-		System.out.println(modulesData.get(12));
-		System.out.println(modulesData.get(15));
-		System.out.println("GOOD2");*/
-
-		//TODO faire des sous ArrayList pour chque semestres ils sont separes par Total semestre
-		//TODO creer un matrice UE en testant si la ligne est P+un nombre ou A+plus un nombre on met donc la suite dans la matrice
-		//TODO recuperer les donnees sur les UVs, note categorie etc
-
-		/*Module mod1 = new Module(modulesData.get(3), Note.getNote(modulesData.get(4)), Integer.valueOf(modulesData.get(5)), semestreModule, parcours, null);
-		Module mod2 = new Module(modulesData.get(6), Note.getNote(modulesData.get(7)), Integer.valueOf(modulesData.get(8)), semestreModule,  parcours, null);
-		Module mod3 = new Module(modulesData.get(9), Note.getNote(modulesData.get(10)), Integer.valueOf(modulesData.get(11)),  semestreModule,  parcours, null);
-		Module mod4 = new Module(modulesData.get(12), Note.getNote(modulesData.get(13)), Integer.valueOf(modulesData.get(14)), semestreModule,  parcours, null);
-		Module mod5 = new Module(modulesData.get(15), Note.getNote(modulesData.get(16)),  Integer.valueOf(modulesData.get(17)), semestreModule,  parcours, null);
-
-
-		modulesEtudiant.add(mod1);//on ajoute les modules a la liste total des modules
-		modulesEtudiant.add(mod2);
-		modulesEtudiant.add(mod3);
-		modulesEtudiant.add(mod4);
-		modulesEtudiant.add(mod5);*/
 	}
 
 	//TODO a commenter //Suppression des elements inutiles (vide, ■) se trouvant dans la liste
