@@ -60,17 +60,6 @@ public class LectureModules {
 		}	
 		return modules;
 	}
-
-	/*try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(new File("tonfichier")));
-			// normalement si le fichier n'existe pas, il est crée à la racine du projet
-			writer.write("....");
-			writer.close();
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}*/
 }
 
 
