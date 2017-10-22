@@ -16,18 +16,6 @@ import operation.data.Module;
 /**GestionData gere les donnees des fichiers des etudiants*/
 public class GestionData {
 
-	//TODO si on a le temps on modifie le type de DataETudian en ArrayLIST
-
-	/**
-	 * LIGNE représente le nombre lignes necessaires dans une matrice pour stocker les données d'un seul etudiant
-	 */
-	private final static int LIGNE = 100;
-
-	/**
-	 * COLONNE représente le nombre colonne necessaires dans une matrice pour stocker les donnees d'un seul etudiant
-	 */
-	private final static int COLONNE = 50;
-
 	/**
 	 * file represente le fichier qui va etre traité
 	 */
@@ -60,6 +48,11 @@ public class GestionData {
 	public GestionData(File file){
 		this.file = file;
 		modulesExistant = LectureModules.lireModules();
+		Iterator<Module> it = modulesExistant.iterator();
+		while (it.hasNext()) {
+			Module module = (Module) it.next();
+			System.out.println(module);
+		}
 	}
 
 	/**
@@ -70,12 +63,12 @@ public class GestionData {
 	}
 
 	/**
-	 * lireFichier traite le fichier txt des etudiants et permet d;instncier les etudaints et les modules pour pouvoir les manipuler en java
+	 * listeEtudiant traite le fichier txt des etudiants et permet d;instncier les etudaints et les modules pour pouvoir les manipuler en java
 	 * @return la liste des etudiants
 	 */
-	public List<Etudiant> lireFichier(){
+	public List<Etudiant> listeEtudiant(){
 		BufferedReader lecteurAvecBuffer;
-		List<String> datas = new ArrayList<String>();//TOUTES LES DONNEES DU FICHIER
+		List<String> datas = new ArrayList<String>();//donnes du fichier
 		reset();// Initialisation
 		try {
 			lecteurAvecBuffer = new BufferedReader(new FileReader(file));
@@ -283,7 +276,7 @@ public class GestionData {
 	 */
 	public ArrayList<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
-		int maxSem=maxSemestre(etu);
+		int maxSem=maxSemestre(etu)+1;
 		int sem=1;
 		while(sem<maxSem+1){
 			String str="";
@@ -294,7 +287,7 @@ public class GestionData {
 			int nbUe=nombreUeSemestre(etu, sem);
 			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
 			while(i<etu.getModules().size()){
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem){
 					nbUeRatees++;
 				}
 				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
@@ -353,14 +346,4 @@ public class GestionData {
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
 	}
-
-	public static int getLigne() {
-		return LIGNE;
-	}
-
-	public static int getColonne() {
-		return COLONNE;
-	}
-
-
 }
