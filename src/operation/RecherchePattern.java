@@ -125,7 +125,7 @@ public class RecherchePattern {
 	 * @return le credit du module
 	 */
 	public static int recupereCredit(String contenu) {
-		String regex = "[0-9]";//juste un chiffre
+		String regex = "[0-9]{1,2}";//juste un chiffre
 		if (Pattern.matches(regex, contenu))
 			return Integer.valueOf(contenu);
 		return 0;

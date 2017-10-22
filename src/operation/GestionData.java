@@ -319,7 +319,7 @@ public class GestionData {
 				}
 				else{
 					str+=", Semestre Moyen";
-				}		
+				}
 			}
 			if (nbUeRateesTotal==1){
 				str+="Poursuite avec Conseil";

@@ -22,6 +22,7 @@ public class Conversion {
 	 * filtre pour filtrer les decisions de jury
 	 */
 	private Filtrage filtre = new Filtrage();
+	
 
 	/**
 	 * decisionCSV contient le nom du fichier CVS contenant les propositions de décisions 
@@ -49,15 +50,14 @@ public class Conversion {
 	 */
 	public List<Etudiant> lireFichier (String fileTxt, String nomFichierCSV){
 		BufferedReader lecteurAvecBuffer = null;
-		BufferedWriter ecritureAvecBuffer= null;
+		BufferedWriter ecritureAvecBuffer = null;
+		FileWriter fw = null;
 		String ligne;
 		String listeMots[];
 
 		GestionData gData = new GestionData(new File(fileTxt));
 		return gData.lireFichier();
 	}
-	
-	
 	
 	public Filtrage getFiltre() {
 		return filtre;
@@ -74,5 +74,4 @@ public class Conversion {
 	public void setDecisionCSV(String sortieExcelCSV) {
 		this.decisionCSV = sortieExcelCSV;
 	}
-
 }
