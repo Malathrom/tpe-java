@@ -39,11 +39,19 @@ public class LectureModules {
 			lecteurAvecBuffer = new BufferedReader(new FileReader(new File(file)));
 			while ((ligne = lecteurAvecBuffer.readLine()) != null){
 				listeMots=ligne.split(" ");
-				nomModule = listeMots[0];
-				categorieModule = listeMots[2];
-				parcoursModule = listeMots[3];
-				creditModule = Integer.valueOf(listeMots[1]);
-				modules.add(new Module(nomModule, creditModule, categorieModule, parcoursModule));
+				
+				if (listeMots[0].equals("//")){
+					System.out.println(ligne);
+				}
+				else{
+					if(listeMots.length==4){
+					nomModule = listeMots[0];
+					creditModule = Integer.valueOf(listeMots[1]);
+					categorieModule = listeMots[2];
+					parcoursModule = listeMots[3];
+					modules.add(new Module(nomModule, creditModule, categorieModule, parcoursModule));
+					}
+				}
 			}
 			lecteurAvecBuffer.close();
 		} catch (IOException e) {
@@ -52,7 +60,7 @@ public class LectureModules {
 		}	
 		return modules;
 	}
-	
+
 	/*try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File("tonfichier")));
 			// normalement si le fichier n'existe pas, il est crée à la racine du projet
