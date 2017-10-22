@@ -23,6 +23,7 @@ public class Module{
 	/**Credit de l'UV*/
 	private int credit;
 
+	//TODO a commenter
 	public Module(String nom, Note note, int credit, int semestre, String parcours, String categorie) {
 		this.nom = nom;
 		this.categorie = categorie;
@@ -31,12 +32,17 @@ public class Module{
 		this.parcours = parcours;
 		this.credit = credit;
 	}
-	
-	public Module(String nom, Note note, int credit, int semestre){
+	//TODO a commenter	
+	public Module(String nom, int credit, String categorie, String parcours){
 		this.nom = nom;
-		this.semestre = semestre; 
-		this.note = note;
 		this.credit = credit;
+		this.categorie = categorie;
+		this.parcours = parcours;
+	}
+	
+	//TODO a commenter
+	public Module(String nom){
+		this.nom = nom;
 	}
 	
 	@Override

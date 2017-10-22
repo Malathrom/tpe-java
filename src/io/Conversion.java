@@ -64,12 +64,12 @@ public class Conversion {
 		bw = new BufferedWriter(fw);
 		pw = new PrintWriter(bw);
 		
-		GestionData g = new GestionData(new File(fileTxt));
-		List<Etudiant> etudiants = g.listeEtudiant();
+		//GestionData g = new GestionData(new File(fileTxt));
+		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fileTxt));
 		Iterator<Etudiant> it = etudiants.iterator();
 		String entete="";
 		entete+="Nom;Prenom;";
-		int semSize= g.avisJury(etudiants.get(0)).size(), j=0;
+		int semSize= GestionData.avisJury(etudiants.get(0)).size(), j=0;
 		while (j<semSize){
 			entete+="Avis Semestre "+(j+1)+";";
 			j++;
@@ -82,7 +82,7 @@ public class Conversion {
 			String out="";
 			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
 			int i=0;
-			ArrayList<String> avisSem= g.avisJury(etudiant);
+			List<String> avisSem= GestionData.avisJury(etudiant);
 			while(i<avisSem.size()){
 				out+= avisSem.get(i)+";";
 				i++;

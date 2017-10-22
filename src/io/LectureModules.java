@@ -43,7 +43,7 @@ public class LectureModules {
 				categorieModule = listeMots[2];
 				parcoursModule = listeMots[3];
 				creditModule = Integer.valueOf(listeMots[1]);
-				modules.add(new Module(nomModule, Note.NULL, 0, creditModule, categorieModule, parcoursModule));
+				modules.add(new Module(nomModule, creditModule, categorieModule, parcoursModule));
 			}
 			lecteurAvecBuffer.close();
 		} catch (IOException e) {

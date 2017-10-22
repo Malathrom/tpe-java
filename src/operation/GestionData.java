@@ -17,16 +17,6 @@ import operation.data.Module;
 public class GestionData {
 
 	/**
-	 * file represente le fichier qui va etre traité
-	 */
-	private File file = null;
-
-	/**
-	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
-	 */
-	private static List<Module> modulesExistant = new ArrayList<Module>();
-
-	/**
 	 * etudiants est la liste des objets de type Etudiant que nous sommes en train de traiter dans le fichier
 	 */
 	private List<Etudiant> etudiants = new ArrayList<Etudiant>();
@@ -34,31 +24,17 @@ public class GestionData {
 	/*
 	 * nbSemestre indique le nombre de semestre qu'a fait l'etudiant
 	 */
-	private int nbSemestreEtudiant = 0; 
+	private static int nbSemestreEtudiant = 0; 
 
 	/*
 	 * nbEtudiant indique le nombre d'etudiant que nous avons traité
 	 */
-	private int nbEtudiant = 0;
-
-	/** 
-	 * Constructeur : Lance la lecture des modules existant en ISI qui se trouve dans le fichier /files/module.txt
-	 * @param file le fichier qui va etre traité
-	 */
-	public GestionData(File file){
-		this.file = file;
-		modulesExistant = LectureModules.lireModules();
-		Iterator<Module> it = modulesExistant.iterator();
-		while (it.hasNext()) {
-			Module module = (Module) it.next();
-			System.out.println(module);
-		}
-	}
+	private static int nbEtudiant = 0;
 
 	/**
 	 * Reset des données pour un nouvel etudiant
 	 */
-	public void reset(){
+	public static void reset(){
 		nbSemestreEtudiant = 0;
 	}
 
@@ -66,7 +42,7 @@ public class GestionData {
 	 * listeEtudiant traite le fichier txt des etudiants et permet d;instncier les etudaints et les modules pour pouvoir les manipuler en java
 	 * @return la liste des etudiants
 	 */
-	public List<Etudiant> listeEtudiant(){
+	public static List<Etudiant> listeEtudiant(File file){
 		BufferedReader lecteurAvecBuffer;
 		List<String> datas = new ArrayList<String>();//donnes du fichier
 		reset();// Initialisation
@@ -96,7 +72,7 @@ public class GestionData {
 	 * @param datas les donnees dans le fichier
 	 * @return la liste des etudiants
 	 */
-	private List<Etudiant> creationListeEtudiants(List<String> datas){
+	private static List<Etudiant> creationListeEtudiants(List<String> datas){
 		List<String> dataEtudiant = new ArrayList<String>();
 		List<Etudiant> etudiants = new ArrayList<Etudiant>();
 		Iterator<String> it = datas.iterator();
@@ -126,7 +102,7 @@ public class GestionData {
 	 * @param dataEtudiant les donnees de l'etudiant
 	 * @return l'etudiant
 	 */
-	private Etudiant ajoutEtudiant(List<String> dataEtudiant){
+	private static Etudiant ajoutEtudiant(List<String> dataEtudiant){
 		String nom = RecherchePattern.recupereNom(dataEtudiant);//on recupere le nom 
 		String prenom = RecherchePattern.recuperePrenom(dataEtudiant);// on recupere le prenom
 		List<Module> modulesEtudiant = ajoutModulesEtudiant(dataEtudiant);//on recupere les UE
@@ -138,7 +114,7 @@ public class GestionData {
 	 * @param dataEtudiant  les donnees de l'etudiant
 	 * @return la liste des modules
 	 */
-	private List<Module> ajoutModulesEtudiant(List<String> dataEtudiant){
+	private static List<Module> ajoutModulesEtudiant(List<String> dataEtudiant){
 		List<Module> modules = new ArrayList<Module>();
 		List<String> dataSemestreEtudiant = new ArrayList<String>(); //donnees d'un semestre de l'etudiant
 		boolean enSemestre = false;
@@ -169,13 +145,14 @@ public class GestionData {
 	 * @param modulesData les donnees sur les UEs
 	 * @return la liste des modules du semestres
 	 */
-	private List<Module> creationModules(List<String> modulesData) {
+	private static List<Module> creationModules(List<String> modulesData) {
 		List<Module> mods = new ArrayList<Module>();
 		nbSemestreEtudiant++;
 		String parcours = RecherchePattern.recupereParcours(modulesData);
 		int semestre = RecherchePattern.recupereSemestre(modulesData);
 		String nomModule = null;
 		Note note = null;
+		String categorie = null;
 		int credit = 0;
 
 		boolean premierModule = false;
@@ -187,20 +164,25 @@ public class GestionData {
 				premierModule=true;
 			}
 			if (premierModule) {
-				if(RecherchePattern.recupereNomModule(str) != null)//tant qu'on a pas trouve un nom de module correct 
+				if(RecherchePattern.recupereNomModule(str) != null){//recherche d'un nom de module correct 
 					nomModule=RecherchePattern.recupereNomModule(str);
-				if(RecherchePattern.recupereNote(str) != null)//tant qu'on a pas trouve une note de module correct 
+					categorie=RecherchePattern.recupereCategorie(nomModule);//on recupere egalement sa categorie dans la liste des modules existants 
+					credit=RecherchePattern.recupereCredit(nomModule);
+				}
+				if(RecherchePattern.recupereNote(str) != null)//recherche d'une note de module correct 
 					note=RecherchePattern.recupereNote(str);	
-				if(RecherchePattern.recupereCredit(str) != 0) //tant qu'on a pas trouve une note de module correct 
-					credit=RecherchePattern.recupereCredit(str);
-				
+				//if(RecherchePattern.recupereCredit(str) != 0) //recherche d'un nombre de credit de module correct 
+					//credit=RecherchePattern.recupereCredit(str);
+
 				//si toutes les valeurs sont ok alors on creer le module
 				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
-					Module module = new Module(nomModule, note, credit, semestre, parcours, null);
+					Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
 					mods.add(module);
-					nomModule = null;//on reset les donnees
-					note = null;//on reset les donnees
-					credit = 0;//on reset les donnees
+					//on reset les donnees
+					nomModule = null;
+					note = null;
+					credit = 0;
+					categorie = null;
 				}
 			}
 		}
@@ -214,7 +196,7 @@ public class GestionData {
 	 * @param le semestre
 	 * @return nbNote
 	 */
-	public int compteNote(Etudiant etu, Note note, int semestre){
+	public static int compteNote(Etudiant etu, Note note, int semestre){
 		int nbNote=0, i=0;
 		while(i<etu.getModules().size()){
 			if (etu.getModules().get(i).getNote()==note && etu.getModules().get(i).getSemestre()==semestre){
@@ -230,7 +212,7 @@ public class GestionData {
 	 * @param etu
 	 * @return le nombre de semestres effectués
 	 */
-	public int maxSemestre(Etudiant etu){
+	public static int maxSemestre(Etudiant etu){
 		int maxSem=0, i=0;
 		while(i<etu.getModules().size()){
 			if(etu.getModules().get(i).getSemestre()>maxSem){
@@ -245,7 +227,7 @@ public class GestionData {
 	 * @param mod
 	 * @return true si c'est le cas, false sinon
 	 */
-	public boolean estRatee(Module mod){
+	public static boolean estRatee(Module mod){
 		boolean out=false;
 		if (mod.getNote()==Note.F || mod.getNote()==Note.FX || mod.getNote()==Note.ABS){
 			out=true;
@@ -258,7 +240,7 @@ public class GestionData {
 	 * @param sem
 	 * @return
 	 */
-	public int nombreUeSemestre(Etudiant etu, int sem){
+	public static int nombreUeSemestre(Etudiant etu, int sem){
 		int nbUe=0, i=0;
 		while(i<etu.getModules().size()){
 			if(etu.getModules().get(i).getSemestre()==sem){
@@ -274,7 +256,7 @@ public class GestionData {
 	 * @param l'étudiant choisis
 	 * @return l'avis de chaque semestre dans un tableau, chaque case représentant un semestre
 	 */
-	public ArrayList<String> avisJury(Etudiant etu){
+	public static List<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
 		int maxSem=maxSemestre(etu)+1;
 		int sem=1;

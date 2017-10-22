@@ -1,11 +1,21 @@
 package operation;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import io.LectureModules;
+import operation.data.Module;
+
 /**RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible*/
 public class RecherchePattern {
+
+	/**
+	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
+	 */
+	private static List<Module> modulesExistant = LectureModules.lireModules();
+
 	/**
 	 * recupereNom recherche avec un systeme de regex le nom de l'etudiant dans le fichier
 	 * @param dataEtudiant la liste des donnes dans laquelle chercher le nom
@@ -124,10 +134,14 @@ public class RecherchePattern {
 	 * @param contenu la chaine a verifier
 	 * @return le credit du module
 	 */
-	public static int recupereCredit(String contenu) {
-		String regex = "[0-9]{1,2}";//juste un chiffre
-		if (Pattern.matches(regex, contenu))
-			return Integer.valueOf(contenu);
+	public static int recupereCredit(String nomModule) {
+		Iterator it = modulesExistant.iterator();
+		while (it.hasNext()) {
+			Module mod = (Module) it.next();
+			if(mod.getNom().equals(nomModule)){//si on a trouve un module correspondant
+				return mod.getCredit();//on retourne sa categorie
+			}
+		}
 		return 0;
 	}
 
@@ -149,20 +163,32 @@ public class RecherchePattern {
 		return 0;
 	}
 
-		/**
-		 * recupereParcours recherche avec un systeme de regex le parcours du module
-		 * @param contenu la chaine a verifier
-		 * @return le parcours du module
-		 */
-		public static String recupereParcours(List<String> modulesData) {
-			Iterator<String> it = modulesData.iterator();
-			String regex = "ISI|TC|MASTER";
-			String contenu;
-			while(it.hasNext()){
-				contenu = it.next();
-				if (Pattern.matches(regex, contenu))//si c'est un nouveau etudiant
-					return contenu;
-			}
-			return null;
+	/**
+	 * recupereParcours recherche avec un systeme de regex le parcours du module
+	 * @param contenu la chaine a verifier
+	 * @return le parcours du module
+	 */
+	public static String recupereParcours(List<String> modulesData) {
+		Iterator<String> it = modulesData.iterator();
+		String regex = "ISI|TC|MASTER";
+		String contenu;
+		while(it.hasNext()){
+			contenu = it.next();
+			if (Pattern.matches(regex, contenu))//si c'est un nouveau etudiant
+				return contenu;
 		}
+		return null;
 	}
+
+	//TODO a commneter on recupere la categorie du module a partir de son nom et en utilisant modulesExistant
+	public static String recupereCategorie(String nomModule){
+		Iterator it = modulesExistant.iterator();
+		while (it.hasNext()) {
+			Module mod = (Module) it.next();
+			if(mod.getNom().equals(nomModule)){//si on a trouve un module correspondant
+				return mod.getCategorie();//on retourne sa categorie
+			}
+		}
+		return "Inconnue";
+	}
+}
