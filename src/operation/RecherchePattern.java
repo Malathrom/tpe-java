@@ -134,14 +134,10 @@ public class RecherchePattern {
 	 * @param contenu la chaine a verifier
 	 * @return le credit du module
 	 */
-	public static int recupereCredit(String nomModule) {
-		Iterator it = modulesExistant.iterator();
-		while (it.hasNext()) {
-			Module mod = (Module) it.next();
-			if(mod.getNom().equals(nomModule)){//si on a trouve un module correspondant
-				return mod.getCredit();//on retourne sa categorie
-			}
-		}
+	public static int recupereCredit(String contenu) {
+		String regex = "[0-9]";//juste un chiffre
+		if (Pattern.matches(regex, contenu))
+			return Integer.valueOf(contenu);
 		return 0;
 	}
 

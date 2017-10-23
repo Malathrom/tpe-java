@@ -161,28 +161,34 @@ public class GestionData {
 			String str = it.next();
 
 			if(RecherchePattern.recupereNomModule(str) != null){//des qu'on a le premier module 
+				nomModule=RecherchePattern.recupereNomModule(str);
 				premierModule=true;
 			}
 			if (premierModule) {
-				if(RecherchePattern.recupereNomModule(str) != null){//recherche d'un nom de module correct 
+				if(RecherchePattern.recupereNomModule(str) != null){
 					nomModule=RecherchePattern.recupereNomModule(str);
-					categorie=RecherchePattern.recupereCategorie(nomModule);//on recupere egalement sa categorie dans la liste des modules existants 
-					credit=RecherchePattern.recupereCredit(nomModule);
+					//	if (nomModule!=null) { //tant qu'on a pas trouve un nom de module correct 
+					System.out.print("nom" +nomModule + " ");
+					System.out.print("note" +note + " ");
+					System.out.print("cre" +credit + " ");
+					System.out.print("par" +parcours + " ");
+					System.out.println("sem" +semestre);
 				}
-				if(RecherchePattern.recupereNote(str) != null)//recherche d'une note de module correct 
+				if(RecherchePattern.recupereNote(str) != null){
 					note=RecherchePattern.recupereNote(str);	
-				//if(RecherchePattern.recupereCredit(str) != 0) //recherche d'un nombre de credit de module correct 
-					//credit=RecherchePattern.recupereCredit(str);
-
+				}
+				//if (note!=null) { //tant qu'on a pas trouve une note de module correct 
+				if(RecherchePattern.recupereCredit(str) != 0){ 
+					credit=RecherchePattern.recupereCredit(str);
+					//if (credit!=0) { //tdes qu'on les credits de la note
+				}
 				//si toutes les valeurs sont ok alors on creer le module
 				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
-					Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
+					Module module = new Module(nomModule, note, credit, semestre, parcours, null);
 					mods.add(module);
-					//on reset les donnees
-					nomModule = null;
-					note = null;
-					credit = 0;
-					categorie = null;
+					nomModule = null;//on reset les donnees
+					note = null;//on reset les donnees
+					credit = 0;//on reset les donnees
 				}
 			}
 		}

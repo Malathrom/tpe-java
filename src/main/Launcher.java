@@ -21,7 +21,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (2) {
+		switch (3) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
