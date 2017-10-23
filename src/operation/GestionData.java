@@ -167,28 +167,27 @@ public class GestionData {
 			if (premierModule) {
 				if(RecherchePattern.recupereNomModule(str) != null){
 					nomModule=RecherchePattern.recupereNomModule(str);
-					//	if (nomModule!=null) { //tant qu'on a pas trouve un nom de module correct 
-					System.out.print("nom" +nomModule + " ");
-					System.out.print("note" +note + " ");
-					System.out.print("cre" +credit + " ");
-					System.out.print("par" +parcours + " ");
-					System.out.println("sem" +semestre);
+					if(RecherchePattern.recupereCategorie(nomModule) != null){ //une fois qu'on a le nom du module si il est de type ISI on essaye de savoir si c'est CS OU TM
+						categorie=RecherchePattern.recupereCategorie(nomModule);
+					}
 				}
 				if(RecherchePattern.recupereNote(str) != null){
 					note=RecherchePattern.recupereNote(str);	
 				}
-				//if (note!=null) { //tant qu'on a pas trouve une note de module correct 
 				if(RecherchePattern.recupereCredit(str) != 0){ 
 					credit=RecherchePattern.recupereCredit(str);
-					//if (credit!=0) { //tdes qu'on les credits de la note
 				}
+				
+				
 				//si toutes les valeurs sont ok alors on creer le module
 				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
-					Module module = new Module(nomModule, note, credit, semestre, parcours, null);
+					Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
 					mods.add(module);
-					nomModule = null;//on reset les donnees
-					note = null;//on reset les donnees
-					credit = 0;//on reset les donnees
+					//on reset les donnees pour le prochain module
+					nomModule = null;
+					note = null;
+					credit = 0;
+					categorie = null;
 				}
 			}
 		}
