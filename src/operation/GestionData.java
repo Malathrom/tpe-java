@@ -255,6 +255,44 @@ public class GestionData {
 		}
 		return nbUe;
 	}
+	
+	/**
+	 * renvois le nom du dernier stage effectué par l'étudiant
+	 * @param etu l'étudiant en question
+	 * @return "TN30" si tn30, etc... puis "pas de stage" si aucun stage n'a été trouvé
+	 */
+	public static String dernierStage(Etudiant etu){
+		int i=0;
+		boolean tn09=false, tn10=false, tn30=false;
+		while(i<etu.getModules().size()){
+			if(etu.getModules().get(i).getCategorie()=="ST"){
+				System.out.println(etu.getModules().get(i));
+			}
+			if (etu.getModules().get(i).getNom()=="TN09"){
+				tn09=true;
+			}
+			if (etu.getModules().get(i).getNom()=="TN10"){
+				tn10=true;
+			}
+			if (etu.getModules().get(i).getNom()=="TN30"){
+				tn30=true;
+			}
+			i++;
+		}
+		if(tn30==true){
+			return "TN30";
+		}
+		else if(tn10==true){
+			return "TN10";
+		}
+		else if(tn09==true){
+			return "TN09";
+		}
+		else {
+			return "Pas de stage";
+		}
+		
+	}
 
 	/**
 	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
@@ -265,7 +303,7 @@ public class GestionData {
 		ArrayList<String> out= new ArrayList<String>();
 		int maxSem=maxSemestre(etu)+1;
 		int sem=1;
-		while(sem<maxSem+1){
+		while(sem<maxSem){
 			String str="";
 			int nbA=compteNote(etu, Note.A, sem);
 			int nbB=compteNote(etu, Note.B, sem);
@@ -274,7 +312,7 @@ public class GestionData {
 			int nbUe=nombreUeSemestre(etu, sem);
 			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
 			while(i<etu.getModules().size()){
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
 					nbUeRatees++;
 				}
 				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){

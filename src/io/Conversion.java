@@ -68,7 +68,7 @@ public class Conversion {
 		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fileTxt));
 		Iterator<Etudiant> it = etudiants.iterator();
 		String entete="";
-		entete+="Nom;Prenom;";
+		entete+="Nom;Prenom;Stage;";
 		int semSize= GestionData.avisJury(etudiants.get(0)).size(), j=0;
 		while (j<semSize){
 			entete+="Avis Semestre "+(j+1)+";";
@@ -77,10 +77,13 @@ public class Conversion {
 		entete+="\n";
 		pw.print(entete);
 		
+		
+		
 		while (it.hasNext()) {
 			Etudiant etudiant = it.next();
 			String out="";
 			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
+			out+=GestionData.dernierStage(etudiant)+";";
 			int i=0;
 			List<String> avisSem= GestionData.avisJury(etudiant);
 			while(i<avisSem.size()){
