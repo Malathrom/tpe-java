@@ -21,26 +21,33 @@ public class SauvegardeRepertoire {
 	/**chemin vers le fichier contenant les paths*/
 	private static File pathFile = new File("src/files/paths.txt");
 
-	/**
-	 * SauvegardeRepertoire stocke dans un fichier les chemins visites par l'utilisateur dans le JFileChooser
-	 * @param chooser JFileChooser qui définit le répertoire ou l'utilisateur recherche les fichier
-	 */
-	public SauvegardeRepertoire(JFileChooser chooser){
+	//TODO a commenter
+	public static List<String> getPaths() {
 		String ligne;
 		BufferedReader br = null;
-		PrintWriter pw = null;
-
 		try {
 			br = new BufferedReader(new FileReader(pathFile));
-
-			paths.add(chooser.getSelectedFile().getParent());//on recupere le rep selectionne
 			while ((ligne = br.readLine()) != null){
 				if (!paths.contains(ligne)) {
 					paths.add(ligne);//on recupere les anciens repertoires si il n'existe pas deja		
 				}
 			}
 			br.close();
+		} catch (IOException e) {
+			System.out.println ("Erreur lors de la lecture : " + e.getMessage());
+		}
+		return paths;
+	}
 
+	//TODO a commenter
+	public static void ajoutPath(JFileChooser chooser) {
+		if (!paths.contains(chooser.getSelectedFile().getParent())) {
+			paths.add(chooser.getSelectedFile().getParent());//on recupere le rep selectionne	
+		}
+
+		PrintWriter pw = null;
+
+		try {
 			pw = new PrintWriter(new BufferedWriter(new FileWriter(pathFile)));
 			for (String string : paths) {
 				pw.println(string);//on reecrit la nouvelle liste
@@ -49,10 +56,6 @@ public class SauvegardeRepertoire {
 		} catch (IOException e) {
 			System.out.println ("Erreur lors de la lecture : " + e.getMessage());
 		}
-	}
-
-	public static List<String> getPaths() {
-		return paths;
 	}
 
 	public static void setPaths(List<String> paths) {

@@ -21,7 +21,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (3) {
+		switch (1) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -41,7 +41,7 @@ public class Launcher {
 		case 3:
 			//File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
 			//File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
-			File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever		
+			File file = new File("src/test/PV ISI 1.txt");//Fichier de test 3//TODO a enlever		
 			List<Etudiant> etudiants = GestionData.listeEtudiant(file);//Test sur les fichiers etudiants
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {

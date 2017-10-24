@@ -235,27 +235,33 @@ public class GestionStagesJuryIsi extends JFrame{
 	 */
 	private void choixRepertoire(){
 		String path = ""; //Chemin a parcourir
-		JFileChooser chooser;
-		
+		JFileChooser chooser = null;
+		System.out.println("test1"+ SauvegardeRepertoire.getPaths().isEmpty());
 		if(SauvegardeRepertoire.getPaths().isEmpty()){//Si la liste des repertoires est vide
 			chooser = new JFileChooser();
+			System.out.println("test2");
 		}
 		else{//si elle n'est pas vide
+			System.out.println("test3");
 			Iterator<String> it = SauvegardeRepertoire.getPaths().iterator();
 			while (it.hasNext() && path.equals("")) {
+				System.out.println("test4");
 				String str = (String) it.next();
 				File file = new File(str);
 				
 				if (file.exists()) {//on recupere le premier repertoire possible	
 					path = file.getAbsolutePath();
+					System.out.println("test5");
 				}
 			}
 			
 			if(path.equals("")){//si on a pas trouvé de chemin coherent
 				chooser = new JFileChooser();
+				System.out.println("test6");
 			}
 			else{
 				chooser = new JFileChooser(path);
+				System.out.println("test7");
 			}
 		}
 
@@ -264,7 +270,9 @@ public class GestionStagesJuryIsi extends JFrame{
 		chooser.setMultiSelectionEnabled(false);
 		int returnVal = chooser.showOpenDialog(null);
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
-			new SauvegardeRepertoire(chooser);//permet de sauvegarder les repertoires
+			System.out.println("test8");
+			
+			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
 			affichageFichier(chooser);
 		}
 	}

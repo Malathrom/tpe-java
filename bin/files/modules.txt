@@ -1,3 +1,4 @@
+// Sigle credit categorie parcours
 // UE automne
 GL02 6 CS ISI
 NF16 6 CS ISI
