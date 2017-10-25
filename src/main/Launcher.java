@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import ihm.GestionStagesJuryIsi;
+import ihm.IHMAvisJury;
 import io.LectureModules;
 import operation.GestionData;
 import operation.GestionNote;
@@ -26,7 +26,7 @@ public class Launcher {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					try {
-						new GestionStagesJuryIsi();
+						new IHMAvisJury();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

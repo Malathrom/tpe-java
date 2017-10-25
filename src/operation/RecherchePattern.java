@@ -10,6 +10,10 @@ import operation.data.Module;
 /**RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible*/
 public class RecherchePattern {
 
+	
+	//TODO Modifier les patterns nom et prenom pour qu'il verifie dans le cas oou il y a plusieurs prenom nom enfaite tant qu'on atteint pas le numero 
+	//c'est toujours le nom et le prenom de l'etudiant
+	
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
 	 */
@@ -180,7 +184,7 @@ public class RecherchePattern {
 		Iterator it = modulesExistant.iterator();
 		while (it.hasNext()) {
 			Module mod = (Module) it.next();
-			if(mod.getNom().equals(nomModule)){//si on a trouve un module correspondant
+			if(mod.getNom().equals(nomModule) || nomModule.startsWith(mod.getNom())){//si on a trouve un module correspondant
 				return mod.getCategorie();//on retourne sa categorie
 			}
 		}

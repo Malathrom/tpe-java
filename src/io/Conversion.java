@@ -93,8 +93,7 @@ public class Conversion {
 			pw.println(out);
 		}
 		pw.println(etudiants);
-		pw.close();
-		
+		pw.close();	
 	}
 	
 	public Filtrage getFiltre() {

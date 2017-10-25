@@ -94,6 +94,12 @@ public class GestionData {
 				}
 			}
 		}
+		//TODO A enlever
+		Iterator<Etudiant> it2 = etudiants.iterator();
+		while (it2.hasNext()) {
+			Etudiant etudiant = (Etudiant) it2.next();
+			System.out.println(etudiant);
+		}
 		return etudiants;
 	}
 

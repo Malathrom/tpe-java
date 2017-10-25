@@ -31,8 +31,8 @@ import java.awt.Font;
  * @author nigro
  * @version 1.0
  */
-public class GestionStagesJuryIsi extends JFrame{
-	
+public class IHMAvisJury extends JFrame{
+
 	//TODO faire la gestion d'exception pour le click des boutons notament
 	//TODO regarder mes anciennes interfaces pour placer, redimesionner la fenetres
 	//TODO voir si c’est possible de faire un aperçu d’un pdf dans un Panel en java
@@ -42,12 +42,12 @@ public class GestionStagesJuryIsi extends JFrame{
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
 	private JTextField sourcePDF;
-	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt;
+	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, conversion_Csv_Pdf;
 
 	/**
 	 * Creation de l'application.
 	 */
-	public GestionStagesJuryIsi() {
+	public IHMAvisJury() {
 		new JFrame();
 		initialize();
 		addListener();
@@ -119,7 +119,7 @@ public class GestionStagesJuryIsi extends JFrame{
 
 		// Bouton lançant la conversion TXT --> "Filtrage" --> CSV 
 		conversionTxt_Csv = new JButton("Conversion  TXT -> CSV");
-		conversionTxt_Csv.setBounds(296, 79, 176, 23);
+		conversionTxt_Csv.setBounds(296, 83, 176, 23);
 		this.getContentPane().add(conversionTxt_Csv);
 
 		// Bouton pour quitter l'application
@@ -142,10 +142,17 @@ public class GestionStagesJuryIsi extends JFrame{
 		sourcePDF.setColumns(10);
 		this.getContentPane().add(sourcePDF);
 
-		// Bouton de convertion PDF --> TXT 
+		// Bouton de conversion PDF --> TXT 
 		conversionPdf_Txt = new JButton("Conversion  PDF >- TXT");
-		conversionPdf_Txt.setBounds(296, 28, 176, 23);
+		conversionPdf_Txt.setBounds(296, 32, 176, 23);
 		this.getContentPane().add(conversionPdf_Txt);
+
+		// Bouton de conversion PDF --> TXT 
+		conversion_Csv_Pdf = new JButton("Avis Jury");
+		conversion_Csv_Pdf.setBounds(296, 140, 176, 23);
+		this.getContentPane().add(conversion_Csv_Pdf);
+
+
 	}
 
 	/** Methode qui ajoute les listeners aux boutons*/
@@ -215,19 +222,17 @@ public class GestionStagesJuryIsi extends JFrame{
 			int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileString +" ?", "Confirmation de la suppression", 
 					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 			this.requestFocus();
-			if(option == JOptionPane.OK_OPTION){
+			if(option == JOptionPane.OK_OPTION)
 				return true;
-			}
-			else{
+			else
 				return false;
-			}
 		}
 		return true;
 	}
 
 	/**Methode qui convertit un fichier txt en format csv*/
 	private void conversion_TXT_CSV() {
-		new Conversion(sourceTXT.getText(),cibleCSV.getText());
+		new Conversion(sourceTXT.getText(), cibleCSV.getText());
 	}
 
 	/**
@@ -236,33 +241,23 @@ public class GestionStagesJuryIsi extends JFrame{
 	private void choixRepertoire(){
 		String path = ""; //Chemin a parcourir
 		JFileChooser chooser = null;
-		System.out.println("test1"+ SauvegardeRepertoire.getPaths().isEmpty());
 		if(SauvegardeRepertoire.getPaths().isEmpty()){//Si la liste des repertoires est vide
 			chooser = new JFileChooser();
-			System.out.println("test2");
 		}
 		else{//si elle n'est pas vide
-			System.out.println("test3");
 			Iterator<String> it = SauvegardeRepertoire.getPaths().iterator();
 			while (it.hasNext() && path.equals("")) {
-				System.out.println("test4");
 				String str = (String) it.next();
 				File file = new File(str);
-				
-				if (file.exists()) {//on recupere le premier repertoire possible	
+
+				if (file.exists()) //on recupere le premier repertoire possible	
 					path = file.getAbsolutePath();
-					System.out.println("test5");
-				}
 			}
-			
-			if(path.equals("")){//si on a pas trouvé de chemin coherent
+
+			if(path.equals(""))//si on a pas trouvé de chemin coherent
 				chooser = new JFileChooser();
-				System.out.println("test6");
-			}
-			else{
+			else
 				chooser = new JFileChooser(path);
-				System.out.println("test7");
-			}
 		}
 
 		FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
@@ -270,8 +265,6 @@ public class GestionStagesJuryIsi extends JFrame{
 		chooser.setMultiSelectionEnabled(false);
 		int returnVal = chooser.showOpenDialog(null);
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
-			System.out.println("test8");
-			
 			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
 			affichageFichier(chooser);
 		}
