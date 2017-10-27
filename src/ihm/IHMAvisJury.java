@@ -19,6 +19,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
@@ -42,7 +43,8 @@ public class IHMAvisJury extends JFrame{
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
 	private JTextField sourcePDF;
-	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, conversion_Csv_Pdf;
+	private File fileTXT, fileCSV, filePDF;
+	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, conversion_Csv_Pdf, avisJury;
 
 	/**
 	 * Creation de l'application.
@@ -148,9 +150,9 @@ public class IHMAvisJury extends JFrame{
 		this.getContentPane().add(conversionPdf_Txt);
 
 		// Bouton de conversion PDF --> TXT 
-		conversion_Csv_Pdf = new JButton("Avis Jury");
-		conversion_Csv_Pdf.setBounds(296, 140, 176, 23);
-		this.getContentPane().add(conversion_Csv_Pdf);
+		avisJury = new JButton("Avis Jury");
+		avisJury.setBounds(296, 140, 176, 23);
+		this.getContentPane().add(avisJury);
 
 
 	}
@@ -169,35 +171,49 @@ public class IHMAvisJury extends JFrame{
 			public void mouseClicked(MouseEvent e) {
 				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()=="")){
 					try {
-						if(confirmationConversion(sourceTXT.getText())){
-							maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\na été converti en "+ sourceTXT.getText(), "Info",  
-									JOptionPane.INFORMATION_MESSAGE);
+						if(fileTXT.exists()){
+							//on demande si on veut l'ecraser
+							int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileTXT.getName() +" ?", "Confirmation de la suppression", 
+									JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+							requestFocus();
+							if(option == JOptionPane.OK_OPTION){
+								maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+								JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\na été converti en "+ fileTXT.getName(), "Info",  
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 						}
 						else{
-							JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  
-									JOptionPane.ERROR_MESSAGE);
+							maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
 						}
+					} catch (FileNotFoundException e2) {
+						JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\n'existe pas", "Erreur",  JOptionPane.ERROR_MESSAGE);
 					} catch (IOException e1) {
-						JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  
+						JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\nn'a pas été converti en "+ fileTXT.getName(), "Erreur",  
 								JOptionPane.ERROR_MESSAGE);
-						e1.printStackTrace();
 					}
 				}
 			}
 		});
 
-		conversionTxt_Csv.addMouseListener(new MouseAdapter() {
+		avisJury.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(confirmationConversion(cibleCSV.getText())){
-					conversion_TXT_CSV();
-					JOptionPane.showMessageDialog(null, "le fichier " + sourceTXT.getText() +"\na été converti en"+ cibleCSV.getText(), "Info",  
-							JOptionPane.INFORMATION_MESSAGE);
+				if(fileCSV.exists()){
+					//on demande si on veut l'ecraser
+					int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileCSV.getName() +" ?", "Confirmation de la suppression", 
+							JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+					requestFocus();
+					if(option == JOptionPane.OK_OPTION){
+						conversion_TXT_CSV();
+						JOptionPane.showMessageDialog(null, "le fichier " + fileTXT.getName() +"\na été converti en "+ fileCSV.getName(), "Info",  
+								JOptionPane.INFORMATION_MESSAGE);
+					}else{
+						JOptionPane.showMessageDialog(null, "le fichier " + fileTXT.getName() +"\nn'a pas été converti en "+ fileCSV.getName(), "Erreur",  
+								JOptionPane.ERROR_MESSAGE);
+					} 
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "le fichier " + sourcePDF.getText() +"\nn'a pas été converti en "+ sourceTXT.getText(), "Erreur",  
-							JOptionPane.ERROR_MESSAGE);
+					conversion_TXT_CSV();
 				}
 			}
 		});
@@ -208,26 +224,6 @@ public class IHMAvisJury extends JFrame{
 				System.exit(0);
 			}
 		});
-	}
-
-	/**
-	 * confirmationConversion teste si le fichier peut etre convertit ou non
-	 * @param fileString le chemin du fichier qui va etre crée
-	 * @return oui si le fichier a été créer non si il ne l'a pas été
-	 */
-	private boolean confirmationConversion(String fileString) {
-		//On regarde si le ficher existe deja
-		if(new File(fileString).exists()){
-			//on demande si on veut l'ecraser
-			int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileString +" ?", "Confirmation de la suppression", 
-					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-			this.requestFocus();
-			if(option == JOptionPane.OK_OPTION)
-				return true;
-			else
-				return false;
-		}
-		return true;
 	}
 
 	/**Methode qui convertit un fichier txt en format csv*/
@@ -275,12 +271,23 @@ public class IHMAvisJury extends JFrame{
 	 * @param chooser le JFileChooser lors du choix des fichiers
 	 */
 	private void affichageFichier(JFileChooser chooser) {
-		String nomFichierPDF= chooser.getSelectedFile().getAbsolutePath();
-		String nomFichierTXT=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".txt";
-		String nomFichierCSV=nomFichierPDF.substring(0, nomFichierPDF.length()-4)+".csv";
+		String nomFichierPDF = chooser.getSelectedFile().getAbsolutePath();
 		sourcePDF.setText(nomFichierPDF);
+		String nomFichierTXT = nomFichierPDF.replace(".pdf", ".txt");
 		sourceTXT.setText(nomFichierTXT);
+		String nomFichierCSV = nomFichierPDF.replace(".pdf", ".csv");
 		cibleCSV.setText(nomFichierCSV);
+		filePDF = new File(nomFichierPDF);
+		try {
+			System.out.println(filePDF.getCanonicalPath());
+			System.out.println(filePDF.getName());
+			System.out.println(filePDF.getPath());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		fileTXT = new File(nomFichierTXT);
+		fileCSV = new File(nomFichierCSV);
 	}
 
 	/*TODO faire la javadoc pour les getter et setter*/
