@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 import ihm.IHMAvisJury;
 import io.LectureModules;
 import operation.GestionData;
-import operation.GestionNote;
 import operation.data.Etudiant;
 
 public class Launcher {
@@ -65,7 +64,7 @@ public class Launcher {
 				System.out.println("y2");
 				break;
 		case 6:
-			new GestionNote();
+			//new GestionNote();
 
 			break;
 		}
