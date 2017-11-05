@@ -24,7 +24,7 @@ public class GestionData {
 	/*
 	 * nbSemestre indique le nombre de semestre qu'a fait l'etudiant
 	 */
-	private static int nbSemestreEtudiant = 0; 
+	private static int nbSemestres = 0; 
 
 	/*
 	 * nbEtudiant indique le nombre d'etudiant que nous avons traité
@@ -35,7 +35,7 @@ public class GestionData {
 	 * Reset des données pour un nouvel etudiant
 	 */
 	public static void reset(){
-		nbSemestreEtudiant = 0;
+		setNbSemestres(0);
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class GestionData {
 		List<Module> modulesEtudiant = ajoutModulesEtudiant(dataEtudiant);//on recupere les UE
 		int credit = RecherchePattern.recupereTotalCredit(dataEtudiant);
 		nbEtudiant++;
-		return new Etudiant(nom, prenom, modulesEtudiant, credit);
+		return new Etudiant(nom, prenom, modulesEtudiant, credit, nbSemestres);
 	}
 
 	/**
@@ -130,8 +130,7 @@ public class GestionData {
 			}
 			if(enSemestre){//si on est dans la zone de semestres
 				if(RecherchePattern.rechercheFinSemestre(data)){//si on est a la fin du semestre 
-					//ajoutModules(dataSemestreEtudiant);//Ajout des modules du semestre
-					modules.addAll(creationModules(dataSemestreEtudiant));
+					modules.addAll(creationModulesSemestre(dataSemestreEtudiant));
 					dataSemestreEtudiant = new ArrayList<String>();// on reset les donnees
 					enSemestre=false;
 				}
@@ -144,13 +143,12 @@ public class GestionData {
 	}
 
 	/**
-	 * creationModules creer les modules de l'etudiant
-	 * @param modulesData les donnees sur les UEs
-	 * @return la liste des modules du semestres
+	 * creationModulesSemestre creer les modules de l'etudiant d'un semestre
+	 * @param modulesData les donnees sur les UEs d'un semestre
+	 * @return la liste des modules du semestre
 	 */
-	private static List<Module> creationModules(List<String> modulesData) {
+	private static List<Module> creationModulesSemestre(List<String> modulesData) {
 		List<Module> mods = new ArrayList<Module>();
-		nbSemestreEtudiant++;
 		String parcours = RecherchePattern.recupereParcours(modulesData);
 		int semestre = RecherchePattern.recupereSemestre(modulesData);
 		String nomModule = null;
@@ -181,7 +179,6 @@ public class GestionData {
 					credit=RecherchePattern.recupereCredit(str);
 				}
 				
-				
 				//si toutes les valeurs sont ok alors on creer le module
 				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
 					Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
@@ -194,22 +191,37 @@ public class GestionData {
 				}
 			}
 		}
+		nbSemestres++; //on ajute un semestre a l'etudiant
 		return mods;
 	}
 
+	//TODO a commenter
 	public List<Etudiant> getEtudiants() {
 		return etudiants;
 	}
 
+	//TODO a commenter
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
 	}
 
+	//TODO a commenter
 	public static int getNbEtudiant() {
 		return nbEtudiant;
 	}
 
+	//TODO a commenter
 	public static void setNbEtudiant(int nbEtudiant) {
 		GestionData.nbEtudiant = nbEtudiant;
+	}
+
+	//TODO a commenter
+	public static int getNbSemestres() {
+		return nbSemestres;
+	}
+
+	//TODO a commenter
+	public static void setNbSemestres(int nbSemestreEtudiant) {
+		GestionData.nbSemestres = nbSemestreEtudiant;
 	}
 }

@@ -12,21 +12,17 @@ public class Etudiant {
 	
 	private int creditTotal;
 	
+	private int nbSemestres;
+	
 	/**liste des modules fait par l'etudiant*/
 	private List<Module> modules = new ArrayList<Module>();
-
-	//TODO A SUPPRIMER UNE FOIS QUE L;autre marche
-	public Etudiant(String nom, String prenom, List<Module> modules) {
-		this.nom = nom;
-		this.prenom = prenom;
-		this.modules = modules;
-	}
 	
-	public Etudiant(String nom, String prenom, List<Module> modules, int creditTotal) {
-		this.nom = nom;
-		this.prenom = prenom;
-		this.modules = modules;
-		this.setCreditTotal(creditTotal);
+	public Etudiant(String nom, String prenom, List<Module> modules, int creditTotal, int semestres) {
+		setNom(nom);
+		setPrenom(prenom);
+		setModules(modules);
+		setCreditTotal(creditTotal);
+		setNbSemestres(semestres);
 	}
 
 	//TODO a commenter
@@ -62,9 +58,20 @@ public class Etudiant {
 		this.creditTotal = creditTotal;
 	}
 	
+	//TODO a commenter
+	public int getNbSemestres() {
+		return nbSemestres;
+	}
+
+	//TODO a commenter
+	public void setNbSemestres(int nbSemestres) {
+		this.nbSemestres = nbSemestres;
+	}
+	
+	@Override
 	public String toString(){
 		Iterator<Module> it = modules.iterator();
-		String chaine = nom + " "+ prenom + " " + creditTotal + "\n";
+		String chaine = nom + " "+ prenom + " total credit:" + creditTotal + " Semestre total:" + nbSemestres + "\n";
 		while (it.hasNext()) {
 			Module module = (Module) it.next();
 			chaine+= module + "\n";

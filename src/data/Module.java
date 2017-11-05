@@ -50,61 +50,62 @@ public class Module{
 		return "Module{ nom=" + nom + " parcours=" + parcours + " semestre: " + semestre + " Note=" + note + " credit=" + credit + " categorie=" + categorie + "}";
 	}
 	
+	//TODO a commenter	
 	public String getNom() {
 		return nom;
 	}
 	
-	
+	//TODO a commenter	
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
-
+	//TODO a commenter	
 	public String getCategorie() {
 		return categorie;
 	}
 
-
+	//TODO a commenter	
 	public void setCategorie(String categorie) {
 		this.categorie = categorie;
 	}
 
-
+	//TODO a commenter	
 	public String getParcours() {
 		return parcours;
 	}
 
-
+	//TODO a commenter	
 	public void setParcours(String parcours) {
 		this.parcours = parcours;
 	}
 
-
+	//TODO a commenter	
 	public int getSemestre() {
 		return semestre;
 	}
 
-
+	//TODO a commenter	
 	public void setSemestre(int semestre) {
 		this.semestre = semestre;
 	}
 
-
+	//TODO a commenter	
 	public Note getNote() {
 		return note;
 	}
 
-
+	//TODO a commenter	
 	public void setNote(Note note) {
 		this.note = note;
 	}
 
-
+	//TODO a commenter	
 	public int getCredit() {
 		return credit;
 	}
 
-
+	//TODO a commenter	
 	public void setCredit(int credit) {
 		this.credit = credit;
 	}
