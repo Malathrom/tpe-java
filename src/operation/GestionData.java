@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import data.Etudiant;
+import data.Module;
 import io.LectureModules;
-import operation.data.Etudiant;
-import operation.data.Module;
 /**GestionData gere les donnees des fichiers des etudiants*/
 public class GestionData {
 
@@ -81,10 +81,11 @@ public class GestionData {
 			if(RecherchePattern.rechercheDebutEtudiant(data)){	//si on change d'etudiant on reste les donnees concernant l'ancien etudiant
 				reset();
 				dataEtudiant = new ArrayList<String>();//on reset les donnees
-				nbEtudiant++;
+				setNbEtudiant(getNbEtudiant() + 1);
 			}
 			else{//si on a pas changer d'etudiant on stocke ces donnees
 				if(RecherchePattern.rechercheFinEtudiant(data)){//si on est a la fin des donnees on creer l'etudiant
+					dataEtudiant.add(data); //on ajoute le dernier element au donnee
 					etudiants.add(ajoutEtudiant(dataEtudiant));
 					reset();
 					//etudiants.add(etudiant);//TODO on ajoute l'ancien etudiant dans la liste
@@ -93,12 +94,6 @@ public class GestionData {
 					dataEtudiant.add(data);//on est pas a la fin on attend
 				}
 			}
-		}
-		//TODO A enlever
-		Iterator<Etudiant> it2 = etudiants.iterator();
-		while (it2.hasNext()) {
-			Etudiant etudiant = (Etudiant) it2.next();
-			System.out.println(etudiant);
 		}
 		return etudiants;
 	}
@@ -112,7 +107,9 @@ public class GestionData {
 		String nom = RecherchePattern.recupereNom(dataEtudiant);//on recupere le nom 
 		String prenom = RecherchePattern.recuperePrenom(dataEtudiant);// on recupere le prenom
 		List<Module> modulesEtudiant = ajoutModulesEtudiant(dataEtudiant);//on recupere les UE
-		return new Etudiant(nom, prenom, modulesEtudiant);
+		int credit = RecherchePattern.recupereTotalCredit(dataEtudiant);
+		nbEtudiant++;
+		return new Etudiant(nom, prenom, modulesEtudiant, credit);
 	}
 
 	/**
@@ -376,5 +373,13 @@ public class GestionData {
 
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
+	}
+
+	public static int getNbEtudiant() {
+		return nbEtudiant;
+	}
+
+	public static void setNbEtudiant(int nbEtudiant) {
+		GestionData.nbEtudiant = nbEtudiant;
 	}
 }

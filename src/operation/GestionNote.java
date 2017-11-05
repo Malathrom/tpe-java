@@ -3,8 +3,8 @@ package operation;
 import java.util.ArrayList;
 import java.util.List;
 
-import operation.data.Etudiant;
-import operation.data.Module;
+import data.Etudiant;
+import data.Module;
 
 public class GestionNote {
 

@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import data.Module;
 import operation.Note;
-import operation.data.Module;
 
 
 /**LectureModule permet de connaitre les modules d'ISI avec leur credit, leur categorie et leur type*/

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import operation.data.Etudiant;
-import operation.data.Module;
+import data.Etudiant;
+import data.Module;
 
 /**
  * Filtrage est une classe Java qui permet d'écrire dans un fichier CSV des propositions de décisions de Jury du département ISI.

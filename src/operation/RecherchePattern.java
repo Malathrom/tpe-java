@@ -4,16 +4,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import data.Module;
 import io.LectureModules;
-import operation.data.Module;
 
 /**RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible*/
 public class RecherchePattern {
 
-	
+
 	//TODO Modifier les patterns nom et prenom pour qu'il verifie dans le cas oou il y a plusieurs prenom nom enfaite tant qu'on atteint pas le numero 
 	//c'est toujours le nom et le prenom de l'etudiant
-	
+
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
 	 */
@@ -78,7 +78,7 @@ public class RecherchePattern {
 	 * @return true si le contenu indique que c'est la fin d'un etudiant
 	 */
 	public static boolean rechercheFinEtudiant(String contenu) {
-		String regex = "Global";
+		String regex = "[0-9]{2,3}/(60|120|180|300|360)"; //par semestre il faut un total de 60 credits 
 		if (Pattern.matches(regex, contenu))
 			return true;
 		return false;
@@ -181,7 +181,7 @@ public class RecherchePattern {
 
 	//TODO a commneter on recupere la categorie du module a partir de son nom et en utilisant modulesExistant
 	public static String recupereCategorie(String nomModule){
-		Iterator it = modulesExistant.iterator();
+		Iterator<Module> it = modulesExistant.iterator();
 		while (it.hasNext()) {
 			Module mod = (Module) it.next();
 			if(mod.getNom().equals(nomModule) || nomModule.startsWith(mod.getNom())){//si on a trouve un module correspondant
@@ -189,5 +189,19 @@ public class RecherchePattern {
 			}
 		}
 		return "Inconnue";
+	}
+
+	//TODO a commneter on recupere la categorie du module a partir de son nom et en utilisant modulesExistant
+	public static int recupereTotalCredit(List<String> data){
+		String regex = "[0-9]{2,3}/(60|120|180|300|360)"; //par semestre il faut un total de 60 credits
+		Iterator<String> it = data.iterator();
+		while (it.hasNext()) {
+			String contenu = it.next();
+			if (Pattern.matches(regex, contenu)){
+				String tab[] = contenu.split("/");
+				return Integer.valueOf(tab[0]);
+			}
+		}
+		return 0;
 	}
 }

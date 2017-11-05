@@ -14,8 +14,8 @@ import java.util.List;
 import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
+import data.Etudiant;
 import operation.GestionData;
-import operation.data.Etudiant;
 
 public class Conversion {
 	FileWriter fw = null;
