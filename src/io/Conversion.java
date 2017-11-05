@@ -15,12 +15,12 @@ import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 import data.Etudiant;
+import operation.DecisionJury;
 import operation.GestionData;
 
 public class Conversion {
 	FileWriter fw = null;
 	//TODO tester la classe pour voir si le fichier final est ok
-	//TODO finir la méthode CompteCSTM avec l’arrayList modules
 
 	/**
 	 * filtre pour filtrer les decisions de jury
@@ -69,7 +69,7 @@ public class Conversion {
 		Iterator<Etudiant> it = etudiants.iterator();
 		String entete="";
 		entete+="Nom;Prenom;Stage;";
-		int semSize= GestionData.avisJury(etudiants.get(0)).size(), j=0;
+		int semSize= DecisionJury.avisJury(etudiants.get(0)).size(), j=0;
 		while (j<semSize){
 			entete+="Avis Semestre "+(j+1)+";";
 			j++;
@@ -83,9 +83,9 @@ public class Conversion {
 			Etudiant etudiant = it.next();
 			String out="";
 			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
-			out+=GestionData.dernierStage(etudiant)+";";
+			out+=DecisionJury.dernierStage(etudiant)+";";
 			int i=0;
-			List<String> avisSem= GestionData.avisJury(etudiant);
+			List<String> avisSem= DecisionJury.avisJury(etudiant);
 			while(i<avisSem.size()){
 				out+= avisSem.get(i)+";";
 				i++;
