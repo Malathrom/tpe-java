@@ -160,36 +160,31 @@ public class GestionData {
 		Iterator<String> it = modulesData.iterator();
 		while (it.hasNext()) {
 			String str = it.next();
+			System.out.println("chaine " +str);
 
 			if(RecherchePattern.recupereNomModule(str) != null){//des qu'on a le premier module 
-				nomModule=RecherchePattern.recupereNomModule(str);
-				premierModule=true;
+				nomModule=RecherchePattern.recupereNomModule(str);//on recupere le nom du module
+				categorie=RecherchePattern.recupereCategorie(nomModule);// la categorie
+				credit=RecherchePattern.recupereCredit(str); //le nombre de credit
+				System.out.println(1);
 			}
-			if (premierModule) {
-				if(RecherchePattern.recupereNomModule(str) != null){
-					nomModule=RecherchePattern.recupereNomModule(str);
-					if(RecherchePattern.recupereCategorie(nomModule) != null){ //une fois qu'on a le nom du module si il est de type ISI on essaye de savoir si c'est CS OU TM
-						categorie=RecherchePattern.recupereCategorie(nomModule);
-					}
-				}
-				if(RecherchePattern.recupereNote(str) != null){
-					note=RecherchePattern.recupereNote(str);	
-				}
-				if(RecherchePattern.recupereCredit(str) != 0){ 
-					credit=RecherchePattern.recupereCredit(str);
-				}
-				
-				//si toutes les valeurs sont ok alors on creer le module
-				if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
-					Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
-					mods.add(module);
-					//on reset les donnees pour le prochain module
-					nomModule = null;
-					note = null;
-					credit = 0;
-					categorie = null;
-				}
+			
+			if(RecherchePattern.recupereNote(str) != null){
+				System.out.println(5);
+				note=RecherchePattern.recupereNote(str);	
 			}
+
+			//si toutes les valeurs sont ok alors on creer le module
+			if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
+				Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
+				mods.add(module);
+				//on reset les donnees pour le prochain module
+				nomModule = null;
+				note = null;
+				credit = 0;
+				categorie = null;
+			}
+
 		}
 		nbSemestres++; //on ajute un semestre a l'etudiant
 		return mods;
