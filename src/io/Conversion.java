@@ -1,32 +1,20 @@
 package io;
 
-import java.io.BufferedReader;
-
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.io.PrintWriter;
-import javax.swing.JOptionPane;
 
 import data.Etudiant;
 import operation.DecisionJury;
 import operation.GestionData;
 
-public class Conversion {
+public class Conversion{
 	FileWriter fw = null;
 	//TODO tester la classe pour voir si le fichier final est ok
-
-	/**
-	 * filtre pour filtrer les decisions de jury
-	 */
-	private Filtrage filtre = new Filtrage();
-	
 
 	/**
 	 * decisionCSV contient le nom du fichier CVS contenant les propositions de décisions 
@@ -94,14 +82,6 @@ public class Conversion {
 		}
 		pw.println(etudiants);
 		pw.close();	
-	}
-	
-	public Filtrage getFiltre() {
-		return filtre;
-	}
-
-	public void setFiltre(Filtrage filtre) {
-		this.filtre = filtre;
 	}
 
 	public String getDecisionCSV() {
