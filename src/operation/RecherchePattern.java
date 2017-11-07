@@ -10,10 +10,6 @@ import io.LectureModules;
 /**RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible*/
 public class RecherchePattern {
 
-
-	//TODO Modifier les patterns nom et prenom pour qu'il verifie dans le cas oou il y a plusieurs prenom nom enfaite tant qu'on atteint pas le numero 
-	//c'est toujours le nom et le prenom de l'etudiant
-
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
 	 */
@@ -26,15 +22,24 @@ public class RecherchePattern {
 	 */
 	public static String recupereNom(List<String> dataEtudiant){
 		Iterator<String> it = dataEtudiant.iterator();
-		String regex = "N°[0-9]{5}";
-		int position = 0;
+		String regex = "M.|Mme";
+		String nom = "";
 		String contenu;
+		int position = 0;
 		while(it.hasNext()){
 			contenu = it.next();
-			if (Pattern.matches(regex, contenu)){
-				position = dataEtudiant.indexOf(contenu)-1;// on recupere la position du nom
-				return dataEtudiant.get(position); //le nom se trouve juste avant le numero etudiant
-			}
+			if (Pattern.matches(regex, contenu)){//on a trouve le M.
+				System.out.println("nom " + contenu);
+				position = dataEtudiant.indexOf(contenu)+2;
+				String regex2 = "[A-Z]{1,}";
+				while (Pattern.matches(regex2, dataEtudiant.get(position))){
+					nom += dataEtudiant.get(position) + " ";
+					System.out.println(nom);
+					position++;
+				}
+				nom = nom.substring(0, nom.length()-1);//on retire l'espace de fin de chaine
+				return nom;
+			}	
 		}
 		return null;
 	}
@@ -46,14 +51,13 @@ public class RecherchePattern {
 	 */
 	public static String recuperePrenom(List<String> dataEtudiant){
 		Iterator<String> it = dataEtudiant.iterator();
-		//String regex = "M.|Mme"; //Mme Ruolin ZHENG
-		String regex = "N°[0-9]{5}";
+		String regex = "M.|Mme"; //Mme Ruolin ZHENG
 		int position = 0;
 		String contenu;
 		while(it.hasNext()){
 			contenu = it.next();
 			if (Pattern.matches(regex, contenu)){
-				position = dataEtudiant.indexOf(contenu)-2; // on recupere la position du prenom
+				position = dataEtudiant.indexOf(contenu)+1; // on recupere la position du prenom
 				return dataEtudiant.get(position);// le prenom se trouve 2 cran avant le numero etudiant
 			}
 		}

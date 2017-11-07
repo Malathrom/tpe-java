@@ -39,8 +39,8 @@ public class Launcher {
 
 		case 3:
 			//File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
-			//File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
-			File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever		
+			File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
+			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever		
 			List<Etudiant> etudiants = GestionData.listeEtudiant(file);//Test sur les fichiers etudiants
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {
@@ -50,8 +50,11 @@ public class Launcher {
 			break;
 
 		case 4:
-			boolean b = Pattern.matches("A|B|C", "A");//si c'est un nouvelle etudiant
-			System.out.println(b);
+			String nom = "ETST HDHG DHHD ";
+			String[] nomsTabs = nom.split(" ");
+			System.out.println(nom.length());
+			nom = nom.substring(0, nom.length()-1);
+			System.out.println(nom);
 			break;
 
 		case 5:
