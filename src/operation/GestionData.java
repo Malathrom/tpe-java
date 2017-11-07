@@ -1,7 +1,6 @@
 package operation;
 
 import java.io.BufferedReader;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +11,6 @@ import java.util.List;
 
 import data.Etudiant;
 import data.Module;
-import io.LectureModules;
 /**GestionData gere les donnees des fichiers des etudiants*/
 public class GestionData {
 
@@ -189,6 +187,23 @@ public class GestionData {
 		nbSemestres++; //on ajute un semestre a l'etudiant
 		return mods;
 	}
+
+	//TODO A VOIR SI CET METHODE PEUT ETRE UTILE POUR LA GESTION DES ETUDIANTS CHINOIS
+	/**
+	 * Indique si le mot clé "Jiaotong" se trouve dans le tableau
+	 * Ces étudiants chinois ne font qu'un ST09 et pas de ST10
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient une université Chinoise (Jiaotong), sinon false
+	 */
+	public boolean trouveUniversiteChinoise (String tabMots[]){
+		int i;
+		i=0;
+		while ((i<tabMots.length) && (! (tabMots[i].equals("Jiaotong"))) ) {
+			i=i+1;
+		}
+		return (i<tabMots.length);	
+	}
+
 
 	//TODO a commenter
 	public List<Etudiant> getEtudiants() {

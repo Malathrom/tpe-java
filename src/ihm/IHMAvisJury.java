@@ -44,7 +44,7 @@ public class IHMAvisJury extends JFrame{
 	private JTextField cibleCSV;
 	private JTextField sourcePDF;
 	private File fileTXT, fileCSV, filePDF;
-	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, conversion_Csv_Pdf, avisJury;
+	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, avisJury;
 
 	/**
 	 * Creation de l'application.
