@@ -141,8 +141,15 @@ public class RecherchePattern {
 		Iterator<Module> it = modulesExistant.iterator();
 		while (it.hasNext()) {
 			Module mod = (Module) it.next();
-			if(mod.getNom().equals(nomModule) || nomModule.startsWith(mod.getNom())){//si on a trouve un module correspondant
-				return mod.getCredit();//on retourne sa categorie
+			if(mod.getNom().equals(nomModule)){//si on a trouve un module correspondant
+				return mod.getCredit();//on retourne son credit
+			}
+		}
+		modulesExistant.iterator();
+		while (it.hasNext()) {
+			Module mod = (Module) it.next();
+			if (nomModule.startsWith(mod.getNom())){ //si on trouve un nom de module approchant
+				return mod.getCredit();//on retourne son credit
 			}
 		}
 		return 0;
@@ -188,7 +195,14 @@ public class RecherchePattern {
 		Iterator<Module> it = modulesExistant.iterator();
 		while (it.hasNext()) {
 			Module mod = (Module) it.next();
-			if(mod.getNom().equals(nomModule) || nomModule.startsWith(mod.getNom())){//si on a trouve un module correspondant
+			if(mod.getNom().equals(nomModule)){//si on a trouve un module correspondant
+				return mod.getCategorie();//on retourne sa categorie
+			}
+		}
+		modulesExistant.iterator();
+		while (it.hasNext()) {
+			Module mod = (Module) it.next();
+			if (nomModule.startsWith(mod.getNom())){ //si on trouve un nom de module approchant
 				return mod.getCategorie();//on retourne sa categorie
 			}
 		}
