@@ -107,7 +107,21 @@ public abstract class DecisionJury {
 		else {
 			return "Pas de stage";
 		}
-
+	}
+	
+	/**
+	 * enStage recherche si l'etudiant est soit en stage ST09, soit en ST10, soit ST30
+	 * tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return true si le tableau tabMots contient le stage "st09" ou "st10" ou "st30", sinon false
+	 */
+	public boolean enStage(String[] tabMots){
+		if(trouveST09(tabMots) || isSt09())
+			return true;
+		if(trouveST10(tabMots) || isSt10())
+			return true;
+		if(trouveST30(tabMots) || isSt30())
+			return true;
+		return false;
 	}
 
 	/**
@@ -179,5 +193,38 @@ public abstract class DecisionJury {
 		}
 		return out;
 	}
+	
 
+	/**
+	 * indique si str est une chaine de charactères numériques.
+	 * @param str
+	 * @return true si str est un nombre, false sinon
+	 */
+	public static boolean isNumeric(String str){  
+		try{  
+			Double.parseDouble(str);  
+		}  
+		catch(NumberFormatException nfe){  
+			return false;  
+		}  
+		return true;  
+	}
+	/**
+	 * Compte le nombre de A obtenus sur l'ensemble du parcours
+	 * @param tabMots tableau de mots composant une ligne de texte à analyser
+	 * @return le nombre de A de l'élève
+	 */
+	public int trouveNbA (String tabMots[]){
+		int i=0;
+		int compteur=0;
+		while(i<tabMots.length){
+			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3]) && isISI(tabMots[i])){
+				compteur++;
+			}
+			i++;
+		}
+
+		return compteur;
+	}
+	
 }

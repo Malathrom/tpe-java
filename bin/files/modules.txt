@@ -42,7 +42,7 @@ TN30 30 ST ISI
 TX 6 TM ISI
 // LE
 LE 4 CE INCONNUE
-// Math physique chimie
+// Maths physique chimie
 MATH 6 CS TC
 PHYS 6 CS TC
 CHMA 6 CS TC
