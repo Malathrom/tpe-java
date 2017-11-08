@@ -194,7 +194,11 @@ public class RecherchePattern {
 		return null;
 	}
 
-	//TODO a commneter on recupere la categorie du module a partir de son nom et en utilisant modulesExistant
+	/**
+	 * la categorie du module a partir de son nom et en utilisant modulesExistant
+	 * @param nomModule le nom du module traiter
+	 * @return la categorie du module
+	 */
 	public static String recupereCategorie(String nomModule){
 		Iterator<Module> it = modulesExistant.iterator();
 		while (it.hasNext()) {
@@ -213,7 +217,11 @@ public class RecherchePattern {
 		return "Inconnue";
 	}
 
-	//TODO a commneter on recupere la categorie du module a partir de son nom et en utilisant modulesExistant
+	/**
+	 * totalCredit recupere le nombre de credit a partir d'un module
+	 * @param data les datas a traiter
+	 * @return le nombre de credit
+	 */
 	public static int recupereTotalCredit(List<String> data){
 		String regex = "[0-9]{2,3}/(60|120|180|300|360)"; //par semestre il faut un total de 60 credits
 		Iterator<String> it = data.iterator();

@@ -25,45 +25,82 @@ public class Etudiant {
 		setNbSemestres(semestres);
 	}
 
-	//TODO a commenter
+	/**
+	 * Getter nom etudiant
+	 * @return le nom de l'etudiant
+	 */
 	public String getNom() {
 		return nom;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Setter nom de l' etudiant
+	 * @param nom le nom de l'etudiant
+	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Getter prenom etudiant
+	 * @return le prenom de l'etudiant
+	 */
 	public String getPrenom() {
 		return prenom;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Setter prenom de l' etudiant
+	 * @param prenom le prenom de l'etudiant
+	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Getter modules etudiant
+	 * @return les modules de l'etudiant
+	 */
 	public List<Module> getModules() {
 		return modules;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Setter liste des modules de l' etudiant
+	 * @param modules les modules de l'etudiant
+	 */
 	public void setModules(List<Module> modules) {
 		this.modules = modules;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Getter creditTotal de l'etudiant
+	 * @return le nombre de credit de l'etudiant
+	 */
 	public int getCreditTotal() {
 		return creditTotal;
 	}
-	//TODO a commenter
+	
+	/**
+	 * Setter creditTotal de l' etudiant
+	 * @param creditTotal le nombre de semestre de l'etudiant
+	 */
 	public void setCreditTotal(int creditTotal) {
 		this.creditTotal = creditTotal;
 	}
 	
-	//TODO a commenter
+	/**
+	 * Getter nombre de semestre de l' etudiant
+	 * @return le nombre de semestre de l'etudiant
+	 */
 	public int getNbSemestres() {
 		return nbSemestres;
 	}
 
-	//TODO a commenter
+	/**
+	 * Setter nombre de semestre de l' etudiant
+	 * @param nbSemestres le nombre de semestre de l'etudiant
+	 */
 	public void setNbSemestres(int nbSemestres) {
 		this.nbSemestres = nbSemestres;
 	}

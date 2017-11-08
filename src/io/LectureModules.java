@@ -39,9 +39,7 @@ public class LectureModules {
 			while ((ligne = lecteurAvecBuffer.readLine()) != null){
 				listeMots=ligne.split(" ");
 				
-				if (listeMots[0].equals("//")){
-					System.out.println(ligne);
-				}
+				if (listeMots[0].equals("//")){}
 				else{
 					if(listeMots.length==4){
 					nomModule = listeMots[0];

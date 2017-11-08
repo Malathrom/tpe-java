@@ -21,7 +21,10 @@ public class SauvegardeRepertoire {
 	/**chemin vers le fichier contenant les paths*/
 	private static File pathFile = new File("src/files/paths.txt");
 
-	//TODO a commenter
+	/**
+	 * getPaths recupere tous les chemins se trouvant dans le fichier paths.txt
+	 * @return la liste des chemins
+	 */
 	public static List<String> getPaths() {
 		String ligne;
 		BufferedReader br = null;
@@ -39,14 +42,16 @@ public class SauvegardeRepertoire {
 		return paths;
 	}
 
-	//TODO a commenter
+	/**
+	 * ajoutPath ajoute le chemin du JfileChooser dans le fichier paths.txt
+	 * @param chooser
+	 */
 	public static void ajoutPath(JFileChooser chooser) {
 		if (!paths.contains(chooser.getSelectedFile().getParent())) {
 			paths.add(chooser.getSelectedFile().getParent());//on recupere le rep selectionne	
 		}
 
 		PrintWriter pw = null;
-
 		try {
 			pw = new PrintWriter(new BufferedWriter(new FileWriter(pathFile)));
 			for (String string : paths) {
