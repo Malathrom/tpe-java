@@ -282,10 +282,7 @@ public class IHMAvisJury extends JFrame{
 			System.out.println(filePDF.getCanonicalPath());
 			System.out.println(filePDF.getName());
 			System.out.println(filePDF.getPath());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} catch (IOException e) { e.printStackTrace(); }
 		fileTXT = new File(nomFichierTXT);
 		fileCSV = new File(nomFichierCSV);
 	}

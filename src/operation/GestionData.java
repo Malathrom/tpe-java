@@ -154,21 +154,17 @@ public class GestionData {
 		String categorie = null;
 		int credit = 0;
 
-		boolean premierModule = false;
 		Iterator<String> it = modulesData.iterator();
 		while (it.hasNext()) {
 			String str = it.next();
-			System.out.println("chaine " +str);
 
 			if(RecherchePattern.recupereNomModule(str) != null){//des qu'on a le premier module 
 				nomModule=RecherchePattern.recupereNomModule(str);//on recupere le nom du module
 				categorie=RecherchePattern.recupereCategorie(nomModule);// la categorie
 				credit=RecherchePattern.recupereCredit(str); //le nombre de credit
-				System.out.println(1);
 			}
 			
 			if(RecherchePattern.recupereNote(str) != null){
-				System.out.println(5);
 				note=RecherchePattern.recupereNote(str);	
 			}
 
@@ -205,32 +201,50 @@ public class GestionData {
 	}
 
 
-	//TODO a commenter
+	/**
+	 * Getter la liste des etudiants
+	 * @return les etudiants
+	 */
 	public List<Etudiant> getEtudiants() {
 		return etudiants;
 	}
 
-	//TODO a commenter
+	/**
+	 * Setter etudiants
+	 * @param etudiants les etudiants
+	 */
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
 	}
 
-	//TODO a commenter
+	/**
+	 * Getter nombre etudiants
+	 * @return le nombre d'etudiant
+	 */
 	public static int getNbEtudiant() {
 		return nbEtudiant;
 	}
 
-	//TODO a commenter
+	/**
+	 * Setter nombre d'etudiant
+	 * @param nbEtudiant le nombre d'etudiant
+	 */
 	public static void setNbEtudiant(int nbEtudiant) {
 		GestionData.nbEtudiant = nbEtudiant;
 	}
 
-	//TODO a commenter
+	/**
+	 * Getter nombre de semestre
+	 * @return le nombre de semestre
+	 */
 	public static int getNbSemestres() {
 		return nbSemestres;
 	}
 
-	//TODO a commenter
+	/**
+	 * Setter nombre de semestre
+	 * @param nbSemestreEtudiant
+	 */
 	public static void setNbSemestres(int nbSemestreEtudiant) {
 		GestionData.nbSemestres = nbSemestreEtudiant;
 	}
