@@ -55,6 +55,12 @@ public class Conversion{
 		//GestionData g = new GestionData(new File(fileTxt));
 		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fileTxt));
 		Iterator<Etudiant> it = etudiants.iterator();
+		//TODO enlever la boucle
+		while (it.hasNext()) {
+			Etudiant etudiant = it.next();
+			System.out.println(etudiant);
+		}
+		
 		String entete="";
 		entete+="Nom;Prenom;Stage;";
 		int semSize= DecisionJury.avisJury(etudiants.get(0)).size(), j=0;

@@ -29,7 +29,7 @@ public class RecherchePattern {
 		while(it.hasNext()){
 			contenu = it.next();
 			if (Pattern.matches(regex, contenu)){//on a trouve le M.
-				System.out.println("nom " + contenu);
+				System.out.println("nom " + contenu);// TODO a enlever
 				position = dataEtudiant.indexOf(contenu)+2;
 				String regex2 = "[A-Z]{1,}";
 				while (Pattern.matches(regex2, dataEtudiant.get(position))){
@@ -37,7 +37,7 @@ public class RecherchePattern {
 					System.out.println(nom);
 					position++;
 				}
-				nom = nom.substring(0, nom.length()-1);//on retire l'espace de fin de chaine
+				//nom = nom.substring(0, nom.length()-1);//on retire l'espace de fin de chaine//TODO a fixer
 				return nom;
 			}	
 		}

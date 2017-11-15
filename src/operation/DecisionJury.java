@@ -1,10 +1,12 @@
 package operation;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import data.Etudiant;
 import data.Module;
+import io.LectureModules;
 
 public abstract class DecisionJury {
 
@@ -77,6 +79,7 @@ public abstract class DecisionJury {
 	 * @param etu l'étudiant en question
 	 * @return "TN30" si tn30, etc... puis "pas de stage" si aucun stage n'a été trouvé
 	 */
+
 	public static String dernierStage(Etudiant etu){
 		int i=0;
 		boolean tn09=false, tn10=false, tn30=false;
@@ -108,12 +111,12 @@ public abstract class DecisionJury {
 			return "Pas de stage";
 		}
 	}
-	
+
+	/** TODO mettre un bollen si l'etudiant a fait en dernier semestre un stage
 	/**
 	 * enStage recherche si l'etudiant est soit en stage ST09, soit en ST10, soit ST30
 	 * tabMots tableau de mots composant une ligne de texte à analyser
 	 * @return true si le tableau tabMots contient le stage "st09" ou "st10" ou "st30", sinon false
-	 */
 	public boolean enStage(String[] tabMots){
 		if(trouveST09(tabMots) || isSt09())
 			return true;
@@ -123,6 +126,24 @@ public abstract class DecisionJury {
 			return true;
 		return false;
 	}
+
+	/*TODO A Appeler quelque part et a commenter
+	 * 
+	 */
+	public int compteCreditsISIOuTC (){
+		int i, credits;
+		credits=0;
+		i=0;
+		List<Module> modules = LectureModules.lireModules();
+		Iterator<Module> it = modules.iterator();
+		while(it.hasNext()){
+			Module mod =it.next();
+			if(mod.getParcours().equals("TC") || mod.getParcours().equals("ISI")){//si l'UV est ISI ou TC on ajoute ces credits
+				credits+=mod.getCredit();
+			}
+		}
+		return credits;
+	}	
 
 	/**
 	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
@@ -193,38 +214,4 @@ public abstract class DecisionJury {
 		}
 		return out;
 	}
-	
-
-	/**
-	 * indique si str est une chaine de charactères numériques.
-	 * @param str
-	 * @return true si str est un nombre, false sinon
-	 */
-	public static boolean isNumeric(String str){  
-		try{  
-			Double.parseDouble(str);  
-		}  
-		catch(NumberFormatException nfe){  
-			return false;  
-		}  
-		return true;  
-	}
-	/**
-	 * Compte le nombre de A obtenus sur l'ensemble du parcours
-	 * @param tabMots tableau de mots composant une ligne de texte à analyser
-	 * @return le nombre de A de l'élève
-	 */
-	public int trouveNbA (String tabMots[]){
-		int i=0;
-		int compteur=0;
-		while(i<tabMots.length){
-			if (tabMots[i].equals("A") && isNumeric(tabMots[i+3]) && isISI(tabMots[i])){
-				compteur++;
-			}
-			i++;
-		}
-
-		return compteur;
-	}
-	
 }
