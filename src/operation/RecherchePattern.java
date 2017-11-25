@@ -16,49 +16,106 @@ public class RecherchePattern {
 	private static List<Module> modulesExistant = LectureModules.lireModules();
 
 	/**
+	 * regex pour savoir quand recuperer le nom et prenom
+	 */
+	private static String regexMrMme = "M.|Mme";
+
+	/**
+	 * regex pour recuperer le numero etudiant
+	 */
+	private static String regexNumEtudiant = "N°[0-9]{5}";
+
+	/**
+	 * regex pour recuperer le nom de l'etudiant
+	 */
+	private static String regexNom = "[A-Z]{1,}-*[A-Z]{1,}";
+
+	/**
+	 * regex pour recuperer le prenom de l'etudiant
+	 */
+	private static String regexPrenom = "[A-Z][a-z]{1,}";
+
+	/**
+	 * regex pour l'annee de l'etudiant
+	 */
+	private static String regexAnnee = "[0-9]{2}/[0-9]{2}/20[0-9]{2}";
+
+	/**
+	 * regex pour les credits etudiants (par semestre il faut un total de 60 credits)
+	 */
+	private static String regexTotalCredit = "[0-9]{2,3}/(60|120|180|300|360)";
+
+	/**
+	 * regex pour le semestre de l'etudiant(ex: A10, P15)
+	 */
+	private static String regexSemestre = "(A|P)[0-9]{2}";
+
+	/**
+	 * regex pour le nom d'un module
+	 */
+	private static String regexNomModule = "([A-Z]{3,5})|([A-Z]{2,}[0-9]{2})";
+
+	/**
+	 * regex pour la note a un module
+	 */
+	private static String regexNoteModule = "[A-F]|FX|EQU|ABS|NULL";//juste une lettre
+
+	/**
+	 * regex pour le parcours du module
+	 */
+	private static String regexParcours = "ISI|TC|MASTER";;
+
+	/**TODO recommenter
 	 * recupereNom recherche avec un systeme de regex le nom de l'etudiant dans le fichier
 	 * @param dataEtudiant la liste des donnes dans laquelle chercher le nom
 	 * @return le nom de l'etudiant
 	 */
 	public static String recupereNom(List<String> dataEtudiant){
 		Iterator<String> it = dataEtudiant.iterator();
-		String regex = "M.|Mme";
 		String nom = "";
-		String contenu;
-		int position = 0;
+		String contenu = "";
 		while(it.hasNext()){
 			contenu = it.next();
-			if (Pattern.matches(regex, contenu)){//on a trouve le M.
-				System.out.println("nom " + contenu);// TODO a enlever
-				position = dataEtudiant.indexOf(contenu)+2;
-				String regex2 = "[A-Z]{1,}";
-				while (Pattern.matches(regex2, dataEtudiant.get(position))){
-					nom += dataEtudiant.get(position) + " ";
-					System.out.println(nom);
-					position++;
+			if (Pattern.matches(regexMrMme, contenu)){ //on a trouve le M. de l'etudiant
+				contenu = it.next(); // on passe le prenom
+				while(it.hasNext()){
+					contenu = it.next();
+					if(Pattern.matches(regexNom, contenu)) // si le contenu ressemble a un nom
+						nom += contenu + " ";
+					else if (Pattern.matches(regexNumEtudiant, contenu)) { // on arrete la recuperation du nom puisque on est au niveau du numero etudiant
+						nom = nom.substring(0, nom.length()-1); // on retire l'espace de fin de chaine//TODO a fixer
+						return nom;
+					}
 				}
-				//nom = nom.substring(0, nom.length()-1);//on retire l'espace de fin de chaine//TODO a fixer
-				return nom;
-			}	
+			}
 		}
 		return null;
 	}
 
-	/**
+	/**TODO recommenter
 	 * recuperPrenom recherche avec un systeme de regex le prenom de l'etudiant dans le fichier
 	 * @param dataEtudiant la liste des donnes dans laquelle chercher le prenom
 	 * @return le prenom de l'etudiant
 	 */
 	public static String recuperePrenom(List<String> dataEtudiant){
 		Iterator<String> it = dataEtudiant.iterator();
-		String regex = "M.|Mme"; //Mme Ruolin ZHENG
-		int position = 0;
-		String contenu;
+		String contenu = "";
+		String prenom = "";
 		while(it.hasNext()){
 			contenu = it.next();
-			if (Pattern.matches(regex, contenu)){
-				position = dataEtudiant.indexOf(contenu)+1; // on recupere la position du prenom
-				return dataEtudiant.get(position);// le prenom se trouve 2 cran avant le numero etudiant
+			if (Pattern.matches(regexMrMme, contenu)){ // on a trouve le M. de l'etudiant
+				contenu = it.next(); 
+				prenom += contenu + " "; // on recupere d'office la chaine qui suit Mr ou Mme car c'est le prenom
+				while(it.hasNext()){
+					contenu = it.next();
+					if(Pattern.matches(regexPrenom, contenu)){ // si le contenu ressemble a un nom
+						prenom += contenu + " ";
+					}
+					else if (Pattern.matches(regexNumEtudiant, contenu)) { // on arrete la recuperation du nom puisque on est au niveau du numero etudiant
+						prenom = prenom.substring(0, prenom.length()-1); // on retire l'espace de fin de chaine
+						return prenom;
+					}
+				}
 			}
 		}
 		return null;
@@ -70,8 +127,7 @@ public class RecherchePattern {
 	 * @return true si le conetnu indique que c'est un nouvelle etudiant
 	 */
 	public static boolean rechercheDebutEtudiant(String contenu) {
-		String regex = "[0-9]{2}/[0-9]{2}/20[0-9]{2}";
-		if (Pattern.matches(regex, contenu))//si c'est un nouveau etudiant
+		if (Pattern.matches(regexAnnee, contenu))//si c'est un nouveau etudiant
 			return true;
 		return false;
 	}
@@ -82,8 +138,7 @@ public class RecherchePattern {
 	 * @return true si le contenu indique que c'est la fin d'un etudiant
 	 */
 	public static boolean rechercheFinEtudiant(String contenu) {
-		String regex = "[0-9]{2,3}/(60|120|180|300|360)"; //par semestre il faut un total de 60 credits 
-		if (Pattern.matches(regex, contenu))
+		if (Pattern.matches(regexTotalCredit, contenu))
 			return true;
 		return false;
 	}
@@ -94,8 +149,7 @@ public class RecherchePattern {
 	 * @return true si le contenu indique que c'est le debut d'un semestre
 	 */
 	public static boolean rechercheDebutSemestre(String contenu) {
-		String regex = "(A|P)[0-9]{2}";
-		if (Pattern.matches(regex, contenu))
+		if (Pattern.matches(regexSemestre, contenu))
 			return true;
 		return false;
 	}
@@ -106,7 +160,7 @@ public class RecherchePattern {
 	 * @return true si le contenu indique que c'est le debut d'un semestre
 	 */
 	public static boolean rechercheFinSemestre(String contenu) {
-		String regex = "Total";//Total
+		String regex = "Total";
 		if (Pattern.matches(regex, contenu))
 			return true;
 		return false;
@@ -118,8 +172,7 @@ public class RecherchePattern {
 	 * @return le nom du module
 	 */
 	public static String recupereNomModule(String contenu) {
-		String regex = "([A-Z]{3,5})|([A-Z]{2,}[0-9]{2})";//un nom de module
-		if (Pattern.matches(regex, contenu))
+		if (Pattern.matches(regexNomModule, contenu))
 			return contenu;
 		return null;
 	}
@@ -130,8 +183,7 @@ public class RecherchePattern {
 	 * @return la note du module
 	 */
 	public static Note recupereNote(String contenu) {
-		String regex = "[A-F]|FX|EQU|ABS|NULL";//juste une lettre
-		if (Pattern.matches(regex, contenu))
+		if (Pattern.matches(regexNoteModule, contenu))
 			return Note.getNote(contenu);
 		return null;
 	}
@@ -168,11 +220,12 @@ public class RecherchePattern {
 		String semestre = null;
 		try{
 			String recupereParcours = recupereParcours(modulesData);// on recupere le parcours qui se trouve juste avant le semestre
+			System.out.println("rp = "+ recupereParcours);
 			int pos = modulesData.indexOf(recupereParcours);//on recupere la position
 			semestre = modulesData.get(pos+1);//on recupere le semestre
 			return Integer.valueOf(semestre);
 		}catch(NumberFormatException e){
-			System.out.println(semestre);
+			e.printStackTrace();
 		}
 		return 0;
 	}
@@ -184,11 +237,10 @@ public class RecherchePattern {
 	 */
 	public static String recupereParcours(List<String> modulesData) {
 		Iterator<String> it = modulesData.iterator();
-		String regex = "ISI|TC|MASTER";
 		String contenu;
 		while(it.hasNext()){
 			contenu = it.next();
-			if (Pattern.matches(regex, contenu))//si c'est un nouveau etudiant
+			if (Pattern.matches(regexParcours, contenu))//si c'est un nouveau etudiant
 				return contenu;
 		}
 		return null;
@@ -223,11 +275,10 @@ public class RecherchePattern {
 	 * @return le nombre de credit
 	 */
 	public static int recupereTotalCredit(List<String> data){
-		String regex = "[0-9]{2,3}/(60|120|180|300|360)"; //par semestre il faut un total de 60 credits
 		Iterator<String> it = data.iterator();
 		while (it.hasNext()) {
 			String contenu = it.next();
-			if (Pattern.matches(regex, contenu)){
+			if (Pattern.matches(regexTotalCredit, contenu)){
 				String tab[] = contenu.split("/");
 				return Integer.valueOf(tab[0]);
 			}

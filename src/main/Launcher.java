@@ -20,7 +20,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (1) {
+		switch (3) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -40,7 +40,7 @@ public class Launcher {
 		case 3:
 			//File file = new File("src/test/etudiant_test.txt");//Fichier de test//TODO a enlever
 			//File file = new File("src/test/4etudiants.txt");//Fichier de test 2//TODO a enlever
-			File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever		
+			File file = new File("/Users/lucasnoga/Desktop/UTT/TX/pdf jury/PV ISI 4.pdf");//Fichier de test 3//TODO a enlever		
 			List<Etudiant> etudiants = GestionData.listeEtudiant(file);//Test sur les fichiers etudiants
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {
@@ -50,11 +50,10 @@ public class Launcher {
 			break;
 
 		case 4:
-			String nom = "ETST HDHG DHHD ";
-			String[] nomsTabs = nom.split(" ");
-			System.out.println(nom.length());
-			nom = nom.substring(0, nom.length()-1);
-			System.out.println(nom);
+			String nom = "ARSGGD";
+			String regex3 = "[a-z]{1,}";
+			if (Pattern.matches(regex3, nom))
+				System.out.println("yo");
 			break;
 
 		case 5:

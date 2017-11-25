@@ -58,9 +58,11 @@ public class GestionData {
 			}
 		}
 		catch(FileNotFoundException exc) {
-			System.out.println("Erreur d'ouverture");
+			System.out.println("Erreur d'ouverture");//TODO faire un optionPane
 		} 
-		catch (IOException e) {e.printStackTrace();}
+		catch (IOException e) {
+			e.printStackTrace();//TODO faire un optionPane
+		}
 		//On creer les etudiants
 		return creationListeEtudiants(datas);
 	}
@@ -163,7 +165,7 @@ public class GestionData {
 				categorie=RecherchePattern.recupereCategorie(nomModule);// la categorie
 				credit=RecherchePattern.recupereCredit(str); //le nombre de credit
 			}
-			
+
 			if(RecherchePattern.recupereNote(str) != null){
 				note=RecherchePattern.recupereNote(str);	
 			}
