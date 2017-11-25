@@ -10,8 +10,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
-import io.Conversion;
 import io.SauvegardeRepertoire;
+import operation.DecisionJury;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -227,8 +227,7 @@ public class IHMAvisJury extends JFrame{
 	//TODO a commenter
 	private void creationDecisionJury() {		
 		//TODO test si les ficheir existe ou pas si le fichier text existe on recupere les donnees
-		new Conversion(sourceTXT.getText(), cibleCSV.getText());
-		System.out.println("yo");
+		DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
 	}
 
 	/**

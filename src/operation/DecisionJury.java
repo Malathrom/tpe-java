@@ -1,16 +1,89 @@
 package operation;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.io.PrintWriter;
 
 import data.Etudiant;
 import data.Module;
 import io.LectureModules;
 
-public abstract class DecisionJury {
+//TODO commenter la classe
+public abstract class DecisionJury{
+	//TODO tester la classe pour voir si le fichier final est ok
 
+	/*TODO a commneter*/
+	private static String fichierTexte;
+
+	/*TODO a commneter*/
+	private static String fichierCsv;
+	
+	/**
+	 * Liste des etudiants qui sont entrain d'etre traités
+	 */
 	List<Etudiant> etudiants = new ArrayList<Etudiant>();
+
+	/**TODO a commenter
+	 * Constructeur : Lance la lecture du fichier texte 
+	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
+	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
+	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
+	 */
+	/**TODO recommenter en expliquant que c'est l'ecriture de la decision de jury
+	 * Prend en compte les nouvelles régles A17 pour les stages : pour les étudiant ISI 1, on compte les CS+TM, 
+	 * ils peuvent chercher un stage que si CS+TM (Hors equivalence) est supérieur strictement à 2
+	 * La méthode lit le fichier TXT ligne par ligne pour extraire les informations relatives aux étudiants et utiles pour le jury
+	 */
+	public static void ecritureDecisionJury (String nomFichierTexte, String nomFichierCSV){
+		fichierCsv=nomFichierCSV;
+		fichierTexte=nomFichierTexte;
+		File file = new File(fichierCsv);
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		BufferedWriter bw;
+		PrintWriter pw;
+		bw = new BufferedWriter(fw);
+		pw = new PrintWriter(bw);
+
+		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
+		Iterator<Etudiant> it = etudiants.iterator();
+
+		String entete="";
+		entete+="Nom;Prenom;Stage;";
+		int semSize= DecisionJury.avisJury(etudiants.get(0)).size(), j=0;
+		while (j<semSize){
+			entete+="Avis Semestre "+(j+1)+";";
+			j++;
+		}
+		entete+="\n";
+		pw.print(entete);
+
+		while (it.hasNext()) {
+			Etudiant etudiant = it.next();
+			String out="";
+			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
+			out+=DecisionJury.dernierStage(etudiant)+";";
+			int i=0;
+			List<String> avisSem= DecisionJury.avisJury(etudiant);
+			while(i<avisSem.size()){
+				out+= avisSem.get(i)+";";
+				i++;
+			}
+			pw.println(out);
+		}
+		//TODO a enlever pw.println(etudiants);
+		pw.close();	
+	}
 
 	/**
 	 * retourne le nombre de note obtenues pour un étudiant et semestre donné.
@@ -215,3 +288,4 @@ public abstract class DecisionJury {
 		return out;
 	}
 }
+

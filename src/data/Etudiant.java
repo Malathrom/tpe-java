@@ -14,6 +14,8 @@ public class Etudiant {
 	
 	private int nbSemestres;
 	
+	private int semestreParcours;
+	
 	/**liste des modules fait par l'etudiant*/
 	private List<Module> modules = new ArrayList<Module>();
 	
