@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -23,6 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.concurrent.BlockingQueue;
 import java.awt.Font;
 
 /**
@@ -159,15 +162,27 @@ public class IHMAvisJury extends JFrame{
 		statistique = new JButton("Generer statistiques");
 		statistique.setBounds(296, 170, 176, 23);
 		this.getContentPane().add(statistique);
-		
+
 		lockButton();
 	}
 
 	/** Methode qui ajoute les listeners aux boutons*/
 	private void addListener(){
-		
-		
-		
+
+		//Methode qui detecte si le textfield pdf est non vide
+		sourcePDF.addCaretListener(new CaretListener() {
+			@Override
+			public void caretUpdate(CaretEvent e) {
+				if (sourcePDF.getText().equals("")){
+					lockButton();
+				}
+					
+				else{
+					unlockButton();
+				}
+			}
+		});
+
 		findPDF.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -307,7 +322,7 @@ public class IHMAvisJury extends JFrame{
 		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
 		//TODO faire un JTextfield pour les stats cibleCSV.setText(fileStats.getAbsolutePath()); 
 	}
-	
+
 	/** Bloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
 	private void lockButton(){
 		conversionPdf_Txt.setEnabled(false);
