@@ -159,10 +159,15 @@ public class IHMAvisJury extends JFrame{
 		statistique = new JButton("Generer statistiques");
 		statistique.setBounds(296, 170, 176, 23);
 		this.getContentPane().add(statistique);
+		
+		lockButton();
 	}
 
 	/** Methode qui ajoute les listeners aux boutons*/
 	private void addListener(){
+		
+		
+		
 		findPDF.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -263,6 +268,7 @@ public class IHMAvisJury extends JFrame{
 			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
 			gestionFichier(chooser);
 		}
+		unlockButton();
 	}
 
 	//TODO a commenter
@@ -300,5 +306,19 @@ public class IHMAvisJury extends JFrame{
 		String nomStats = filePDF.getName().replace(".pdf", ".csv");//TODO a voir dans quel format sera le fichier de stat
 		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
 		//TODO faire un JTextfield pour les stats cibleCSV.setText(fileStats.getAbsolutePath()); 
+	}
+	
+	/** Bloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
+	private void lockButton(){
+		conversionPdf_Txt.setEnabled(false);
+		avisJury.setEnabled(false);
+		statistique.setEnabled(false);
+	}
+
+	/** Debloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
+	private void unlockButton() {
+		conversionPdf_Txt.setEnabled(true);
+		avisJury.setEnabled(true);
+		statistique.setEnabled(true);	
 	}
 }
