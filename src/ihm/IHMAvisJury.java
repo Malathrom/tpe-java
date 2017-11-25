@@ -43,8 +43,9 @@ public class IHMAvisJury extends JFrame{
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
 	private JTextField sourcePDF;
-	private File fileTXT, fileCSV, filePDF;
-	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, avisJury;
+	private File fileTXT, filePDF, fileDecisionJury, fileStats;
+	private File dirAvisJury, dirStats, dirDatasTxt;;
+	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, avisJury, statistique;
 
 	/**
 	 * Creation de l'application.
@@ -122,7 +123,7 @@ public class IHMAvisJury extends JFrame{
 		// Bouton lançant la conversion TXT --> "Filtrage" --> CSV 
 		conversionTxt_Csv = new JButton("Conversion  TXT -> CSV");
 		conversionTxt_Csv.setBounds(296, 83, 176, 23);
-		this.getContentPane().add(conversionTxt_Csv);
+		//TODO bouton supprimé this.getContentPane().add(conversionTxt_Csv);
 
 		// Bouton pour quitter l'application
 		exit = new JButton("Quitter");
@@ -149,12 +150,15 @@ public class IHMAvisJury extends JFrame{
 		conversionPdf_Txt.setBounds(296, 32, 176, 23);
 		this.getContentPane().add(conversionPdf_Txt);
 
-		// Bouton de conversion PDF --> TXT 
+		// Bouton pour la decisionJury 
 		avisJury = new JButton("Avis Jury");
 		avisJury.setBounds(296, 140, 176, 23);
 		this.getContentPane().add(avisJury);
 
-
+		// Bouton pour les statistiques
+		statistique = new JButton("Generer statistiques");
+		statistique.setBounds(296, 170, 176, 23);
+		this.getContentPane().add(statistique);
 	}
 
 	/** Methode qui ajoute les listeners aux boutons*/
@@ -198,23 +202,17 @@ public class IHMAvisJury extends JFrame{
 		avisJury.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(fileCSV.exists()){
-					//on demande si on veut l'ecraser
-					int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileCSV.getName() +" ?", "Confirmation de la suppression", 
-							JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-					requestFocus();
-					if(option == JOptionPane.OK_OPTION){
-						conversion_TXT_CSV();
-						JOptionPane.showMessageDialog(null, "le fichier " + fileTXT.getName() +"\na été converti en "+ fileCSV.getName(), "Info",  
-								JOptionPane.INFORMATION_MESSAGE);
-					}else{
-						JOptionPane.showMessageDialog(null, "le fichier " + fileTXT.getName() +"\nn'a pas été converti en "+ fileCSV.getName(), "Erreur",  
-								JOptionPane.ERROR_MESSAGE);
-					} 
-				}
-				else{
-					conversion_TXT_CSV();
-				}
+				creationDecisionJury();
+			}
+		});
+
+		//TODO a ppelrler les methodes pour les statistiques
+		statistique.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.out.println("test");
+				//TODO on teste si la decision de jury a ete faite donc on teste su le fichier decision existe sinon on recreer la liste des etudiants du PDF
+				//if(fileCSV.exists()){
 			}
 		});
 
@@ -226,9 +224,11 @@ public class IHMAvisJury extends JFrame{
 		});
 	}
 
-	/**Methode qui convertit un fichier txt en format csv*/
-	private void conversion_TXT_CSV() {
+	//TODO a commenter
+	private void creationDecisionJury() {		
+		//TODO test si les ficheir existe ou pas si le fichier text existe on recupere les donnees
 		new Conversion(sourceTXT.getText(), cibleCSV.getText());
+		System.out.println("yo");
 	}
 
 	/**
@@ -262,53 +262,44 @@ public class IHMAvisJury extends JFrame{
 		int returnVal = chooser.showOpenDialog(null);
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
 			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
-			affichageFichier(chooser);
+			gestionFichier(chooser);
 		}
 	}
 
-	/**
-	 * affichageFichier affiche sur l'ihm les chemins des fichiers pdf, csv, txt
-	 * @param chooser le JFileChooser lors du choix des fichiers
-	 */
-	private void affichageFichier(JFileChooser chooser) {
-		String nomFichierPDF = chooser.getSelectedFile().getAbsolutePath();
-		sourcePDF.setText(nomFichierPDF);
-		String nomFichierTXT = nomFichierPDF.replace(".pdf", ".txt");
-		sourceTXT.setText(nomFichierTXT);
-		String nomFichierCSV = nomFichierPDF.replace(".pdf", ".csv");
-		cibleCSV.setText(nomFichierCSV);
-		filePDF = new File(nomFichierPDF);
-		try {
-			System.out.println(filePDF.getCanonicalPath());
-			System.out.println(filePDF.getName());
-			System.out.println(filePDF.getPath());
-		} catch (IOException e) { e.printStackTrace(); }
-		fileTXT = new File(nomFichierTXT);
-		fileCSV = new File(nomFichierCSV);
-	}
+	//TODO a commenter
+	private void gestionFichier(JFileChooser chooser) {
+		//Recuperation du PDF choisi dans le JFileChooser
+		filePDF = new File(chooser.getSelectedFile().getAbsolutePath());
+		sourcePDF.setText(filePDF.getAbsolutePath());
 
-	/*TODO faire la javadoc pour les getter et setter*/
-	public JTextField getSourceTXT() {
-		return sourceTXT;
-	}
+		//Creation du repertoire de decision jury
+		dirDatasTxt = new File(filePDF.getParent()+"/DatasTxt");//creation du repertoire d'avis de jury
+		if(!dirDatasTxt.exists())
+			dirDatasTxt.mkdir();
 
-	public void setSourceTXT(JTextField sourceTXT) {
-		this.sourceTXT = sourceTXT;
-	}
+		//Creation du repertoire de decision jury
+		dirAvisJury = new File(filePDF.getParent()+"/AvisJury");//creation du repertoire d'avis de jury
+		if(!dirAvisJury.exists())
+			dirAvisJury.mkdir();
 
-	public JTextField getCibleCSV() {
-		return cibleCSV;
-	}
+		//Creation du repertoire de decision jury
+		dirStats = new File(filePDF.getParent()+"/Stats");//creation du repertoire d'avis de jury
+		if(!dirStats.exists())
+			dirStats.mkdir();
 
-	public void setCibleCSV(JTextField cibleCSV) {
-		this.cibleCSV = cibleCSV;
-	}
+		//creation du fichier txt pour les donnees des etudiants
+		String nomFichierTXT = filePDF.getName().replace(".pdf", ".txt");
+		fileTXT = new File(dirDatasTxt.getAbsolutePath()+"/"+nomFichierTXT);
+		sourceTXT.setText(fileTXT.getAbsolutePath()); 	
 
-	public JTextField getSourcePDF() {
-		return sourcePDF;
-	}
+		//creation du fichier de decision
+		String nomDecisionJury = filePDF.getName().replace(".pdf", ".csv");
+		fileDecisionJury = new File(dirAvisJury.getAbsolutePath()+"/"+nomDecisionJury);
+		cibleCSV.setText(fileDecisionJury.getAbsolutePath()); 
 
-	public void setSourcePDF(JTextField sourcePDF) {
-		this.sourcePDF = sourcePDF;
+		//creation du fichier pour les stats
+		String nomStats = filePDF.getName().replace(".pdf", ".csv");//TODO a voir dans quel format sera le fichier de stat
+		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
+		//TODO faire un JTextfield pour les stats cibleCSV.setText(fileStats.getAbsolutePath()); 
 	}
 }
