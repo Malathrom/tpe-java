@@ -13,6 +13,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import io.SauvegardeRepertoire;
+import javafx.scene.input.KeyCode;
 import operation.DecisionJury;
 
 import javax.swing.JButton;
@@ -48,6 +49,7 @@ public class IHMAvisJury extends JFrame{
 	private JTextField sourceTXT;
 	private JTextField cibleCSV;
 	private JTextField sourcePDF;
+	private JLabel message;
 	private File fileTXT, filePDF, fileDecisionJury, fileStats;
 	private File dirAvisJury, dirStats, dirDatasTxt;;
 	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, avisJury, statistique;
@@ -145,6 +147,10 @@ public class IHMAvisJury extends JFrame{
 		lblNewLabel_3.setBounds(10, 11, 77, 14);
 		this.getContentPane().add(lblNewLabel_3);
 
+		message = new JLabel("");
+		message.setBounds(10, 190, 1000, 23);
+		this.getContentPane().add(message);
+
 		sourcePDF = new JTextField();
 		sourcePDF.setBounds(108, 8, 627, 20);
 		sourcePDF.setColumns(10);
@@ -164,7 +170,6 @@ public class IHMAvisJury extends JFrame{
 		statistique = new JButton("Generer statistiques");
 		statistique.setBounds(296, 140, 176, 23);
 		this.getContentPane().add(statistique);
-
 		lockButton();
 	}
 
@@ -176,8 +181,27 @@ public class IHMAvisJury extends JFrame{
 			@Override
 			public void keyPressed(KeyEvent e) {
 				//TODO faire un touche pour la recherhce de fichier, une pour l'avis jury, une pour la conversion, une pour les stats
-				if (e.getKeyCode()==KeyEvent.VK_UP){
-					System.out.println("coucou");
+				switch (e.getKeyCode()) {
+				case KeyEvent.VK_R:
+					choixRepertoire();
+
+					break;
+				case KeyEvent.VK_C:
+					conversionPdf_Txt.doClick();
+					break;
+				case KeyEvent.VK_A:
+					avisJury.doClick();
+
+					break;
+				case KeyEvent.VK_S:
+					statistique.doClick();
+
+					break;
+				case KeyEvent.VK_Q:
+					System.exit(0); 
+					break;
+				default:
+					break;
 				}
 			}
 			@Override
@@ -187,17 +211,11 @@ public class IHMAvisJury extends JFrame{
 			public void keyReleased(KeyEvent e) {}
 		});
 
-		//Methode qui detecte si le textfield pdf est non vide
+		// Listener qui detecte si le textfield pdf est non vide
 		sourcePDF.addCaretListener(new CaretListener() {
 			@Override
 			public void caretUpdate(CaretEvent e) {
-				if (sourcePDF.getText().equals("")){
-					lockButton();
-				}
-
-				else{
-					unlockButton();
-				}
+				detectionPDF();
 			}
 		});
 
@@ -211,29 +229,7 @@ public class IHMAvisJury extends JFrame{
 		conversionPdf_Txt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()=="")){
-					try {
-						if(fileTXT.exists()){
-							//on demande si on veut l'ecraser
-							int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileTXT.getName() +" ?", "Confirmation de la suppression", 
-									JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-							requestFocus();
-							if(option == JOptionPane.OK_OPTION){
-								maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-								JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\na été converti en "+ fileTXT.getName(), "Info",  
-										JOptionPane.INFORMATION_MESSAGE);
-							}
-						}
-						else{
-							maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-						}
-					} catch (FileNotFoundException e2) {
-						JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\n'existe pas", "Erreur",  JOptionPane.ERROR_MESSAGE);
-					} catch (IOException e1) {
-						JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\nn'a pas été converti en "+ fileTXT.getName(), "Erreur",  
-								JOptionPane.ERROR_MESSAGE);
-					}
-				}
+				convertirPDF();
 			}
 		});
 
@@ -248,9 +244,7 @@ public class IHMAvisJury extends JFrame{
 		statistique.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.out.println("test");
-				//TODO on teste si la decision de jury a ete faite donc on teste su le fichier decision existe sinon on recreer la liste des etudiants du PDF
-				//if(fileCSV.exists()){
+				genererStatistique();
 			}
 		});
 
@@ -262,10 +256,69 @@ public class IHMAvisJury extends JFrame{
 		});
 	}
 
-	//TODO a commenter
+	/**
+	 * Methode declenché lors de la decision de jury
+	 */
 	private void creationDecisionJury() {		
 		//TODO test si les ficheir existe ou pas si le fichier text existe on recupere les donnees
 		DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
+	}
+
+	/**
+	 * Methode qui detecte si le PDF est present est valable
+	 */
+	private void detectionPDF() {
+		//FAIRE LE FILEPDF.exist
+		if (sourcePDF.getText().equals("")){
+			lockButton();
+			message.setText("<html><span color='red'>Pas de PDF</span></html>");
+		}
+		else{
+			if(new File(sourcePDF.getText()).exists()){
+				message.setText("");
+				unlockButton();
+			}
+			else
+				message.setText("<html><span color='red'>le fichier "+ sourcePDF.getText() +" n'existe pas</span></html>");
+		}
+	}
+
+	/**
+	 * Methode declenché lors de la generation des statistiques
+	 */
+	private void genererStatistique() {
+		//TODO on teste si la decision de jury a ete faite donc on teste su le fichier decision existe sinon on recreer la liste des etudiants du PDF
+		// TODO A CODER
+
+	}
+
+	/**
+	 * Methode declenché lors de la conversion du PDF en TXT
+	 */
+	private void convertirPDF() {
+		if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()=="")){
+			try {
+				if(fileTXT.exists()){
+					//on demande si on veut l'ecraser
+					int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileTXT.getName() +" ?", "Confirmation de la suppression", 
+							JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+					requestFocus();
+					if(option == JOptionPane.OK_OPTION){
+						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+						JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\na été converti en "+ fileTXT.getName(), "Info",  
+								JOptionPane.INFORMATION_MESSAGE);
+					}
+				}
+				else{
+					maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+				}
+			} catch (FileNotFoundException e2) {
+				JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\n'existe pas", "Erreur",  JOptionPane.ERROR_MESSAGE);
+			} catch (IOException e1) {
+				JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\nn'a pas été converti en "+ fileTXT.getName(), "Erreur",  
+						JOptionPane.ERROR_MESSAGE);
+			}
+		}
 	}
 
 	/**

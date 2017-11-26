@@ -1,0 +1,5377 @@
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 1
+M. Komi ABALO N°38690 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 23/12/1989 à LOME (TOGO) BAC DIP. ETRANGER en 2010
+Conseiller M. DUCHENE Jacques Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38690 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  D   6 ▲
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF14  D   6 ▲
+TX10  C   6 ▲
+LE01  F   0
+LE01I  D   4
+APP10  RES  0
+GE04  E   4
+ATDOC1 Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Vous ne pourrez pas suivre les UV : NF16,
+LO02 et RE01.
+Total semestre 12 24 4 4 44
+P15 ISI 2 IF02  B   6 ▲ EG23  C   6 ▲
+IF24  B   6  ●
+LO07  E   6 ▲
+LE02  F   0 APP10  ABS
+GE31  B   4
+Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Vous devez lever votre réserve en APP10.
+Total semestre 6 18 0 4 28
+A15 ISI 3 IF15  C   6  ● IF16  F   0
+IF20  D   6  ●
+LE02  F   0
+LE02I  E   4
+APP10  ABS
+GE25  E   4
+SE01  A   4 Poursuite avec réserves
+Mauvais semestre. Attention, vous n'avez toujours pas
+validé votre NPML, indispensable pour être
+diplômé(e). Prenez immédiatement contact avec
+pour.
+Total semestre 6 6 4 4 4 24
+P16 ISI 4 TN09  C   30 LX10  ABS Stage
+OPTA LP - ROSIERES PRES TROYES - FRANCE -
+du 01/02/16 au 29/07/16
+ Prenez contact à la rentrée avec Stephen LE COCHE
+pour les Uvs d'anglais.
+Total semestre 30 30
+A16 ISI 5 Libre IF10  B   6  ● TX20  B   6  ● ST10 LX10  E   4 Stage
+OPTA LP - ROSIERES PRES TROYES - FRANCE -
+du 12/09/16 au 11/09/17
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Formation par alternance
+Total semestre 6 6 4 16
+P17 ISI 6 Libre IF05  F   0
+IF19  D   6  ●
+ST10  C   30 GE18  E   4 OPTA LP - ROSIERES PRES TROYES - FRANCE -
+du 12/09/16 au 11/09/17
+Formation par alternance
+Total semestre 6 30 4 40
+Total 36 54 60 12 16 4 182
+TOTAUX Ingénieur de M. Komi ABALO
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 60/60 ✓ 12/12 ✓ 16/4 ✓ 4/4 ✓ 0 182/180 ✓
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 2
+M. Olivier AFFIA N°35272 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 31/05/1994 à CAVAILLON (FRANCE) BAC BAC S-Ing. en 2012
+Conseiller Mme BENOIST Amanda Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35272 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  D   6  ■
+PHYS01  A   6  ■
+MS11  E   6  ■
+TN04  D   6  ■
+FM01  C   2
+LE01  C   4
+SI10  D   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 10 34
+P13 TC 2 CHMA01 E   6  ■
+MATH02  D   6  ■
+NF04  D   6  ■
+TN01  B   6  ■
+TN05  B   6 LE02  D   4 GE31  D   4 Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 4 4 38
+A13 TC 3 MATH03  D   6  ■
+PHYS02  C   6  ■
+LO02  E   6 ▲
+NF05  B   6  ■
+LE03  C   4 GE21  D   4 Poursuite normale
+Assez bon semestre. . Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 12 4 4 32
+P14 TC 4 PHYS05  C   6  ■
+SH01  D   6  ■
+GL01  C   6  ■
+TITS  B   6  ■
+LE08  C   4 SC02  C   4 BULE  ADM Poursuite normale
+Bon semestre. Vous serez en branche au prochain
+semestre.
+Total semestre 12 12 4 4 32
+A14 ISI 1 GL02  C   6 ▲
+NF16  D   6 ▲
+NF20  C   6 ▲
+IF14  E   6 ▲ LP00  D   4 SP01  E   4 Poursuite normale
+Assez bon semestre. N'oubliez pas que pour être
+diplômé(e), vous devez passer un semestre à
+l'étranger.
+Total semestre 18 6 4 4 32
+P15 ISI 2 IF02  B   6 ▲ IF03  C   6 ▲
+LO07  A   6 ▲
+TX20  B   6  ●
+GE32  D   4
+GE34  C   4
+Poursuite normale
+Bon semestre.
+Total semestre 6 18 8 32
+A15 ISI 3 UX40  EQU  6  ●
+UX41  EQU  6  ●
+UX70  EQU  4
+UX71  EQU  4
+UX80  EQU  4 Semestre d'études à l'étranger
+ Louisiana State University Health Sciences Center
+(Etats-Unis) A15 + P16.
+semestre à l'étranger
+Total semestre 12 8 4 24
+P16 ISI 4 UX30  EQU  6 ▲
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX52  EQU  6  ●
+Semestre d'études à l'étranger
+ Louisiana State University Health Sciences Center
+(Etats-Unis) A15 + P16.
+Total semestre 24 24
+A16 ISI 5 ST09  B   30 Stage
+MAIL EXPERTISE LLP - ASHFORD-KENT-UK -
+ROYAUME-UNI - du 01/09/16 au 17/02/17
+Total semestre 30 30
+P17 ISI 6 MSI IF08  C   6  ●
+IF22  D   6  ●
+GE04  E   4
+GE11  C   4
+GE43  D   4
+Total semestre 12 12 24
+Total 84 108 36 26 36 12 302
+TOTAUX Ingénieur de M. Olivier AFFIA
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 42/24 ✓
+TCBR 54/54 ✓
+FIL 48/30 ✓
+TCBR+FIL 36/30 ✓ 66/30 ✓
+Global 84 108 36/66 26/20 ✓ 36/8 ✓ 12/8 ✓ 0 NPML ✓ 302/300 ✓
+48/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 4
+Mme Essi AGBEFOU N°38458 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 07/11/1993 à LOMÉ (TOGO) BAC DIP. ETRANGER en 2011
+Conseiller M. NIGRO Jean-Marc Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38458 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  D   6 ▲
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF07  C   6 ▲
+IF09  B   6 ▲
+IF14  B   6 ▲
+LE01  F   0
+LE01I  C   4
+GE36  A   4 Poursuite avec conseil
+Bon semestre. Vous ne pourrez pas suivre les UV :
+NF16, RE01 et LO01. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez.
+Total semestre 12 30 4 4 50
+P15 ISI 2 IF02  B   6 ▲ EG23  B   6 ▲
+IF11  C   6  ●
+LO07  C   6 ▲
+NF19  C   6 ▲
+LE02  D   4 GE21  D   4 ATDOC1
+ATDOC2
+Poursuite normale
+Bon semestre
+Total semestre 6 24 4 4 38
+A15 ISI 3 TN09  B   30 Stage
+AXA FRANCE - NANTERRE - FRANCE - du 01/09/15
+au 19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  C   6  ●
+IF19  D   6  ●
+IF08  C   6  ●
+LO10  C   6  ●
+LE03  F   0 GE41  C   6 PO03  D   4 ATDOC3
+ATDOC4
+Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez.
+Total semestre 12 12 0 6 4 34
+A16 ISI 5 MPL ST10  C   30 LX10  E   4 Jury de diplôme
+GENERAL ELECTRIC MEDICAL SYSTEMS - BUC -
+FRANCE - du 25/08/16 au 24/02/17
+Votre cursus sera étudié par le prochain jury de
+diplôme.
+Total semestre 30 4 34
+P17 ISI 6 MPL BULE  ADM
+Total semestre
+Total 30 66 60 12 14 4 186
+TOTAUX Ingénieur de Mme Essi AGBEFOU
+CS TM ST EC ME CT HP NPML
+TCBR 66/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 66/30 ✓
+Global 30 66 60/60 ✓ 12/12 ✓ 14/4 ✓ 4/4 ✓ 0 NPML ✓ 186/180 ✓
+18/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 5
+M. Serge Levaross AKA N°38712 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 23/10/1991 à BONOUA (COTE D'IVOIRE) BAC DIP. ETRANGER en 2009
+Conseiller M. SMOLARZ André Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38712 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  B   6 ▲
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF14  B   6 ▲
+TX10  C   6 ▲
+LE02  C   4 APP10  RES  0 ATDOC1 Poursuite normale
+Bon semestre. Vous ne pourrez pas suivre les UV :
+NF16, LO02 et LO01.
+Total semestre 12 24 4 0 40
+P15 ISI 2 IF02  C   6 ▲ EG23  B   6 ▲
+IF11  D   6  ●
+NF19  C   6 ▲
+LE03  C   4 APP10  D   4
+GE31  A   4
+GE36  C   4
+Poursuite normale
+Assez bon semestre. Vous devez lever votre réserve
+en APP10.
+Total semestre 6 18 4 12 40
+A15 ISI 3 TN09  C   30 Stage
+BASSETTI - GRENOBLE - FRANCE - du 10/08/15 au
+05/02/16
+ Vous êtes autorisé(e) à chercher un contrat de
+professionnalisation.
+Total semestre 30 30
+P16 ISI 4 MPL IF08  E   6  ●
+LO07  D   6 ▲
+LO10  E   6  ●
+LE08  C   4 GE21  C   4 PO03  D   4 BULE  ADM Poursuite normale
+Semestre moyen. Ne négligez pas les UV CS.
+Total semestre 18 4 4 4 30
+A16 ISI 5 Libre IF10  C   6  ● IF20  E   6  ● ST10 Stage
+MANUFACTURE FRANCAISE DES
+PNEUMATIQUES MICHELIN - CLERMONT
+FERRAND - FRANCE - du 01/09/16 au 31/08/17
+Formation par alternance
+Total semestre 6 6 12
+P17 ISI 6 Libre IF05  D   6  ●
+IF19  E   6  ●
+ST10  C   30 GE18  C   4 MANUFACTURE FRANCAISE DES
+PNEUMATIQUES MICHELIN - CLERMONT
+FERRAND - FRANCE - du 01/09/16 au 31/08/17
+Formation par alternance
+Total semestre 12 30 4 46
+Total 36 66 60 12 20 4 198
+TOTAUX Ingénieur de M. Serge Levaross AKA
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 36/30 ✓ 66/30 ✓
+Global 36 66 60/60 ✓ 12/12 ✓ 20/4 ✓ 4/4 ✓ 0 NPML ✓ 198/180 ✓
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 6
+M. Yawo AMEGADJE N°38651 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 31/10/1991 à LOME (TOGO) BAC DIP. ETRANGER en 2010
+Conseiller M. SALEMBIER Pascal Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38651 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  F   0
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF09  C   6 ▲
+IF14  C   6 ▲
+TX10  B   6 ▲
+LE01  C   4 APP10  RES  0 Poursuite avec conseil
+Assez bon semestre. Vous ne pourrez pas suivre les
+UV : NF16, LO02, RE01. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 30 4 0 40
+P15 ISI 2 IF02  C   6 ▲
+LO12  A   6 ▲
+EG23  E   6 ▲
+LO07  D   6 ▲
+LE02  D   4 APP10  B   4
+GE31  C   4
+GE36  D   4
+Poursuite normale
+Assez bon semestre. Vous devez lever votre réserve
+en APP10.
+Total semestre 12 12 4 12 40
+A15 ISI 3 TN09  B   30 Stage
+ADP GSI FRANCE - NANTERRE CEDEX - FRANCE -
+du 07/07/15 au 06/01/16
+ Vous êtes autorisé(e) à chercher un contrat de
+professionnalisation.
+Total semestre 30 30
+P16 ISI 4 MPL IF08  E   6  ●
+LO10  E   6  ●
+LE03  E   4
+LE08  F   0
+GE41  D   6 PO03  E   4 Poursuite avec conseil
+Mauvais semestre. Attention à l'anglais.
+Total semestre 12 4 6 4 26
+A16 ISI 5 Libre IF10  C   6  ● IF20  E   6  ● ST10 LX10  D   4 BULE  ADM Stage
+ADP GSI FRANCE - NANTERRE CEDEX - FRANCE -
+du 06/09/16 au 31/08/17
+Formation par alternance
+Total semestre 6 6 4 16
+P17 ISI 6 Libre IF05  E   6  ●
+IF19  F   0
+ST10  RES  0 GE18  C   4 ADP GSI FRANCE - NANTERRE CEDEX - FRANCE -
+du 06/09/16 au 31/08/17
+Formation par alternance
+Total semestre 6 0 4 10
+Total 30 60 30 16 22 4 162
+TOTAUX Ingénieur de M. Yawo AMEGADJE
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 30 60 30/60 16/12 ✓ 22/4 ✓ 4/4 ✓ 0 NPML ✓ 162/180
+26/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 7
+M. Ayawo AMEGANVI N°38640 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 06/06/1991 à ASSAHOUN (TOGO) BAC DIP. ETRANGER en 2010
+Conseiller Mlle BROUSSET Kristine Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38640 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  A   6 ▲
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF09  C   6 ▲
+IF14  C   6 ▲
+TX10  B   6 ▲
+LE01  F   0
+LE01I  D   4
+APP10  RES  0 Poursuite avec conseil
+Assez bon semestre. Vous ne pourez pas suivre les
+UV : NF16, LO02 et LO07. Vos résultats en langues
+sont insuffisants pour obtenir le NPML en temps voulu,
+réagissez.
+Total semestre 12 30 4 0 46
+P15 ISI 2 IF02  D   6 ▲ EG23  B   6 ▲
+IF11  C   6  ●
+LO10  F   0
+LE02  D   4 APP10  C   4
+GE31  C   4
+GE36  D   4
+Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM.
+Total semestre 6 12 4 12 34
+A15 ISI 3 TN09  C   30 Stage
+SIMPLIFIA - LYON - FRANCE - du 03/08/15 au
+29/01/16
+ Vous êtes autorisé(e) à chercher un contrat de
+professionnalisation.
+Total semestre 30 30
+P16 ISI 4 MPL IF08  D   6  ●
+LO10  C   6  ●
+LE03  E   4
+LE08  F   0
+GE38  C   6 PO03  D   4 Poursuite avec conseil
+Semestre moyen. Attention à l'anglais.
+Total semestre 12 4 6 4 26
+A16 ISI 5 Libre IF10  B   6  ● IF20  D   6  ● ST10 LX10  D   4 Stage
+CAPGEMINI TECHNOLOGY SERVICES -
+SURESNES CEDEX - FRANCE - du 05/09/16 au
+31/08/17
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Formation par alternance
+Total semestre 6 6 4 16
+P17 ISI 6 Libre IF05  E   6  ●
+IF19  E   6  ●
+ST10  RES  0 GE18  C   4 BULE  ADM CAPGEMINI TECHNOLOGY SERVICES -
+SURESNES CEDEX - FRANCE - du 05/09/16 au
+31/08/17
+Formation par alternance
+Total semestre 12 0 4 16
+Total 36 60 30 16 22 4 168
+TOTAUX Ingénieur de M. Ayawo AMEGANVI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 36/30 ✓ 60/30 ✓
+Global 36 60 30/60 16/12 ✓ 22/4 ✓ 4/4 ✓ 0 NPML ✓ 168/180
+26/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 8
+Mme Kelly ANNE N°35239 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 12/06/1993 à GENNEVILLIERS (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller M. BIRREGAH Babiga Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35239 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 CHMA01 C   6  ■
+MATH01  EQU  6  ■
+MATH02  B   6  ■
+NF04  B   6  ■
+TN01  D   6  ■
+LE02  A   4
+SI10  C   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 18 12 8 38
+P13 TC 2 MATH03  B   6  ■
+PHYS01  C   6  ■
+PHYS04  C   6  ■
+MS11  A   6  ■
+TN04  D   6  ■
+TN05  A   6 LE03  A   4 Poursuite normale
+Bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 18 12 6 4 40
+A13 TC 3 PHYS02  B   6  ■
+SY01  B   6  ■
+MM01  D   6  ■
+NF05  A   6  ■
+LE08  B   4
+LS03  E   4
+GE31  C   4 BULE  ADM Poursuite normale
+Bon semestre. Vous pouvez passer en branche.
+Total semestre 12 12 8 4 36
+P14 SRT 1 RE02  C   6  ◊
+RE04  F   0
+LO11  FX   0
+LO14  C   6 ▲
+GE32  C   4 LI01  C   4 Poursuite avec réserves
+Semestre médiocre. Un effort général s'impose.
+Total semestre 6 6 4 4 20
+A14 SRT 2 IF01  A   6  ◊
+NF16  D   6 ▲
+SY06  C   6  ◊
+LO02  C   6 ▲ APP10  RES  0
+GE44  C   4
+SC00  C   4 Poursuite normale
+Bon semestre. Votre demande de changement
+d'orientation a été acceptée. Vous serez en ISI2 en
+P15.
+Total semestre 18 6 4 4 32
+P15 ISI 2 IF02  D   6 ▲
+LO12  B   6 ▲
+EG23  A   6 ▲
+LO07  A   6 ▲
+APP10  ABS
+GE21  D   4
+GE36  D   4
+Poursuite normale
+Bon semestre. Vous devez lever votre réserve en
+APP10
+.
+Total semestre 12 12 8 32
+A15 ISI 3 UX20  EQU  7,5 ▲
+UX40  EQU  7,5 ●
+UX50  EQU  7,5 ●
+UX51  EQU  7,5 ●
+UX60  EQU  3 Semestre d'études à l'étranger
+ Lund University (Suède).
+semestre à l'étranger
+Total semestre 15 15 3 33
+P16 ISI 4 TN09  C   30 Stage
+FINANSEMBLE SAS - LE CHESNAY - FRANCE - du
+18/01/16 au 30/06/16
+Total semestre 30 30
+A16 ISI 5 MPL GL02  A   6 ▲
+IF10  B   6  ●
+IF17  A   6  ●
+TX20  C   6  ●
+GE25  B   4 ATDOC1 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 28
+P17 ISI 6 MPL ST10 CAPGEMINI TECHNOLOGY SERVICES -
+SURESNES CEDEX - FRANCE - du 06/02/17 au
+04/08/17
+Total semestre
+Total 111 87 36 23 24 8 289
+TOTAUX Ingénieur de Mme Kelly ANNE
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 36/24 ✓
+TCBR 55,5/54 ✓
+FIL 40,5/30 ✓
+TCBR+FIL 45/30 ✓ 51/30 ✓
+Global 111 87 36/66 23/20 ✓ 24/8 ✓ 8/8 ✓ 0 NPML ✓ 289/300
+32/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 10
+Mme Amandine AUGEREAU N°38399 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 12/03/1994 à FEURS (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. NIGRO Jean-Marc Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38399 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  B   6 ▲
+NF20  C   6 ▲
+IF14  B   6 ▲
+LO02  B   6 ▲
+LE01  C   4 GE21  D   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+LO12  A   6 ▲
+EG23  B   6 ▲
+IF03  E   6 ▲
+LE02  D   4 GE31  A   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  C   30 Stage
+AIGA - LYON - FRANCE - du 03/08/15 au 15/01/16
+Total semestre 30 30
+P16 ISI 4 UX20  EQU  6 ▲
+UX40  EQU  6  ●
+UX41  EQU  6  ●
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+Semestre d'études à l'étranger
+ Nanyang Technological University (Singapour).
+L'étudiante ne pourra pas suivre à l'UTT l'UE : GL02
+Total semestre 18 12 30
+A16 ISI 5 MPL IF10  B   6  ●
+IF15  C   6  ●
+LE03  C   4
+LE08  E   4
+PO03  D   4
+SC06  C   4
+ATDOC1 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 8 8 28
+P17 ISI 6 MPL ST10 ITN CONSULTANTS SAS - LYON - FRANCE - du
+03/04/17 au 15/09/17
+Total semestre
+Total 54 36 30 16 8 8 152
+TOTAUX Ingénieur de Mme Amandine AUGEREAU
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 54/30 ✓ 36/30 ✓
+Global 54 36 30/60 16/12 ✓ 8/4 ✓ 8/4 ✓ 0 NPML ✓ 152/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 11
+M. Guillaume AVARGUES N°35292 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 06/01/1994 à NICE (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller M. CARQUIN Emmanuel Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MPL      Mineur(s) GEB
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35292 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  D   6  ■
+PHYS01  B   6  ■
+MS11  A   6  ■
+TN04  C   6  ■
+FM01  C   2
+LE01  E   4
+SI10  C   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 10 34
+P13 TC 2 CHMA01 D   6  ■
+MATH02  C   6  ■
+EN01  B   6  ■
+NF04  B   6  ■
+TN05  B   6 LE02  E   4 GE31  A   4 Poursuite normale
+Bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 4 4 38
+A13 TC 3 MATH03  D   6  ■
+PHYS02  B   6  ■
+IF14  C   6 ▲
+NF05  B   6  ■
+LE03  F   0 GE21  C   4 Poursuite avec conseil
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV EC. Vous pouvez prendre 2
+TM de branche.
+Total semestre 12 12 0 4 28
+P14 TC 4 PHYS04  C   6  ■
+PHYS05  B   6  ■
+C2I1  C   4  ■
+LO07  C   6 ▲
+LE03  D   4 SC02  C   4 Poursuite normale
+Bon semestre. Vous serez en branche au prochain
+semestre.
+Total semestre 12 10 4 4 30
+A14 ISI 1 GL02  B   6 ▲
+NF16  B   6 ▲
+IF07  A   6 ▲
+LO02  C   6 ▲
+LE08  F   0 GE36  B   4 Poursuite avec conseil
+Assez bon semestre. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e). N'oubliez pas que pour être diplômé(e),
+vous devez passer un semestre à l'étranger.
+Total semestre 12 12 0 4 28
+P15 ISI 2 UX20  EQU  6 ▲
+UX40  EQU  6  ●
+UX30  EQU  6 ▲
+UX31  EQU  6 ▲
+UX92  EQU  6  ◊
+UX60  EQU  4 UX80  EQU  4 BULE  ADM Semestre d'études à l'étranger
+ Nanyang Technological University (Singapour).
+Total semestre 12 18 4 4 38
+A15 ISI 3 IF10  C   6  ● IF16  B   6  ●
+IF17  C   6  ●
+IF26  A   6  ●
+GE44  B   4 SP11  A   4 Poursuite normale
+Bon semestre
+Total semestre 6 18 4 4 32
+P16 ISI 4 TN09  A   30 Stage
+IBM FRANCE - NICE COTE D'AZUR - NICE MERIDIA
+- FRANCE - du 18/01/16 au 15/07/16
+Total semestre 30 30
+A16 ISI 5 MPL TX20  B   6  ● APP10  A   4
+GE10  D   4
+GE25  B   4
+PO03  C   4 ATDOC1
+ATDOC2
+ATDOC3
+Poursuite normale
+Assez bon semestre
+Total semestre 6 12 4 22
+P17 ISI 6 MPL ST10 ORANGE APPLICATIONS FOR BUSINESS -
+VALBONNE - FRANCE - du 06/02/17 au 04/08/17
+Total semestre
+Total 78 100 36 22 28 16 280
+TOTAUX Ingénieur de M. Guillaume AVARGUES
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 34/24 ✓
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 78 100 36/66 22/20 ✓ 28/8 ✓ 16/8 ✓ 0 NPML ✓ 280/300
+44/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 13
+M. Badr BAHNANE N°38612 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 20/02/1993 à KHOURIGBA (MAROC) BAC DIP. ETRANGER en 2010
+Conseiller M. KHOUKHI Lyes Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38612 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 SRT 1 NF20  C   6 ▲ IF09  B   6 ▲
+IF14  D   6 ▲
+RE01  D   6 ▲
+LE08  C   4 PH20  FX   0 BULE  ADM Poursuite normale
+Assez bon semestre. Vous êtes admis en ISI
+Total semestre 6 18 4 0 28
+P15 ISI 2 EX50  EQU  6 ▲
+IF02  C   6 ▲
+RE04  ABS
+EX60  EQU  6 ▲
+IF03  D   6 ▲
+NF19  B   6 ▲
+LE18  A   4 GE34  F   0 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. De meilleurs résultats sont nécessaires dans
+les UV ME. Vous ne pourrez pas suivre les uv : NF16
+et LO02.
+Total semestre 12 18 4 0 34
+A15 ISI 3 TN09  C   30 Stage
+BASSETTI - GRENOBLE - FRANCE - du 01/08/15 au
+31/01/16
+ Vous êtes autorisé(e) à chercher un contrat de
+professionnalisation.
+Total semestre 30 30
+P16 ISI 4 MPL IF11  D   6  ●
+LO10  C   6  ●
+LE15  D   4
+LS00  B   4
+GE21  D   4
+GE31  C   4
+PO03  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 8 8 4 32
+A16 ISI 5 Libre IF10  C   6  ● IF20  E   6  ● ST10 Stage
+BASSETTI - GRENOBLE - FRANCE - du 11/07/16 au
+10/07/17
+Formation par alternance
+Total semestre 6 6 12
+P17 ISI 6 Libre IF05  E   6  ●
+IF19  F   0
+ST10  C   30 GE18  E   4 BASSETTI - GRENOBLE - FRANCE - du 11/07/16 au
+10/07/17
+Formation par alternance
+Total semestre 6 30 4 40
+Total 30 54 60 16 12 4 176
+TOTAUX Ingénieur de M. Badr BAHNANE
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 60/60 ✓ 16/12 ✓ 12/4 ✓ 4/4 ✓ 0 NPML ✓ 176/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 14
+M. Ayoub BAKKALI EL KASMI N°38417 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 16/04/1994 à MARTIL (MAROC) BAC DIP. ETRANGER en 2012
+Conseiller M. LE COCHE Stephen Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38417 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  F   0 IF07  F   0
+IF14  E   6 ▲
+LO02  F   0
+LE01  F   0 SP01  F   0 Réorienté
+Au vu de l'insuffisance de vos résultats, le jury de suivi
+a prononcé votre réorientation. Vous n'avez pas donné
+votre accord pour être réorienté.
+Total semestre 0 6 0 0 6
+P15 ISI 2 IF02  B   6 ▲
+LO12  F   0
+EG23  C   6 ▲
+LO07  B   6 ▲
+LE01  B   4 GE31  E   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+A15 ISI 3 GL02  E   6 ▲ IF07  C   6 ▲
+IF09  D   6 ▲
+LO02  D   6 ▲
+LE02  F   0 GE34  D   4 Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez.
+Vous pouvez partir en stage.
+Total semestre 6 18 0 4 28
+P16 ISI 4 TN09  D   30 LX10  C   4 Stage
+BUSINESS WEB AGENCE - DIJON - FRANCE - du
+01/02/16 au 27/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 4 34
+A16 ISI 5 MSI IF15  B   6  ●
+NF20  E   6 ▲
+IF16  C   6  ●
+IF17  B   6  ●
+LE02  B   4
+LE04  A   4
+SO02  D   4 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 4 36
+P17 ISI 6 MSI IF19  E   6  ● IF08  F   0
+IF24  A   6  ●
+LS00  B   4 APP10  B   4 ATDOC1
+ATDOC2
+Total semestre 6 6 4 4 20
+Total 30 54 30 20 12 4 150
+TOTAUX Ingénieur de M. Ayoub BAKKALI EL KASMI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 30/60 20/12 ✓ 12/4 ✓ 4/4 ✓ 0 NPML ✓ 150/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 15
+M. Mohammed BARGACH N°38415 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 15/04/1994 à KHEMISSET (MAROC) BAC BAC S en 2012
+Conseiller Mme DUHAMEL ANDREA Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38415 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  C   6 ▲ IF07  F   0
+IF14  D   6 ▲
+LO02  D   6 ▲
+LE01  F   0
+LE01I  D   4
+SP01  F   0 Poursuite avec réserves
+Mauvais semestre. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Vous n'êtes pas autorisé(e) à chercher un
+stage au prochain semestre.
+Total semestre 6 12 4 0 22
+P15 ISI 2 IF02  B   6 ▲
+LO12  F   0
+EG23  B   6 ▲
+LO07  B   6 ▲
+LE02  F   0 GE31  C   4 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. De meilleurs résultats sont nécessaires dans
+les UV EC. Vos résultats en langues sont insuffisants
+pour obtenir le NPML en temps voulu, réagissez.
+Total semestre 6 12 0 4 22
+A15 ISI 3 GL02  C   6 ▲
+IF15  A   6  ●
+LO01  B   6 ▲
+IF07  C   6 ▲
+IF09  D   6 ▲
+LE02  E   4 GE34  C   4 Poursuite normale
+Assez bon semestre
+Total semestre 18 12 4 4 38
+P16 ISI 4 TN09  B   30 Stage
+AIGA - LYON - FRANCE - du 01/02/16 au 15/07/16
+ Vos résultats en langues sont insuffisants pour
+obtenir le NPML en temps voulu, réagissez. Vous êtes
+autorisé(e) à chercher un contrat de
+professionnalisation.
+Total semestre 30 30
+A16 ISI 5 MSI IF16  D   6  ●
+IF17  B   6  ●
+IF20  E   6  ●
+LE03  F   0
+LE04  D   4
+APP10  B   4 SO02  D   4 ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+Poursuite avec réserves
+Mauvais semestre. Ne négligez pas les UV TM de
+filière. Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e). De
+meilleurs résultats sont nécessaires dans les UV EC.
+Un effort général s'impose.
+Total semestre 18 4 4 4 30
+P17 ISI 6 Libre IF05  D   6  ●
+IF19  F   0
+ST10 LX10  C   4 AXA INVESTMENT MANAGERS PARIS - PARIS LA
+DEFENSE CEDEX - FRANCE - du 20/02/17 au
+16/02/18
+Formation par alternance
+Total semestre 6 4 10
+Total 36 54 30 16 12 4 152
+TOTAUX Ingénieur de M. Mohammed BARGACH
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 16/12 ✓ 12/4 ✓ 4/4 ✓ 0 152/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 16
+M. Corentin BARRAUX N°38422 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 23/08/1993 à LE BLANC-MESNIL (FRANCE) BAC BAC S-SVT svt en 2011
+Conseiller Mme DUHAMEL ANDREA Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle STIC 4 SSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38422 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+IF14  D   6 ▲
+LO02  F   0
+LE03  C   4 SC00  A   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM.
+Total semestre 12 6 4 4 26
+P15 ISI 2 IF02  C   6 ▲
+LO12  C   6 ▲
+IF03  C   6 ▲
+LO07  D   6 ▲
+LE08  C   4
+SI11  D   4
+Poursuite normale
+Assez bon semestre.
+Vous pouvez partir en stage.
+Total semestre 12 12 8 32
+A15 ISI 3 GL02  E   6 ▲
+GS13  D   6  ●
+GS11  C   6  ●
+IF26  F   0
+LO02  D   6 ▲
+LS00  F   0 GE31  D   4 BULE  ADM Poursuite avec conseil
+Semestre médiocre. Un effort général s'impose.
+Total semestre 12 12 0 4 28
+P16 ISI 4 TN09  C   30 Stage
+RATP - PARIS Cedex 12 - FRANCE - du 01/02/16 au
+01/08/16
+ Vous êtes autorisé(e) à vous inscrire en Master SSI.
+Total semestre 30 30
+A16 ISI 5 MRI DD10  EQU  8 Poursuite normale
+Total semestre 8 8
+P17 ISI 6 MRI IF25  F   0 IF08  D   6  ●
+IF11  C   6  ●
+IF22  A   6  ●
+NF19  C   6 ▲
+LG03  E   4
+Total semestre 0 24 4 28
+Total 36 54 30 16 4 4 8 152
+TOTAUX Ingénieur de M. Corentin BARRAUX
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 16/12 ✓ 4/4 ✓ 4/4 ✓ 8 NPML ✓ 152/180
+8/16
+→ Master Sciences et Technologies de Automne 2016 à Printemps 2017 n°38422 Légende : * Master ▲ Master M1 ● Master M2 ◊ Hors Profil ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A16 STIC 3 SSI DD30  EQU  4  ●
+GS10  B   4  ●
+GS15  D   6  ●
+GS16  C   4  ●
+DD31  EQU  4  ●
+GS21  B   4  ●
+SD10  D   2  * DD32  EQU  4  * BULE  ADM  * Poursuite normale
+Assez bon semestre
+Total semestre 18 8 2 4 32
+P17 STIC 4 SSI
+Total semestre
+TOTAUX Master Sciences et Technologies de M. Corentin BARRAUX
+CS TM ST EC ME CT HP NPML
+M2 26/24 ✓
+Global 18 8 0/30 6/6 ✓ NPML ✓ 32/60
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 18
+M. Jessy BARTHELEMY N°38312 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 08/09/1994 à REIMS (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller Mme DUHAMEL ANDREA Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38312 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  B   6 ▲
+NF20  C   6 ▲
+IF14  C   6 ▲
+LO02  A   6 ▲
+LE02  B   4 GE36  C   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+LO12  A   6 ▲
+IF03  C   6 ▲
+LO07  A   6 ▲
+LE03  B   4 GE31  D   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+GROUPE EA - TROYES - FRANCE - du 01/09/15 au
+19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  B   6  ● IF08  B   6  ●
+IF11  C   6  ●
+NF19  A   6 ▲
+LE08  C   4 SC02  D   4 BULE  ADM Poursuite normale
+Bon semestre
+Total semestre 6 18 4 4 32
+A16 ISI 5 MPL IF10  C   6  ● IF16  B   6  ● LP00  B   4 GE04  C   4
+GE25  B   4
+ATDOC1
+ATDOC2
+ATDOC3
+Poursuite normale
+Assez bon semestre
+Total semestre 6 6 4 8 24
+P17 ISI 6 MPL ST10  C   30 NIKEC SOLUTIONS - BEZANNES - FRANCE - du
+06/02/17 au 21/07/17
+Total semestre 30 30
+Total 36 48 60 16 16 4 180
+TOTAUX Ingénieur de M. Jessy BARTHELEMY
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 36 48 60/60 ✓ 16/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 180/180 ✓
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 19
+Mme Elsa BASSI N°38353 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 06/02/1994 à DIJON (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38353 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  A   6 ▲
+IF14  D   6 ▲
+LO02  D   6 ▲
+LE03  B   4 GE31  C   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  D   6 ▲
+LO12  C   6 ▲
+IF03  F   0
+LO07  A   6 ▲
+LE08  C   4 GE21  D   4 BULE  ADM Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM.
+Total semestre 12 6 4 4 26
+A15 ISI 3 TN09  B   30 Stage
+FINANSEMBLE SAS - LE CHESNAY - FRANCE - du
+15/07/15 au 31/12/15
+Total semestre 30 30
+P16 ISI 4 MPL IF05  A   6  ● IF08  B   6  ●
+IF11  B   6  ●
+LO10  C   6  ●
+IT00  B   4 GE34  B   4 Poursuite normale
+Bon semestre
+Total semestre 6 18 4 4 32
+A16 ISI 5 MPL UX30  EQU  5 ▲
+UX50  EQU  5  ●
+Semestre d'études à l'étranger
+semestre à l'étranger
+Politecnico di Milano (Italie).
+Total semestre 10 10
+P17 ISI 6 MPL ST10 GE41  B   6 ER01  C   4 SOPRA STERIA - LIMONEST CEDEX - FRANCE - du
+06/03/17 au 01/09/17
+Total semestre 6 4 10
+Total 30 46 30 12 18 4 140
+TOTAUX Ingénieur de Mme Elsa BASSI
+CS TM ST EC ME CT HP NPML
+TCBR 47/54
+FIL 29/30
+TCBR+FIL 30/30 ✓ 46/30 ✓
+Global 30 46 30/60 12/12 ✓ 18/4 ✓ 4/4 ✓ 0 NPML ✓ 140/180
+22/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 20
+M. Anthime BATON N°12937 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 24/04/1993 à MONTREUIL (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL      Mineur(s) GEB, GEC
+→ Ingénieur de Automne 2011 à Printemps 2013 n°12937 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A11 TC 1 CHMA01 F   0
+MATH01  E   6  ■
+NF04  B   6  ■
+TN04  B   6  ■
+LE01  B   4
+SI10  C   4
+APP1 Poursuite avec conseil
+Semestre moyen. Ne négligez pas les UV CS.
+Total semestre 6 12 8 26
+P12 TC 2 MATH02  F   0
+PHYS01  D   6  ■
+MS11  C   6  ■
+TN01  A   6  ■
+TN05  A   6 LE02  B   4
+LG03  C   4
+APP2 Poursuite avec réserves
+Semestre médiocre. Votre maintien à l'UTT dépendra
+de vos résultats aux UV CS au prochain semestre.
+Total semestre 6 12 6 8 32
+A12 TC 3 CHMA01 D   6  ■
+MATH02  F   0
+NF05  C   6  ■ LE03  C   4
+LG10  D   4
+GE21  C   4 Instance de réorientation
+Vous serez en instance de réorientation au prochain
+semestre.
+Total semestre 6 6 8 4 24
+P13 IDR 1 MATH03  E   6  ■
+PHYS05  F   0
+NF02  A   6  ■ LE08  B   4 GE31  A   4 NPML  EQU Réorienté
+Au vu de l'insuffisance de vos résultats, le jury de suivi
+a prononcé votre réorientation. Vous n'êtes pas
+autorisé(e) à poursuivre vos études à l'UTT.
+Total semestre 6 6 4 4 20
+Total 24 36 6 28 8 102
+TOTAUX Ingénieur de M. Anthime BATON
+CS TM ST EC ME CT HP NPML
+TC 24/48 36/24 ✓
+TCBR 0/54
+FIL 0/30
+TCBR+FIL 0/30 0/30
+Global 24 36 6/66 28/20 ✓ 8/8 ✓ 0/8 0 NPML ✓ 102/300
+8/32
+→ Ingénieur de Automne 2014 à Printemps 2017 n°12937 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  F   0
+IF14  F   0
+LO02  A   6 ▲
+LS00  C   4 GE36  B   4
+GE37  C   4
+ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+NPML  EQU Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. De meilleurs résultats sont nécessaires dans
+les UV TM.
+Total semestre 6 6 4 8 24
+P15 ISI 2 IF02  C   6 ▲
+LO12  C   6 ▲
+EG23  B   6 ▲
+LO07  B   6 ▲
+LS01  C   4 GE28  D   4 AHE1  ADM  4 Poursuite normale
+Bon semestre. C'est mieux, ne relachez pas vos
+efforts.
+Total semestre 12 12 4 4 4 36
+A15 ISI 3 UX20  EQU  6 ▲ UX30  EQU  6 ▲
+UX31  EQU  6 ▲
+UX60  EQU  4 UX80  EQU  4 Semestre d'études à l'étranger
+ University of Ottawa (Canada).
+semestre à l'étranger
+Total semestre 6 12 4 4 26
+P16 ISI 4 TN09  B   30 Stage
+LGM - VELIZY VILLACOUBLAY CEDEX - FRANCE -
+du 01/02/16 au 15/07/16
+Total semestre 30 30
+A16 ISI 5 MPL IF10  B   6  ● IF16  B   6  ●
+IF17  A   6  ●
+GE10  E   4
+GE25  B   4
+GE33  B   4
+Poursuite normale
+Bon semestre
+Total semestre 6 12 12 30
+P17 ISI 6 MPL IF05  B   6  ● IF08  C   6  ●
+LO10  D   6  ●
+GE04  B   4
+GE11  D   4
+GE43  C   4
+Total semestre 6 12 12 30
+Total 36 54 30 12 36 4 4 176
+TOTAUX Ingénieur de M. Anthime BATON
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 12/12 ✓ 36/4 ✓ 4/4 ✓ 4 NPML ✓ 176/180
+40/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 22
+M. Dorian BELPOMO N°38339 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 18/08/1993 à REMIREMONT (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller M. TIXIER Matthieu Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI      Mineur(s) GEC
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38339 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+IF14  D   6 ▲
+LO02  D   6 ▲
+LE02  C   4 GE21  C   4 Poursuite normale
+Semestre moyen
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  D   6 ▲
+LO12  C   6 ▲
+IF03  D   6 ▲
+LO07  C   6 ▲
+LE03  B   4 GE31  A   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+ARAMISAUTO - ARCUEIL - FRANCE - du 01/07/15
+au 31/12/15
+Total semestre 30 30
+P16 ISI 4 MSI IF19  B   6  ● IF08  B   6  ●
+IF22  FX   0
+LE08  B   4 GE28  C   4 EE06  D   4 ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+BULE  ADM Poursuite avec conseil
+Semestre moyen. Ne négligez pas les UV TM de
+filière.
+Total semestre 6 6 4 4 4 24
+A16 ISI 5 MSI IF15  C   6  ● IF09  C   6 ▲
+IF16  C   6  ●
+IF20  D   6  ●
+GE25  A   4
+GE34  C   4
+Poursuite normale
+Assez bon semestre
+Total semestre 6 18 8 32
+P17 ISI 6 MSI ST10 SOPRA STERIA - LIMONEST CEDEX - FRANCE - du
+25/02/17 au 25/08/17
+Total semestre
+Total 36 48 30 12 20 4 150
+TOTAUX Ingénieur de M. Dorian BELPOMO
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 36 48 30/60 12/12 ✓ 20/4 ✓ 4/4 ✓ 0 NPML ✓ 150/180
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 23
+M. Salmane BEN BACHIR OUCHEN N°38441 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 14/04/1994 à TANGER (MAROC) BAC DIP. ETRANGER en 2011
+Conseiller M. TIXIER Matthieu Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38441 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+IF14  F   0
+LO02  D   6 ▲
+LE03  D   4 GE21  D   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM.
+Total semestre 12 6 4 4 26
+P15 ISI 2 IF02  C   6 ▲
+LO12  F   0
+EG23  D   6 ▲
+LO07  E   6 ▲
+NF19  E   6 ▲
+LE08  D   4 GE34  E   4 BULE  ADM Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Vous pouvez partir en stage.
+Total semestre 6 18 4 4 32
+A15 ISI 3 GL02  D   6 ▲
+IF15  B   6  ●
+IF14  C   6 ▲
+IF16  D   6  ●
+TX20  D   6  ●
+LE04  C   4 GE04  E   4 Poursuite normale
+Semestre moyen. Vous devez lever votre réserve en
+TX20.
+Total semestre 12 18 4 4 38
+P16 ISI 4 TN09  A   30 Stage
+BNP PARIBAS - PANTIN - FRANCE - du 01/02/16 au
+29/07/16
+Total semestre 30 30
+A16 ISI 5 MSI UX30  EQU  6 ▲
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX60  EQU  6 UX80  EQU  6 Semestre d'études à l'étranger
+semestre à l'étranger
+POSTECH - Pohang University of Science and
+Technology (Corée du Sud)
+Total semestre 18 6 6 30
+P17 ISI 6 MSI ST10 GE41  F   0 APGAR FRANCE - NEUILLY SUR SEINE - FRANCE -
+du 15/02/17 au 18/08/17
+Total semestre 0 0
+Total 30 60 30 18 12 6 156
+TOTAUX Ingénieur de M. Salmane BEN BACHIR OUCHEN
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 30 60 30/60 18/12 ✓ 12/4 ✓ 6/4 ✓ 0 NPML ✓ 156/180
+18/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 24
+M. Thomas BENOUALI N°38331 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 01/04/1992 à ST-DENIS (FRANCE) BAC BAC STI en 2010
+Conseiller M. TIXIER Matthieu Dernier diplôme obtenu LICENCE et LICENCE LMD
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38331 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  B   6 ▲
+NF20  B   6 ▲
+IF14  D   6 ▲
+LO02  A   6 ▲
+LE03  A   4 SC00  D   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  A   6 ▲
+LO12  C   6 ▲
+IF03  C   6 ▲
+LO07  B   6 ▲
+LE08  B   4 GE31  D   4 ATDOC1
+ATDOC2
+BULE  ADM Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+WISEN - PARIS - FRANCE - du 07/07/15 au 07/01/16
+Total semestre 30 30
+P16 ISI 4 UX30  EQU  7,5 ▲
+UX50  EQU  7,5 ●
+UX51  EQU  5,5 ●
+UX70  EQU  4,5 Semestre d'études à l'étranger
+ Malmö University (Suède).
+Total semestre 20,50 4,50 25
+A16 ISI 5 MRI GS13  EQU  3  ●
+GS15  B   6  ●
+GS11  EQU  3  ●
+IF20  C   6  ●
+LS00  C   4 GE21  D   4 Poursuite avec conseil
+Semestre médiocre. Un effort général s'impose.
+Total semestre 9 9 4 4 26
+P17 ISI 6 MRI ISI_C01  B   3  ●
+ISI_C02  B   3  ●
+Total semestre 6 6
+Total 33 59,50 30 12 12,50 4 151
+TOTAUX Ingénieur de M. Thomas BENOUALI
+CS TM ST EC ME CT HP NPML
+TCBR 55,5/54 ✓
+FIL 37/30 ✓
+TCBR+FIL 33/30 ✓ 59,5/30 ✓
+Global 33 59,5 30/60 12/12 ✓ 12,5/4 ✓ 4/4 ✓ 0 NPML ✓ 151/180
+16,5/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 25
+Mme Aglaé BERNARD N°38326 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 27/08/1991 à PARIS 19E  ARRONDISSEMENT (FRANCE) BAC BAC S-SVT m. en 2009
+Conseiller M. TIXIER Matthieu Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38326 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  B   6 ▲
+IF14  C   6 ▲
+LO02  A   6 ▲
+LE03  B   4 GE21  C   4 ATDOC1 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  B   6 ▲
+IF03  C   6 ▲
+LO07  B   6 ▲
+LE08  B   4 GE28  D   4 ATDOC2 BULE  ADM Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+CARDIWEB - PARIS - FRANCE - du 15/07/15 au
+25/12/15
+Total semestre 30 30
+P16 ISI 4 UX40  EQU  6  ● UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX60  EQU  6 Semestre d'études à l'étranger
+ École de Technologie Supérieure  (Canada).
+Total semestre 6 12 6 24
+A16 ISI 5 MPL GL02  C   6 ▲
+IF10  C   6  ●
+IF15  C   6  ●
+TX20  B   6  ● GE25  B   4 SC00  D   4 ATDOC3 Poursuite normale
+Semestre moyen
+Total semestre 18 6 4 4 32
+P17 ISI 6 MPL ST10 WORLDLINE - VILLEURBANNE CEDEX - FRANCE -
+du 13/03/17 au 08/09/17
+Total semestre
+Total 48 42 30 14 12 4 150
+TOTAUX Ingénieur de Mme Aglaé BERNARD
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 48/30 ✓ 42/30 ✓
+Global 48 42 30/60 14/12 ✓ 12/4 ✓ 4/4 ✓ 0 NPML ✓ 150/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 26
+M. Pierre BOIRON N°38397 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 20/03/1993 à LANGRES (FRANCE) BAC BAC S-SVT p.c. en 2011
+Conseiller M. COGRANNE Rémi Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38397 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  E   6 ▲
+NF20  E   6 ▲
+IF14  C   6 ▲
+LO02  C   6 ▲
+LE01  E   4 LI03  C   4 Poursuite normale
+Semestre moyen. Vous auriez pu mieux faire.
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  E   6 ▲
+LO12  D   6 ▲
+EG23  C   6 ▲
+IF03  C   6 ▲
+LE02  F   0 CTC1  B   4 Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez.
+Total semestre 12 12 0 4 28
+A15 ISI 3 TN09  C   30 Stage
+AUBAY - BOULOGNE BILLANCOURT - FRANCE - du
+03/08/15 au 15/01/16
+Total semestre 30 30
+P16 ISI 4 UX20  EQU  3 ▲ UX30  EQU  3 ▲
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX60  EQU  1,5 UX80  EQU  3 Semestre d'études à l'étranger
+ Riga Technical University (Lettonie).
+L'étudiant ne pourra pas suivre à l'UTT les UE : GL02
+et IF15
+Total semestre 3 15 1,50 3 22,50
+A16 ISI 5 MPL IF10  B   6  ● LE02  E   4
+LE03  D   4
+GE21  C   4
+GE31  D   4
+ATDOC1 Poursuite normale
+Semestre moyen. Attention, vous n'avez toujours pas
+validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 6 8 8 22
+P17 ISI 6 MPL IF05  C   6  ● LO10  D   6  ● LE08  E   4 HT05  F   0
+MTC01  C   4
+BULE  ADM
+Total semestre 6 6 4 4 20
+Total 39 45 30 17,50 8 15 154,50
+TOTAUX Ingénieur de M. Pierre BOIRON
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 39/30 ✓ 45/30 ✓
+Global 39 45 30/60 17,5/12 ✓ 8/4 ✓ 15/4 ✓ 0 NPML ✓ 154,5/180
+23/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 27
+M. Charlélie BORELLA N°38328 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 06/07/1993 à REIMS (FRANCE) BAC BAC S-SVT svt en 2011
+Conseiller M. COGRANNE Rémi Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38328 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  F   0
+IF14  B   6 ▲
+LO02  C   6 ▲
+LE01  D   4 GE21  D   4 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 0 12 4 4 20
+P15 ISI 2 IF02  B   6 ▲
+LO12  F   0
+EG23  B   6 ▲
+LO07  A   6 ▲
+LE02  E   4 GE28  E   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Vous auriez pu mieux faire.
+Total semestre 6 12 4 4 26
+A15 ISI 3 GL02  B   6 ▲
+IF15  C   6  ●
+NF16  D   6 ▲
+IF07  B   6 ▲
+IF09  B   6 ▲
+LE03  C   4 PO03  A   4 Poursuite normale
+Bon semestre
+Total semestre 18 12 4 4 38
+P16 ISI 4 TN09  B   30 Stage
+ALCIMED - LYON - FRANCE - du 01/02/16 au
+29/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MSI AC20  A   6  ● IF16  A   6  ●
+IF17  B   6  ●
+IF20  E   6  ●
+LE08  D   4 GE25  C   4
+GE36  B   4
+BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 6 18 4 8 36
+P17 ISI 6 MSI ST10 WORLDLINE - VILLEURBANNE CEDEX - FRANCE -
+du 06/02/17 au 04/08/17
+Total semestre
+Total 30 54 30 16 16 4 150
+TOTAUX Ingénieur de M. Charlélie BORELLA
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 30/60 16/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 150/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 28
+M. Denis CHENESSEAU N°38384 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 03/11/1994 à ORLEANS (FRANCE) BAC BAC S-Ing. en 2012
+Conseiller M. CAHIER Jean-Pierre Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle ISI 6 MPL      Mineur(s) GEC
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38384 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  D   6 ▲
+IF14  C   6 ▲
+LO02  C   6 ▲
+LE03  A   4 GE21  C   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  A   6 ▲
+IF03  C   6 ▲
+LO07  A   6 ▲
+LE08  A   4 GE31  E   4 BULE  ADM Poursuite normale
+Très bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  A   30 Stage
+ORANGE LABS - CAEN Cedex 4 - FRANCE - du
+01/09/15 au 12/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  B   6  ● IF08  C   6  ●
+IF11  C   6  ●
+LO10  D   6  ●
+GE41  C   6 SC02  A   4 ATDOC1
+ATDOC2
+Poursuite normale
+Assez bon semestre
+Total semestre 6 18 6 4 34
+A16 ISI 5 MPL GL02  B   6 ▲
+IF10  C   6  ●
+LS00  A   4 GE25  A   4
+GE28  D   4
+ATDOC3
+ATDOC4
+Poursuite normale
+Assez bon semestre
+Total semestre 12 4 8 24
+P17 ISI 6 MPL ST10 SMILE - ASNIERES SUR SEINE - FRANCE - du
+06/02/17 au 04/08/17
+Total semestre
+Total 42 42 30 12 22 4 152
+TOTAUX Ingénieur de M. Denis CHENESSEAU
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 42/30 ✓ 42/30 ✓
+Global 42 42 30/60 12/12 ✓ 22/4 ✓ 4/4 ✓ 0 NPML ✓ 152/180
+26/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 29
+M. Abderrahmane CHENOUFI N°38313 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 13/04/1994 à BENI MESSOUS (ALGERIE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. CAHIER Jean-Pierre Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38313 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  B   6 ▲
+IF14  B   6 ▲
+LO02  C   6 ▲
+LE01  D   4 SP01  B   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 LO12  B   6 ▲
+RE04  E   6 ▲
+LO07  C   6 ▲
+NF19  C   6 ▲
+LE02  E   4 GE31  F   0 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV ME.
+Total semestre 12 12 4 0 28
+A15 ISI 3 GL02  B   6 ▲ IF16  C   6  ●
+IF26  C   6  ●
+LE03  F   0 GE21  C   4
+GE28  D   4
+Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Prenez immédiatement contact avec M. LE
+COCHE pour l'anglais. Vous auriez pu mieux faire.
+Total semestre 6 12 0 8 26
+P16 ISI 4 TN09  C   30 LX10  C   4 Stage
+ARIES PACKAGING - ROSIERES PRES TROYES -
+FRANCE - du 01/02/16 au 22/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 4 34
+A16 ISI 5 MPL IF10  B   6  ● IF17  C   6  ● LE03  C   4 GE31  E   4 PO03  C   4 Poursuite normale
+Semestre moyen. Attention, vous n'avez toujours pas
+validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 6 6 4 4 4 24
+P17 ISI 6 MPL IF08  A   6  ●
+LO10  E   6  ●
+LE08  D   4 ATDOC1
+ATDOC2
+ATDOC3
+BULE  ADM
+Total semestre 12 4 16
+Total 36 54 30 20 12 8 160
+TOTAUX Ingénieur de M. Abderrahmane CHENOUFI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 20/12 ✓ 12/4 ✓ 8/4 ✓ 0 NPML ✓ 160/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 30
+Mme Mélanie COISSARD N°35302 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 04/11/1994 à CLERMONT FERRAND (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MSI      Mineur(s) CIE
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35302 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 CHMA01 A   6  ■
+MATH01  B   6  ■
+NF04  A   6  ■
+TN01  A   6  ■
+LE03  A   4
+SI10  A   4
+APP1 Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Total semestre 12 12 8 32
+P13 TC 2 MATH02  B   6  ■
+PHYS01  C   6  ■
+MS11  A   6  ■
+TN04  B   6  ■
+TN05  C   6 LE08  A   4 HT05  A   4 BULE  ADM Poursuite normale
+Très bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 4 4 38
+A13 TC 3 MATH03  C   6  ■
+PHYS03  A   6  ■
+SY01  A   6  ■
+IF14  A   6 ▲
+NF05  A   6  ■
+LE18  B   4 GE31  A   4 Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats. Vous pouvez prendre des UV de branche.
+Total semestre 18 12 4 4 38
+P14 TC 4 FMS01  B   6  ■
+MT00  A   6  ■
+FQ01  A   6  ◊
+NFB1S  A   6  ■
+CHINA  A   6 FAH02S  A   6 Poursuite normale
+ UTSEUS (Chine). Vous serez en branche au prochain
+semestre.
+Total semestre 12 12 6 6 36
+A14 ISI 1 NF16  A   6 ▲
+NF20  A   6 ▲
+IF07  A   6 ▲
+LO02  A   6 ▲
+LG10  C   4 GE44  A   4 HT06  A   4 Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Total semestre 12 12 4 4 4 36
+P15 ISI 2 IF02  B   6 ▲
+RE04  A   6 ▲
+IF03  B   6 ▲
+IF22  A   6  ●
+LO07  A   6 ▲
+EE06  B   4
+PH19  B   4
+AHE1  ADM  4
+AHE2  ADM  4
+ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Total semestre 12 18 8 8 46
+A15 ISI 3 IF15  B   6  ● GS11  B   6  ◊
+IF16  A   6  ●
+TX20  A   6  ●
+LC01  B   4
+LG08  C   4
+GE21  B   4 Poursuite normale
+Excellent semestre
+Total semestre 6 18 8 4 36
+P16 ISI 4 TN09  A   30 GE41  A   6 Stage
+ROLEX SA - GENEVE 26 - SUISSE - du 01/02/16 au
+29/07/16
+Total semestre 30 6 36
+A16 ISI 5 MSI AC20  A   6  ●
+GS15  A   6  ◊
+IF17  A   6  ●
+IF20  B   6  ●
+SC00  A   4
+SO02  A   4
+Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Double diplôme Georgia Tec
+A16 (UTT) + P17 (Metz) + A17 (stage ou USA) + A18
+(stage ou USA)
+Georgia Institute of Technology (Georgia Tech) Etats-
+Unis
+Total semestre 12 12 8 32
+P17 ISI 6 MSI PE1  EQU  2 Double diplôme Georgia Tec
+Georgia Institute of Technology (Georgia Tech) Etats-
+Unis
+Total semestre 2 2
+Total 96 108 36 34 24 24 10 332
+TOTAUX Ingénieur de Mme Mélanie COISSARD
+CS TM ST EC ME CT HP NPML
+TC 54/48 ✓ 36/24 ✓
+TCBR 54/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 36/30 ✓ 60/30 ✓
+Global 96 108 36/66 34/20 ✓ 24/8 ✓ 24/8 ✓ 10 NPML ✓ 332/300 ✓
+48/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 32
+M. Maxime COUTURE N°38391 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 05/07/1991 à AIRE-SUR-L'ADOUR (FRANCE) BAC BAC STG en 2008
+Conseiller M. SOULIER Eddie Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL      Mineur(s) GEC
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38391 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  F   0
+IF14  E   6 ▲
+LO02  C   6 ▲
+LE03  A   4 SC00  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  A   6 ▲
+LO12  C   6 ▲
+IF03  E   6 ▲
+LO07  B   6 ▲
+LE08  B   4 GE31  D   4 ATDOC1
+ATDOC2
+BULE  ADM Poursuite normale
+Bon semestre. Vous pouvez partir en stage.
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+SARL SINFIN - ST ANDRE LES VERGERS -
+FRANCE - du 13/07/15 au 31/12/15
+Total semestre 30 30
+P16 ISI 4 MPL IF05  A   6  ●
+RE04  F   0
+IF08  D   6  ●
+IF11  C   6  ●
+LO10  D   6  ●
+GE21  E   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 18 4 28
+A16 ISI 5 MPL GL02  E   6 ▲
+IF10  B   6  ●
+NF20  F   0
+IF16  C   6  ● LS01  D   4 GE25  D   4
+GE28  E   4
+Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Un effort général s'impose.
+Total semestre 12 6 4 8 30
+P17 ISI 6 MPL ISI_C01  C   3  ●
+ISI_C02  C   3  ●
+ST10 SMILE - ASNIERES SUR SEINE - FRANCE - du
+06/03/17 au 05/09/17
+Total semestre 6 6
+Total 36 54 30 12 16 4 152
+TOTAUX Ingénieur de M. Maxime COUTURE
+CS TM ST EC ME CT HP NPML
+TCBR 48/54
+FIL 42/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 12/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 152/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 33
+M. Alexandre CREUSOT N°38311 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 14/12/1994 à CHALONS-EN-CHAMPAGNE (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. SOULIER Eddie Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38311 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  B   6 ▲
+NF20  D   6 ▲
+IF14  D   6 ▲
+LO02  C   6 ▲
+LE03  B   4 GE31  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 LO12  B   6 ▲
+RE04  F   0
+IF03  D   6 ▲
+NF19  B   6 ▲
+LE08  B   4 GE36  D   4 BULE  ADM Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+A15 ISI 3 TN09  B   30 Stage
+CENTRE D'ECONOMIE RURALE - CHALONS
+CHAMPAGNE CEDEX - FRANCE - du 15/07/15 au
+08/01/16
+Total semestre 30 30
+P16 ISI 4 MPL IF02  E   6 ▲
+IF05  C   6  ●
+IF11  D   6  ●
+LO07  C   6 ▲
+LG02  D   4 SC02  C   4 ATDOC1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+A16 ISI 5 MPL IF10  C   6  ●
+LO01  A   6 ▲
+IF17  C   6  ●
+IF20  D   6  ●
+GE21  E   4 SC00  D   4 ATDOC2
+ATDOC3
+Poursuite normale
+Semestre moyen. Vous auriez pu mieux faire. De
+meilleurs résultats sont nécessaires dans les UV ME.
+Total semestre 12 12 4 4 32
+P17 ISI 6 MPL ST10 ACTUAL PLUS - ST JULIEN LES VILLAS - FRANCE -
+du 06/02/17 au 04/08/17
+Total semestre
+Total 42 48 30 12 12 8 152
+TOTAUX Ingénieur de M. Alexandre CREUSOT
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 42/30 ✓ 48/30 ✓
+Global 42 48 30/60 12/12 ✓ 12/4 ✓ 8/4 ✓ 0 NPML ✓ 152/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 34
+M. Etienne CUNIN N°38310 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 07/02/1994 à CHALONS-EN-CHAMPAGNE (FRANCE) BAC BAC S-SVT svt en 2012
+Conseiller Mme LORIETTE Sophie Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38310 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  F   0 IF07  D   6 ▲
+IF14  B   6 ▲
+LO02  C   6 ▲
+LE01  B   4 SP02  D   4 Poursuite avec conseil
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 0 18 4 4 26
+P15 ISI 2 IF02  A   6 ▲
+LO12  A   6 ▲
+IF03  C   6 ▲
+LO07  B   6 ▲
+LE02  A   4 GE31  A   4 Poursuite normale
+Très bon semestre. Vous pouvez partir en stage.
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+JTDC DITRSIBUTION - ARRAS - FRANCE - du
+13/07/15 au 31/12/15
+Total semestre 30 30
+P16 ISI 4 MPL IF05  A   6  ● IF08  B   6  ●
+IF11  C   6  ●
+NF19  A   6 ▲
+LE03  C   4
+LE08  C   4
+SP11  C   4 BULE  ADM Poursuite normale
+Bon semestre
+Total semestre 6 18 8 4 36
+A16 ISI 5 MPL GL02  C   6 ▲
+IF10  C   6  ●
+IF16  B   6  ● LP00  B   4 GE04  D   4 ATDOC1
+ATDOC2
+ATDOC3
+Poursuite normale
+Semestre moyen
+Total semestre 12 6 4 4 26
+P17 ISI 6 MPL ST10 MARBOTIC - TALENCE - FRANCE - du 27/02/17 au
+25/08/17
+Total semestre
+Total 30 54 30 20 8 8 150
+TOTAUX Ingénieur de M. Etienne CUNIN
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 30/60 20/12 ✓ 8/4 ✓ 8/4 ✓ 0 NPML ✓ 150/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 35
+M. Alexandre DAUSSY N°38318 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 15/05/1994 à EPINAL (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller M. DOYEN Guillaume Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle STIC 4 SSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38318 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  D   6 ▲ IF07  B   6 ▲
+IF14  D   6 ▲
+LO02  A   6 ▲
+LE02  B   4 GE31  E   4 Poursuite normale
+Bon semestre
+Total semestre 6 18 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  D   6 ▲
+IF03  C   6 ▲
+NF19  A   6 ▲
+LE03  C   4 GE41  A   4 SO05  B   4 ATDOC1
+ATDOC2
+ATDOC3
+Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 4 36
+A15 ISI 3 TN09  B   30 Stage
+ARKETEAM SAS - VANDOEUVRE LES NANCY -
+FRANCE - du 13/07/15 au 25/12/15
+Total semestre 30 30
+P16 ISI 4 UX30  EQU  5 ▲
+UX50  EQU  5  ●
+UX60  EQU  2
+UX61  EQU  2
+EI04L  B   6 Semestre d'études à l'étranger
+ Vous êtes autorisé(e) à vous inscrire en Master SSI.
+University of Oulu (Finlande). Attention, vous n'avez
+toujours pas validé votre NPML, indispensable pour
+être diplômé(e).
+Total semestre 10 4 6 20
+A16 ISI 5 MSI LE08  B   4 ATDOC4
+DD10  EQU  8
+BULE  ADM Poursuite normale
+Total semestre 4 8 12
+P17 ISI 6 MSI IF05  C   6  ◊
+IF19  B   6  ●
+IF08  B   6  ●
+IF22  C   6  ●
+IF24  A   6  ●
+Total semestre 12 18 30
+Total 30 58 30 16 14 4 8 160
+TOTAUX Ingénieur de M. Alexandre DAUSSY
+CS TM ST EC ME CT HP NPML
+TCBR 53/54
+FIL 29/30
+TCBR+FIL 24/30 58/30 ✓
+Global 30 58 30/60 16/12 ✓ 14/4 ✓ 4/4 ✓ 8 NPML ✓ 160/180
+18/16 ✓
+→ Master Sciences et Technologies de Automne 2016 à Printemps 2017 n°38318 Légende : * Master ▲ Master M1 ● Master M2 ◊ Hors Profil ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A16 STIC 3 SSI GS10  A   4  ●
+GS13  D   6  ●
+GS15  C   6  ●
+DD31  EQU  4  ●
+GS11  C   6  ●
+GS21  B   4  ●
+SD10  B   2  * DD32  EQU  4  * BULE  ADM  * Poursuite normale
+Bon semestre
+Total semestre 16 14 2 4 36
+P17 STIC 4 SSI
+Total semestre
+TOTAUX Master Sciences et Technologies de M. Alexandre DAUSSY
+CS TM ST EC ME CT HP NPML
+M2 30/24 ✓
+Global 16 14 0/30 6/6 ✓ NPML ✓ 36/60
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 37
+M. Maxime DEHONGHER N°38304 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 10/11/1993 à ABBEVILLE (FRANCE) BAC BAC S-SVT p.c. en 2011
+Conseiller Mme DUHAMEL ANDREA Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle IM 4 IMEDD
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38304 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  A   6 ▲
+NF20  D   6 ▲
+IF07  B   6 ▲
+IF14  A   6 ▲
+LE02  B   4 PH15  C   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+LO12  B   6 ▲
+EG23  A   6 ▲
+IF03  B   6 ▲
+LE03  A   4 EE06  A   4 AHE1  ADM  4
+ATDOC1
+Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Total semestre 12 12 4 4 4 36
+A15 ISI 3 UX30  EQU  6 ▲
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX60  EQU  4 UX80  EQU  4
+UX81  EQU  4
+Semestre d'études à l'étranger
+ KAIST - Korea Advanced Institute of Science and
+Technology (Corée du Sud).
+semestre à l'étranger
+L'étudiant ne pourra pas suivre l'UV suivante : IF20
+Total semestre 18 4 8 30
+P16 ISI 4 TN09  B   30 EI04L  A   6 Stage
+JCDECAUX FRANCE - PLAISIR CEDEX - FRANCE -
+du 04/01/16 au 01/07/16
+ Vous êtes autorisé(e) à vous inscrire en Master
+IMEDD. Attention, vous n'avez toujours pas validé
+votre NPML, indispensable pour être diplômé(e).
+Total semestre 30 6 36
+A16 ISI 5 MSI LE08  B   4
+LS00  C   4
+DD10  EQU  8 BULE  ADM Poursuite normale
+Total semestre 8 8 16
+P17 ISI 6 MSI IF05  C   6  ◊
+IF19  B   6  ●
+IF08  B   6  ●
+IF22  B   6  ●
+ATDOC2
+ATDOC3
+PE1  EQU  2
+Total semestre 12 12 2 26
+Total 36 54 30 20 6 16 14 176
+TOTAUX Ingénieur de M. Maxime DEHONGHER
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 36 54 30/60 20/12 ✓ 6/4 ✓ 16/4 ✓ 14 NPML ✓ 176/180
+22/16 ✓
+→ Master Sciences et Technologies de Automne 2016 à Printemps 2017 n°38304 Légende : * Master ▲ Master M1 ● Master M2 ◊ Hors Profil ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A16 IM 3 IMEDD EI01  C   6  ●
+ME01  C   4  ●
+ME05  B   4  ●
+EC01  D   6  ●
+ME02  C   4  ●
+LS00  C   4  *
+SD10  A   2  *
+DD32  EQU  4  * BULE  ADM  * Poursuite normale
+Bon semestre
+Total semestre 14 10 6 4 34
+P17 IM 4 IMEDD
+Total semestre
+TOTAUX Master Sciences et Technologies de M. Maxime DEHONGHER
+CS TM ST EC ME CT HP NPML
+M2 24/24 ✓
+Global 14 10 0/30 10/6 ✓ NPML ✓ 34/60
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 39
+M. Constant DJIEMON SIDJUI N°38607 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 08/05/1985 à NKONGSAMBA (CAMEROUN) BAC DIP. ETRANGER en 2009
+Conseiller M. NIGRO Jean-Marc Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38607 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  B   6 ▲
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF09  C   6 ▲
+IF14  B   6 ▲
+TX10  B   6 ▲
+LE00  E   4
+LE01I  E   4
+GE04  E   4 Poursuite normale
+Bon semestre. Vous ne pourrez pas suivre les UV :
+NF16, LO02 et LO07.
+Total semestre 12 30 8 4 54
+P15 ISI 2 IF02  C   6 ▲
+IF05  E   6  ●
+IF03  C   6 ▲
+LO10  D   6  ●
+LE02  F   0 GE31  B   4
+GE36  F   0
+Poursuite avec réserves
+Semestre médiocre. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Vous auriez pu mieux faire.
+Total semestre 12 12 0 4 28
+A15 ISI 3 TN09  B   30 Stage
+SARL 3WRE - PARIS - FRANCE - du 27/07/15 au
+22/01/16
+ Vous êtes autorisé(e) à chercher un contrat de
+professionnalisation.
+Total semestre 30 30
+P16 ISI 4 MPL IF08  D   6  ●
+NF19  B   6 ▲
+LE02  D   4
+LE03  F   0
+PO03  B   4
+SE02  D   4
+Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Attention à l'anglais.
+Total semestre 12 4 8 24
+A16 ISI 5 Libre IF10  C   6  ● IF20  C   6  ● ST10 LX10  D   4 Stage
+SQLI AGENCY - LA PLAINE ST DENIS - FRANCE -
+du 05/09/16 au 08/09/17
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Formation par alternance
+Total semestre 6 6 4 16
+P17 ISI 6 Libre IF19  D   6  ● TX11  C   6 ▲ ST10  RES  0 GE18  D   4 ATDOC1 BULE  ADM SQLI AGENCY - LA PLAINE ST DENIS - FRANCE -
+du 05/09/16 au 08/09/17
+Formation par alternance
+Total semestre 6 6 0 4 16
+Total 36 66 30 16 12 8 168
+TOTAUX Ingénieur de M. Constant DJIEMON SIDJUI
+CS TM ST EC ME CT HP NPML
+TCBR 66/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 66/30 ✓
+Global 36 66 30/60 16/12 ✓ 12/4 ✓ 8/4 ✓ 0 NPML ✓ 168/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 40
+M. Benjamin DONATI N°38334 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 17/12/1992 à ALENCON (FRANCE) BAC BAC S-Ing. en 2010
+Conseiller M. NIGRO Jean-Marc Dernier diplôme obtenu LICENCE et LICENCE LMD
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38334 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  E   6 ▲
+IF14  D   6 ▲
+LO02  F   0
+LE02  B   4 GE10  F   0 Poursuite avec réserves
+Mauvais semestre. Votre maintien à l'UTT dépendra
+de vos résultats au prochain semestre d'études. Vous
+n'êtes pas autorisé(e) à chercher un stage au prochain
+semestre.
+Total semestre 6 6 4 0 16
+P15 ISI 2 IF02  D   6 ▲
+LO12  D   6 ▲
+LO07  B   6 ▲
+NF19  C   6 ▲
+LE03  B   4 ATDOC1 Poursuite normale
+Semestre moyen. C'est mieux, ne relachez pas vos
+efforts.
+Total semestre 12 12 4 28
+A15 ISI 3 GL02  C   6 ▲ EG23  C   6 ▲
+IF07  A   6 ▲
+LE08  B   4 GE34  C   4 PO03  A   4 BULE  ADM Poursuite normale
+Bon semestre
+Total semestre 6 12 4 4 4 30
+P16 ISI 4 TN09  A   30 Stage
+PORSCHE FRANCE SA - ROISSY EN FRANCE -
+FRANCE - du 20/01/16 au 22/07/16
+Total semestre 30 30
+A16 ISI 5 MPL UX40  EQU  10 ● UX50  EQU  10 ●
+UX51  EQU  5  ●
+UX70  EQU  5 Semestre d'études à l'étranger
+semestre à l'étranger
+Universitetet i Stavanger (Norvège).
+Total semestre 10 15 5 30
+P17 ISI 6 MPL IF05  B   6  ● IF11  B   6  ● GE21  C   4
+GE31  B   4
+EV04  C   4 ATDOC2
+ATDOC3
+Total semestre 6 6 8 4 24
+Total 40 51 30 12 17 8 158
+TOTAUX Ingénieur de M. Benjamin DONATI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 37/30 ✓
+TCBR+FIL 40/30 ✓ 51/30 ✓
+Global 40 51 30/60 12/12 ✓ 17/4 ✓ 8/4 ✓ 0 NPML ✓ 158/180
+25/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 41
+M. Quentin DUMORTIER N°38414 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 13/05/1994 à COMPIEGNE (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller Mlle LEWKOWICZ Myriam Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38414 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  B   6 ▲ IF07  F   0
+IF14  C   6 ▲
+LO02  C   6 ▲
+LE02  B   4 SC00  B   4 Poursuite avec conseil
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV TM.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  C   6 ▲
+LO12  C   6 ▲
+RE04  D   6 ▲
+EG23  B   6 ▲ LE03  B   4 GE36  B   4 Poursuite normale
+Assez bon semestre. C'est mieux, ne relachez pas vos
+efforts.
+Total semestre 18 6 4 4 32
+A15 ISI 3 TN09  A   30 Stage
+ERMEWA SA - LEVALLOIS PERRET - FRANCE - du
+01/09/15 au 19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF03  B   6 ▲
+IF08  B   6  ●
+IF11  C   6  ●
+LO10  D   6  ●
+TX10  B   6 ▲
+LE08  C   4 SC02  ABS BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 30 4 34
+A16 ISI 5 MPL GL02  C   6 ▲
+IF10  B   6  ●
+IF16  A   6  ●
+IF17  ABS
+TX20  A   6  ●
+HT03  D   4
+LI03  D   4
+PO03  ABS
+Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CT.
+Total semestre 12 12 8 32
+P17 ISI 6 MPL ST10 ERMEWA SA - LEVALLOIS PERRET - FRANCE - du
+13/02/17 au 28/07/17
+Total semestre
+Total 36 60 30 12 4 12 154
+TOTAUX Ingénieur de M. Quentin DUMORTIER
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 60/30 ✓
+Global 36 60 30/60 12/12 ✓ 4/4 ✓ 12/4 ✓ 0 NPML ✓ 154/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 42
+M. Alexandre DUPONCHEL N°38395 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 06/11/1994 à LESQUIN (FRANCE) BAC BAC S-SVT svt en 2012
+Conseiller Mlle LEWKOWICZ Myriam Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38395 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  B   6 ▲ IF07  B   6 ▲
+IF14  F   0
+LO02  C   6 ▲
+LE01  B   4 EP01  F   0 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM. De meilleurs résultats
+sont nécessaires dans les UV CT.
+Total semestre 6 12 4 0 22
+P15 ISI 2 LO12  D   6 ▲
+RE04  F   0
+LO07  C   6 ▲
+NF19  B   6 ▲
+LE02  B   4 GE31  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Vous pouvez partir en stage.
+Total semestre 6 12 4 4 26
+A15 ISI 3 TN09  B   30 Stage
+GFI INFORMATIQUE - LILLE - FRANCE - du
+07/09/15 au 19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF02  C   6 ▲
+IF05  C   6  ●
+IF03  C   6 ▲
+LO10  B   6  ●
+LE03  D   4 HT05  D   4
+MTC01  C   4
+Poursuite normale
+Assez bon semestre. Vous devez lever votre réserve
+en HT05. Attention, vous n'avez toujours pas validé
+votre NPML, indispensable pour être diplômé(e).
+Total semestre 12 12 4 8 36
+A16 ISI 5 MPL GL02  B   6 ▲
+IF10  B   6  ●
+IF16  C   6  ●
+TX20  B   6  ●
+LE08  D   4 SC00  C   4
+SO02  B   4
+ATDOC1
+ATDOC2
+ATDOC3
+BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 8 36
+P17 ISI 6 MPL ST10 ALTIMA - ROUBAIX - FRANCE - du 06/02/17 au
+04/08/17
+Total semestre
+Total 36 48 30 16 4 16 150
+TOTAUX Ingénieur de M. Alexandre DUPONCHEL
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 36 48 30/60 16/12 ✓ 4/4 ✓ 16/4 ✓ 0 NPML ✓ 150/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 43
+M. Adrien DUROT N°38407 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 03/08/1993 à MONTREAL (CANADA) BAC BAC S en 2012
+Conseiller M. BEAUSEROY Pierre Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38407 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  B   6 ▲
+IF14  D   6 ▲
+LO02  C   6 ▲
+LS02  E   4 GE21  C   4 NPML  ADM Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  E   6 ▲
+LO12  D   6 ▲
+EG23  C   6 ▲
+LO07  C   6 ▲
+NF19  B   6 ▲
+LS03  C   4 GE34  F   0 Poursuite avec conseil
+Semestre moyen. Vous auriez pu mieux faire.
+Total semestre 12 18 4 0 34
+A15 ISI 3 TN09  B   30 Stage
+WORLDLINE/RBU - RENNES - FRANCE - du
+03/08/15 au 29/01/16
+Total semestre 30 30
+P16 ISI 4 UX40  EQU  6  ● UX60  EQU  3,5 UX70  EQU  3,5
+UX71  EQU  3,5
+UX80  EQU  3,5
+UX81  EQU  3,5
+Semestre d'études à l'étranger
+ Universidad Tecnica Federico Santa Maria (CHILI).
+Total semestre 6 3,50 7 7 23,50
+A16 ISI 5 MPL IF10  C   6  ● IF16  C   6  ●
+IF17  D   6  ●
+IF20  ABS
+TX20  B   6  ●
+LP00  A   4
+LS10  A   4
+ATDOC1
+ATDOC2
+ATDOC3
+BULS  ADM Poursuite normale
+Assez bon semestre
+Total semestre 6 18 8 32
+P17 ISI 6 MPL ST10 WORLDLINE/RBU - RENNES - FRANCE - du
+01/03/17 au 31/08/17
+Total semestre
+Total 36 48 30 19,50 11 7 151,50
+TOTAUX Ingénieur de M. Adrien DUROT
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 36 48 30/60 19,5/12 ✓ 11/4 ✓ 7/4 ✓ 0 NPML ✓ 151,5/180
+18/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 44
+M. Théo DUVAL N°38439 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 26/10/1994 à CHAUMONT (FRANCE) BAC BAC S-Ing. en 2012
+Conseiller M. SALEMBIER Pascal Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38439 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  F   0
+IF14  C   6 ▲
+LO02  F   0
+LE02  C   4 GE21  C   4 Poursuite avec réserves
+Très mauvais semestre. Votre maintien à l'UTT
+dépendra de vos résultats au prochain semestre
+d'études. Vous devez lever votre réserve en LE02.
+Vous n'êtes pas autorisé(e) à chercher un stage au
+prochain semestre.
+Total semestre 0 6 4 4 14
+P15 ISI 2 IF02  E   6 ▲
+LO12  C   6 ▲
+EG23  D   6 ▲ LE03  C   4 GE31  F   0 SC02  B   4 Poursuite avec conseil
+Semestre moyen. C'est mieux, ne relachez pas vos
+efforts.
+Total semestre 12 6 4 0 4 26
+A15 ISI 3 GL02  C   6 ▲ IF07  D   6 ▲
+IF09  D   6 ▲
+LO02  D   6 ▲
+LE08  D   4 GE28  D   4 BULE  ADM Poursuite normale
+Semestre moyen.
+Vous pouvez partir en stage.
+Total semestre 6 18 4 4 32
+P16 ISI 4 TN09  C   30 Stage
+IBM SERVICES CENTER FRANCE - LOMME -
+FRANCE - du 01/02/16 au 29/07/16
+Total semestre 30 30
+A16 ISI 5 MSI IF15  C   6  ●
+NF20  D   6 ▲
+IF16  C   6  ●
+IF17  C   6  ●
+IF20  B   6  ●
+GE25  E   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 18 4 34
+P17 ISI 6 MSI IF19  B   6  ● IF08  B   6  ●
+IF24  A   6  ●
+KO00  B   4 GE31  E   4 SO05  C   4 ATDOC1
+ATDOC2
+ATDOC3
+Total semestre 6 12 4 4 4 30
+Total 36 60 30 16 16 8 166
+TOTAUX Ingénieur de M. Théo DUVAL
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 36/30 ✓ 60/30 ✓
+Global 36 60 30/60 16/12 ✓ 16/4 ✓ 8/4 ✓ 0 NPML ✓ 166/180
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 45
+M. Kodjo Mario EDJI N°38455 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 08/06/1992 à LOME (TOGO) BAC DIP. ETRANGER en 2009
+Conseiller M. SALEMBIER Pascal Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38455 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  F   0
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF07  F   0
+IF09  C   6 ▲
+IF14  E   6 ▲
+LE01  C   4 GE36  F   0 Poursuite avec réserves
+Mauvais semestre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. De meilleurs résultats sont nécessaires dans
+les UV ME. Pour pouvoir partir en stage, vous devez
+attendre la décision du 1er jury de suivi du prochain
+semestre.
+Total semestre 6 24 4 0 34
+P15 ISI 2 IF02  B   6 ▲
+LO12  F   0
+LO07  C   6 ▲
+NF19  C   6 ▲
+LE02  D   4 GE41  A   4 Poursuite avec conseil
+Semestre moyen. C'est mieux, ne relachez pas vos
+efforts.
+Vous pouvez partir en stage.
+Total semestre 6 12 4 4 26
+A15 ISI 3 GL02  E   6 ▲
+IF10  D   6  ●
+IF16  E   6  ●
+IF26  C   6  ●
+LE03  D   4 APP10  D   4
+GE38  E   6
+Poursuite normale
+Semestre médiocre.
+Total semestre 12 12 4 10 38
+P16 ISI 4 TN09  A   30 Stage
+PONT SUR SEINE INDUSTRIES - PONT SUR SEINE
+- FRANCE - du 01/02/16 au 29/07/16
+ Vous êtes autorisé(e) à chercher un contrat de
+professionnalisation. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 30 30
+A16 ISI 5 Libre IF20  D   6  ●
+TX20  C   6  ●
+ST10 LX10  D   4 Stage
+VALEO SYSTEMES THERMIQUES - LA VERRIERE
+CEDEX - FRANCE - du 12/09/16 au 30/09/17
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Formation par alternance
+Total semestre 12 4 16
+P17 ISI 6 Libre IF05  D   6  ●
+IF19  F   0
+ST10  B   30 GE18  C   4 ER01  C   4 BULE  ADM VALEO SYSTEMES THERMIQUES - LA VERRIERE
+CEDEX - FRANCE - du 12/09/16 au 30/09/17
+Formation par alternance
+Total semestre 6 30 4 4 44
+Total 30 60 60 16 18 4 188
+TOTAUX Ingénieur de M. Kodjo Mario EDJI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 30 60 60/60 ✓ 16/12 ✓ 18/4 ✓ 4/4 ✓ 0 NPML ✓ 188/180 ✓
+22/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 46
+M. Yassine EL BIDAOUI N°38606 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 25/11/1994 à CASABLANCA (MAROC) BAC DIP. ETRANGER en 2012
+Conseiller M. SALEMBIER Pascal Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38606 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  D   6 ▲
+IF14  C   6 ▲
+LO02  C   6 ▲
+LE01  B   4 GE21  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  FX   0
+LO12  E   6 ▲
+EG23  D   6 ▲
+IF03  E   6 ▲
+LO07  D   6 ▲
+LE02  E   4 GE31  E   4 Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 18 4 4 32
+A15 ISI 3 TN09  D   30 Stage
+EFMA - PARIS - FRANCE - du 01/08/15 au 29/01/16
+Total semestre 30 30
+P16 ISI 4 IF02  D   6 ▲ IF08  E   6  ●
+IF11  E   6  ●
+LE03  D   4
+LS00  D   4
+GE34  ABS BULE  ADM Poursuite normale
+Semestre médiocre. Le travail personnel fourni est
+clairement insuffisant.
+Total semestre 6 12 8 26
+A16 ISI 5 MPL UX50  EQU  5  ●
+UX51  EQU  5  ●
+UX60  EQU  5 Semestre d'études à l'étranger
+ Votre comportement et votre attitude sont souvent
+inacceptables, ce n'est pas compatible avec les
+fonctions d'ingénieur : vous devez les corriger
+immédiatement.
+semestre à l'étranger
+Instituto Tecnológico y de Estudios Superiores de
+Monterrey - ITESM (Mexique).
+Total semestre 10 5 15
+P17 ISI 6 MPL IF05  D   6  ● LO10  D   6  ● GE43  F   0 SP11  D   4
+Total semestre 6 6 0 4 16
+Total 30 58 30 21 8 4 151
+TOTAUX Ingénieur de M. Yassine EL BIDAOUI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 34/30 ✓
+TCBR+FIL 30/30 ✓ 58/30 ✓
+Global 30 58 30/60 21/12 ✓ 8/4 ✓ 4/4 ✓ 0 NPML ✓ 151/180
+12/16
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 47
+M. Chengang FENG N°35025 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 12/04/1992 à ZHEJIANG (CHINE) BAC DIP. ETRANGER en 2010
+Conseiller Mme DUHAMEL ANDREA Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35025 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+LO02  F   0
+RE01  F   0
+LF10  C   4
+LF11  B   4
+Poursuite avec réserves
+Mauvais semestre. Prenez contact avec le service des
+Relations Internationales de l'UTT. Un effort général
+s'impose.
+DD Xi'An Jiaotong University
+Total semestre 12 0 8 20
+P13 ISI 2 IF02  D   6 ▲
+RE04  C   6 ▲
+LO07  C   6 ▲
+NF19  C   6 ▲
+LF14  B   4 GE21  D   4 Poursuite normale
+Assez bon semestre. En progrès. Ne négligez pas les
+UV CT.
+DD Xi'An Jiaotong University
+Total semestre 12 12 4 4 32
+A13 ISI 3 IF15  B   6 ▲ IF14  C   6 ▲
+IF20  A   6  ●
+RE01  B   6 ▲
+LF15  C   4 HT03  D   4 NPML  ADM Poursuite normale
+Bon semestre
+DD Xi'An Jiaotong University
+Total semestre 6 18 4 4 32
+P14 ISI 4 TN09  C   30 Stage
+CAIRN.INFO - PARIS - FRANCE - du 03/02/14 au
+31/07/14
+DD Xi'An Jiaotong University
+Total semestre 30 30
+A14 ISI 5 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P15 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+A15 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P16 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+A16 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P17 ISI 6 Libre DD Xi'An Jiaotong University
+Total semestre
+Total 30 30 30 16 4 4 114
+TOTAUX Ingénieur de M. Chengang FENG
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 6/30
+TCBR+FIL 30/30 ✓ 30/30 ✓
+Global 30 30 30/60 16/12 ✓ 4/4 ✓ 4/4 ✓ 0 NPML ✓ 114/180
+8/16
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 49
+Mme Lou GRIMAL N°38540 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 29/05/1995 à NANCY (FRANCE) BAC BAC S-SVT svt en 2012
+Conseiller Mlle LEWKOWICZ Myriam Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle IM 4 IMEDD
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38540 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  D   6 ▲
+IF07  C   6 ▲
+IF14  B   6 ▲
+LE03  A   4 EV04  A   4 Poursuite avec conseil
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Vous auriez pu mieux faire.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  C   6 ▲ IF03  B   6 ▲
+LO07  B   6 ▲
+NF19  C   6 ▲
+LE08  A   4 HT05  B   4 BULE  ADM Poursuite normale
+Bon semestre. En progrès.
+Total semestre 6 18 4 4 32
+A15 ISI 3 UX20  EQU  5 ▲
+UX40  EQU  5  ●
+UX30  EQU  5 ▲
+UX50  EQU  5  ●
+UX60  EQU  5 UX70  EQU  5 ER01  A   4 Semestre d'études à l'étranger
+ University of Southern (Danemark).
+semestre à l'étranger
+L'étudiante ne pourra pas suivre l'UV suivante : IF08
+Total semestre 10 10 5 5 4 34
+P16 ISI 4 TN09  A   30 Stage
+CEA / DAM - ARPAJON CEDEX - FRANCE - du
+22/02/16 au 05/08/16
+ Vous êtes autorisé(e) à vous inscrire en Master
+IMEDD.
+Total semestre 30 30
+A16 ISI 5 MSI LG10  D   4 DD10  EQU  8 Poursuite normale
+Total semestre 4 8 12
+P17 ISI 6 MSI IF05  A   6  ◊
+IF19  A   6  ●
+IF22  C   6  ●
+TX10  RES  0
+LG11  D   4
+Total semestre 12 6 4 22
+Total 34 46 30 21 5 12 8 156
+TOTAUX Ingénieur de Mme Lou GRIMAL
+CS TM ST EC ME CT HP NPML
+TCBR 52/54
+FIL 22/30
+TCBR+FIL 28/30 46/30 ✓
+Global 34 46 30/60 21/12 ✓ 5/4 ✓ 12/4 ✓ 8 NPML ✓ 156/180
+17/16 ✓
+→ Master Sciences et Technologies de Automne 2016 à Printemps 2017 n°38540 Légende : * Master ▲ Master M1 ● Master M2 ◊ Hors Profil ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A16 IM 3 IMEDD EI01  B   6  ●
+ME01  D   4  ●
+ME05  A   4  ●
+EC01  B   6  ●
+ME02  C   4  ●
+SD10  A   2  * DD32  EQU  4  * BULE  ADM  * Poursuite normale
+Bon semestre
+Total semestre 14 10 2 4 30
+P17 IM 4 IMEDD
+Total semestre
+TOTAUX Master Sciences et Technologies de Mme Lou GRIMAL
+CS TM ST EC ME CT HP NPML
+M2 24/24 ✓
+Global 14 10 0/30 6/6 ✓ NPML ✓ 30/60
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 51
+M. Arthur GUEDON N°35257 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 31/05/1994 à ANGERS (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller Mlle BROUSSET Kristine Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MSI      Mineur(s) GEB
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35257 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 CHMA01 B   6  ■
+MATH01  C   6  ■
+NF04  B   6  ■
+TN04  C   6  ■
+LE01  E   4
+SI10  B   4
+APP1 Poursuite normale
+Bon semestre
+Total semestre 12 12 8 32
+P13 TC 2 MATH02  D   6  ■
+PHYS01  B   6  ■
+MS11  C   6  ■
+TN01  B   6  ■
+TN05  A   6 LE02  D   4 GE31  C   4 Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 4 4 38
+A13 TC 3 CHMA02 D   6  ■
+MATH03  E   6  ■
+NF05  D   6  ■ LE03  F   0 GE21  D   4 EV01  C   4 Poursuite normale
+Semestre moyen. Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 6 0 4 4 26
+P14 TC 4 CHMA04 B   6  ■
+SH01  B   6  ■
+C2I1  A   4  ■
+LO14  B   6 ▲
+LE03  E   4 GE36  B   4 Poursuite normale
+Bon semestre. Vous serez en branche au prochain
+semestre.
+Total semestre 12 10 4 4 30
+A14 ISI 1 NF16  B   6 ▲
+NF20  B   6 ▲
+IF14  B   6 ▲
+LO02  C   6 ▲
+LE08  C   4 GE04  C   4
+GE10  B   4
+Poursuite normale
+Bon semestre. N'oubliez pas que pour être diplômé(e),
+vous devez passer un semestre à l'étranger.
+Total semestre 12 12 4 8 36
+P15 ISI 2 IF02  B   6 ▲
+RE04  B   6 ▲
+IF03  C   6 ▲
+LO07  B   6 ▲
+GE32  A   4 PO03  A   4 Poursuite normale
+Très bon semestre. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 12 12 4 4 32
+A15 ISI 3 UX40  EQU  6  ● UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX52  EQU  6  ●
+Semestre d'études à l'étranger
+ Université Laval (Canada).
+semestre à l'étranger
+L'étudiant ne pourra pas suivre l'UV suivante : IF08
+Total semestre 6 18 24
+P16 ISI 4 TN09  B   30 Stage
+ARAMISAUTO - ARCUEIL - FRANCE - du 18/01/16
+au 15/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MSI IF15  B   6  ● TX20  C   6  ● LE04  C   4 GE25  C   4
+GE41  B   6
+ATDOC1
+ATDOC2
+ATDOC3
+BULE  ADM Poursuite normale
+Semestre moyen
+Total semestre 6 6 4 10 26
+P17 ISI 6 MSI ST10 CAPGEMINI TECHNOLOGY SERVICES - NANTES
+CEDEX 1 - FRANCE - du 06/02/17 au 04/08/17
+Total semestre
+Total 84 88 36 24 34 8 274
+TOTAUX Ingénieur de M. Arthur GUEDON
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 34/24 ✓
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 84 88 36/66 24/20 ✓ 34/8 ✓ 8/8 ✓ 0 NPML ✓ 274/300
+42/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 53
+Mme Jie HOU N°37676 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 12/08/1994 à SHAANXI (CHINE) BAC DIP. ETRANGER en 2012
+Conseiller M. BENEL Aurelien Dernier diplôme obtenu Diplôme d'établissement ETRANGER secondaire
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°37676 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  A   6 ▲
+IF14  C   6 ▲
+LO02  C   6 ▲
+LF02  B   4
+LF10  B   4
+LF11  C   4
+BULE  ADM Poursuite normale
+Bon semestre
+DD Xi'An Jiaotong University
+Total semestre 12 12 12 36
+P15 ISI 2 IF02  D   6 ▲
+LO12  D   6 ▲
+RE04  C   6 ▲
+LO07  B   6 ▲
+NF19  B   6 ▲
+LFT  ABS
+LF14  B   4
+GE31  A   4 Poursuite normale
+Bon semestre
+DD Xi'An Jiaotong University
+Total semestre 18 12 4 4 38
+A15 ISI 3 IF20  B   6  ●
+IF26  B   6  ●
+LF03  B   4
+LF15  A   4
+GE21  B   4 EV04  A   4 Poursuite normale
+Très bon semestre
+DD Xi'An Jiaotong University
+NPML FR
+Total semestre 12 8 4 4 28
+P16 ISI 4 TN09  A   30 Stage
+PARTICEEP - PARIS - FRANCE - du 01/02/16 au
+02/08/16
+DD Xi'An Jiaotong University
+Total semestre 30 30
+A16 ISI 5 NPMLFLE ADM Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P17 ISI 6 Libre DD Xi'An Jiaotong University
+Total semestre
+Total 30 36 30 24 8 4 132
+TOTAUX Ingénieur de Mme Jie HOU
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 12/30
+TCBR+FIL 30/30 ✓ 36/30 ✓
+Global 30 36 30/60 24/12 ✓ 8/4 ✓ 4/4 ✓ 0 NPML ✓ 132/180
+12/16
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 54
+Mme Hadia IDRISSI AOUAD N°39945 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 23/09/1993 à CASABLANCA (MAROC) BAC DIP. ETRANGER en 2011
+Conseiller M. GAGLIO Gerald Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2015 à Printemps 2017 n°39945 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A15 ISI 3 EX50  EQU  6 ▲
+EX51  EQU  6 ▲
+GL02  F   0
+IF15  A   6  ●
+EX60  EQU  6 ▲
+EX61  EQU  6 ▲
+IF14  D   6 ▲
+IF16  B   6  ●
+TN09  EQU  30 EX70  EQU  4
+LE00  A   4
+LE01  A   4
+GE36  B   4 EX90  EQU  4 Poursuite avec conseil
+Semestre moyen. Vous ne pourrez pas suivre les UV :
+NF16, NF20, LO02 et NF19. De meilleurs résultats
+sont nécessaires dans les UV CS de tronc commun de
+branche. Vos résultats en langues sont insuffisants
+pour obtenir le NPML en temps voulu, réagissez.
+Total semestre 18 24 30 12 4 4 92
+P16 ISI 4 MSI IF02  B   6 ▲
+IF19  C   6  ●
+IF03  F   0
+IF08  D   6  ●
+IF24  A   6  ●
+LE02  B   4 GE21  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM. Vos résultats en langues
+sont insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Vous devez valider le TCB le semestre
+prochain.
+Total semestre 12 12 4 4 32
+A16 ISI 5 MSI GL02  C   6 ▲ IF07  C   6 ▲
+IF09  C   6 ▲
+LE08  E   4 HT03  F   0
+LI03  E   4
+ATDOC1
+ATDOC2
+ATDOC3
+BULE  ADM Poursuite normale
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CT.
+Total semestre 6 12 4 4 26
+P17 ISI 6 MSI ST10  C   30 CGI FRANCE - COURBEVOIE - FRANCE - du
+06/02/17 au 04/08/17
+Total semestre 30 30
+Total 36 48 60 20 8 8 180
+TOTAUX Ingénieur de Mme Hadia IDRISSI AOUAD
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 36 48 60/60 ✓ 20/12 ✓ 8/4 ✓ 8/4 ✓ 0 NPML ✓ 180/180 ✓
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 55
+M. Christopher KAY N°35344 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 01/09/1994 à PARIS12 (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. LEMERCIER Marc Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35344 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  E   6  ■
+PHYS01  E   6  ■
+MS11  E   6  ■
+TN04  C   6  ■
+FM01  B   2
+LE11  B   4
+SI10  A   4
+APP1 Poursuite normale
+Semestre moyen
+Total semestre 12 12 10 34
+P13 TC 2 CHMA01 D   6  ■
+MATH02  E   6  ■
+NF04  E   6  ■
+TN01  D   6  ■
+TN05  A   6 LE17  A   4
+LS02  B   4
+BULE  ADM Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 8 38
+A13 TC 3 MATH03  F   0
+PHYS03  E   6  ■
+LO02  E   6 ▲
+NF05  D   6  ■
+LS03  C   4 GE31  B   4 Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS. Vous pouvez prendre 2
+TM de branche.
+Total semestre 6 12 4 4 26
+P14 TC 4 MATH03  C   6  ■
+SH01  B   6  ■
+TITS  B   6  ■
+LC00  A   4
+LS10  A   4
+GE21  C   4 Poursuite normale
+Très bon semestre. Vous êtes autorisé(e) à passer en
+branche à titre dérogatoire.
+Total semestre 18 8 4 30
+A14 ISI 1 GL02  C   6 ▲
+NF16  A   6 ▲
+IF14  B   6 ▲ LC01  A   4
+LS08  A   4
+GE34  B   4 Poursuite normale
+Très bon semestre. N'oubliez pas que pour être
+diplômé(e), vous devez passer un semestre à
+l'étranger.
+Le jury de suivi ne demande pas de compensation de
+l'UV CS de tronc commun manquante.
+Total semestre 12 6 8 4 30
+P15 ISI 2 AC10  A   6 ▲
+IF02  A   6 ▲
+IF03  B   6 ▲
+LO07  A   6 ▲
+GE32  A   4 LI01  B   4 ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  A   30 Stage
+BROCELIA - PARIS - FRANCE - du 31/08/15 au
+12/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  B   6  ●
+NF20  B   6 ▲
+IF08  A   6  ● LXLS  A   4 ER01  A   4
+SE02  C   4
+Poursuite normale
+Très bon semestre
+Total semestre 12 6 4 8 30
+A16 ISI 5 MPL IF16  C   6  ●
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX52  EQU  6  ●
+UX80  EQU  5 Semestre d'études à l'étranger
+semestre à l'étranger
+University of Newcastle (Australie).
+Total semestre 24 5 29
+P17 ISI 6 MPL ST10 PE1  EQU  2 AXA IMP - PARIS LA DEFENSE CEDEX - FRANCE -
+du 16/01/17 au 13/07/17
+Total semestre 2 2
+Total 84 84 36 42 16 17 2 281
+TOTAUX Ingénieur de M. Christopher KAY
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 30/24 ✓
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 84 84 36/66 42/20 ✓ 16/8 ✓ 17/8 ✓ 2 NPML ✓ 281/300
+33/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 57
+M. Louis KLEIJN N°35343 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 28/03/1995 à SENLIS (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. GOUDRY Stéphane Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35343 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  C   6  ■
+PHYS01  C   6  ■
+EN01  E   6  ■
+MS11  D   6  ■
+LE03  B   4
+SI10  C   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 32
+P13 TC 2 CHMA01 D   6  ■
+MATH02  D   6  ■
+NF04  B   6  ■
+TN01  C   6  ■
+TN05  C   6 LE08  A   4 SP11  E   4 BULE  ADM Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Sport/études 1
+Total semestre 12 12 6 4 4 38
+A13 TC 3 MATH03  E   6  ■
+NF05  B   6  ■
+PHYS03  D   6  ■
+TN04  F   0 LG03  C   4 SP01  D   4 Poursuite normale
+Semestre moyen. Vous pouvez prendre 2 TM de
+branche.
+Sport/études 1
+Total semestre 18 0 4 4 26
+P14 TC 4 PHYS05  F   0
+SH01  D   6  ■
+TITS  B   6  ■ LC00  C   4 GE21  C   4 HT05  C   4 Poursuite normale
+Semestre moyen. Vous êtes autorisé(e) à passer en
+branche à titre dérogatoire.
+Sport/études 1
+Total semestre 6 6 4 4 4 24
+A14 ISI 1 GL02  D   6 ▲
+NF16  C   6 ▲
+IF14  C   6 ▲
+LO02  D   6 ▲
+LC01  E   4 GE31  D   4 Poursuite normale
+Assez bon semestre. "Charge sportive" inférieure à
+10h/semaine + aménagement emploi du temps.
+N'oubliez pas que pour être diplômé(e), vous devez
+passer un semestre à l'étranger.
+Le jury de suivi ne demande pas de compensation de
+l'UV CS de tronc commun manquante.
+Sport/études 1
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  A   6 ▲ IF03  C   6 ▲
+LO07  B   6 ▲
+TX20  B   6  ●
+LS00  C   4 EV01  C   4 Poursuite normale
+Bon semestre. "Charge sportive" inférieure à
+10h/semaine + aménagement emploi du temps.
+Sport/études 1
+Total semestre 6 18 4 4 32
+A15 ISI 3 UX30  EQU  6 ▲
+UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX52  EQU  6  ●
+UX80  EQU  4 Semestre d'études à l'étranger
+ University of Newcastle (Australie).
+semestre à l'étranger
+Total semestre 24 4 28
+P16 ISI 4 TN09  A   30 Stage
+DEVOTEAM - LEVALLOIS PERRET - FRANCE - du
+15/02/16 au 12/08/16
+Total semestre 30 30
+A16 ISI 5 MPL IF10  B   6  ●
+NF20  D   6 ▲
+IF17  B   6  ●
+IF20  C   6  ●
+GE41  B   6 PO03  B   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 6 4 34
+P17 ISI 6 MPL ST10  B   30 HACON INGENIEURGESELLSCHAFT MBH -
+HANNOVER - ALLEMAGNE - du 06/02/17 au
+05/08/17
+Total semestre 30 30
+Total 78 96 66 28 14 24 306
+TOTAUX Ingénieur de M. Louis KLEIJN
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 30/24 ✓
+TCBR 54/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 30/30 ✓ 66/30 ✓
+Global 78 96 66/66 ✓ 28/20 ✓ 14/8 ✓ 24/8 ✓ 0 NPML ✓ 306/300 ✓
+38/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 59
+M. Mario LAPORTE N°38351 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 11/03/1991 à MONTEREAU-FAULT-YONNE (FRANCE) BAC BAC STI en 2011
+Conseiller Mme DUHAMEL ANDREA Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38351 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  D   6 ▲
+IF14  D   6 ▲
+LO02  B   6 ▲
+LE00  C   4
+LE02I  E   4
+GE31  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 8 4 30
+P15 ISI 2 IF02  B   6 ▲
+LO12  F   0
+EG23  A   6 ▲
+LO07  B   6 ▲
+LE03  D   4 GE21  B   4 Poursuite avec conseil
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Vous pouvez partir en stage.
+Total semestre 6 12 4 4 26
+A15 ISI 3 TN09  D   30 Stage
+WEDOOGIFT - PARIS - FRANCE - du 10/08/15 au
+05/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  C   6  ● IF03  B   6 ▲
+LO10  B   6  ●
+TX20  A   6  ●
+LE08  F   0 GE41  D   6 PO03  D   4 Poursuite avec conseil
+Semestre moyen. Attention, vous n'avez toujours pas
+validé votre NPML, indispensable pour être
+diplômé(e). Attention à l'anglais.
+Total semestre 6 18 0 6 4 34
+A16 ISI 5 MPL GL02  B   6 ▲
+IF10  B   6  ●
+IF09  C   6 ▲
+IF16  B   6  ●
+LE04  C   4 GE38  C   6
+MG06  C   6
+ATDOC1
+ATDOC2
+ATDOC3
+Poursuite normale
+Assez bon semestre. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 12 12 4 12 40
+P17 ISI 6 MPL ST10 CGI FRANCE - COURBEVOIE - FRANCE - du
+06/02/17 au 21/07/17
+Total semestre
+Total 30 54 30 16 26 4 160
+TOTAUX Ingénieur de M. Mario LAPORTE
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 30/60 16/12 ✓ 26/4 ✓ 4/4 ✓ 0 160/180
+30/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 60
+M. Geoffrey LETELLIER N°13081 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 07/04/1993 à EPERNAY (FRANCE) BAC BAC S-SVT m. en 2011
+Conseiller M. NIGRO Jean-Marc Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2011 à Printemps 2012 n°13081 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A11 TC 1 CHMA01 F   0
+MATH01  F   0
+NF04  D   6  ■
+TN04  C   6  ■
+LE01  F   0
+SI10  C   4
+APP1 Poursuite avec réserves
+Très mauvais semestre. Votre maintien à l'UTT
+dépendra de vos résultats au prochain semestre
+d'études.
+Total semestre 0 12 4 16
+P12 TC 2 MATH01  E   6  ■
+PHYS01  F   0
+EN01  F   0
+MS11  F   0
+TN05  D   6 LE01  F   0 APP2 Démissionnaire
+Le jury constate votre démission.
+démissionnaire
+Total semestre 6 0 6 0 12
+Total 6 12 6 4 28
+TOTAUX Ingénieur de M. Geoffrey LETELLIER
+CS TM ST EC ME CT HP NPML
+TC+BR 18/72
+TC 6/48 12/24 6/6 ✓ 4 0 0 0 28
+4/24
+→ Ingénieur de Automne 2014 à Printemps 2017 n°13081 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  A   6 ▲
+NF20  A   6 ▲
+IF14  A   6 ▲
+LO02  C   6 ▲
+LE01  C   4 GE31  C   4 Poursuite normale
+Très bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+RE04  D   6 ▲
+IF03  C   6 ▲
+LO07  A   6 ▲
+LE02  E   4 PO03  A   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 UX40  EQU  6  ● UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX52  EQU  6  ●
+Semestre d'études à l'étranger
+ Université Laval (Canada).
+semestre à l'étranger
+L'étudiant ne pourra pas s'inscrire à l'UV suivante :
+IF08
+Total semestre 6 18 24
+P16 ISI 4 TN09  B   30 Stage
+LA BANQUE POSTALE - ISSY LES MOULINEAUX -
+FRANCE - du 04/01/16 au 01/07/16
+Total semestre 30 30
+A16 ISI 5 MSI GL02  B   6 ▲
+IF15  C   6  ●
+TX20  C   6  ● LE03  E   4 GE25  C   4
+GE41  B   6
+ATDOC1
+ATDOC2
+ATDOC3
+BULE  ADM Poursuite normale
+Assez bon semestre. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e). Prenez immédiatement contact avec Mr
+LE COCHE pour l'anglais.
+Total semestre 12 6 4 10 32
+P17 ISI 6 MSI ST10 CGI BUSINESS CONSULTING - COURBEVOIE -
+FRANCE - du 13/02/17 au 11/08/17
+Total semestre
+Total 42 48 30 12 14 4 150
+TOTAUX Ingénieur de M. Geoffrey LETELLIER
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 42/30 ✓ 48/30 ✓
+Global 42 48 30/60 12/12 ✓ 14/4 ✓ 4/4 ✓ 0 NPML ✓ 150/180
+18/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 62
+Mme Sibylle LETORT N°38321 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 29/11/1994 à AUXERRE (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller M. NIGRO Jean-Marc Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38321 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  F   0
+IF14  B   6 ▲
+LO02  F   0
+LE01  B   4 PH15  E   4 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. De meilleurs résultats sont nécessaires dans
+les UV TM. Un effort général s'impose.
+Total semestre 6 6 4 4 20
+P15 ISI 2 IF02  B   6 ▲
+RE04  F   0
+IF03  D   6 ▲
+LO07  C   6 ▲
+LE02  C   4 GE04  D   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Vous auriez pu mieux faire.
+Total semestre 6 12 4 4 26
+A15 ISI 3 GL02  C   6 ▲
+IF15  C   6  ●
+IF07  C   6 ▲
+IF09  A   6 ▲
+LE03  B   4 GE36  C   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P16 ISI 4 TN09  B   30 Stage
+LIMPIDE - HAVELU - FRANCE - du 01/02/16 au
+01/08/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MSI NF20  B   6 ▲ IF16  B   6  ●
+IF17  C   6  ●
+IF20  C   6  ●
+LE08  B   4 GE21  C   4 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 6 18 4 4 32
+P17 ISI 6 MSI IF19  B   6  ● IF08  C   6  ● KO00  A   4 GE44  C   4
+Total semestre 6 6 4 4 20
+Total 36 54 30 20 16 4 160
+TOTAUX Ingénieur de Mme Sibylle LETORT
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 20/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 160/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 63
+M. Robin L'HONORE N°38401 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 20/10/1993 à LOMME (FRANCE) BAC BAC STG en 2011
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38401 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  E   6 ▲
+IF14  C   6 ▲
+LO02  B   6 ▲
+LE01  C   4 GE31  A   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  F   0
+LO12  C   6 ▲
+EG23  B   6 ▲
+IF03  E   6 ▲
+LE02  C   4 PO03  B   4 ATDOC1
+ATDOC2
+Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Vous auriez pu mieux faire.
+Vous pouvez partir en stage.
+Total semestre 6 12 4 4 26
+A15 ISI 3 TN09  B   30 Stage
+SEGILOG - FRELINGHIEN - FRANCE - du 31/08/15
+au 12/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF02  C   6 ▲
+IF05  E   6  ●
+IF08  C   6  ●
+LO10  C   6  ●
+LE03  D   4 EE06  B   4 Poursuite normale
+Semestre moyen. Attention, vous n'avez toujours pas
+validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 12 12 4 4 32
+A16 ISI 5 MPL GL02  C   6 ▲
+IF10  C   6  ●
+IF07  C   6 ▲ LE08  D   4
+LS03  F   0
+GE33  B   4 ATDOC3 BULE  ADM Poursuite normale
+Semestre moyen
+Total semestre 12 6 4 4 26
+P17 ISI 6 MPL semestre à l'étranger
+Universidad Politécnica de Valencia (Espagne)
+Total semestre
+Total 36 42 30 16 8 8 140
+TOTAUX Ingénieur de M. Robin L'HONORE
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 24/30
+TCBR+FIL 36/30 ✓ 42/30 ✓
+Global 36 42 30/60 16/12 ✓ 8/4 ✓ 8/4 ✓ 0 NPML ✓ 140/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 64
+M. Patrick LIM N°38472 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 20/03/1992 à IVRY-SUR-SEINE (FRANCE) BAC BAC S-SVT m. en 2011
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38472 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  B   6 ▲
+NF20  B   6 ▲
+IF14  C   6 ▲
+LO02  A   6 ▲
+LE02  C   4 GE21  E   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  A   6 ▲
+LO12  C   6 ▲
+EG23  C   6 ▲
+LO07  A   6 ▲
+LE03  B   4 GE41  B   4 SO02  B   4 ATDOC1 Poursuite normale
+Très bon semestre
+Total semestre 12 12 4 4 4 36
+A15 ISI 3 TN09  B   30 Stage
+WEDOOGIFT - PARIS - FRANCE - du 06/07/15 au
+31/12/15
+Total semestre 30 30
+P16 ISI 4 MPL IF05  C   6  ● IF03  B   6 ▲
+LO10  B   6  ●
+TX20  A   6  ●
+LE08  D   4 PO03  B   4 BULE  ADM Poursuite normale
+Bon semestre. Vous êtes autorisé(e) à chercher un
+contrat de professionnalisation.
+Total semestre 6 18 4 4 32
+A16 ISI 5 MPL GL02  A   6 ▲
+IF10  B   6  ●
+TX20  D   6  ● MG06  B   6 ATDOC2
+ATDOC3
+ATDOC4
+Poursuite normale
+Semestre moyen
+Total semestre 12 6 6 24
+P17 ISI 6 MPL ST10 SOPRA BANKING SOFTWARE - PARIS LA
+DEFENSE CEDEX - FRANCE - du 06/02/17 au
+31/07/17
+Total semestre
+Total 42 48 30 12 14 8 154
+TOTAUX Ingénieur de M. Patrick LIM
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 42/30 ✓ 48/30 ✓
+Global 42 48 30/60 12/12 ✓ 14/4 ✓ 8/4 ✓ 0 NPML ✓ 154/180
+22/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 65
+M. Guillaume LOZACHMEUR N°38421 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 17/07/1994 à COMPIEGNE (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL      Mineur(s) GEC
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38421 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  C   6 ▲
+NF20  E   6 ▲
+IF14  A   6 ▲
+LO02  D   6 ▲
+LE02  B   4 GE31  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  F   0
+IF03  B   6 ▲
+LO07  A   6 ▲
+LE03  D   4 GE21  D   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+A15 ISI 3 TN09  B   30 Stage
+FREMENCORP SAS - ROSIERES PRES TROYES -
+FRANCE - du 24/08/15 au 19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF08  A   6  ●
+IF11  D   6  ●
+TX10  B   6 ▲
+LE08  D   4 GE28  D   4
+GE41  D   6
+BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 18 4 10 32
+A16 ISI 5 MPL IF10  B   6  ● IF09  D   6 ▲
+IF16  B   6  ●
+TX20  A   6  ●
+GE25  C   4 HT03  F   0 Poursuite normale
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CT.
+Total semestre 6 18 4 0 28
+P17 ISI 6 MPL IF05  B   6  ● LO10  C   6  ● HT07  B   4
+SO02  B   4
+ATDOC1
+Total semestre 6 6 8 20
+Total 30 66 30 12 22 8 168
+TOTAUX Ingénieur de M. Guillaume LOZACHMEUR
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 30/30 ✓ 66/30 ✓
+Global 30 66 30/60 12/12 ✓ 22/4 ✓ 8/4 ✓ 0 NPML ✓ 168/180
+30/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 66
+Mme Soukaina MABROUKI N°38521 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 21/03/1994 à EL KELAA DES SRAGHNA (MAROC) BAC DIP. ETRANGER en 2011
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38521 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 SM 1 NF16  E   6 ▲
+NF20  C   6 ▲
+IF14  B   6 ▲
+LO02  F   0
+LE01  B   4 GE21  C   4 Poursuite normale
+Assez bon semestre. Votre demande de changement
+d'orientation a été acceptée. Vous serez en ISI2 en
+P15.
+Total semestre 12 6 4 4 26
+P15 ISI 2 IF02  C   6 ▲
+LO12  E   6 ▲
+EG23  D   6 ▲
+IF03  D   6 ▲
+LE02  A   4 GE34  E   4 Poursuite normale
+Assez bon semestre. En progrès.
+Vous pouvez partir en stage.
+Total semestre 12 12 4 4 32
+A15 ISI 3 IF15  B   6  ● IF07  C   6 ▲
+IF09  C   6 ▲
+IF20  E   6  ●
+LE03  B   4 PO03  A   4 Poursuite normale
+Assez bon semestre
+Total semestre 6 18 4 4 32
+P16 ISI 4 TN09  B   30 Stage
+CNIT 1 - SNCF VOYAGES - PARIS LA DEFENSE
+CEDEX - FRANCE - du 25/01/16 au 22/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MSI UX40  EQU  6  ●
+UX41  EQU  6  ●
+UX50  EQU  6  ● UX70  EQU  6 Semestre d'études à l'étranger
+semestre à l'étranger
+Université Laval (Canada).
+Total semestre 12 6 6 24
+P17 ISI 6 MSI ST10 LX10  E   4 GE41  E   6 BULE  ADM IBM FRANCE - BOIS COLOMBES - FRANCE - du
+23/01/17 au 21/07/17
+Total semestre 4 6 10
+Total 42 42 30 16 20 4 154
+TOTAUX Ingénieur de Mme Soukaina MABROUKI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 42/30 ✓ 42/30 ✓
+Global 42 42 30/60 16/12 ✓ 20/4 ✓ 4/4 ✓ 0 NPML ✓ 154/180
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 67
+M. Nicolas MAURER N°38344 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 05/12/1992 à WOIPPY (FRANCE) BAC BAC S-SVT svt en 2011
+Conseiller Mlle MATTA Nada Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38344 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  E   6 ▲ IF09  A   6 ▲
+IF14  D   6 ▲
+LO02  E   6 ▲
+LE01  D   4 EV04  C   4 Poursuite normale
+Semestre moyen
+Total semestre 6 18 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  F   0
+RE04  F   0
+IF03  C   6 ▲ LE02  E   4 GE04  A   4 Poursuite avec conseil
+Semestre médiocre. Un effort général s'impose. De
+meilleurs résultats sont nécessaires dans les UV CS
+de tronc commun de branche.
+Total semestre 6 6 4 4 20
+A15 ISI 3 TN09  B   30 Stage
+VIGILOCK - ROSIERES PRES TROYES - FRANCE -
+du 17/08/15 au 13/02/16
+Total semestre 30 30
+P16 ISI 4 MRI AC20  D   6  ●
+IF25  A   6  ●
+LO07  B   6 ▲
+NF19  A   6 ▲
+LE03  E   4 HT05  C   4 Poursuite normale
+Assez bon semestre. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e).
+Total semestre 12 12 4 4 32
+A16 ISI 5 MRI GL02  D   6 ▲
+GS13  C   6  ●
+IF10  C   6  ●
+GS11  B   6  ● LE08  D   4 GE25  D   4
+GE36  A   4
+ATDOC1 BULE  ADM Poursuite normale
+Semestre moyen
+Total semestre 18 6 4 8 36
+P17 ISI 6 MRI IF08  D   6  ●
+LO10  B   6  ◊
+TX20  A   6  ●
+KO00  B   4 GE44  C   4 ATDOC2
+ATDOC3
+Total semestre 18 4 4 26
+Total 42 60 30 20 16 8 176
+TOTAUX Ingénieur de M. Nicolas MAURER
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 42/30 ✓ 54/30 ✓
+Global 42 60 30/60 20/12 ✓ 16/4 ✓ 8/4 ✓ 0 NPML ✓ 176/180
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 68
+M. Romain MAUSSANG N°38363 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 18/06/1994 à GRASSE (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. CAHIER Jean-Pierre Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38363 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  F   0 IF07  D   6 ▲
+IF14  D   6 ▲
+LO02  D   6 ▲
+LE02  D   4 GE34  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 0 18 4 4 26
+P15 ISI 2 IF02  D   6 ▲
+LO12  E   6 ▲
+IF03  C   6 ▲
+LO07  D   6 ▲
+LE03  D   4 GE31  E   4 HT07  A   4 Poursuite normale
+Semestre moyen. Plus de travail personnel est
+nécessaire. Vous pouvez partir en stage.
+Total semestre 12 12 4 4 4 36
+A15 ISI 3 UX50  EQU  6  ●
+UX51  EQU  6  ●
+Semestre d'études à l'étranger
+ Jönköping University (Suède).
+semestre à l'étranger
+Total semestre 12 12
+P16 ISI 4 TN09  B   30 Stage
+CGI FRANCE - VALBONNE - FRANCE - du 01/02/16
+au 29/07/16
+ Prenez contact à la rentrée avec Michel LEGAULT
+pour vos résultats de SE.
+Total semestre 30 30
+A16 ISI 5 MRI GL02  F   0
+GS13  E   6  ●
+GS11  B   6  ●
+RE16  F   0
+LE08  C   4 GE25  C   4 BULE  ADM Poursuite avec réserves
+Mauvais semestre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Ne négligez pas les UV TM de tronc
+commun de branche.Votre comportement et votre
+attitude durant le SE ont été inacceptables et non
+compatibles avec les fonctions d ingénieur. Le jury a
+décidé d annuler votre semestre à l étranger.
+Total semestre 6 6 4 4 20
+P17 ISI 6 MRI IF25  B   6  ●
+RE04  C   6 ▲
+EG23  B   6 ▲ LI01  C   4
+SO05  C   4
+Total semestre 12 6 8 26
+Total 30 54 30 12 12 12 150
+TOTAUX Ingénieur de M. Romain MAUSSANG
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 30/60 12/12 ✓ 12/4 ✓ 12/4 ✓ 0 NPML ✓ 150/180
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 69
+M. Ionel MOREAU-SEREZ N°38476 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 04/06/1992 à PLOIESTI (ROUMANIE) BAC BAC STI en 2010
+Conseiller M. CAHIER Jean-Pierre Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38476 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+IF14  D   6 ▲
+LO02  A   6 ▲
+LE02  C   4 GE21  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 LO12  E   6 ▲
+RE04  E   6 ▲
+EG23  A   6 ▲
+LO07  B   6 ▲
+LE03  D   4 SO02  B   4 ATDOC1 Poursuite normale
+Semestre moyen
+Total semestre 12 12 4 4 32
+A15 ISI 3 UX40  EQU  6  ● UX30  EQU  6 ▲
+UX31  EQU  6 ▲
+UX50  EQU  6  ●
+UX70  EQU  4
+UX71  EQU  4
+Semestre d'études à l'étranger
+ KAIST - Korea Advanced Institute of Science and
+Technology (Corée du Sud).
+semestre à l'étranger
+Total semestre 6 18 8 32
+P16 ISI 4 TN09  B   30 Stage
+INTERACTIVE MOBILITY - PARIS - FRANCE - du
+22/02/16 au 19/08/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MRI GS13  B   6  ● GS11  A   6  ●
+TX20  D   6  ●
+LE08  C   4 GE25  B   4 ATDOC2
+ATDOC3
+BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 6 12 4 4 26
+P17 ISI 6 MRI ST10 CGI BUSINESS CONSULTING - COURBEVOIE -
+FRANCE - du 13/02/17 au 10/08/17
+Total semestre
+Total 36 54 30 12 16 4 152
+TOTAUX Ingénieur de M. Ionel MOREAU-SEREZ
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 12/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 152/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 70
+M. Thibault NEULAT N°38323 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 26/11/1991 à PARIS 20E (FRANCE) BAC BAC S-SVT p.c. en 2010
+Conseiller M. BEAUSEROY Pierre Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38323 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  B   6 ▲
+NF20  D   6 ▲
+IF14  C   6 ▲
+LO02  C   6 ▲
+KO00  D   4 GE31  D   4 NPML  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  E   6 ▲
+LO12  F   0
+EG23  D   6 ▲
+IF03  D   6 ▲
+LO07  C   6 ▲
+IT00  C   4 GE21  C   4 Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 18 4 4 32
+A15 ISI 3 GS13  E   6  ● GS11  E   6  ●
+IF07  F   0
+IF26  F   0
+GE33  B   4 PO03  A   4 Poursuite avec réserves
+Mauvais semestre. De meilleurs résultats sont
+nécessaires dans les UV TM. Un effort général
+s'impose si vous voulez rester à l'UTT.
+Total semestre 6 6 4 4 20
+P16 ISI 4 TN09  C   30 Stage
+ORANGE LABS - LANNION - FRANCE - du 07/03/16
+au 19/08/16
+Total semestre 30 30
+A16 ISI 5 MRI GS15  F   0
+IF10  C   6  ◊
+NF16  ABS
+LC00  F   0 GE28  E   4 Poursuite avec réserves
+Mauvais semestre. De meilleurs résultats sont
+nécessaires dans les UV CS de filière. De meilleurs
+résultats sont nécessaires dans les UV EC. Un effort
+général s'impose.
+Total semestre 6 0 4 10
+P17 ISI 6 MRI IF25  F   0 IF08  E   6  ●
+IF11  C   6  ●
+NF19  C   6 ▲
+LE11  A   4 ATDOC1
+ATDOC2
+ATDOC3
+Total semestre 0 18 4 22
+Total 30 54 30 12 16 4 146
+TOTAUX Ingénieur de M. Thibault NEULAT
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 24/30
+TCBR+FIL 24/30 54/30 ✓
+Global 30 54 30/60 12/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 146/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 71
+Mme Diane PACAUD N°38316 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 10/06/1994 à NANTES (FRANCE) BAC BAC ES en 2012
+Conseiller Mlle LEWKOWICZ Myriam Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38316 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+IF07  B   6 ▲
+IF14  B   6 ▲
+LE02  B   4 GE10  D   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  C   6 ▲ IF03  D   6 ▲
+LO07  C   6 ▲
+NF19  C   6 ▲
+LE03  C   4 HT05  A   4
+HT07  B   4
+Poursuite normale
+Assez bon semestre
+Total semestre 6 18 4 8 36
+A15 ISI 3 UX30  EQU  10 ▲
+UX31  EQU  10 ▲
+UX50  EQU  5  ●
+UX80  EQU  5 Semestre d'études à l'étranger
+ Griffith College - Dublin (Irlande).
+semestre à l'étranger
+L'étudiante ne pourra pas s'inscrire à l'UV suivante :
+LO02
+Total semestre 25 5 30
+P16 ISI 4 TN09  A   30 BULE  ADM Stage
+PARK 'N PLUG - ROSIERES PRES TROYES -
+FRANCE - du 01/02/16 au 15/07/16
+Total semestre 30 30
+A16 ISI 5 MSI IF10  B   6  ◊
+IF15  C   6  ●
+IF17  A   6  ●
+IF20  E   6  ●
+KO00  A   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 28
+P17 ISI 6 MSI IF05  A   6  ◊
+IF19  A   6  ●
+IF08  B   6  ●
+LO10  C   6  ◊
+GE21  D   4
+Total semestre 12 12 4 28
+Total 42 79 30 12 8 13 184
+TOTAUX Ingénieur de Mme Diane PACAUD
+CS TM ST EC ME CT HP NPML
+TCBR 68/54 ✓
+FIL 35/30 ✓
+TCBR+FIL 30/30 ✓ 73/30 ✓
+Global 42 79 30/60 12/12 ✓ 8/4 ✓ 13/4 ✓ 0 NPML ✓ 184/180 ✓
+21/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 72
+M. Louis PALAYRET N°38352 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 05/01/1993 à PARIS 14E (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller M. TIXIER Matthieu Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38352 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  B   6 ▲
+NF20  B   6 ▲
+IF14  B   6 ▲
+LO02  D   6 ▲
+LE02  A   4 SC00  D   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  E   6 ▲
+LO12  C   6 ▲
+IF03  E   6 ▲
+LO07  B   6 ▲
+LE03  B   4 GE31  F   0 CTC1  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV ME.
+Total semestre 12 12 4 0 4 32
+A15 ISI 3 TN09  C   30 Stage
+OSTRAL PTY LTD - SUFFOLK PARK - AUSTRALIE -
+du 26/07/15 au 26/01/16
+Total semestre 30 30
+P16 ISI 4 UX20  EQU  6 ▲ UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX70  EQU  4 Semestre d'études à l'étranger
+ POSTECH - Pohang University of Science and
+Technology (Corée du Sud). Attention, vous n'avez
+toujours pas validé votre NPML, indispensable pour
+être diplômé(e).
+Total semestre 6 12 4 22
+A16 ISI 5 MPL GS15  B   6  ●
+IF10  C   6  ●
+IF16  C   6  ●
+IF17  C   6  ●
+LE08  B   4 GE21  E   4 BULE  ADM Poursuite normale
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV ME.
+Total semestre 12 12 4 4 32
+P17 ISI 6 MPL ISI_C02  C   3  ● ST10 STEAMULO - PARIS - FRANCE - du 15/02/17 au
+11/08/17
+Total semestre 3 3
+Total 42 51 30 12 8 8 151
+TOTAUX Ingénieur de M. Louis PALAYRET
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 39/30 ✓
+TCBR+FIL 42/30 ✓ 51/30 ✓
+Global 42 51 30/60 12/12 ✓ 8/4 ✓ 8/4 ✓ 0 NPML ✓ 151/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 73
+M. Anthony PALMIGIANO N°38319 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 24/12/1992 à SARREGUEMINES (FRANCE) BAC BAC S-SVT svt en 2010
+Conseiller M. SOULIER Eddie Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38319 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  A   6 ▲
+NF20  C   6 ▲
+IF07  B   6 ▲
+IF14  A   6 ▲
+LE03  B   4 GE31  A   4 Poursuite normale
+Très bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  D   6 ▲
+LO12  C   6 ▲
+EG23  A   6 ▲
+IF03  B   6 ▲
+LO07  B   6 ▲
+LE08  B   4 GE21  D   4 BULE  ADM Poursuite normale
+Bon semestre
+Total semestre 12 18 4 4 38
+A15 ISI 3 TN09  A   30 Stage
+PISCINES MAGILINE - TROYES - FRANCE - du
+03/08/15 au 13/02/16
+Total semestre 30 30
+P16 ISI 4 MSI IF19  A   6  ● IF08  A   6  ●
+IF22  A   6  ●
+IF24  A   6  ●
+LC00  A   4 GE41  B   6 PO03  C   4 ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+Poursuite normale
+Excellent semestre. Nous vous félicitons pour vos
+résultats.
+Total semestre 6 18 4 6 4 38
+A16 ISI 5 MSI UX50  EQU  6  ●
+UX51  EQU  6  ●
+UX92  EQU  6  ◊
+UX70  EQU  6 UX80  EQU  6 Semestre d'études à l'étranger
+semestre à l'étranger
+City University of Hong Kong (Chine).
+Total semestre 18 6 6 30
+P17 ISI 6 MSI ST10  B   30 PRO-DATALGI HONG KONG LTD - HONG KONG -
+CHINE - du 06/01/17 au 07/07/17
+Total semestre 30 30
+Total 30 66 60 12 20 10 198
+TOTAUX Ingénieur de M. Anthony PALMIGIANO
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 30 66 60/60 ✓ 12/12 ✓ 20/4 ✓ 10/4 ✓ 0 NPML ✓ 198/180 ✓
+30/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 74
+M. Victor PAYNAT--SAUTIVET N°35423 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 05/04/1995 à TROYES (FRANCE) BAC BAC S-Ing. en 2012
+Conseiller M. ATIFI Hassan Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35423 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 CHMA01 D   6  ■
+MATH01  E   6  ■
+EN01  F   0
+NF04  B   6  ■
+LE01  B   4
+SI10  E   4
+APP1 Poursuite avec conseil
+Semestre moyen. Ne négligez pas les UV TM.
+Total semestre 12 6 8 26
+P13 TC 2 MATH02  E   6  ■
+PHYS01  C   6  ■
+MS11  B   6  ■
+TN01  C   6  ■
+TN05  D   6 LE02  B   4
+LG02  C   4
+Poursuite normale
+Assez bon semestre
+Total semestre 12 12 6 8 38
+A13 TC 3 CHMA02 D   6  ■
+MATH03  F   0
+TN04  A   6  ■
+NF05  C   6  ■ IT00  D   4
+LE03  D   4
+Poursuite normale
+Assez bon semestre. Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 6 8 26
+P14 TC 4 CHMA04 C   6  ■
+MATH03  C   6  ■
+C2I1  A   4  ■
+LO07  A   6 ▲
+LE08  D   4 GE21  C   4 BULE  EQU Poursuite normale
+Bon semestre. Vous êtes autorisé(e) à passer en
+branche à titre dérogatoire.
+Total semestre 12 10 4 4 30
+A14 ISI 1 NF16  C   6 ▲
+NF20  B   6 ▲
+IF14  D   6 ▲
+LO02  C   6 ▲
+GE28  D   4 SE01  D   4 Poursuite normale
+Bon semestre. N'oubliez pas que pour être diplômé(e),
+vous devez passer un semestre à l'étranger.
+Le jury de suivi ne demande pas de compensation de
+l'UV CS de tronc commun manquante.
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  B   6 ▲
+IF03  E   6 ▲
+NF19  B   6 ▲
+GE31  D   4 PO03  A   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+VIGILOCK - ROSIERES PRES TROYES - FRANCE -
+du 17/08/15 au 12/02/16
+Total semestre 30 30
+P16 ISI 4 MRI IF25  A   6  ● IF08  B   6  ●
+IF11  D   6  ●
+LO10  B   6  ◊
+GE41  C   6 EE06  D   4 ATDOC1
+ATDOC2
+Poursuite normale
+Assez bon semestre
+Total semestre 6 18 6 4 34
+A16 ISI 5 MRI UX20  EQU  5 ▲
+UX40  EQU  10 ●
+UX41  EQU  5  ●
+UX30  EQU  5 ▲
+UX50  EQU  5  ●
+Semestre d'études à l'étranger
+semestre à l'étranger
+Syddansk Universitet (Danemark).
+Total semestre 20 10 30
+P17 ISI 6 MRI LS00  A   4 HT07  B   4
+SO02  B   4
+SO04  A   4
+ATDOC3
+Total semestre 4 12 16
+Total 98 86 36 32 18 24 294
+TOTAUX Ingénieur de M. Victor PAYNAT--SAUTIVET
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 28/24 ✓
+TCBR 64/54 ✓
+FIL 38/30 ✓
+TCBR+FIL 50/30 ✓ 52/30 ✓
+Global 98 86 36/66 32/20 ✓ 18/8 ✓ 24/8 ✓ 0 NPML ✓ 294/300
+42/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 76
+M. Grégoire PETERSCHMITT N°35420 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 02/04/1994 à IVRY SUR SEINE (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. LERONDEL Gilles Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35420 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  D   6  ■
+PHYS01  C   6  ■
+MS11  D   6  ■
+TN01  B   6  ■
+LE02  D   4
+SI10  B   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 32
+P13 TC 2 CHMA01 D   6  ■
+MATH02  D   6  ■
+NF04  C   6  ■
+TN04  E   6  ■
+TN05  D   6 LE03  B   4 GE31  C   4 Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 4 4 38
+A13 TC 3 MATH03  E   6  ■
+PHYS02  C   6  ■
+EN01  A   6  ■
+RE01  E   6 ▲
+LE08  C   4 GE21  D   4 BULE  ADM Poursuite normale
+Semestre moyen. Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 12 4 4 32
+P14 TC 4 MATH04  E   6  ■
+PHYS04  B   6  ■
+C2I1  C   4  ■
+EN03  B   6  ■
+LG00  A   4 HT07  C   4 Poursuite normale
+Assez bon semestre. Vous serez en branche au
+prochain semestre.
+Total semestre 12 10 4 4 30
+A14 ISI 1 GL02  B   6 ▲
+NF20  B   6 ▲
+IF14  C   6 ▲
+LO02  B   6 ▲
+LG01  A   4 GE34  B   4 Poursuite normale
+Bon semestre. N'oubliez pas que pour être diplômé(e),
+vous devez passer un semestre à l'étranger.
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  A   6 ▲
+EG23  C   6 ▲
+NF19  A   6 ▲
+LG02  B   4 GE32  B   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+THALES SYSTEMES AEROPORTES SAS -
+ELANCOURT - FRANCE - du 24/08/15 au 19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  D   6  ● IF08  C   6  ●
+IF11  C   6  ●
+LO10  B   6  ●
+LG03  C   4 EE06  C   4 Poursuite normale
+Assez bon semestre
+Total semestre 6 18 4 4 32
+A16 ISI 5 MPL UX20  EQU  6 ▲
+UX40  EQU  6  ●
+UX70  EQU  6 UX80  EQU  6
+UX81  EQU  6
+Semestre d'études à l'étranger
+semestre à l'étranger
+Nanyang Technological University (Singapour).
+Total semestre 12 6 12 30
+P17 ISI 6 MPL ST10 SOLUTEC - PARIS - FRANCE - du 06/02/17 au
+04/08/17
+Total semestre
+Total 90 88 36 32 22 20 288
+TOTAUX Ingénieur de M. Grégoire PETERSCHMITT
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 40/24 ✓
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 42/30 ✓ 48/30 ✓
+Global 90 88 36/66 32/20 ✓ 22/8 ✓ 20/8 ✓ 0 NPML ✓ 288/300
+42/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 78
+M. Nicolas PHUNG N°12590 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 15/09/1992 à TROYES (FRANCE) BAC BAC PRO Industri. en 2011
+Conseiller M. GAGLIO Gerald Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°12590 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  F   0
+IF07  C   6 ▲
+IF14  B   6 ▲
+LE01  F   0
+LE01I  E   4
+GE34  C   4 Poursuite avec réserves
+Mauvais semestre. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. Vous n'êtes pas autorisé(e) à chercher un
+stage au prochain semestre.
+Total semestre 0 12 4 4 20
+P15 ISI 2 IF02  B   6 ▲
+LO12  F   0
+EG23  C   6 ▲
+IF03  B   6 ▲
+LE02  E   4 GE21  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. C'est mieux, ne relachez pas vos efforts.
+Total semestre 6 12 4 4 26
+A15 ISI 3 GL02  B   6 ▲
+NF16  C   6 ▲
+IF09  C   6 ▲
+IF16  C   6  ●
+LE03  F   0 GE28  E   4 Poursuite avec conseil
+MSemestre moyen. Attention, vous n'avez toujours
+pas validé votre NPML, indispensable pour être
+diplômé(e). Prenez immédiatement contact avec M.
+LE COCHE pour l'anglais.
+Total semestre 12 12 0 4 28
+P16 ISI 4 TN09  B   30 LX10  C   4 Stage
+PISCINES MAGILINE - TROYES - FRANCE - du
+08/02/16 au 29/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 4 34
+A16 ISI 5 MSI IF15  C   6  ●
+NF20  C   6 ▲
+IF17  B   6  ●
+IF20  D   6  ●
+LE03  F   0 PO03  B   4 Poursuite avec conseil
+Semestre médiocre. Vous êtes autorisé(e) à chercher
+un contrat de professionnalisation. De meilleurs
+résultats sont nécessaires dans les UV EC. Attention,
+vous n'avez toujours pas validé votre NPML,
+indispensable pour être diplômé(e). Prenez
+immédiatement contact avec MR LECOCHE pour
+l'anglais.
+Total semestre 12 12 0 4 28
+P17 ISI 6 MSI IF08  C   6  ●
+IF24  A   6  ●
+LE08  E   4 GE31  D   4
+GE32  C   4
+ATDOC1
+ATDOC2
+ATDOC3
+BULE  ADM
+Total semestre 12 4 8 24
+Total 30 60 30 16 20 4 160
+TOTAUX Ingénieur de M. Nicolas PHUNG
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 30 60 30/60 16/12 ✓ 20/4 ✓ 4/4 ✓ 0 NPML ✓ 160/180
+24/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 79
+M. Quentin PIERRE N°38332 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 05/07/1994 à LONGJUMEAU (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller M. GAGLIO Gerald Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38332 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF20  B   6 ▲ IF07  A   6 ▲
+IF14  A   6 ▲
+LO02  B   6 ▲
+LE02  B   4 GE31  A   4 Poursuite normale
+Très bon semestre
+Total semestre 6 18 4 4 32
+P15 ISI 2 IF02  C   6 ▲
+LO12  A   6 ▲
+LO07  A   6 ▲
+NF19  A   6 ▲
+LE03  B   4 GE21  C   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+ALPIX - LA CHAPELLE ST LUC - FRANCE - du
+23/07/15 au 14/01/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  A   6  ● IF03  A   6 ▲
+IF08  B   6  ●
+LO10  A   6  ●
+LE08  B   4 SC02  C   4 ATDOC1 BULE  ADM Poursuite normale
+Très bon semestre
+Total semestre 6 18 4 4 32
+A16 ISI 5 MPL GL02  A   6 ▲
+IF10  B   6  ●
+IF16  A   6  ● GE25  A   4
+GE33  B   4
+ATDOC2
+ATDOC3
+Poursuite normale
+Très bon semestre
+Total semestre 12 6 8 26
+P17 ISI 6 MPL ST10 FREMENCORP SAS - ROSIERES PRES TROYES -
+FRANCE - du 06/02/17 au 28/07/17
+Total semestre
+Total 36 54 30 12 16 4 152
+TOTAUX Ingénieur de M. Quentin PIERRE
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 36 54 30/60 12/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 152/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 80
+M. Anthony PRUD'HOMME N°38305 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 11/07/1993 à VERSAILLES (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller M. GAGLIO Gerald Dernier diplôme obtenu LICENCE et LICENCE LMD
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38305 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  B   6 ▲
+NF20  C   6 ▲
+IF14  B   6 ▲
+LO02  D   6 ▲
+LE03  B   4 GE31  E   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 EX50  EQU  6 ▲
+EX51  EQU  6 ▲
+LO12  F   0
+EG23  F   0
+LO07  B   6 ▲
+NF19  A   6 ▲
+LE08  B   4 SC02  E   4 BULE  ADM Poursuite avec réserves
+Mauvais semestre. Vous ne pourrez pas suivre les Uv
+: LO01 et Re04. Le travail personnel fourni est
+clairement insuffisant.
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  A   30 Stage
+ORANGE LABS PRODUITS & SERVICES -
+GUYANCOURT CEDEX - FRANCE - du 27/07/15 au
+26/01/16
+Total semestre 30 30
+P16 ISI 4 MRI IF25  A   6  ● IF03  C   6 ▲
+IF08  B   6  ●
+IF11  D   6  ●
+IF22  FX   0
+LE18  C   4 GE11  E   4 ATDOC1
+ATDOC2
+Poursuite avec conseil
+Assez bon semestre
+Total semestre 6 18 4 4 32
+A16 ISI 5 MRI GL02  B   6 ▲
+GS13  C   6  ●
+IF10  B   6  ●
+GS11  C   6  ● SC00  D   4
+SC06  B   4
+ATDOC3
+ATDOC4
+Poursuite normale
+Assez bon semestre
+Total semestre 18 6 8 32
+P17 ISI 6 MRI ISI_C01  F   0 ST10 SMILE - ASNIERES SUR SEINE - FRANCE - du
+06/02/17 au 04/08/17
+Total semestre 0 0
+Total 48 48 30 12 8 12 158
+TOTAUX Ingénieur de M. Anthony PRUD'HOMME
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 48/30 ✓ 48/30 ✓
+Global 48 48 30/60 12/12 ✓ 8/4 ✓ 12/4 ✓ 0 NPML ✓ 158/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 81
+M. Ali QUENAHAT N°35433 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 15/05/1993 à MAZARESHARIF (AFGHANISTAN) BAC BAC S-Ing. en 2012
+Conseiller M. MARCOCCIA Michel Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35433 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  C   6  ■
+PHYS01  C   6  ■
+MS11  D   6  ■
+TN04  D   6  ■
+LE01  B   4
+SI10  D   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 32
+P13 TC 2 CHMA01 C   6  ■
+MATH02  E   6  ■
+EN01  D   6  ■
+NF04  B   6  ■
+TN05  F   0 LE02  C   4 GE21  D   4 Poursuite normale
+Semestre moyen. Votre comportement et votre
+attitude sont souvent inacceptables, ce n'est pas
+compatible avec les fonctions d'ingénieur : vous devez
+les corriger immédiatement. Vous pouvez prendre 1
+TM de branche. Vous devrez refaire le stage TN05.
+Total semestre 12 12 0 4 4 32
+A13 TC 3 MATH03  E   6  ■
+PHYS03  C   6  ■
+IF14  C   6 ▲
+NF05  C   6  ■
+LE03  D   4 GE31  B   4 Poursuite normale
+Assez bon semestre. Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 12 4 4 32
+P14 TC 4 PHYS04  B   6  ■
+PHYS05  D   6  ■
+EG23  B   6 ▲
+LO07  A   6 ▲
+TN05  B   6 LE08  D   4
+LS02  D   4
+BULE  ADM Poursuite normale
+Bon semestre. Vous serez en branche au prochain
+semestre.
+Total semestre 12 12 6 8 38
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+LO02  C   6 ▲
+TX10  A   6 ▲
+SE01  B   4
+SO02  D   4
+Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 32
+P15 ISI 2 AC20  E   6  ●
+IF02  B   6 ▲
+IF03  C   6 ▲
+IF24  B   6  ●
+EE06  C   4
+PO03  A   4
+Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 32
+A15 ISI 3 UX40  EQU  6  ● UX50  EQU  6  ● UX60  EQU  7,5
+UX61  EQU  4
+UX80  EQU  4 Semestre d'études à l'étranger
+ Linköping University (Suède).
+semestre à l'étranger
+L'étudiant ne pourra pas suivre l'UV suivante : IF08
+Total semestre 6 6 11,50 4 27,50
+P16 ISI 4 TN09  C   30 Stage
+OSTRAL PTY LTD - SUFFOLK PARK - AUSTRALIE -
+du 01/02/16 au 15/07/16
+Total semestre 30 30
+A16 ISI 5 MSI IF15  B   6  ● IF20  D   6  ● GE34  A   4
+GE38  B   6
+Poursuite normale
+Assez bon semestre
+Total semestre 6 6 10 22
+P17 ISI 6 MSI ST10 MAZARS SA - VILLEURBANNE - FRANCE - du
+06/02/17 au 21/07/17
+Total semestre
+Total 84 84 36 35,50 18 20 277,50
+TOTAUX Ingénieur de M. Ali QUENAHAT
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 30/24 ✓
+TCBR 54/54 ✓
+FIL 36/30 ✓
+TCBR+FIL 36/30 ✓ 54/30 ✓
+Global 84 84 36/66 35,5/20 ✓ 18/8 ✓ 20/8 ✓ 0 NPML ✓ 277,5/300
+38/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 83
+M. Vincent RAJAU N°38402 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 08/05/1993 à TROYES (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller M. BIRREGAH Babiga Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38402 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  C   6 ▲
+IF14  C   6 ▲
+LO02  E   6 ▲
+LE08  A   4 GE36  E   4 BULE  ADM Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  C   6 ▲
+LO12  D   6 ▲
+IF03  D   6 ▲
+LO07  C   6 ▲
+LE17  C   4 GE21  D   4 Poursuite normale
+Semestre moyen.
+Vous pouvez partir en stage.
+Total semestre 12 12 4 4 32
+A15 ISI 3 GL02  A   6 ▲
+IF10  C   6  ●
+IF16  C   6  ●
+IF26  F   0
+IT00  D   4 PO03  B   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV TM.
+Total semestre 12 6 4 4 26
+P16 ISI 4 TN09  D   30 Stage
+DREW LONDON - LONDON - ROYAUME-UNI - du
+01/02/16 au 31/07/16
+Total semestre 30 30
+A16 ISI 5 MPL IF09  D   6 ▲
+IF17  D   6  ●
+TX20  B   6  ●
+GE25  D   4
+GE34  C   4
+PH15  F   0 Poursuite normale
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CT.
+Total semestre 18 8 0 26
+P17 ISI 6 MPL IF05  C   6  ● IF08  E   6  ●
+LO10  B   6  ●
+LO14  C   6 ▲
+LE15  ABS SC02  ABS ATDOC1
+ATDOC2
+Total semestre 6 18 24
+Total 36 66 30 12 16 4 164
+TOTAUX Ingénieur de M. Vincent RAJAU
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 36/30 ✓ 66/30 ✓
+Global 36 66 30/60 12/12 ✓ 16/4 ✓ 4/4 ✓ 0 NPML ✓ 164/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 84
+M. Maxime ROLET N°38341 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 17/12/1993 à DIJON (FRANCE) BAC BAC S-Ing. en 2012
+Conseiller M. BIRREGAH Babiga Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38341 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  D   6 ▲
+IF14  F   0
+LO02  E   6 ▲
+LE01  C   4 GE21  E   4 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. De meilleurs résultats sont nécessaires dans
+les UV TM.
+Total semestre 6 6 4 4 20
+P15 ISI 2 IF02  E   6 ▲
+LO12  C   6 ▲
+IF03  D   6 ▲
+LO07  A   6 ▲
+LE02  B   4 GE31  E   4 Poursuite normale
+Semestre moyen. C'est mieux, ne relachez pas vos
+efforts.
+Total semestre 12 12 4 4 32
+A15 ISI 3 IF15  B   6  ●
+NF16  C   6 ▲
+EG23  D   6 ▲
+IF07  D   6 ▲
+LE03  C   4 GE36  E   4 Poursuite normale
+Semestre moyen
+Total semestre 12 12 4 4 32
+P16 ISI 4 TN09  B   30 Stage
+VOXELIA - STRASBOURG - FRANCE - du 25/01/16
+au 25/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MSI UX40  EQU  6  ●
+UX41  EQU  6  ●
+UX42  EQU  6  ●
+UX50  EQU  6  ● UX60  EQU  6 Semestre d'études à l'étranger
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e). Prenez
+immédiatement contact avec Mr LECOCHE pour
+l'anglais.
+semestre à l'étranger
+Université du Québec à Chicoutimi (Canada).
+Total semestre 18 6 6 30
+P17 ISI 6 MSI ST10 LX10  C   4 ER01  C   4 HORIZON SOFTWARE - BELFORT - FRANCE - du
+23/01/17 au 24/07/17
+Total semestre 4 4 8
+Total 48 36 30 22 12 4 152
+TOTAUX Ingénieur de M. Maxime ROLET
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 48/30 ✓ 36/30 ✓
+Global 48 36 30/60 22/12 ✓ 12/4 ✓ 4/4 ✓ 0 152/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 85
+M. Thibault ROY N°35211 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 30/11/1994 à PARIS12 (FRANCE) BAC BAC S-SVT m. en 2012
+Conseiller M. NOAILLES Jérôme Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MRI
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35211 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 CHMA01 C   6  ■
+MATH01  B   6  ■
+NF04  B   6  ■
+TN01  E   6  ■
+LE01  B   4
+SI10  D   4
+APP1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 8 32
+P13 TC 2 MATH02  D   6  ■
+PHYS01  C   6  ■
+MS11  D   6  ■
+TN04  C   6  ■
+TN05  C   6 LE02  B   4
+LS02  D   4
+GE31  E   4 Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 8 4 42
+A13 TC 3 MATH03  C   6  ■
+PHYS03  E   6  ■
+LO02  E   6 ▲
+NF05  D   6  ■
+LE03  C   4
+LS03  D   4
+Poursuite normale
+Semestre moyen. Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 12 8 32
+P14 TC 4 CHMA04 F   0
+MATH04  E   6  ■
+EG23  C   6 ▲
+LO07  C   6 ▲
+LE08  C   4
+LS10  D   4
+BULE  ADM Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS. Vous pouvez passer en
+branche, vous devrez alors compléter votre cursus TC
+lors du prochain semestre.
+Total semestre 6 12 8 26
+A14 ISI 1 UX30  EQU  6 ▲ UX60  EQU  4 Poursuite avec réserves
+Très mauvais semestre. Universidad Politécnica de
+Valencia (Espagne).
+Le travail personnel fourni est clairement insuffisant.
+Total semestre 6 4 10
+P15 ISI 2 IF02  C   6 ▲
+LO12  C   6 ▲
+PHYS04  E   6  ■
+IF03  D   6 ▲ LS08  B   4 GE43  C   4 BULS  ADM Poursuite normale
+Semestre moyen
+Total semestre 18 6 4 4 32
+A15 ISI 3 GL02  B   6 ▲
+GS13  D   6  ●
+IF07  C   6 ▲
+IF26  C   6  ●
+LXIT  B   4 PO03  A   4 AHE1  ADM  4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 4 36
+P16 ISI 4 TN09  B   30 EI04L  D   6 Stage
+BANQUE RAIFFEISEN S.C - LEUDELANGE -
+LUXEMBOURG - du 01/02/16 au 31/07/16
+Total semestre 30 6 36
+A16 ISI 5 MRI AC20  A   6  ●
+IF15  C   6  ◊
+GS11  B   6  ●
+IF20  B   6  ●
+GE21  D   4
+GE28  A   4
+SC04  E   4 Poursuite normale
+Assez bon semestre. De meilleurs résultats sont
+nécessaires dans les UV CT.
+Total semestre 12 12 8 4 36
+P17 ISI 6 MRI ST10 MG06  C   6 PE1  EQU  2 DELOITTE - NEUILLY SUR SEINE CEDEX -
+FRANCE - du 13/02/17 au 28/07/17
+Total semestre 6 2 8
+Total 84 84 36 44 28 8 6 290
+TOTAUX Ingénieur de M. Thibault ROY
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 30/24 ✓
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 84 84 36/66 44/20 ✓ 28/8 ✓ 8/8 ✓ 6 NPML ✓ 290/300
+36/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 87
+M. Soufiane SAIDI N°38368 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 30/06/1993 à CARPENTRAS (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller M. LEMERCIER Marc Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38368 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  F   0
+IF14  D   6 ▲
+LO02  C   6 ▲
+LE02  B   4 GE31  C   4 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Un effort général s'impose.
+Total semestre 0 12 4 4 20
+P15 ISI 2 IF02  E   6 ▲
+LO12  F   0
+EG23  D   6 ▲
+LO07  C   6 ▲
+LE03  B   4 GE21  D   4 ATDOC1
+ATDOC2
+ATDOC3
+ATDOC4
+Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Vous auriez pu mieux faire.
+Total semestre 6 12 4 4 26
+A15 ISI 3 GL02  B   6 ▲
+NF16  C   6 ▲
+IF07  B   6 ▲
+IF09  D   6 ▲
+LE08  C   4 GE28  D   4 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P16 ISI 4 TN09  A   30 Stage
+ATOS INFOGERANCE - VILLEURBANNE - FRANCE
+- du 01/02/16 au 29/07/16
+Total semestre 30 30
+A16 ISI 5 MPL AC20  C   6  ●
+IF10  B   6  ●
+IF16  C   6  ●
+IF20  E   6  ●
+TX20  C   6  ●
+IT00  E   4 SO02  E   4 Poursuite avec conseil
+Semestre médiocre. Ne négligez pas les UV TM de
+filière. Un effort général s'impose.
+Total semestre 12 18 4 4 38
+P17 ISI 6 MPL TX10  C   6 ▲ ST10 GE41  C   6 ATOS INTEGRATION - LYON - FRANCE - du
+06/03/17 au 01/09/17
+Total semestre 6 6 12
+Total 30 60 30 16 18 4 158
+TOTAUX Ingénieur de M. Soufiane SAIDI
+CS TM ST EC ME CT HP NPML
+TCBR 60/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 60/30 ✓
+Global 30 60 30/60 16/12 ✓ 18/4 ✓ 4/4 ✓ 0 NPML ✓ 158/180
+22/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 88
+M. Thomas SCHAAL N°38390 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 19/01/1993 à HAGUENAU (FRANCE) BAC BAC STI en 2011
+Conseiller M. LEMERCIER Marc Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle STIC 4 SSI
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38390 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 GL02  C   6 ▲
+NF20  D   6 ▲
+IF14  C   6 ▲
+LO02  D   6 ▲
+LE02  D   4 GE34  C   4 ATDOC1 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+LO12  E   6 ▲
+EG23  D   6 ▲
+IF03  B   6 ▲
+LE03  C   4 GE21  C   4
+GE41  B   4
+AHE1  ADM  4
+ATDOC2
+ATDOC3
+Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 8 4 40
+A15 ISI 3 UX20  EQU  5 ▲ UX30  EQU  10 ▲
+UX50  EQU  5  ●
+UX80  EQU  5 Semestre d'études à l'étranger
+ Griffith College - Dublin (Irlande).
+semestre à l'étranger
+Total semestre 5 15 5 25
+P16 ISI 4 TN09  C   30 Stage
+AIGA - LYON - FRANCE - du 01/02/16 au 15/07/16
+ Vous êtes autorisé(e) à vous inscrire en Master SSI.
+Attention, vous n'avez toujours pas validé votre NPML,
+indispensable pour être diplômé(e).
+Total semestre 30 30
+A16 ISI 5 MSI LG10  F   0 ATDOC4
+DD10  EQU  8
+BULE  ADM Poursuite normale
+Total semestre 0 8 8
+P17 ISI 6 MSI IF19  C   6  ● IF08  B   6  ●
+IF22  E   6  ●
+IF24  B   6  ●
+ISI_C02  D   3  ●
+LG03  B   4
+Total semestre 6 21 4 31
+Total 35 60 30 12 12 5 12 166
+TOTAUX Ingénieur de M. Thomas SCHAAL
+CS TM ST EC ME CT HP NPML
+TCBR 63/54 ✓
+FIL 32/30 ✓
+TCBR+FIL 35/30 ✓ 60/30 ✓
+Global 35 60 30/60 12/12 ✓ 12/4 ✓ 5/4 ✓ 12 NPML ✓ 166/180
+17/16 ✓
+→ Master Sciences et Technologies de Automne 2016 à Printemps 2017 n°38390 Légende : * Master ▲ Master M1 ● Master M2 ◊ Hors Profil ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A16 STIC 3 SSI GS10  E   4  ●
+GS13  C   6  ●
+GS15  E   6  ●
+DD31  EQU  4  ●
+GS11  C   6  ●
+GS21  C   4  ●
+SD10  B   2  * DD32  EQU  4  * BULE  ADM  * Poursuite normale
+Assez bon semestre. Vous devez lever votre réserve
+en GS10.
+Total semestre 16 14 2 4 36
+P17 STIC 4 SSI
+Total semestre
+TOTAUX Master Sciences et Technologies de M. Thomas SCHAAL
+CS TM ST EC ME CT HP NPML
+M2 30/24 ✓
+Global 16 14 0/30 6/6 ✓ NPML ✓ 36/60
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 90
+M. Youssef SIFEDDINE N°38618 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 31/05/1993 à CASABLANCA (MAROC) BAC DIP. ETRANGER en 2011
+Conseiller M. LEMERCIER Marc Dernier diplôme obtenu Attestation délivrée à la suite d'un cursus en CPGE
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38618 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  ABS
+NF20  F   0
+IF14  C   6 ▲
+LO02  E   6 ▲
+LE00  D   4 GE31  D   4 Poursuite avec réserves
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche. Un effort général s'impose. Vous n'êtes pas
+autorisé(e) à chercher un stage au prochain semestre.
+Total semestre 0 12 4 4 20
+P15 ISI 2 IF02  C   6 ▲
+LO12  D   6 ▲
+EG23  D   6 ▲
+LO07  C   6 ▲
+LE02  F   0 GE34  D   4 Poursuite avec conseil
+Semestre moyen. Vos résultats en langues sont
+insuffisants pour obtenir le NPML en temps voulu,
+réagissez. C'est mieux, ne relachez pas vos efforts.
+Total semestre 12 12 0 4 28
+A15 ISI 3 IF15  B   6  ● IF07  D   6 ▲
+IF09  E   6 ▲
+IF20  E   6  ●
+LE02  E   4
+LE03  E   4
+GE36  D   4 ATDOC1 Poursuite normale
+Semestre moyen. Prenez immédiatement contact
+avec M. LE COCHE pour l'anglais.
+Total semestre 6 18 8 4 36
+P16 ISI 4 TN09  C   30 GE41  C   6 Stage
+BASSETTI - GRENOBLE - FRANCE - du 01/02/16 au
+31/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e).
+Total semestre 30 6 36
+A16 ISI 5 Libre IF10  B   6  ●
+NF20  C   6 ▲
+IF16  D   6  ●
+TX20  C   6  ●
+LE08  D   4 LI03  E   4
+SO02  E   4
+ATDOC2
+ATDOC3
+BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 8 36
+P17 ISI 6 Libre ST10 CGI FRANCE - COURBEVOIE - FRANCE - du
+06/02/17 au 04/08/17
+Total semestre
+Total 30 54 30 16 18 8 156
+TOTAUX Ingénieur de M. Youssef SIFEDDINE
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 30 54 30/60 16/12 ✓ 18/4 ✓ 8/4 ✓ 0 NPML ✓ 156/180
+26/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 91
+Mme Helene Ardo SOW N°38389 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 23/02/1993 à DAKAR (SENEGAL) BAC DIP. ETRANGER en 2011
+Conseiller M. LEMERCIER Marc Dernier diplôme obtenu LICENCE et LICENCE LMD
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38389 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 EX50  EQU  6 ▲
+NF20  E   6 ▲
+EX60  EQU  6 ▲
+IF09  D   6 ▲
+IF14  B   6 ▲
+LO02  B   6 ▲
+LE01  C   4 EP01  D   4 Poursuite normale
+Assez bon semestre. Vous ne pourrez pas suivre les
+UV : NF16 et LO01.
+Total semestre 12 24 4 4 44
+P15 ISI 2 IF02  D   6 ▲ EG23  C   6 ▲
+IF03  F   0
+IF11  E   6  ●
+NF19  E   6 ▲
+LE02  E   4 LI01  C   4 Poursuite avec conseil
+Semestre médiocre. Un effort général s'impose.
+Total semestre 6 18 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+CARREFOUR - MASSY - FRANCE - du 01/09/15 au
+19/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  C   6  ●
+IF19  C   6  ◊
+IF08  C   6  ●
+IF24  C   6  ◊
+LO10  E   6  ●
+LE03  D   4 GE21  C   4 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 18 4 4 38
+A16 ISI 5 MPL IF10  C   6  ● GE28  A   4
+GE44  D   4
+Poursuite normale
+Semestre moyen. Vous auriez pu mieux faire.
+Total semestre 6 8 14
+P17 ISI 6 MPL ST10 CGI FRANCE - COURBEVOIE - FRANCE - du
+06/02/17 au 04/08/17
+Total semestre
+Total 36 60 30 12 12 8 158
+TOTAUX Ingénieur de Mme Helene Ardo SOW
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 30/30 ✓ 54/30 ✓
+Global 36 60 30/60 12/12 ✓ 12/4 ✓ 8/4 ✓ 0 NPML ✓ 158/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 92
+M. Nicolas SWIECH N°35406 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 01/06/1994 à AVIGNON (FRANCE) BAC BAC S-SVT p.c. en 2011
+Conseiller M. PRINS Christian Dernier diplôme obtenu Baccalauréat (français)
+Dernier établissement Formation actuelle ISI 6 MSI
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35406 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 TC 1 MATH01  C   6  ■
+PHYS01  C   6  ■
+MS11  B   6  ■
+TN01  C   6  ■
+LE03  B   4
+SI10  A   4
+APP1 Poursuite normale
+Bon semestre
+Total semestre 12 12 8 32
+P13 TC 2 CHMA01 D   6  ■
+MATH02  D   6  ■
+NF04  C   6  ■
+TN04  D   6  ■
+TN05  A   6 LE08  C   4 SC02  C   4 BULE  ADM Poursuite normale
+Assez bon semestre. Vous pouvez prendre 1 TM de
+branche.
+Total semestre 12 12 6 4 4 38
+A13 TC 3 MATH03  B   6  ■
+SY01  C   6  ■
+LO02  F   0
+NF05  D   6  ■
+LG00  A   4 SC00  C   4 Poursuite normale
+Assez bon semestre. Vous pouvez prendre 2 TM de
+branche.
+Total semestre 12 6 4 4 26
+P14 TC 4 MATH04  F   0
+SH01  C   6  ■
+C2I1  B   4  ■
+GL01  A   6  ■
+GE21  B   4
+GE31  F   0
+Poursuite normale
+Semestre moyen. Vous pouvez passer en branche,
+vous devrez alors compléter votre cursus TC lors du
+prochain semestre.
+Total semestre 6 10 4 20
+A14 ISI 1 CHMA02 F   0
+NF16  D   6 ▲
+IF14  B   6 ▲
+LO02  D   6 ▲
+LG01  C   4 GE31  A   4 Poursuite avec conseil
+Semestre moyen. Pour rester à l'UTT vous devez
+impérativement compléter votre cursus TC au
+prochain semestre. N'oubliez pas que pour être
+diplômé(e), vous devez passer un semestre à
+l'étranger.
+Total semestre 6 12 4 4 26
+P15 ISI 2 CHMA04 E   6  ■
+IF02  B   6 ▲
+LO07  D   6 ▲
+NF19  C   6 ▲
+LE15  B   4
+LG02  D   4
+Poursuite normale
+Semestre moyen
+Total semestre 12 12 8 32
+A15 ISI 3 GL02  D   6 ▲ EG23  B   6 ▲
+IF07  C   6 ▲
+IF09  B   6 ▲
+LG03  E   4 GE41  B   6 Poursuite normale
+Assez bon semestre
+Total semestre 6 18 4 6 34
+P16 ISI 4 TN09  A   30 Stage
+BNP PARIBAS - MONTREUIL - FRANCE - du
+01/02/16 au 29/07/16
+Total semestre 30 30
+A16 ISI 5 MSI UX30  EQU  7,5 ▲
+UX50  EQU  3  ●
+UX51  EQU  5,5 ●
+UX60  EQU  4,5 UX70  EQU  6 Semestre d'études à l'étranger
+semestre à l'étranger
+Malmö högskola (Suède).
+Total semestre 16 4,50 6 26,50
+P17 ISI 6 MSI AC20  B   6  ●
+IF19  A   6  ●
+IF08  C   6  ●
+IF22  B   6  ●
+IF24  C   6  ●
+GE11  C   4
+GE28  B   4
+Total semestre 12 18 8 38
+Total 78 116 36 36,50 28 8 302,50
+TOTAUX Ingénieur de M. Nicolas SWIECH
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 40/24 ✓
+TCBR 67,5/54 ✓
+FIL 38,5/30 ✓
+TCBR+FIL 30/30 ✓ 76/30 ✓
+Global 78 116 36/66 36,5/20 ✓ 28/8 ✓ 8/8 ✓ 0 NPML ✓ 302,5/300 ✓
+36/32 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 94
+M. Hamza TAJI N°38385 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 26/11/1993 à AGADIR (MAROC) BAC DIP. ETRANGER en 2011
+Conseiller M. SMOLARZ André Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38385 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  F   0
+NF20  D   6 ▲
+IF07  C   6 ▲
+IF14  D   6 ▲
+LE01  B   4 GE34  D   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  C   6 ▲ EG23  F   0
+IF03  E   6 ▲
+LO07  C   6 ▲
+LE02  D   4 SO02  C   4 Poursuite avec conseil
+Semestre médiocre. De meilleurs résultats sont
+nécessaires dans les UV TM. Vous ne partez pas en
+stage au prochain semestre même si vous avez déjà
+signé une convention. Un effort général s'impose.
+Total semestre 6 12 4 4 26
+A15 ISI 3 IF15  C   6  ●
+NF16  D   6 ▲
+EG23  B   6 ▲
+IF09  D   6 ▲
+LE03  E   4 GE36  E   4 Poursuite normale
+Semestre moyen. C'est mieux, ne relachez pas vos
+efforts.
+Total semestre 12 12 4 4 32
+P16 ISI 4 EX68  EQU  6  ◊
+EX69  EQU  6  ●
+TN09  B   30 Stage
+SOCIETE GENERALE - COURBEVOIE - FRANCE -
+du 01/02/16 au 29/07/16
+ Attention, vous n'avez toujours pas validé votre
+NPML, indispensable pour être diplômé(e). Vous êtes
+autorisé(e) à chercher un contrat de
+professionnalisation.
+L'étudiant ne pourra pas suivre les UVs suivantes :
+RE01 et RE16.
+Total semestre 12 30 42
+A16 ISI 5 Libre IF10  B   6  ● IF20  D   6  ● ST10 LX10  D   4 BULE  ADM Stage
+SOCIETE GENERALE - PARIS CEDEX 18 - FRANCE
+- du 05/09/16 au 29/08/17
+Formation par alternance
+Total semestre 6 6 4 16
+P17 ISI 6 Libre IF05  D   6  ●
+IF19  F   0
+ST10  RES  0 GE18  E   4 SOCIETE GENERALE - PARIS CEDEX 18 - FRANCE
+- du 05/09/16 au 29/08/17
+Formation par alternance
+Total semestre 6 0 4 10
+Total 36 54 30 16 12 4 152
+TOTAUX Ingénieur de M. Hamza TAJI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 36 54 30/60 16/12 ✓ 12/4 ✓ 4/4 ✓ 0 NPML ✓ 152/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 95
+Mme Alexandra THAI N°38350 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 30/07/1994 à PARIS 19E  ARRONDISSEMENT (FRANCE) BAC BAC S-SVT p.c. en 2012
+Conseiller Mme TOUVET Peggy Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38350 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  D   6 ▲
+NF20  C   6 ▲
+IF14  B   6 ▲
+LO02  A   6 ▲
+LE02  C   4 GE31  A   4 ATDOC1 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  E   6 ▲
+RE04  C   6 ▲
+IF03  B   6 ▲
+NF19  B   6 ▲
+LE03  B   4 GE32  A   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 IF10  B   6  ● EG23  D   6 ▲
+IF26  B   6  ●
+LC01  A   4
+LE08  D   4
+LP00  B   4
+SC04  D   4 ATDOC2
+ATDOC3
+ATDOC4
+BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 6 12 12 4 34
+P16 ISI 4 Libre TN09  A   30 Stage
+BFORBANK - PARIS LA DEFENSE CEDEX -
+FRANCE - du 01/02/16 au 31/07/16
+Total semestre 30 30
+A16 ISI 5 Libre UX40  EQU  6  ●
+UX41  EQU  6  ●
+UX50  EQU  6  ● UX60  EQU  4
+UX61  EQU  4
+UX80  EQU  4
+UX81  EQU  4
+Semestre d'études à l'étranger
+semestre à l'étranger
+University of Michigan - Shanghai Jiatong University
+Joint Institute (Chine).
+Total semestre 12 6 8 8 34
+P17 ISI 6 Libre ST10 DELOITTE TAX & CONSULTING - LUXEMBOURG -
+LUXEMBOURG - du 01/03/17 au 31/08/17
+Total semestre
+Total 42 42 30 28 8 12 162
+TOTAUX Ingénieur de Mme Alexandra THAI
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 42/30 ✓ 42/30 ✓
+Global 42 42 30/60 28/12 ✓ 8/4 ✓ 12/4 ✓ 0 NPML ✓ 162/180
+20/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 96
+M. Damien TROUBLAT N°38394 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 18/05/1990 à LE CREUSOT (FRANCE) BAC BAC S-SVT p.c. en 2009
+Conseiller Mme DI LORETO Inès Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2014 à Printemps 2017 n°38394 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  C   6 ▲
+NF20  C   6 ▲
+IF14  D   6 ▲
+LO02  C   6 ▲
+LE01  C   4 GE21  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+LO12  D   6 ▲
+IF03  D   6 ▲
+LO07  B   6 ▲
+LE02  B   4 GE31  D   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  A   30 Stage
+ORANGE LABS - CAEN Cedex 4 - FRANCE - du
+31/08/15 au 12/02/16
+Total semestre 30 30
+P16 ISI 4 MPL IF05  B   6  ● IF08  C   6  ●
+IF11  C   6  ●
+LO10  B   6  ●
+LE03  C   4
+LE08  D   4
+GE34  D   4 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 6 18 8 4 36
+A16 ISI 5 MPL UX30  EQU  5 ▲
+UX50  EQU  5  ●
+Semestre d'études à l'étranger
+semestre à l'étranger
+Politecnico di Milano (Italie).
+Total semestre 10 10
+P17 ISI 6 MPL ISI_C01  C   3  ● ST10 GE41  D   6 ER01  B   4 SOPRA STERIA - LIMONEST CEDEX - FRANCE - du
+06/03/17 au 31/08/17
+Total semestre 3 6 4 13
+Total 30 55 30 16 18 4 153
+TOTAUX Ingénieur de M. Damien TROUBLAT
+CS TM ST EC ME CT HP NPML
+TCBR 53/54
+FIL 32/30 ✓
+TCBR+FIL 30/30 ✓ 55/30 ✓
+Global 30 55 30/60 16/12 ✓ 18/4 ✓ 4/4 ✓ 0 NPML ✓ 153/180
+22/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 97
+M. Victor VILLEMEUR N°13114 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 24/03/1994 à TOULOUSE (FRANCE) BAC BAC S-Ing. en 2011
+Conseiller M. LEMERCIER Marc Dernier diplôme obtenu DUT
+Dernier établissement Formation actuelle ISI 6 MPL
+→ Ingénieur de Automne 2011 à Printemps 2013 n°13114 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A11 TC 1 CHMA01 F   0
+MATH01  E   6  ■
+EN01  F   0
+NF04  C   6  ■
+LE01  B   4
+SI10  C   4
+APP1 Poursuite avec réserves
+Mauvais semestre. Votre maintien à l'UTT dépendra
+de vos résultats au prochain semestre d'études.
+Total semestre 6 6 8 20
+P12 TC 2 MATH02  F   0
+PHYS01  F   0
+MS11  E   6  ■
+TN01  D   6  ■
+TN05  C   6 LE02  D   4 GE31  E   4 APP2 Poursuite avec réserves
+Mauvais semestre. Votre maintien à l'UTT dépendra
+de vos résultats aux UV CS au prochain semestre.
+Total semestre 0 12 6 4 4 26
+A12 TC 3 CHMA01 E   6  ■
+MATH02  F   0
+NF05  ABS
+TN04  D   6  ■
+LE03  C   4 GE21  E   4 Instance de réorientation
+Vous serez en instance de réorientation au prochain
+semestre.
+Total semestre 6 6 4 4 20
+P13 IDR 1 MATH03  ABS
+PHYS01  ABS
+NF02  ABS LE08  ABS
+LS02  ABS
+Réorienté
+Au vu de l'insuffisance de vos résultats, le jury de suivi
+a prononcé votre réorientation. Vous n'êtes pas
+autorisé(e) à poursuivre vos études à l'UTT.
+Total semestre
+Total 12 24 6 16 8 66
+TOTAUX Ingénieur de M. Victor VILLEMEUR
+CS TM ST EC ME CT HP NPML
+TC 12/48 24/24 ✓
+TCBR 0/54
+FIL 0/30
+TCBR+FIL 0/30 0/30
+Global 12 24 6/66 16/20 8/8 ✓ 0/8 0 66/300
+8/32
+→ Ingénieur de Automne 2014 à Printemps 2017 n°13114 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A14 ISI 1 NF16  ABS
+NF20  D   6 ▲
+IF14  C   6 ▲
+LO02  E   6 ▲
+LE03  C   4 SP11  C   4 Poursuite avec conseil
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS de tronc commun de
+branche.
+Total semestre 6 12 4 4 26
+P15 ISI 2 IF02  D   6 ▲
+RE04  F   0
+LO07  C   6 ▲
+NF19  F   0
+LE08  B   4 SP01  C   4 BULE  ADM Poursuite avec réserves
+Mauvais semestre. Vous ne partez pas en stage au
+prochain semestre même si vous avez déjà signé une
+convention.
+Total semestre 6 6 4 4 20
+A15 ISI 3 GL02  B   6 ▲
+NF16  B   6 ▲
+EG23  D   6 ▲
+IF07  B   6 ▲
+LS01  A   4 GE28  C   4 Poursuite normale
+Bon semestre
+Total semestre 12 12 4 4 32
+P16 ISI 4 TN09  B   30 Stage
+THALES ALENIA SPACE - TOULOUSE - FRANCE -
+du 01/02/16 au 13/07/16
+Total semestre 30 30
+A16 ISI 5 MPL UX30  EQU  4 ▲
+UX50  EQU  2  ●
+UX51  EQU  2  ●
+UX52  EQU  3  ●
+UX53  EQU  3  ●
+UX54  EQU  4  ●
+UX55  EQU  4  ●
+UX60  EQU  4 Semestre d'études à l'étranger
+semestre à l'étranger
+Zachodniopomorski Uniwersytet Technologiczny w
+Szczecinie (Pologne).
+Total semestre 22 4 26
+P17 ISI 6 MPL IF05  B   6  ● IF08  B   6  ●
+IF11  B   6  ●
+LO10  A   6  ●
+GE34  D   4 ATDOC1
+ATDOC2
+ATDOC3
+Total semestre 6 18 4 28
+Total 30 70 30 16 8 8 162
+TOTAUX Ingénieur de M. Victor VILLEMEUR
+CS TM ST EC ME CT HP NPML
+TCBR 58/54 ✓
+FIL 42/30 ✓
+TCBR+FIL 30/30 ✓ 70/30 ✓
+Global 30 70 30/60 16/12 ✓ 8/4 ✓ 8/4 ✓ 0 NPML ✓ 162/180
+16/16 ✓
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 99
+M. Yifeng WU N°13624 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 07/10/1993 à ANHUI (CHINE) BAC DIP. ETRANGER en 2011
+Conseiller M. CHEN Haoxun Dernier diplôme obtenu Diplôme d'établissement ETRANGER secondaire
+Dernier établissement Formation actuelle STIC 4 SSI
+→ Ingénieur de Printemps 2012 à Printemps 2017 n°13624 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+P12 TC 1 MATH01  B   6  ■
+PHYS01  D   6  ■
+MS11  D   6  ■ LF10  C   4
+LF11  C   4
+LF12  C   4
+LF13  C   4
+Poursuite normale
+Bon semestre
+Total semestre 12 6 16 34
+A12 TC 2 CHMA01 C   6  ■
+MATH02  C   6  ■
+NF04  C   6  ■
+TN04  C   6  ■
+LF14  C   4
+LF21  D   4
+GE31  D   4 Poursuite normale
+Bon semestre.
+Total semestre 12 12 8 4 36
+P13 TC 3 CHMA03 F   0
+MATH03  D   6  ■
+NF02  F   0
+TN01  E   6  ■
+TN05  C   6 LF24  E   4 GE21  E   4 Poursuite avec réserves
+Mauvais semestre. Un effort général s'impose. Vous
+pouvez prendre 1 TM de branche.
+Total semestre 6 6 6 4 4 26
+A13 TC 4 PHYS02  F   0
+SY01  B   6  ■
+NF05  C   6  ■
+TN02  D   6  ■
+LF15  C   4 Poursuite avec réserves
+Semestre moyen. De meilleurs résultats sont
+nécessaires dans les UV CS. Vous pouvez prendre 1
+TM de branche.
+Total semestre 6 12 4 22
+P14 TC 5 MATH04  C   6  ■
+PHYS04  B   6  ■
+LO07  C   6 ▲ LE02  C   4 GE36  F   0 EV01  C   4 Poursuite normale
+Assez bon semestre. Vous serez en branche au
+prochain semestre.
+Total semestre 12 6 4 0 4 26
+A14 ISI 1 NF16  C   6 ▲
+NF20  B   6 ▲
+IF14  D   6 ▲
+LO02  C   6 ▲
+LE03  D   4 AP03  E   4 Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+P15 ISI 2 IF02  B   6 ▲
+LO12  B   6 ▲
+IF03  E   6 ▲
+NF19  C   6 ▲
+LE08  D   4 GE32  B   4 BULE  ADM Poursuite normale
+Assez bon semestre
+Total semestre 12 12 4 4 32
+A15 ISI 3 TN09  B   30 Stage
+SAGEMCOM BROADBAND - RUEIL MALMAISON -
+FRANCE - du 01/09/15 au 19/02/16
+ Votre demande de filière à l'UTC a été refusée.
+Total semestre 30 30
+P16 ISI 4 MPL IF05  D   6  ● IF11  C   6  ●
+LO10  D   6  ●
+TX20  A   6  ●
+GE34  A   4
+GE41  C   6
+Poursuite normale
+Assez bon semestre. Vous êtes autorisé(e) à vous
+inscrire en Master SSI.
+Total semestre 6 18 10 34
+A16 ISI 5 MPL IF10  C   6  ● ATDOC1
+ATDOC2
+DD10  EQU  8
+Poursuite normale
+Total semestre 6 8 14
+P17 ISI 6 MPL EI04L  FX   0 ORANGE LABS - CAEN Cedex 4 - FRANCE - du
+13/02/17 au 11/08/17
+Total semestre 0 0
+Total 84 84 36 44 22 8 8 286
+TOTAUX Ingénieur de M. Yifeng WU
+CS TM ST EC ME CT HP NPML
+TC 48/48 ✓ 36/24 ✓
+TCBR 54/54 ✓
+FIL 30/30 ✓
+TCBR+FIL 36/30 ✓ 48/30 ✓
+Global 84 84 36/66 44/20 ✓ 22/8 ✓ 8/8 ✓ 8 NPML ✓ 286/300
+30/32
+→ Master Sciences et Technologies de Automne 2016 à Printemps 2017 n°13624 Légende : * Master ▲ Master M1 ● Master M2 ◊ Hors Profil ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A16 STIC 3 SSI GS10  D   4  ●
+GS13  EQU  3  ●
+GS15  A   6  ●
+GS16  D   4  ●
+DD31  EQU  4  ●
+GS11  F   0
+SD10  D   2  * DD32  EQU  4  * BULE  ADM  * Poursuite avec conseil
+Semestre médiocre. Le jury décide de l'organisation
+d'une seconde session d'examen des UV non
+validées. Cette seconde session ne pourra se dérouler
+que minimum 2 mois après la date du présent jury, et
+au plus tard avant la fin du prochain semestre
+d'études. Vous devez impérativement avoir signé votre
+convention de stage avant le 01/03/2017.
+Total semestre 17 4 2 4 27
+P17 STIC 4 SSI EM58  EQU  3  ● EM62  EQU  6  ● ST30  * ORANGE LABS - CAEN Cedex 4 - FRANCE - du
+13/02/17 au 11/08/17
+Total semestre 3 6 9
+TOTAUX Master Sciences et Technologies de M. Yifeng WU
+CS TM ST EC ME CT HP NPML
+M2 30/24 ✓
+Global 20 10 0/30 6/6 ✓ NPML ✓ 36/60
+ 
+03/07/2017 PV de jury de suivi ISI-6-P17 101
+Mme Miaoyue ZHOU N°35023 DECISION DU JURY :	 AN	 CV	 DM	 EX	 IN	 JD	 NC	 OR	 PC	 PN	 PR	 RD	 SE	 SP
+Né(e) le 08/07/1993 à HUBEI (CHINE) BAC DIP. ETRANGER en 2010
+Conseiller M. BIRREGAH Babiga Dernier diplôme obtenu Diplôme d'établissement ETRANGER supérieur
+Dernier établissement Formation actuelle ISI 6 Libre
+→ Ingénieur de Automne 2012 à Printemps 2017 n°35023 Légende : ■ Tronc commun ▲ Tronc commun de branche ● Filière ◊ Hors profil × En attente d'affectation ✓ Profil minimum validé
+CS TM ST EC ME CT HP NPML Observations
+A12 ISI 1 NF16  C   6 ▲
+NF20  B   6 ▲
+LO02  E   6 ▲
+RE01  C   6 ▲
+LF10  B   4
+LF11  B   4
+Poursuite normale
+Assez bon semestre
+DD Xi'An Jiaotong University
+Total semestre 12 12 8 32
+P13 ISI 2 IF02  D   6 ▲
+RE04  E   6 ▲
+EG23  C   6 ▲
+LO07  C   6 ▲
+NF19  C   6 ▲
+LF14  B   4 GE21  E   4 Poursuite normale
+Assez bon semestre. Ne négligez pas les UV CT.
+DD Xi'An Jiaotong University
+Total semestre 12 18 4 4 38
+A13 ISI 3 IF15  C   6  ● IF20  D   6  ● LE08  D   4
+LF15  C   4
+HT03  C   4 BULE  ADM Poursuite normale
+Assez bon semestre
+DD Xi'An Jiaotong University
+Total semestre 6 6 8 4 24
+P14 ISI 4 TN09  B   30 Stage
+STRUCTURE & REHABILITATION - BAGNOLET -
+FRANCE - du 03/02/14 au 25/07/14
+DD Xi'An Jiaotong University
+Total semestre 30 30
+A14 ISI 5 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P15 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+A15 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P16 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+A16 ISI 6 Libre Report de décision
+DD Xi'An Jiaotong University
+Total semestre
+P17 ISI 6 Libre DD Xi'An Jiaotong University
+Total semestre
+Total 30 36 30 20 4 4 124
+TOTAUX Ingénieur de Mme Miaoyue ZHOU
+CS TM ST EC ME CT HP NPML
+TCBR 54/54 ✓
+FIL 12/30
+TCBR+FIL 30/30 ✓ 36/30 ✓
+Global 30 36 30/60 20/12 ✓ 4/4 ✓ 4/4 ✓ 0 NPML ✓ 124/180
+8/16
+DATE DU JURY  SIGNATURES DES MEMBRES DU JURY
