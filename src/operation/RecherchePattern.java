@@ -1,14 +1,14 @@
 package operation;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
-
 import data.Module;
 import io.LectureModules;
 
 /**RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible*/
-public class RecherchePattern {
+public abstract class RecherchePattern {
 
 	/**
 	 * modules contient la liste des modules existant dans le fichier modules pour filtrer les modules
@@ -28,7 +28,7 @@ public class RecherchePattern {
 	/**
 	 * regex pour recuperer le nom de l'etudiant
 	 */
-	private static String regexNom = "[A-Z]{1,}-*[A-Z]{1,}";
+	private static String regexNom = "[A-ZÁÀ'ÇÉÈÊ]{1,}-*[A-ZÁÀÇÉÈÊ]{1,}";
 
 	/**
 	 * regex pour recuperer le prenom de l'etudiant
@@ -63,7 +63,7 @@ public class RecherchePattern {
 	/**
 	 * regex pour le parcours du module
 	 */
-	private static String regexParcours = "ISI|TC|MASTER";;
+	private static String regexParcours = "ISI|TC|HC|SRT|MASTER";;
 
 	/**TODO recommenter
 	 * recupereNom recherche avec un systeme de regex le nom de l'etudiant dans le fichier
@@ -73,6 +73,7 @@ public class RecherchePattern {
 	public static String recupereNom(List<String> dataEtudiant){
 		Iterator<String> it = dataEtudiant.iterator();
 		String nom = "";
+		List<String> noms = new ArrayList<String>();
 		String contenu = "";
 		while(it.hasNext()){
 			contenu = it.next();
@@ -81,9 +82,10 @@ public class RecherchePattern {
 				while(it.hasNext()){
 					contenu = it.next();
 					if(Pattern.matches(regexNom, contenu)) // si le contenu ressemble a un nom
-						nom += contenu + " ";
+						noms.add(contenu);
 					else if (Pattern.matches(regexNumEtudiant, contenu)) { // on arrete la recuperation du nom puisque on est au niveau du numero etudiant
-						nom = nom.substring(0, nom.length()-1); // on retire l'espace de fin de chaine//TODO a fixer
+						String[] nomTab = (String[]) noms.toArray(new String[0]);
+						nom = String.join(" ", nomTab);
 						return nom;
 					}
 				}
@@ -218,10 +220,10 @@ public class RecherchePattern {
 	 */
 	public static int recupereSemestre(List<String> modulesData) {
 		String semestre = null;
+		int pos = 0;
 		try{
 			String recupereParcours = recupereParcours(modulesData);// on recupere le parcours qui se trouve juste avant le semestre
-			System.out.println("rp = "+ recupereParcours);
-			int pos = modulesData.indexOf(recupereParcours);//on recupere la position
+			pos = modulesData.indexOf(recupereParcours);//on recupere la position
 			semestre = modulesData.get(pos+1);//on recupere le semestre
 			return Integer.valueOf(semestre);
 		}catch(NumberFormatException e){
