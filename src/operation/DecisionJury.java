@@ -17,10 +17,14 @@ import io.LectureModules;
 public abstract class DecisionJury{
 	//TODO tester la classe pour voir si le fichier final est ok
 
-	/*TODO a commneter*/
+	/*
+	 * fichierTexte represente le fichier qui contient les donnees des etudiants
+	 */
 	private static String fichierTexte;
 
-	/*TODO a commneter*/
+	/*
+	 * fichierCsv represente le fichier qui contiendra les decisionsJury en csv
+	 */
 	private static String fichierCsv;
 	
 	/**
