@@ -62,10 +62,10 @@ public class GestionData {
 			}
 		}
 		catch(FileNotFoundException exc) {
-			System.out.println("Erreur d'ouverture");//TODO faire un optionPane
+			System.out.println("Erreur d'ouverture");
 		} 
 		catch (IOException e) {
-			e.printStackTrace();//TODO faire un optionPane
+			e.printStackTrace();
 		}
 		//On creer les etudiants
 		return creationListeEtudiants(datas);
@@ -189,7 +189,7 @@ public class GestionData {
 		return mods;
 	}
 
-	//TODO A VOIR SI CET METHODE PEUT ETRE UTILE POUR LA GESTION DES ETUDIANTS CHINOIS
+	//TODO Redecrire cette methode A VOIR SI CET METHODE PEUT ETRE UTILE POUR LA GESTION DES ETUDIANTS CHINOIS
 	/**
 	 * Indique si le mot clé "Jiaotong" se trouve dans le tableau
 	 * Ces étudiants chinois ne font qu'un ST09 et pas de ST10

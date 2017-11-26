@@ -65,7 +65,7 @@ public abstract class RecherchePattern {
 	 */
 	private static String regexParcours = "ISI|TC|HC|SRT|MASTER";;
 
-	/**TODO recommenter
+	/**
 	 * recupereNom recherche avec un systeme de regex le nom de l'etudiant dans le fichier
 	 * @param dataEtudiant la liste des donnes dans laquelle chercher le nom
 	 * @return le nom de l'etudiant
@@ -94,7 +94,7 @@ public abstract class RecherchePattern {
 		return null;
 	}
 
-	/**TODO recommenter
+	/**
 	 * recuperPrenom recherche avec un systeme de regex le prenom de l'etudiant dans le fichier
 	 * @param dataEtudiant la liste des donnes dans laquelle chercher le prenom
 	 * @return le prenom de l'etudiant

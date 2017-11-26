@@ -13,9 +13,10 @@ import data.Etudiant;
 import data.Module;
 import io.LectureModules;
 
-//TODO commenter la classe
+/**
+ * Classe qui gere les decisions de jury des etudiants 
+ */
 public abstract class DecisionJury{
-	//TODO tester la classe pour voir si le fichier final est ok
 
 	/*
 	 * fichierTexte represente le fichier qui contient les donnees des etudiants
@@ -32,16 +33,10 @@ public abstract class DecisionJury{
 	 */
 	List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
-	/**TODO a commenter
-	 * Constructeur : Lance la lecture du fichier texte 
-	 * @param nomFichierTexte Chaine de caractéres représentant le fichier texte à analyser
-	 * @param nomFichierCSV Chaine de caractéres représentant le fichier CSV de sortie (résultat)
-	 * @param niveauIsi entier représentant le niveau de l'étudiant dans la formation ISI
-	 */
-	/**TODO recommenter en expliquant que c'est l'ecriture de la decision de jury
-	 * Prend en compte les nouvelles régles A17 pour les stages : pour les étudiant ISI 1, on compte les CS+TM, 
-	 * ils peuvent chercher un stage que si CS+TM (Hors equivalence) est supérieur strictement à 2
-	 * La méthode lit le fichier TXT ligne par ligne pour extraire les informations relatives aux étudiants et utiles pour le jury
+	/**
+	 * Methode qui ecrit les decisions de jury dans un fichier csv a partir des donnees des etudiants contenue dans un fichier texte
+	 * @param nomFichierTexte le fichier texte à analyser contenant les donnees des etudiants
+	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
 	 */
 	public static void ecritureDecisionJury (String nomFichierTexte, String nomFichierCSV){
 		fichierCsv=nomFichierCSV;
@@ -189,7 +184,7 @@ public abstract class DecisionJury{
 		}
 	}
 
-	/** TODO mettre un bollen si l'etudiant a fait en dernier semestre un stage
+	/** TODO mettre un booleen si l'etudiant a fait en dernier semestre un stage
 	/**
 	 * enStage recherche si l'etudiant est soit en stage ST09, soit en ST10, soit ST30
 	 * tabMots tableau de mots composant une ligne de texte à analyser
@@ -204,10 +199,10 @@ public abstract class DecisionJury{
 		return false;
 	}
 
-	/*TODO A Appeler quelque part et a commenter
-	 * 
+	/*TODO A Appeler quelque part
+	 * Methode qui compte les credits des modules ISI de l'etudiant
 	 */
-	public int compteCreditsISIOuTC (){
+	public int compteCreditsISI (){
 		int i, credits;
 		credits=0;
 		i=0;

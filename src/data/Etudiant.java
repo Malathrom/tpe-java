@@ -6,18 +6,30 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-//TODO commenter toutes la classes
+/**
+ * Classe representant un etudiant
+ */
 public class Etudiant {
 
+	/**
+	 * nom de l'etudiant
+	 */
 	private String nom;
 
+	/**
+	 * prenom de l'etudiant
+	 */
 	private String prenom;
-
+	
+	/**
+	 * nombre de credit obtenu par l'etudiant
+	 */
 	private int creditTotal;
-
+	
+	/**
+	 * nombre de semestre effectué par l'etudiant
+	 */
 	private int nbSemestres;
-
-	private int semestreParcours;
 
 	/**liste des modules fait par l'etudiant*/
 	private List<Module> modules = new ArrayList<Module>();

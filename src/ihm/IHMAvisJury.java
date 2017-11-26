@@ -13,7 +13,6 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import io.SauvegardeRepertoire;
-import javafx.scene.input.KeyCode;
 import operation.DecisionJury;
 
 import javax.swing.JButton;
@@ -127,11 +126,6 @@ public class IHMAvisJury extends JFrame{
 		isiLevel.setBounds(10, 153, 88, 14);
 		this.getContentPane().add(isiLevel);
 
-		// Bouton lançant la conversion TXT --> "Filtrage" --> CSV 
-		conversionTxt_Csv = new JButton("Conversion  TXT -> CSV");
-		conversionTxt_Csv.setBounds(296, 83, 176, 23);
-		//TODO bouton supprimé this.getContentPane().add(conversionTxt_Csv);
-
 		// Bouton pour quitter l'application
 		exit = new JButton("Quitter");
 		exit.setBounds(664, 169, 109, 23);
@@ -180,22 +174,18 @@ public class IHMAvisJury extends JFrame{
 		this.addKeyListener(new KeyListener() {
 			@Override
 			public void keyPressed(KeyEvent e) {
-				//TODO faire un touche pour la recherhce de fichier, une pour l'avis jury, une pour la conversion, une pour les stats
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_R:
 					choixRepertoire();
-
 					break;
 				case KeyEvent.VK_C:
 					conversionPdf_Txt.doClick();
 					break;
 				case KeyEvent.VK_A:
-					avisJury.doClick();
-
+					creationDecisionJury();
 					break;
 				case KeyEvent.VK_S:
-					statistique.doClick();
-
+					genererStatistique();
 					break;
 				case KeyEvent.VK_Q:
 					System.exit(0); 
@@ -240,7 +230,7 @@ public class IHMAvisJury extends JFrame{
 			}
 		});
 
-		//TODO a ppelrler les methodes pour les statistiques
+		//TODO a appeler les methodes pour les statistiques
 		statistique.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -260,10 +250,8 @@ public class IHMAvisJury extends JFrame{
 	 * Methode declenché lors de la decision de jury
 	 */
 	private void creationDecisionJury() {		
-		//TODO test si les ficheir existe ou pas si le fichier text existe on recupere les donnees pour le csv
 		if(fileDecisionJury.exists()){
-			//on demande si on veut l'ecraser
-			int option = dialogEcrasmentFichier(fileDecisionJury);
+			int option = dialogEcrasmentFichier(fileDecisionJury); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
 				DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
@@ -313,7 +301,7 @@ public class IHMAvisJury extends JFrame{
 					requestFocus();
 					if(option == JOptionPane.OK_OPTION){
 						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-						dialogConversionFichier(filePDF, fileTXT);
+						dialogSuccesConversionFichier(filePDF, fileTXT);
 					}
 				}
 				else
@@ -321,12 +309,16 @@ public class IHMAvisJury extends JFrame{
 			} catch (FileNotFoundException e2) {
 				dialogFichierInexistant(filePDF);
 			} catch (IOException e1) {
-				dialogFichierNonConverti(filePDF, fileTXT);
+				dialogEchecConversionFichier(filePDF, fileTXT);
 			}
 		}
 	}
 
-	//TODO commenter
+	/**
+	 * methode affichant la boite de dialog pour demander l'ecrasement d'un fichier
+	 * @param file le fichier qui doit etre ecraser
+	 * @return ok ou non
+	 */
 	private int dialogEcrasmentFichier(File file) {
 		String message = "Voulez-vous ecraser le fichier " + file.getName() +" ?";
 		String message2 = "Confirmation de la suppression";
@@ -334,23 +326,38 @@ public class IHMAvisJury extends JFrame{
 		return option;
 	}
 
-	//TODO commenter
-	private void dialogConversionFichier(File file, File file2){
+	/**
+	 * methode affichant la boite de dialog pour afficher le succes de la conversion du fichier
+	 * @param file le fichier source de la conversion
+	 * @param file2 le fichier converti
+	 */
+	private void dialogSuccesConversionFichier(File file, File file2){
 		String message = "le fichier " + file.getName() +"\na été converti en "+ file2.getName();
 		JOptionPane.showMessageDialog(null, message, "Info", JOptionPane.INFORMATION_MESSAGE);
 	}
 
-	//TODO commenter
+	/**
+	 * methode affichant la boite de dialog pour afficher un fichier inexistant
+	 * @param file le fichier inexistant
+	 */
 	private void dialogFichierInexistant(File file){
 		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\n'existe pas", "Erreur", JOptionPane.ERROR_MESSAGE);
 	}
 
-	//TODO commenter
-	private void dialogFichierNonConverti(File file, File file2){
+	/**
+	 * methode affichant la boite de dialog pour afficher l'echec de la conversion du fichier
+	 * @param file le fichier source de la conversion
+	 * @param file2 le fichier non converti
+	 */
+	private void dialogEchecConversionFichier(File file, File file2){
 		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\nn'a pas été converti en "+ file2.getName(), "Erreur", JOptionPane.ERROR_MESSAGE);
 	}
 
-	//TODO commenter
+	/**
+	 * methode affichant la boite de dialog pour demander l'ecrasement d'un fichier
+	 * @param file le fichier qui doit etre ecraser
+	 * @return ok ou non
+	 */
 	private void dialogDecisionJury(File file) {
 		JOptionPane.showMessageDialog(null, "le fichier de decisionJury " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
 
@@ -392,7 +399,10 @@ public class IHMAvisJury extends JFrame{
 		unlockButton();
 	}
 
-	//TODO a commenter
+	/**
+	 * Methode qui gere les fichiers et les dossier en entrée/sortie
+	 * @param chooser le choix du fichier PDF
+	 */
 	private void gestionFichier(JFileChooser chooser) {
 		//Recuperation du PDF choisi dans le JFileChooser
 		filePDF = new File(chooser.getSelectedFile().getAbsolutePath());
