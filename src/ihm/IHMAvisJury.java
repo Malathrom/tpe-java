@@ -260,8 +260,18 @@ public class IHMAvisJury extends JFrame{
 	 * Methode declenché lors de la decision de jury
 	 */
 	private void creationDecisionJury() {		
-		//TODO test si les ficheir existe ou pas si le fichier text existe on recupere les donnees
-		DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
+		//TODO test si les ficheir existe ou pas si le fichier text existe on recupere les donnees pour le csv
+		if(fileDecisionJury.exists()){
+			//on demande si on veut l'ecraser
+			int option = dialogEcrasmentFichier(fileDecisionJury);
+			requestFocus();
+			if(option == JOptionPane.OK_OPTION){
+				DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
+				dialogDecisionJury(fileDecisionJury);
+			}
+		}
+		else
+			DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
 	}
 
 	/**
@@ -289,7 +299,6 @@ public class IHMAvisJury extends JFrame{
 	private void genererStatistique() {
 		//TODO on teste si la decision de jury a ete faite donc on teste su le fichier decision existe sinon on recreer la liste des etudiants du PDF
 		// TODO A CODER
-
 	}
 
 	/**
@@ -300,25 +309,51 @@ public class IHMAvisJury extends JFrame{
 			try {
 				if(fileTXT.exists()){
 					//on demande si on veut l'ecraser
-					int option = JOptionPane.showConfirmDialog(null, "Voulez-vous ecraser le fichier " + fileTXT.getName() +" ?", "Confirmation de la suppression", 
-							JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+					int option = dialogEcrasmentFichier(fileTXT);
 					requestFocus();
 					if(option == JOptionPane.OK_OPTION){
 						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-						JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\na été converti en "+ fileTXT.getName(), "Info",  
-								JOptionPane.INFORMATION_MESSAGE);
+						dialogConversionFichier(filePDF, fileTXT);
 					}
 				}
-				else{
+				else
 					maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-				}
 			} catch (FileNotFoundException e2) {
-				JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\n'existe pas", "Erreur",  JOptionPane.ERROR_MESSAGE);
+				dialogFichierInexistant(filePDF);
 			} catch (IOException e1) {
-				JOptionPane.showMessageDialog(null, "le fichier " + filePDF.getName() +"\nn'a pas été converti en "+ fileTXT.getName(), "Erreur",  
-						JOptionPane.ERROR_MESSAGE);
+				dialogFichierNonConverti(filePDF, fileTXT);
 			}
 		}
+	}
+
+	//TODO commenter
+	private int dialogEcrasmentFichier(File file) {
+		String message = "Voulez-vous ecraser le fichier " + file.getName() +" ?";
+		String message2 = "Confirmation de la suppression";
+		int option = JOptionPane.showConfirmDialog(null, message, message2, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+		return option;
+	}
+
+	//TODO commenter
+	private void dialogConversionFichier(File file, File file2){
+		String message = "le fichier " + file.getName() +"\na été converti en "+ file2.getName();
+		JOptionPane.showMessageDialog(null, message, "Info", JOptionPane.INFORMATION_MESSAGE);
+	}
+
+	//TODO commenter
+	private void dialogFichierInexistant(File file){
+		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\n'existe pas", "Erreur", JOptionPane.ERROR_MESSAGE);
+	}
+
+	//TODO commenter
+	private void dialogFichierNonConverti(File file, File file2){
+		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\nn'a pas été converti en "+ file2.getName(), "Erreur", JOptionPane.ERROR_MESSAGE);
+	}
+
+	//TODO commenter
+	private void dialogDecisionJury(File file) {
+		JOptionPane.showMessageDialog(null, "le fichier de decisionJury " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
+
 	}
 
 	/**
