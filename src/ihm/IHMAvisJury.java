@@ -17,6 +17,9 @@ import operation.DecisionJury;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.BufferedWriter;
@@ -25,7 +28,6 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.concurrent.BlockingQueue;
 import java.awt.Font;
 
 /**
@@ -168,6 +170,21 @@ public class IHMAvisJury extends JFrame{
 
 	/** Methode qui ajoute les listeners aux boutons*/
 	private void addListener(){
+		this.setFocusable(true);//on donne le focus a la fenetre
+		//Ajout d'un listener de touche de clavier
+		this.addKeyListener(new KeyListener() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode()==KeyEvent.VK_UP){
+					System.out.println("coucou");
+				}
+			}
+			@Override
+			public void keyTyped(KeyEvent e) {}
+
+			@Override
+			public void keyReleased(KeyEvent e) {}
+		});
 
 		//Methode qui detecte si le textfield pdf est non vide
 		sourcePDF.addCaretListener(new CaretListener() {
@@ -176,7 +193,7 @@ public class IHMAvisJury extends JFrame{
 				if (sourcePDF.getText().equals("")){
 					lockButton();
 				}
-					
+
 				else{
 					unlockButton();
 				}
