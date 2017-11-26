@@ -1,24 +1,27 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+//TODO commenter toutes la classes
 public class Etudiant {
-	
+
 	private String nom;
-	
+
 	private String prenom;
-	
+
 	private int creditTotal;
-	
+
 	private int nbSemestres;
-	
+
 	private int semestreParcours;
-	
+
 	/**liste des modules fait par l'etudiant*/
 	private List<Module> modules = new ArrayList<Module>();
-	
+
 	public Etudiant(String nom, String prenom, List<Module> modules, int creditTotal, int semestres) {
 		setNom(nom);
 		setPrenom(prenom);
@@ -34,7 +37,7 @@ public class Etudiant {
 	public String getNom() {
 		return nom;
 	}
-	
+
 	/**
 	 * Setter nom de l' etudiant
 	 * @param nom le nom de l'etudiant
@@ -42,7 +45,7 @@ public class Etudiant {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
+
 	/**
 	 * Getter prenom etudiant
 	 * @return le prenom de l'etudiant
@@ -50,7 +53,7 @@ public class Etudiant {
 	public String getPrenom() {
 		return prenom;
 	}
-	
+
 	/**
 	 * Setter prenom de l' etudiant
 	 * @param prenom le prenom de l'etudiant
@@ -58,7 +61,7 @@ public class Etudiant {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	
+
 	/**
 	 * Getter modules etudiant
 	 * @return les modules de l'etudiant
@@ -66,7 +69,7 @@ public class Etudiant {
 	public List<Module> getModules() {
 		return modules;
 	}
-	
+
 	/**
 	 * Setter liste des modules de l' etudiant
 	 * @param modules les modules de l'etudiant
@@ -74,7 +77,7 @@ public class Etudiant {
 	public void setModules(List<Module> modules) {
 		this.modules = modules;
 	}
-	
+
 	/**
 	 * Getter creditTotal de l'etudiant
 	 * @return le nombre de credit de l'etudiant
@@ -82,7 +85,7 @@ public class Etudiant {
 	public int getCreditTotal() {
 		return creditTotal;
 	}
-	
+
 	/**
 	 * Setter creditTotal de l' etudiant
 	 * @param creditTotal le nombre de semestre de l'etudiant
@@ -90,7 +93,7 @@ public class Etudiant {
 	public void setCreditTotal(int creditTotal) {
 		this.creditTotal = creditTotal;
 	}
-	
+
 	/**
 	 * Getter nombre de semestre de l' etudiant
 	 * @return le nombre de semestre de l'etudiant
@@ -106,14 +109,28 @@ public class Etudiant {
 	public void setNbSemestres(int nbSemestres) {
 		this.nbSemestres = nbSemestres;
 	}
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		Etudiant etu = (Etudiant) obj;
+		if(etu == this)
+			return true;
+		if( this.getNom().equals(etu.getNom()) && this.getPrenom().equals(etu.getPrenom()))
+			return true;
+		else
+			return false;
+	}
+
 	@Override
 	public String toString(){
-		Iterator<Module> it = modules.iterator();
+
 		String chaine = nom + " "+ prenom + " total credit:" + creditTotal + " Semestre total:" + nbSemestres + "\n";
-		while (it.hasNext()) {
-			Module module = (Module) it.next();
-			chaine+= module + "\n";
+		if (modules!=null){
+			Iterator<Module> it = modules.iterator();
+			while (it.hasNext()) {
+				Module module = (Module) it.next();
+				chaine+= module + "\n";
+			}
 		}
 		return chaine;
 	}

@@ -156,13 +156,13 @@ public class IHMAvisJury extends JFrame{
 		this.getContentPane().add(conversionPdf_Txt);
 
 		// Bouton pour la decisionJury 
-		avisJury = new JButton("Avis Jury");
-		avisJury.setBounds(296, 140, 176, 23);
+		avisJury = new JButton("Generer Avis Jury");
+		avisJury.setBounds(296, 85, 176, 23);
 		this.getContentPane().add(avisJury);
 
 		// Bouton pour les statistiques
 		statistique = new JButton("Generer statistiques");
-		statistique.setBounds(296, 170, 176, 23);
+		statistique.setBounds(296, 140, 176, 23);
 		this.getContentPane().add(statistique);
 
 		lockButton();
@@ -175,6 +175,7 @@ public class IHMAvisJury extends JFrame{
 		this.addKeyListener(new KeyListener() {
 			@Override
 			public void keyPressed(KeyEvent e) {
+				//TODO faire un touche pour la recherhce de fichier, une pour l'avis jury, une pour la conversion, une pour les stats
 				if (e.getKeyCode()==KeyEvent.VK_UP){
 					System.out.println("coucou");
 				}

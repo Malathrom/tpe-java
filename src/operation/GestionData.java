@@ -6,8 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import data.Etudiant;
 import data.Module;
@@ -88,13 +92,13 @@ public class GestionData {
 					dataEtudiant.add(data); //on ajoute le dernier element au donnee
 					etudiants.add(ajoutEtudiant(dataEtudiant));
 					reset();
-					//etudiants.add(etudiant);//TODO on ajoute l'ancien etudiant dans la liste
 				}
 				else{
 					dataEtudiant.add(data);//on est pas a la fin on attend
 				}
 			}
 		}
+		etudiants = suppressionDoublons(etudiants); //on supprime les doublons buggés
 		return etudiants;
 	}
 
@@ -124,12 +128,11 @@ public class GestionData {
 		Iterator<String> it = dataEtudiant.iterator();
 		while (it.hasNext()) {//on parcourt les donnees
 			String data = it.next();
-
 			if(RecherchePattern.rechercheDebutSemestre(data)){	//pour le premier semestre
 				enSemestre = true;
 			}
 			if(enSemestre){//si on est dans la zone de semestres
-				if(RecherchePattern.rechercheFinSemestre(data)){//si on est a la fin du semestre 
+				if(RecherchePattern.rechercheFinSemestre(data)){//si on est a la fin du semestre
 					modules.addAll(creationModulesSemestre(dataSemestreEtudiant));
 					dataSemestreEtudiant = new ArrayList<String>();// on reset les donnees
 					enSemestre=false;
@@ -241,6 +244,36 @@ public class GestionData {
 	 */
 	public static int getNbSemestres() {
 		return nbSemestres;
+	}
+
+	/**TODO a finir
+	 * Methode qui supprime les doublons des etudiants
+	 * @param etudiants la liste des etudiants
+	 */
+	private static List<Etudiant> suppressionDoublons(List<Etudiant> etudiants) {
+		List<Etudiant> listEtu = new ArrayList<Etudiant>();
+		/**foreach(Etudiant etudiant : etudiants) {
+			listEtu.add(etudiant);
+			while(etudiants.contains(etudiant)){//on supprime toutes les occurences de celui-ci
+				etudiants.remove(etudiant);
+			}
+		}*/
+		for (int i=0; i<etudiants.size(); i++) {
+			Etudiant etudiant = etudiants.get(i);
+			if (!listEtu.contains(etudiant))
+				listEtu.add(etudiant);
+		}
+		Iterator<Etudiant> it = listEtu.iterator();
+		while (it.hasNext()) {
+			Etudiant etudiant = it.next();
+			System.out.println(etudiant.getNom());
+		}
+		/*System.out.println("Salut");
+        Set<Etudiant> set = new Set<Etudiant>() ;
+        set.addAll(etudiants);
+
+        Collections.sort(list);*/
+		return listEtu;
 	}
 
 	/**
