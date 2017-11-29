@@ -44,7 +44,7 @@ public class SauvegardeRepertoire {
 
 	/**
 	 * ajoutPath ajoute le chemin du JfileChooser dans le fichier paths.txt
-	 * @param chooser
+	 * @param chooser le choix du repertoire
 	 */
 	public static void ajoutPath(JFileChooser chooser) {
 		if (!paths.contains(chooser.getSelectedFile().getParent())) {

@@ -6,12 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import data.Etudiant;
 import data.Module;
@@ -42,6 +38,7 @@ public class GestionData {
 
 	/**
 	 * listeEtudiant traite le fichier txt des etudiants et permet d;instncier les etudaints et les modules pour pouvoir les manipuler en java
+	 * @param file le fichier qui traite les donnees
 	 * @return la liste des etudiants
 	 */
 	public static List<Etudiant> listeEtudiant(File file){
@@ -245,10 +242,19 @@ public class GestionData {
 	public static int getNbSemestres() {
 		return nbSemestres;
 	}
+	
+	/**
+	 * Setter nombre de semestre
+	 * @param nbSemestreEtudiant le nobre de semestre de l'etudiant
+	 */
+	public static void setNbSemestres(int nbSemestreEtudiant) {
+		GestionData.nbSemestres = nbSemestreEtudiant;
+	}
 
-	/**TODO a finir
+	/**
 	 * Methode qui supprime les doublons des etudiants
 	 * @param etudiants la liste des etudiants
+	 * @return la liste sans les doublons
 	 */
 	private static List<Etudiant> suppressionDoublons(List<Etudiant> etudiants) {
 		List<Etudiant> listEtu = new ArrayList<Etudiant>();
@@ -276,11 +282,5 @@ public class GestionData {
 		return listEtu;
 	}
 
-	/**
-	 * Setter nombre de semestre
-	 * @param nbSemestreEtudiant
-	 */
-	public static void setNbSemestres(int nbSemestreEtudiant) {
-		GestionData.nbSemestres = nbSemestreEtudiant;
-	}
+	
 }

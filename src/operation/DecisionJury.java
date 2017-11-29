@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import java.io.PrintWriter;
 
 import data.Etudiant;
@@ -38,7 +39,12 @@ public abstract class DecisionJury{
 	 */
 	List<Etudiant> etudiants = new ArrayList<Etudiant>();
 
-	/**TODO a commeneter voir le commentaire dans ecritureDecisionJuryCSV*/
+	/**
+	 * Méthode qui ecrit les decisions de jury dans le fichier PDF et CSV a partir des donnes du fichier Texte
+	 * @param nomFichierPDF le fichier PDF de sortie (résultat)
+	 * @param nomFichierTexte  le fichier texte à analyser contenant les donnees des etudiants
+	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
+	 */
 	public static void ecritureDecisionJury (String nomFichierPDF, String nomFichierTexte, String nomFichierCSV){
 		fichierPdf=nomFichierPDF;
 		fichierTexte=nomFichierTexte;
@@ -48,9 +54,7 @@ public abstract class DecisionJury{
 	}
 
 	/**
-	 * Methode qui ecrit les decisions de jury dans un fichier csv a partir des donnees des etudiants contenue dans un fichier texte
-	 * @param nomFichierTexte le fichier texte à analyser contenant les donnees des etudiants
-	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
+	 * Methode qui écrit les decisions de jury dans un fichier CSV
 	 */
 	public static void ecritureDecisionJuryCSV(){
 		File file = new File(fichierCsv);
@@ -95,12 +99,14 @@ public abstract class DecisionJury{
 		pw.close();	
 	}
 
-	//TODO a commenter
+	/**
+	 * Methode qui écrit les decisions de jury dans un fichier PDF
+	 */
 	public static void ecritureDecisionJuryPDF(){
 		//TODO voir comment ecrire dans un fichier
 		System.out.println("Salut");//TODO a enlever
 		System.out.println("yo "+ fichierPdf);
-	
+
 		File file = new File(fichierPdf);
 		FileWriter fw = null;
 		try {
@@ -108,13 +114,21 @@ public abstract class DecisionJury{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		//TODO Voir cette methode faire un sysout dessus
+		/**
+		static String getText(File pdfFile) throws IOException {
+			PDDocument doc = PDDocument.load(pdfFile);
+			return new PDFTextStripper().getText(doc);
+		}
+		 */
 	}
 
 	/**
 	 * retourne le nombre de note obtenues pour un étudiant et semestre donné.
-	 * @param etu
-	 * @param la note que l'on veut compter
-	 * @param le semestre
+	 * @param etu l'etudiant a traiter
+	 * @param note la note que l'on veut compter
+	 * @param semestre le semestre
 	 * @return nbNote
 	 */
 	public static int compteNote(Etudiant etu, Note note, int semestre){
@@ -130,7 +144,7 @@ public abstract class DecisionJury{
 
 	/**
 	 * retourne le numero de semestre effectués pour un étudiant
-	 * @param etu
+	 * @param etu l'etudiant a traiter
 	 * @return le nombre de semestres effectués
 	 */
 	public static int maxSemestre(Etudiant etu){
@@ -143,9 +157,10 @@ public abstract class DecisionJury{
 		}		
 		return maxSem;
 	}
+
 	/**
 	 * indique si une UE est ratée
-	 * @param mod
+	 * @param mod le module qui est tester
 	 * @return true si c'est le cas, false sinon
 	 */
 	public static boolean estRatee(Module mod){
@@ -155,11 +170,12 @@ public abstract class DecisionJury{
 		}
 		return out;
 	}
+
 	/**
 	 * retourne le nombre d'ue pour un étudiant et semestre donné
-	 * @param etu
-	 * @param sem
-	 * @return
+	 * @param etu l'etudiant traité
+	 * @param sem le semestre visée
+	 * @return le nombre d'UE de l'etudiant ce semestre
 	 */
 	public static int nombreUeSemestre(Etudiant etu, int sem){
 		int nbUe=0, i=0;
@@ -177,7 +193,6 @@ public abstract class DecisionJury{
 	 * @param etu l'étudiant en question
 	 * @return "TN30" si tn30, etc... puis "pas de stage" si aucun stage n'a été trouvé
 	 */
-
 	public static String dernierStage(Etudiant etu){
 		int i=0;
 		boolean tn09=false, tn10=false, tn30=false;
@@ -210,12 +225,15 @@ public abstract class DecisionJury{
 		}
 	}
 
-	/** TODO mettre un booleen si l'etudiant a fait en dernier semestre un stage
+
 	/**
 	 * enStage recherche si l'etudiant est soit en stage ST09, soit en ST10, soit ST30
 	 * tabMots tableau de mots composant une ligne de texte à analyser
 	 * @return true si le tableau tabMots contient le stage "st09" ou "st10" ou "st30", sinon false
+	 */
+	/** TODO mettre un booleen si l'etudiant a fait en dernier semestre un stage
 	public boolean enStage(String[] tabMots){
+
 		if(trouveST09(tabMots) || isSt09())
 			return true;
 		if(trouveST10(tabMots) || isSt10())
@@ -224,9 +242,11 @@ public abstract class DecisionJury{
 			return true;
 		return false;
 	}
+	 */
 
-	/*TODO A Appeler quelque part
+	/**TODO  A voir si elle est utile d'après les regles, A Appeler quelque part
 	 * Methode qui compte les credits des modules ISI de l'etudiant
+	 * @return le nombre de credit pour les module ISI
 	 */
 	public int compteCreditsISI (){
 		int i, credits;
@@ -245,7 +265,7 @@ public abstract class DecisionJury{
 
 	/**
 	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
-	 * @param l'étudiant choisis
+	 * @param etu l'étudiant choisis
 	 * @return l'avis de chaque semestre dans un tableau, chaque case représentant un semestre
 	 */
 	public static List<String> avisJury(Etudiant etu){

@@ -7,7 +7,9 @@ import java.util.regex.Pattern;
 import data.Module;
 import io.LectureModules;
 
-/**RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible*/
+/**
+ * RecherchePattern traite les pattern dans les fichiers texte pour recuperer des donnees senesible
+ */
 public abstract class RecherchePattern {
 
 	/**
@@ -192,7 +194,7 @@ public abstract class RecherchePattern {
 
 	/**
 	 * recupereCredit recherche avec un systeme de regex le credit du module
-	 * @param contenu la chaine a verifier
+	 * @param nomModule le nom du module
 	 * @return le credit du module
 	 */
 	public static int recupereCredit(String nomModule) {
@@ -215,7 +217,7 @@ public abstract class RecherchePattern {
 
 	/**
 	 * recupereSemestreModule recherche avec un systeme de regex le semestre du module
-	 * @param contenu la chaine a verifier
+	 * @param modulesData la liste des donnees du semestre
 	 * @return le semestre du module
 	 */
 	public static int recupereSemestre(List<String> modulesData) {
@@ -234,7 +236,7 @@ public abstract class RecherchePattern {
 
 	/**
 	 * recupereParcours recherche avec un systeme de regex le parcours du module
-	 * @param contenu la chaine a verifier
+	 * @param modulesData la liste des donnees du semestre
 	 * @return le parcours du module
 	 */
 	public static String recupereParcours(List<String> modulesData) {

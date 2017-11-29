@@ -134,7 +134,7 @@ public class Module{
 
 	/**
 	 * Setter: la note du module
-	 * @param note
+	 * @param note la note a modifié
 	 */
 	public void setNote(Note note) {
 		this.note = note;

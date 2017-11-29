@@ -6,10 +6,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import data.Etudiant;
-import data.Module;
 import ihm.IHMAvisJury;
 import io.LectureModules;
 import operation.GestionData;
@@ -50,7 +48,7 @@ public class Launcher {
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {
 				Etudiant etudiant = it.next();
-				//System.out.println(etudiant);
+				System.out.println(etudiant);
 			}
 			break;
 
