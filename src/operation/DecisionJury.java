@@ -27,20 +27,32 @@ public abstract class DecisionJury{
 	 * fichierCsv represente le fichier qui contiendra les decisionsJury en csv
 	 */
 	private static String fichierCsv;
-	
+
+	/*
+	 * fichierCsv represente le fichier qui contiendra les decisionsJury en csv
+	 */
+	private static String fichierPdf;
+
 	/**
 	 * Liste des etudiants qui sont entrain d'etre traités
 	 */
 	List<Etudiant> etudiants = new ArrayList<Etudiant>();
+
+	/**TODO a commeneter voir le commentaire dans ecritureDecisionJuryCSV*/
+	public static void ecritureDecisionJury (String nomFichierPDF, String nomFichierTexte, String nomFichierCSV){
+		fichierPdf=nomFichierPDF;
+		fichierTexte=nomFichierTexte;
+		fichierCsv=nomFichierCSV;
+		ecritureDecisionJuryCSV();//ecriture des decisions dans les CSV
+		ecritureDecisionJuryPDF();//ecriture des decisions dans les PDF
+	}
 
 	/**
 	 * Methode qui ecrit les decisions de jury dans un fichier csv a partir des donnees des etudiants contenue dans un fichier texte
 	 * @param nomFichierTexte le fichier texte à analyser contenant les donnees des etudiants
 	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
 	 */
-	public static void ecritureDecisionJury (String nomFichierTexte, String nomFichierCSV){
-		fichierCsv=nomFichierCSV;
-		fichierTexte=nomFichierTexte;
+	public static void ecritureDecisionJuryCSV(){
 		File file = new File(fichierCsv);
 		FileWriter fw = null;
 		try {
@@ -48,7 +60,7 @@ public abstract class DecisionJury{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		BufferedWriter bw;
 		PrintWriter pw;
 		bw = new BufferedWriter(fw);
@@ -80,8 +92,22 @@ public abstract class DecisionJury{
 			}
 			pw.println(out);
 		}
-		//TODO a enlever pw.println(etudiants);
 		pw.close();	
+	}
+
+	//TODO a commenter
+	public static void ecritureDecisionJuryPDF(){
+		//TODO voir comment ecrire dans un fichier
+		System.out.println("Salut");//TODO a enlever
+		System.out.println("yo "+ fichierPdf);
+	
+		File file = new File(fichierPdf);
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

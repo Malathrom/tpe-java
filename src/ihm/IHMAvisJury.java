@@ -49,9 +49,9 @@ public class IHMAvisJury extends JFrame{
 	private JTextField cibleCSV;
 	private JTextField sourcePDF;
 	private JLabel message;
-	private File fileTXT, filePDF, fileDecisionJury, fileStats;
-	private File dirAvisJury, dirStats, dirDatasTxt;;
-	private JButton exit, findPDF, conversionTxt_Csv, conversionPdf_Txt, avisJury, statistique;
+	private File fileTXT, fileSourcePDF, fileDestPDF, fileDecisionJury, fileStats;
+	private File dirAvisJury, dirStats, dirDatasTxt, dirAvisJuryCSV, dirAvisJuryPDF;
+	private JButton exit, findPDF, conversionPdf_Txt, avisJury, statistique;
 
 	/**
 	 * Creation de l'application.
@@ -254,12 +254,12 @@ public class IHMAvisJury extends JFrame{
 			int option = dialogEcrasmentFichier(fileDecisionJury); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-				DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
+				DecisionJury.ecritureDecisionJury(fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
 				dialogDecisionJury(fileDecisionJury);
 			}
 		}
 		else
-			DecisionJury.ecritureDecisionJury(sourceTXT.getText(), cibleCSV.getText());
+			DecisionJury.ecritureDecisionJury(fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
 	}
 
 	/**
@@ -301,19 +301,122 @@ public class IHMAvisJury extends JFrame{
 					requestFocus();
 					if(option == JOptionPane.OK_OPTION){
 						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
-						dialogSuccesConversionFichier(filePDF, fileTXT);
+						dialogSuccesConversionFichier(fileSourcePDF, fileTXT);
 					}
 				}
 				else
 					maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
 			} catch (FileNotFoundException e2) {
-				dialogFichierInexistant(filePDF);
+				dialogFichierInexistant(fileSourcePDF);
 			} catch (IOException e1) {
-				dialogEchecConversionFichier(filePDF, fileTXT);
+				dialogEchecConversionFichier(fileSourcePDF, fileTXT);
 			}
 		}
 	}
 
+	/**
+	 * ChoixRepertoire permet de definir le repertoire le plus adequat pour le JFileChooser
+	 */
+	private void choixRepertoire(){
+		String path = ""; //Chemin a parcourir
+		JFileChooser chooser = null;
+		if(SauvegardeRepertoire.getPaths().isEmpty()){//Si la liste des repertoires est vide
+			chooser = new JFileChooser();
+		}
+		else{//si elle n'est pas vide
+			Iterator<String> it = SauvegardeRepertoire.getPaths().iterator();
+			while (it.hasNext() && path.equals("")) {
+				String str = (String) it.next();
+				File file = new File(str);
+
+				if (file.exists()) //on recupere le premier repertoire possible	
+					path = file.getAbsolutePath();
+			}
+
+			if(path.equals(""))//si on a pas trouvé de chemin coherent
+				chooser = new JFileChooser();
+			else
+				chooser = new JFileChooser(path);
+		}
+
+		FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
+		chooser.setFileFilter(filter);
+		chooser.setMultiSelectionEnabled(false);
+		int returnVal = chooser.showOpenDialog(null);
+		if(returnVal == JFileChooser.APPROVE_OPTION) {
+			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
+			gestionFichier(chooser);
+		}
+		unlockButton();
+	}
+
+	/**
+	 * Methode qui gere les fichiers et les dossier en entrée/sortie
+	 * @param chooser le choix du fichier PDF
+	 */
+	private void gestionFichier(JFileChooser chooser) {
+		//Recuperation du PDF choisi dans le JFileChooser
+		fileSourcePDF = new File(chooser.getSelectedFile().getAbsolutePath());
+		sourcePDF.setText(fileSourcePDF.getAbsolutePath());
+
+		//Creation du repertoire de decision jury
+		dirDatasTxt = new File(fileSourcePDF.getParent()+"/DatasTxt");//creation du repertoire d'avis de jury
+		if(!dirDatasTxt.exists())
+			dirDatasTxt.mkdir();
+
+		//Creation du repertoire de decision jury
+		dirAvisJury = new File(fileSourcePDF.getParent()+"/AvisJury");//creation du repertoire d'avis de jury
+		if(!dirAvisJury.exists())
+			dirAvisJury.mkdir();
+		
+		//Creation du repertoire de decision jury CSV
+		dirAvisJuryCSV = new File(dirAvisJury.getAbsolutePath()+"/csv");//creation du repertoire pour les CSV
+			if(!dirAvisJuryCSV.exists())
+				dirAvisJuryCSV.mkdir();
+				
+		//Creation du repertoire de decision jury PDF
+		dirAvisJuryPDF = new File(dirAvisJury.getAbsolutePath()+"/pdf");//creation du repertoire pour les PDF
+			if(!dirAvisJuryPDF.exists())
+				dirAvisJuryPDF.mkdir();
+
+		//Creation du repertoire de decision jury
+		dirStats = new File(fileSourcePDF.getParent()+"/Stats");//creation du repertoire d'avis de jury
+		if(!dirStats.exists())
+			dirStats.mkdir();
+
+		//creation du fichier txt pour les donnees des etudiants
+		String nomFichierTXT = fileSourcePDF.getName().replace(".pdf", ".txt");
+		fileTXT = new File(dirDatasTxt.getAbsolutePath()+"/"+nomFichierTXT);
+		sourceTXT.setText(fileTXT.getAbsolutePath()); 	
+
+		//creation du fichier de decision csv
+		String nomDecisionJury = fileSourcePDF.getName().replace(".pdf", ".csv");
+		fileDecisionJury = new File(dirAvisJuryCSV.getAbsolutePath()+"/"+nomDecisionJury);
+		cibleCSV.setText(fileDecisionJury.getAbsolutePath()); 
+		
+		//creation du fichier de decision pdf
+		String nomPDFDecisionJury = fileSourcePDF.getName();
+		fileDestPDF = new File(dirAvisJuryPDF.getAbsolutePath()+"/"+nomPDFDecisionJury);
+
+		//creation du fichier pour les stats
+		String nomStats = fileSourcePDF.getName().replace(".pdf", ".csv");//TODO a voir dans quel format sera le fichier de stat
+		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
+		//TODO faire un JTextfield pour les stats cibleCSV.setText(fileStats.getAbsolutePath()); 
+	}
+
+	/** Bloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
+	private void lockButton(){
+		conversionPdf_Txt.setEnabled(false);
+		avisJury.setEnabled(false);
+		statistique.setEnabled(false);
+	}
+
+	/** Debloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
+	private void unlockButton() {
+		conversionPdf_Txt.setEnabled(true);
+		avisJury.setEnabled(true);
+		statistique.setEnabled(true);	
+	}
 	/**
 	 * methode affichant la boite de dialog pour demander l'ecrasement d'un fichier
 	 * @param file le fichier qui doit etre ecraser
@@ -362,94 +465,5 @@ public class IHMAvisJury extends JFrame{
 		JOptionPane.showMessageDialog(null, "le fichier de decisionJury " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
 
 	}
-
-	/**
-	 * ChoixRepertoire permet de definir le repertoire le plus adequat pour le JFileChooser
-	 */
-	private void choixRepertoire(){
-		String path = ""; //Chemin a parcourir
-		JFileChooser chooser = null;
-		if(SauvegardeRepertoire.getPaths().isEmpty()){//Si la liste des repertoires est vide
-			chooser = new JFileChooser();
-		}
-		else{//si elle n'est pas vide
-			Iterator<String> it = SauvegardeRepertoire.getPaths().iterator();
-			while (it.hasNext() && path.equals("")) {
-				String str = (String) it.next();
-				File file = new File(str);
-
-				if (file.exists()) //on recupere le premier repertoire possible	
-					path = file.getAbsolutePath();
-			}
-
-			if(path.equals(""))//si on a pas trouvé de chemin coherent
-				chooser = new JFileChooser();
-			else
-				chooser = new JFileChooser(path);
-		}
-
-		FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF","pdf");
-		chooser.setFileFilter(filter);
-		chooser.setMultiSelectionEnabled(false);
-		int returnVal = chooser.showOpenDialog(null);
-		if(returnVal == JFileChooser.APPROVE_OPTION) {
-			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
-			gestionFichier(chooser);
-		}
-		unlockButton();
-	}
-
-	/**
-	 * Methode qui gere les fichiers et les dossier en entrée/sortie
-	 * @param chooser le choix du fichier PDF
-	 */
-	private void gestionFichier(JFileChooser chooser) {
-		//Recuperation du PDF choisi dans le JFileChooser
-		filePDF = new File(chooser.getSelectedFile().getAbsolutePath());
-		sourcePDF.setText(filePDF.getAbsolutePath());
-
-		//Creation du repertoire de decision jury
-		dirDatasTxt = new File(filePDF.getParent()+"/DatasTxt");//creation du repertoire d'avis de jury
-		if(!dirDatasTxt.exists())
-			dirDatasTxt.mkdir();
-
-		//Creation du repertoire de decision jury
-		dirAvisJury = new File(filePDF.getParent()+"/AvisJury");//creation du repertoire d'avis de jury
-		if(!dirAvisJury.exists())
-			dirAvisJury.mkdir();
-
-		//Creation du repertoire de decision jury
-		dirStats = new File(filePDF.getParent()+"/Stats");//creation du repertoire d'avis de jury
-		if(!dirStats.exists())
-			dirStats.mkdir();
-
-		//creation du fichier txt pour les donnees des etudiants
-		String nomFichierTXT = filePDF.getName().replace(".pdf", ".txt");
-		fileTXT = new File(dirDatasTxt.getAbsolutePath()+"/"+nomFichierTXT);
-		sourceTXT.setText(fileTXT.getAbsolutePath()); 	
-
-		//creation du fichier de decision
-		String nomDecisionJury = filePDF.getName().replace(".pdf", ".csv");
-		fileDecisionJury = new File(dirAvisJury.getAbsolutePath()+"/"+nomDecisionJury);
-		cibleCSV.setText(fileDecisionJury.getAbsolutePath()); 
-
-		//creation du fichier pour les stats
-		String nomStats = filePDF.getName().replace(".pdf", ".csv");//TODO a voir dans quel format sera le fichier de stat
-		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
-		//TODO faire un JTextfield pour les stats cibleCSV.setText(fileStats.getAbsolutePath()); 
-	}
-
-	/** Bloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
-	private void lockButton(){
-		conversionPdf_Txt.setEnabled(false);
-		avisJury.setEnabled(false);
-		statistique.setEnabled(false);
-	}
-
-	/** Debloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la*/
-	private void unlockButton() {
-		conversionPdf_Txt.setEnabled(true);
-		avisJury.setEnabled(true);
-		statistique.setEnabled(true);	
-	}
+	
 }
