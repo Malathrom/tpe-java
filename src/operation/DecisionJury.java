@@ -317,6 +317,9 @@ public abstract class DecisionJury{
 
 
 	/**
+	 * Scan les modules d'un étudiant et affiche en réponse un string contenant l'avis jury.
+	 * @param etu l'etudiant choisis.
+	 * @return l'avis jury en string.
 	 */
 	public static List<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
