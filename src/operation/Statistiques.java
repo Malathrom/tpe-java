@@ -3,11 +3,21 @@ package operation;
 import java.util.Iterator;
 import java.util.List;
 import data.Etudiant;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public abstract class Statistiques {
-
+	
+	private static String fichierCsv;
+	
+	private static String fichierTexte;
+	
 	public static int totalNote(List<Etudiant> etudiants, Note note){
 		int totalNote=0;
 		Iterator<Etudiant> it = etudiants.iterator();
@@ -72,10 +82,30 @@ public abstract class Statistiques {
 		return out;
 	}
 	
-	public static void afficheStats(List<Etudiant> etudiants){
+	public static void ecritureStatistiqueCSV(){
+		File file = new File(fichierCsv);
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		BufferedWriter bw;
+		PrintWriter pw;
+		bw = new BufferedWriter(fw);
+		pw = new PrintWriter(bw);
+
+		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
+		Iterator<Etudiant> it = etudiants.iterator();
+
 		
 		
 		
+		
+		
+		pw.println("test");
+		pw.close();	
 	}
 	
 

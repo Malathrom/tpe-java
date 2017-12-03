@@ -94,8 +94,10 @@ public abstract class DecisionJury{
 				out+= avisSem.get(i)+";";
 				i++;
 			}
+
 			pw.println(out);
 		}
+		pw.println(etudiants);
 		pw.close();	
 	}
 
@@ -197,16 +199,13 @@ public abstract class DecisionJury{
 		int i=0;
 		boolean tn09=false, tn10=false, tn30=false;
 		while(i<etu.getModules().size()){
-			if(etu.getModules().get(i).getCategorie()=="ST"){
-				System.out.println(etu.getModules().get(i));
-			}
-			if (etu.getModules().get(i).getNom()=="TN09"){
+			if (etu.getModules().get(i).getNom().equals("TN09")){
 				tn09=true;
 			}
-			if (etu.getModules().get(i).getNom()=="TN10"){
+			if (etu.getModules().get(i).getNom().equals("TN10")){
 				tn10=true;
 			}
-			if (etu.getModules().get(i).getNom()=="TN30"){
+			if (etu.getModules().get(i).getNom().equals("TN30")){
 				tn30=true;
 			}
 			i++;
@@ -268,10 +267,62 @@ public abstract class DecisionJury{
 	 * @param etu l'étudiant choisis
 	 * @return l'avis de chaque semestre dans un tableau, chaque case représentant un semestre
 	 */
+
+
+
+	/**
+	 * Retourne si oui ou non il faut afficher un avertissement pour le NPML
+	 * @param etu l'etudiant choisis
+	 * @param sem
+	 * @return un booleen 
+	 */
+	public static boolean avertissementNPML(Etudiant etu, int sem){
+		boolean avertissementNPML=false;
+		int i=0;
+		if (sem==1 || sem==2){
+
+			while(i<etu.getModules().size()){
+				if (etu.getModules().get(i).getSemestre()==1 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01"))){
+					avertissementNPML=true;
+				}/* LE01(validé ou non) en ISI 1  */
+				if (etu.getModules().get(i).getSemestre()==2 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01") || etu.getModules().get(i).getNom().equals("LE02"))){
+					avertissementNPML=true;
+				}/* LE01 ou LE02 (validé ou non) en ISI 2  */
+				i++;
+			}
+		}
+		if (sem==3){
+			boolean LE03=false;
+			i=0;
+			while(i<etu.getModules().size()){
+				if (etu.getModules().get(i).getSemestre()==3 && etu.getModules().get(i).getParcours().equals("ISI") && etu.getModules().get(i).getNom().equals("LE03")){
+					LE03=true;
+				}
+				if (etu.getModules().get(i).getSemestre()==3 && !etu.getModules().get(i).getParcours().equals("ISI")){
+					LE03=true;
+				}
+				i++;
+			}
+
+			if (LE03==false){
+				avertissementNPML=true;
+			}
+		}
+
+
+
+		return avertissementNPML;
+	}
+
+
+
+	/**
+	 */
 	public static List<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
 		int maxSem=maxSemestre(etu)+1;
 		int sem=1;
+		boolean buleadm=false;
 		while(sem<maxSem){
 			String str="";
 			int nbA=compteNote(etu, Note.A, sem);
@@ -280,14 +331,21 @@ public abstract class DecisionJury{
 			int nbE=compteNote(etu, Note.E, sem);
 			int nbUe=nombreUeSemestre(etu, sem);
 			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
+
+			boolean avertissementNPML=avertissementNPML(etu, sem);
 			while(i<etu.getModules().size()){
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie().equals("CS") || etu.getModules().get(i).getCategorie().equals("TM"))){
 					nbUeRatees++;
 				}
-				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie()=="CS" || etu.getModules().get(i).getCategorie()=="TM")){
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie().equals("CS") || etu.getModules().get(i).getCategorie().equals("TM"))){
 					nbUeRateesCSTM++;
 				}
+				if (!estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && etu.getModules().get(i).getNom().equals("LE08")){
+					buleadm=true;
+				}
 				i++;
+
+
 			}
 			int nbUeRateesTotal=nbUeRatees+nbUeRateesCSTM;
 			if (nbUeRateesTotal==0){
@@ -324,6 +382,13 @@ public abstract class DecisionJury{
 				}
 				else{
 					str+=", Très Mauvais Semestre";
+				}
+			}
+			if (buleadm==false){
+				if(avertissementNPML){
+					str+=", Vos résultats en langues sont insuffisants pour obtenir le NPML en temps voulu, réagissez.";
+				}else{
+					str+=", Attention, vous n'avez toujours pas validé votre NPML, indispensable pour être diplômé(e).";
 				}
 			}
 
