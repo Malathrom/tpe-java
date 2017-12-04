@@ -336,6 +336,7 @@ public abstract class DecisionJury{
 			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
 
 			boolean avertissementNPML=avertissementNPML(etu, sem);
+			boolean LE03valide=false;
 			while(i<etu.getModules().size()){
 				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && !(etu.getModules().get(i).getCategorie().equals("CS") || etu.getModules().get(i).getCategorie().equals("TM"))){
 					nbUeRatees++;
@@ -346,6 +347,9 @@ public abstract class DecisionJury{
 				if (!estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && etu.getModules().get(i).getNom().equals("LE08")){
 					buleadm=true;
 				}
+				if(!estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==(sem-1) && etu.getModules().get(i).getNom().equals("LE03")){
+					LE03valide=true;
+				}/* LE03 a été validé au semestre précédent*/
 				i++;
 
 
@@ -390,7 +394,7 @@ public abstract class DecisionJury{
 			if (buleadm==false){
 				if(avertissementNPML){
 					str+=", Vos résultats en langues sont insuffisants pour obtenir le NPML en temps voulu, réagissez.";
-				}else{
+				}else if (LE03valide){
 					str+=", Attention, vous n'avez toujours pas validé votre NPML, indispensable pour être diplômé(e).";
 				}
 			}

@@ -18,6 +18,8 @@ public abstract class Statistiques {
 	
 	private static String fichierTexte;
 	
+	
+	
 	public static int totalNote(List<Etudiant> etudiants, Note note){
 		int totalNote=0;
 		Iterator<Etudiant> it = etudiants.iterator();
@@ -78,7 +80,7 @@ public abstract class Statistiques {
 		int nbTotal = nbRate+nbReussie;
 		pourcentReussite=(float)nbReussie/nbTotal;
 		ArrayList<Object> out = new ArrayList<Object>();
-		out.addAll(Arrays.asList(nbTotal, nbReussie, nbRate, pourcentReussite, nbA, nbB, nbC, nbD, nbE, nbF, nbElse));
+		out.addAll(Arrays.asList(nomUe, nbTotal, nbReussie, nbRate, pourcentReussite, nbA, nbB, nbC, nbD, nbE, nbF, nbElse));
 		return out;
 	}
 	
@@ -98,7 +100,7 @@ public abstract class Statistiques {
 
 		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
 		Iterator<Etudiant> it = etudiants.iterator();
-
+		pw.println("");
 		
 		
 		
