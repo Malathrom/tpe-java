@@ -82,7 +82,7 @@ public abstract class Statistiques {
 		return out;
 	}
 	
-	public static void ecritureStatistiqueCSV(){
+	public static void ecritureStatistiques(String fichierStat){
 		File file = new File(fichierCsv);
 		FileWriter fw = null;
 		try {

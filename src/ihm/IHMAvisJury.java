@@ -14,6 +14,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 import io.SauvegardeRepertoire;
 import operation.DecisionJury;
+import operation.Statistiques;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -286,7 +287,16 @@ public class IHMAvisJury extends JFrame{
 	 */
 	private void genererStatistique() {
 		//TODO on teste si la decision de jury a ete faite donc on teste su le fichier decision existe sinon on recreer la liste des etudiants du PDF
-		// TODO A CODER
+		if(fileStats.exists()){
+			int option = dialogEcrasmentFichier(fileStats); //on demande si on veut l'ecraser
+			requestFocus();
+			if(option == JOptionPane.OK_OPTION){
+				Statistiques.ecritureStatistiques(fileStats.getAbsolutePath());
+				dialogDecisionJury(fileStats);
+			}
+		}
+		else
+			Statistiques.ecritureStatistiques(fileStats.getAbsolutePath());
 	}
 
 	/**
@@ -368,16 +378,16 @@ public class IHMAvisJury extends JFrame{
 		dirAvisJury = new File(fileSourcePDF.getParent()+"/AvisJury");//creation du repertoire d'avis de jury
 		if(!dirAvisJury.exists())
 			dirAvisJury.mkdir();
-		
+
 		//Creation du repertoire de decision jury CSV
 		dirAvisJuryCSV = new File(dirAvisJury.getAbsolutePath()+"/csv");//creation du repertoire pour les CSV
-			if(!dirAvisJuryCSV.exists())
-				dirAvisJuryCSV.mkdir();
-				
+		if(!dirAvisJuryCSV.exists())
+			dirAvisJuryCSV.mkdir();
+
 		//Creation du repertoire de decision jury PDF
 		dirAvisJuryPDF = new File(dirAvisJury.getAbsolutePath()+"/pdf");//creation du repertoire pour les PDF
-			if(!dirAvisJuryPDF.exists())
-				dirAvisJuryPDF.mkdir();
+		if(!dirAvisJuryPDF.exists())
+			dirAvisJuryPDF.mkdir();
 
 		//Creation du repertoire de decision jury
 		dirStats = new File(fileSourcePDF.getParent()+"/Stats");//creation du repertoire d'avis de jury
@@ -393,7 +403,7 @@ public class IHMAvisJury extends JFrame{
 		String nomDecisionJury = fileSourcePDF.getName().replace(".pdf", ".csv");
 		fileDecisionJury = new File(dirAvisJuryCSV.getAbsolutePath()+"/"+nomDecisionJury);
 		cibleCSV.setText(fileDecisionJury.getAbsolutePath()); 
-		
+
 		//creation du fichier de decision pdf
 		String nomPDFDecisionJury = fileSourcePDF.getName();
 		fileDestPDF = new File(dirAvisJuryPDF.getAbsolutePath()+"/"+nomPDFDecisionJury);
@@ -421,7 +431,7 @@ public class IHMAvisJury extends JFrame{
 		avisJury.setEnabled(true);
 		statistique.setEnabled(true);	
 	}
-	
+
 	/**
 	 * Méthode affichant la boite de dialog pour demander l'ecrasement d'un fichier
 	 * @param file le fichier qui doit etre ecraser
@@ -469,5 +479,5 @@ public class IHMAvisJury extends JFrame{
 		JOptionPane.showMessageDialog(null, "le fichier de decisionJury " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
 
 	}
-	
+
 }
