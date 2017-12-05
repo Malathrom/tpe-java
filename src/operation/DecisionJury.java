@@ -107,7 +107,7 @@ public abstract class DecisionJury{
 	public static void ecritureDecisionJuryPDF(){
 		//TODO voir comment ecrire dans un fichier
 		System.out.println("Salut");//TODO a enlever
-		System.out.println("yo "+ fichierPdf);
+		System.out.println("yo "+ fichierPdf);//TODO a enlever
 
 		File file = new File(fichierPdf);
 		FileWriter fw = null;

@@ -40,15 +40,12 @@ import java.awt.Font;
  */
 public class IHMAvisJury extends JFrame{
 
-	//TODO faire la gestion d'exception pour le click des boutons notament
 	//TODO regarder mes anciennes interfaces pour placer, redimesionner la fenetres
 	//TODO voir si c’est possible de faire un aperçu d’un pdf dans un Panel en java
 
 	private static final long serialVersionUID = 1L;
 
-	private JTextField sourceTXT;
-	private JTextField cibleCSV;
-	private JTextField sourcePDF;
+	private JTextField sourceTXT, cibleCSV, sourcePDF, cibleStat;
 	private JLabel message;
 	private File fileTXT, fileSourcePDF, fileDestPDF, fileDecisionJury, fileStats;
 	private File dirAvisJury, dirStats, dirDatasTxt, dirAvisJuryCSV, dirAvisJuryPDF;
@@ -64,7 +61,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * conversion d'un PDF en une chaine de caract�res
+	 * conversion d'un PDF en une chaine de caractères
 	 * @param pdfFile pointeur vers le fichier PDF 
 	 * @return Une chaine de caractères avec le texte du fichier PDF
 	 * @throws IOException erreur d'ouverture du PDF
@@ -101,92 +98,105 @@ public class IHMAvisJury extends JFrame{
 	private void initialize() {
 		this.setVisible(true);
 		this.setTitle("Gestion Stages Jury ISI");
-		this.setBounds(100, 100, 799, 241);
+		this.setBounds(100, 100, 800, 250);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.getContentPane().setLayout(null);
 
-		JLabel lblTxt = new JLabel("Source TXT");
-		lblTxt.setBounds(10, 65, 88, 14);
+		JLabel lblPDF = new JLabel("Source PDF");
+		lblPDF.setBounds(10, 10, 77, 15);
+		this.getContentPane().add(lblPDF);
+
+		JLabel lblTxt = new JLabel("Cible TXT");
+		lblTxt.setBounds(10, 65, 88, 15);
 		this.getContentPane().add(lblTxt);
 
 		JLabel lblCsv = new JLabel("Cible CSV");
-		lblCsv.setBounds(10, 115, 88, 14);
+		lblCsv.setBounds(10, 120, 88, 15);
 		this.getContentPane().add(lblCsv);
+
+		JLabel lblStat = new JLabel("Cible Stats");
+		lblStat.setBounds(10, 175, 88, 15);
+		this.getContentPane().add(lblStat);
+
+		sourcePDF = new JTextField();
+		sourcePDF.setBounds(108, 8, 627, 20);
+		this.getContentPane().add(sourcePDF);
 
 		sourceTXT = new JTextField();
 		sourceTXT.setBounds(108, 59, 627, 20);
-		sourceTXT.setColumns(10);
 		this.getContentPane().add(sourceTXT);
 
 		cibleCSV = new JTextField();
 		cibleCSV.setBounds(108, 112, 627, 20);
-		cibleCSV.setColumns(10);
 		this.getContentPane().add(cibleCSV);
 
-		JLabel isiLevel = new JLabel("Niveau ISI");
-		isiLevel.setBounds(10, 153, 88, 14);
-		this.getContentPane().add(isiLevel);
-
-		// Bouton pour quitter l'application
-		exit = new JButton("Quitter");
-		exit.setBounds(664, 169, 109, 23);
-		this.getContentPane().add(exit);
+		cibleStat = new JTextField();
+		cibleStat.setBounds(108, 170, 627, 20);
+		this.getContentPane().add(cibleStat);
 
 		// Bouton pour le chargement du fichier PDF 
 		findPDF = new JButton("...");
 		findPDF.setFont(new Font("Tahoma", Font.BOLD, 11));
-		findPDF.setBounds(740, 7, 33, 23);
+		findPDF.setBounds(740, 10, 33, 20);
 		this.getContentPane().add(findPDF);
-
-		JLabel lblNewLabel_3 = new JLabel("Source PDF");
-		lblNewLabel_3.setBounds(10, 11, 77, 14);
-		this.getContentPane().add(lblNewLabel_3);
-
-		message = new JLabel("");
-		message.setBounds(10, 190, 1000, 23);
-		this.getContentPane().add(message);
-
-		sourcePDF = new JTextField();
-		sourcePDF.setBounds(108, 8, 627, 20);
-		sourcePDF.setColumns(10);
-		this.getContentPane().add(sourcePDF);
 
 		// Bouton de conversion PDF --> TXT 
 		conversionPdf_Txt = new JButton("Conversion  PDF >- TXT");
-		conversionPdf_Txt.setBounds(296, 32, 176, 23);
+		conversionPdf_Txt.setBounds(296, 32, 176, 20);
 		this.getContentPane().add(conversionPdf_Txt);
 
 		// Bouton pour la decisionJury 
 		avisJury = new JButton("Generer Avis Jury");
-		avisJury.setBounds(296, 85, 176, 23);
+		avisJury.setBounds(296, 85, 176, 20);
 		this.getContentPane().add(avisJury);
 
 		// Bouton pour les statistiques
 		statistique = new JButton("Generer statistiques");
-		statistique.setBounds(296, 140, 176, 23);
+		statistique.setBounds(300, 140, 176, 20);
 		this.getContentPane().add(statistique);
+
+		message = new JLabel("");
+		message.setBounds(10, 200, 1000, 20);
+		this.getContentPane().add(message);
+
+		// Bouton pour quitter l'application
+		exit = new JButton("Quitter");
+		exit.setBounds(670, 200, 110, 20);
+		this.getContentPane().add(exit);
+
 		lockButton();
 	}
 
 	/** Methode qui ajoute les listeners aux boutons*/
 	private void addListener(){
-		this.setFocusable(true);//on donne le focus a la fenetre
+		this.setFocusable(true);
+		this.addMouseListener(new MouseAdapter() {//on donne le focus a la fenetre
+			@Override
+			public void mouseClicked(MouseEvent me) {
+				requestFocusInWindow();
+			}
+		});
+
 		//Ajout d'un listener de touche de clavier
 		this.addKeyListener(new KeyListener() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_R:
-					choixRepertoire();
+					if(findPDF.isEnabled())
+						choixRepertoire();
 					break;
 				case KeyEvent.VK_C:
-					conversionPdf_Txt.doClick();
+					if(conversionPdf_Txt.isEnabled())
+						convertirPDF();
 					break;
 				case KeyEvent.VK_A:
-					creationDecisionJury();
+					if(avisJury.isEnabled())
+						creationDecisionJury();
 					break;
 				case KeyEvent.VK_S:
-					genererStatistique();
+					if(statistique.isEnabled())
+						genererStatistique();
 					break;
 				case KeyEvent.VK_Q:
 					System.exit(0); 
@@ -213,29 +223,32 @@ public class IHMAvisJury extends JFrame{
 		findPDF.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				choixRepertoire();
+				if(findPDF.isEnabled())
+					choixRepertoire();
 			}
 		});
 
 		conversionPdf_Txt.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				convertirPDF();
+				if(conversionPdf_Txt.isEnabled())
+					convertirPDF();
 			}
 		});
 
 		avisJury.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				creationDecisionJury();
+				if(avisJury.isEnabled())
+					creationDecisionJury();
 			}
 		});
 
-		//TODO a appeler les methodes pour les statistiques
 		statistique.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				genererStatistique();
+				if(statistique.isEnabled())
+					genererStatistique();
 			}
 		});
 
@@ -356,8 +369,8 @@ public class IHMAvisJury extends JFrame{
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
 			SauvegardeRepertoire.ajoutPath(chooser);//permet de sauvegarder les repertoires
 			gestionFichier(chooser);
+			unlockButton();
 		}
-		unlockButton();
 	}
 
 	/**
@@ -389,7 +402,7 @@ public class IHMAvisJury extends JFrame{
 		if(!dirAvisJuryPDF.exists())
 			dirAvisJuryPDF.mkdir();
 
-		//Creation du repertoire de decision jury
+		//Creation du repertoire de stat jury
 		dirStats = new File(fileSourcePDF.getParent()+"/Stats");//creation du repertoire d'avis de jury
 		if(!dirStats.exists())
 			dirStats.mkdir();
@@ -411,7 +424,7 @@ public class IHMAvisJury extends JFrame{
 		//creation du fichier pour les stats
 		String nomStats = fileSourcePDF.getName().replace(".pdf", ".csv");//TODO a voir dans quel format sera le fichier de stat
 		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
-		//TODO faire un JTextfield pour les stats stats.setText(fileStats.getAbsolutePath()); 
+		cibleStat.setText(dirStats.getAbsolutePath()+"/"+nomStats);
 	}
 
 	/**

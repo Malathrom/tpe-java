@@ -20,7 +20,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (2) {
+		switch (1) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -33,17 +33,18 @@ public class Launcher {
 			});
 			break;
 
-		case 2:
-			System.out.println(LectureModules.lireModules());//Test sur les modules
+		case 2://test de l'ecriture dans un pdf
+			//TODO  URGENT TEST ecrire en PDF
+			File statfile = new File("src/test/fichier.pdf");//Fichier de test
 			break;
 
-		case 3:
-			//File file = new File("src/test/4etudiants.txt");//Fichier de test//TODO a enlever
-			File file = new File("src/test/testPV4.txt");//Fichier de test//TODO a enlever
-			//File file = new File("src/test/test1ETU.txt");//Fichier de test//TODO a enlever
-			//File file = new File("src/test/PV ISI 2.txt");//Fichier de test 3//TODO a enlever	
-			//File file = new File("src/test/PV ISI 4.txt");
-			//File file = new File("src/test/PV ISI 6.txt");
+		case 3://Test des fichiers pour recuperer les etudiants
+			File file = new File("src/test/4etudiants.txt");//Fichier de test
+			//File file2 = new File("src/test/testPV4.txt");//Fichier de test
+			//File file3 = new File("src/test/test1ETU.txt");//Fichier de test
+			//File file4 = new File("src/test/PV ISI 2.txt");//Fichier de test 3
+			//File file5 = new File("src/test/PV ISI 4.txt");
+			//File file6 = new File("src/test/PV ISI 6.txt");
 			List<Etudiant> etudiants = GestionData.listeEtudiant(file);//Test sur les fichiers etudiants
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {
@@ -86,6 +87,10 @@ public class Launcher {
 			String[] array = new String[] { "a", "b", "c" };
 			String joined2 = String.join(" ", array);
 			System.out.println(joined2);
+			break;
+			
+		case 7:
+			System.out.println(LectureModules.lireModules());//Test sur les modules
 			break;
 		}
 	}

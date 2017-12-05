@@ -34,6 +34,7 @@ public abstract class Statistiques {
 		return totalNote;
 	}
 
+	
 	public static ArrayList<Object> pourcentUe(List<Etudiant> etudiants, String nomUe){
 		float pourcentReussite;
 		int nbReussie=0, nbRate=0, nbA=0, nbB=0, nbC=0, nbD=0, nbE=0, nbF=0, nbElse=0;
