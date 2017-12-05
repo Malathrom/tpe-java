@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+
+import com.sun.xml.internal.txw2.Document;
+
 import java.io.PrintWriter;
 
 import data.Etudiant;
@@ -113,28 +118,19 @@ public abstract class DecisionJury{
 	 * Methode qui écrit les decisions de jury dans un fichier PDF
 	 */
 	public static void ecritureDecisionJuryPDF(){
-		//TODO voir comment ecrire dans un fichier
-		System.out.println("Salut");//TODO a enlever
-		System.out.println("yo "+ fichierPdf);//TODO a enlever
-
-		FileInputStream sourceFile = null;
-		FileOutputStream destinationFile = null; 
-		try { 
-			sourceFile = new FileInputStream(fichierSrcPdf); 
-			destinationFile = new FileOutputStream(fichierPdf); 
-			byte buffer[]=new byte[512*1024]; 
-			int nbLecture; 
-			while( (nbLecture = sourceFile.read(buffer)) != -1 ) { 
-				destinationFile.write(buffer, 0, nbLecture); 
-			}
-			destinationFile.flush();
-			sourceFile.close();
-			destinationFile.close();
-		} catch (IOException e) {
+		//TODO - copier les pdf dans le dossier dans la fonctionecriturePDF puis essayer d’écrire les decisions
+		File file = new File(fichierSrcPdf) ;//Loading an existing document
+		PDDocument document;
+		try {
+			document = PDDocument.load(file);
+			document.save(fichierPdf) ;//Saving the document dans le chemin voulu
+			document.close() ; //Closing the document
+		}catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		//TODO Voir cette methode faire un sysout dessus
+		//TODO voir comment ecrire dans un fichier
 		/**
 		static String getText(File pdfFile) throws IOException {
 			PDDocument doc = PDDocument.load(pdfFile);
@@ -265,9 +261,7 @@ public abstract class DecisionJury{
 	 * @return le nombre de credit pour les module ISI
 	 */
 	public int compteCreditsISI (){
-		int i, credits;
-		credits=0;
-		i=0;
+		int credits = 0;
 		List<Module> modules = LectureModules.lireModules();
 		Iterator<Module> it = modules.iterator();
 		while(it.hasNext()){

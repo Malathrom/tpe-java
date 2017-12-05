@@ -3,9 +3,13 @@ package main;
 import java.awt.EventQueue;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
 
 import data.Etudiant;
 import ihm.IHMAvisJury;
@@ -31,11 +35,6 @@ public class Launcher {
 					}
 				}
 			});
-			break;
-
-		case 2://test de l'ecriture dans un pdf
-			//File statfile = new File("src/test/fichier.pdf");//Fichier de test
-			//TODO  URGENT TEST ecrire en PDF
 			break;
 
 		case 3://Test des fichiers pour recuperer les etudiants
@@ -91,6 +90,48 @@ public class Launcher {
 
 		case 7:
 			System.out.println(LectureModules.lireModules());//Test sur les modules
+			break;
+
+		case 8://test de l'ecriture dans un pdf
+
+			//Creating PDF document object 
+			PDDocument document = new PDDocument() ;    
+			//Saving the document
+			try {
+
+				//Closing the document 
+				for (i=0; i<10; i++) {
+					//Creating a blank page 
+					PDPage blankPage = new PDPage() ;
+					//Adding the blank page to the document
+					document.addPage( blankPage ) ;
+				} 
+				document.save("src/test/fichier.pdf") ;
+				document.close() ;
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("PDF created") ;  
+			break;
+		case 9://chargement d'un document 
+			try {
+				PDDocument.load(new File("/Users/lucasnoga/Desktop/UTT/TX/pdf jury/AvisJury/pdf/PV ISI 2.pdf"));
+
+				//Closing the document 
+				for (i=0; i<10; i++) {
+					//Creating a blank page 
+					PDPage blankPage = new PDPage() ;
+					//Adding the blank page to the document
+					//document.addPage( blankPage ) ;
+				} 
+				//document.save("src/test/fichier.pdf") ;
+				//document.close() ;
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("PDF created") ;  
 			break;
 		}
 	}
