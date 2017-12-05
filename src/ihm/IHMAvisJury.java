@@ -268,12 +268,12 @@ public class IHMAvisJury extends JFrame{
 			int option = dialogEcrasmentFichier(fileDecisionJury); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-				DecisionJury.ecritureDecisionJury(fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
+				DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
 				dialogDecisionJury(fileDecisionJury);
 			}
 		}
 		else
-			DecisionJury.ecritureDecisionJury(fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
+			DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
 	}
 
 	/**

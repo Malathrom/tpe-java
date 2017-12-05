@@ -2,6 +2,8 @@ package operation;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,6 +21,11 @@ import io.LectureModules;
  */
 public abstract class DecisionJury{
 
+	/**
+	 *  fichierTexte represente le fichier source PDF
+	 */
+	private static String fichierSrcPdf;
+
 	/*
 	 * fichierTexte represente le fichier qui contient les donnees des etudiants
 	 */
@@ -30,7 +37,7 @@ public abstract class DecisionJury{
 	private static String fichierCsv;
 
 	/*
-	 * fichierCsv represente le fichier qui contiendra les decisionsJury en csv
+	 * fichierPDF represente le fichier qui contiendra les decisionsJury en pdf
 	 */
 	private static String fichierPdf;
 
@@ -45,7 +52,8 @@ public abstract class DecisionJury{
 	 * @param nomFichierTexte  le fichier texte à analyser contenant les donnees des etudiants
 	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
 	 */
-	public static void ecritureDecisionJury (String nomFichierPDF, String nomFichierTexte, String nomFichierCSV){
+	public static void ecritureDecisionJury (String fichierSourcePDF, String nomFichierPDF, String nomFichierTexte, String nomFichierCSV){
+		fichierSrcPdf = fichierSourcePDF;
 		fichierPdf=nomFichierPDF;
 		fichierTexte=nomFichierTexte;
 		fichierCsv=nomFichierCSV;
@@ -109,10 +117,19 @@ public abstract class DecisionJury{
 		System.out.println("Salut");//TODO a enlever
 		System.out.println("yo "+ fichierPdf);//TODO a enlever
 
-		File file = new File(fichierPdf);
-		FileWriter fw = null;
-		try {
-			fw = new FileWriter(file);
+		FileInputStream sourceFile = null;
+		FileOutputStream destinationFile = null; 
+		try { 
+			sourceFile = new FileInputStream(fichierSrcPdf); 
+			destinationFile = new FileOutputStream(fichierPdf); 
+			byte buffer[]=new byte[512*1024]; 
+			int nbLecture; 
+			while( (nbLecture = sourceFile.read(buffer)) != -1 ) { 
+				destinationFile.write(buffer, 0, nbLecture); 
+			}
+			destinationFile.flush();
+			sourceFile.close();
+			destinationFile.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -34,8 +34,8 @@ public class Launcher {
 			break;
 
 		case 2://test de l'ecriture dans un pdf
+			//File statfile = new File("src/test/fichier.pdf");//Fichier de test
 			//TODO  URGENT TEST ecrire en PDF
-			File statfile = new File("src/test/fichier.pdf");//Fichier de test
 			break;
 
 		case 3://Test des fichiers pour recuperer les etudiants
@@ -88,7 +88,7 @@ public class Launcher {
 			String joined2 = String.join(" ", array);
 			System.out.println(joined2);
 			break;
-			
+
 		case 7:
 			System.out.println(LectureModules.lireModules());//Test sur les modules
 			break;
