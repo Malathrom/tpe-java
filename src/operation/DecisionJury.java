@@ -2,8 +2,6 @@ package operation;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,9 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-
-import com.sun.xml.internal.txw2.Document;
 
 import java.io.PrintWriter;
 
@@ -45,7 +40,6 @@ public abstract class DecisionJury{
 	 * fichierPDF represente le fichier qui contiendra les decisionsJury en pdf
 	 */
 	private static String fichierPdf;
-
 	/**
 	 * Liste des etudiants qui sont entrain d'etre traités
 	 */
@@ -129,7 +123,6 @@ public abstract class DecisionJury{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		//TODO voir comment ecrire dans un fichier
 		/**
 		static String getText(File pdfFile) throws IOException {
@@ -319,9 +312,6 @@ public abstract class DecisionJury{
 				avertissementNPML=true;
 			}
 		}
-
-
-
 		return avertissementNPML;
 	}
 

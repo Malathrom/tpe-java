@@ -304,12 +304,12 @@ public class IHMAvisJury extends JFrame{
 			int option = dialogEcrasmentFichier(fileStats); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-				Statistiques.ecritureStatistiques(fileStats.getAbsolutePath());
+				Statistiques.ecritureStatistiques(sourceTXT.getText(), fileStats.getAbsolutePath());
 				dialogDecisionJury(fileStats);
 			}
 		}
 		else
-			Statistiques.ecritureStatistiques(fileStats.getAbsolutePath());
+			Statistiques.ecritureStatistiques(sourceTXT.getText(), fileStats.getAbsolutePath());
 	}
 
 	/**
