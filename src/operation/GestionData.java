@@ -162,6 +162,7 @@ public class GestionData {
 
 			if(RecherchePattern.recupereNomModule(str) != null){//des qu'on a le premier module 
 				nomModule=RecherchePattern.recupereNomModule(str);//on recupere le nom du module
+				//System.out.println("nom " + nomModule);//TODO a enlever
 				categorie=RecherchePattern.recupereCategorie(nomModule);// la categorie
 				credit=RecherchePattern.recupereCredit(str); //le nombre de credit
 			}
@@ -173,6 +174,7 @@ public class GestionData {
 			//si toutes les valeurs sont ok alors on creer le module
 			if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
 				Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
+				//System.out.println("module, "+ module);TODO a enlever
 				mods.add(module);
 				//on reset les donnees pour le prochain module
 				nomModule = null;
@@ -269,18 +271,6 @@ public class GestionData {
 			if (!listEtu.contains(etudiant))
 				listEtu.add(etudiant);
 		}
-		Iterator<Etudiant> it = listEtu.iterator();
-		while (it.hasNext()) {
-			Etudiant etudiant = it.next();
-			System.out.println(etudiant.getNom());
-		}
-		/*System.out.println("Salut");
-        Set<Etudiant> set = new Set<Etudiant>() ;
-        set.addAll(etudiants);
-
-        Collections.sort(list);*/
 		return listEtu;
 	}
-
-	
 }

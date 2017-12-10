@@ -205,7 +205,7 @@ public abstract class RecherchePattern {
 				return mod.getCredit();//on retourne son credit
 			}
 		}
-		modulesExistant.iterator();
+		it = modulesExistant.iterator();
 		while (it.hasNext()) {
 			Module mod = (Module) it.next();
 			if (nomModule.startsWith(mod.getNom())){ //si on trouve un nom de module approchant
@@ -263,7 +263,7 @@ public abstract class RecherchePattern {
 				return mod.getCategorie();//on retourne sa categorie
 			}
 		}
-		modulesExistant.iterator();
+		it = modulesExistant.iterator();
 		while (it.hasNext()) {
 			Module mod = (Module) it.next();
 			if (nomModule.startsWith(mod.getNom())){ //si on trouve un nom de module approchant

@@ -24,7 +24,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (1) {
+		switch (3) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -37,14 +37,23 @@ public class Launcher {
 			});
 			break;
 
+		case 2:
+			if ("LE".startsWith("LE08")){ //si on trouve un nom de module approchant
+				System.out.println("1");
+			}
+			if ("LE08".startsWith("LE")){ //si on trouve un nom de module approchant
+				System.out.println("1");
+			}
+			break;
+
 		case 3://Test des fichiers pour recuperer les etudiants
 			File file = new File("src/test/4etudiants.txt");//Fichier de test
-			//File file2 = new File("src/test/testPV4.txt");//Fichier de test
-			//File file3 = new File("src/test/test1ETU.txt");//Fichier de test
-			//File file4 = new File("src/test/PV ISI 2.txt");//Fichier de test 3
-			//File file5 = new File("src/test/PV ISI 4.txt");
-			//File file6 = new File("src/test/PV ISI 6.txt");
-			List<Etudiant> etudiants = GestionData.listeEtudiant(file);//Test sur les fichiers etudiants
+			File file2 = new File("src/test/testPV4.txt");//Fichier de test
+			File file3 = new File("src/test/test1ETU.txt");//Fichier de test
+			File file4 = new File("src/test/PV ISI 2.txt");//Fichier de test 3
+			File file5 = new File("src/test/PV ISI 4.txt");
+			File file6 = new File("src/test/PV ISI 6.txt");
+			List<Etudiant> etudiants = GestionData.listeEtudiant(file6);//Test sur les fichiers etudiants
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {
 				Etudiant etudiant = it.next();
