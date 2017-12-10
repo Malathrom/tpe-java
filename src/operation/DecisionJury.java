@@ -116,13 +116,51 @@ public abstract class DecisionJury{
 		File file = new File(fichierSrcPdf) ;//Loading an existing document
 		PDDocument document;
 		try {
-			document = PDDocument.load(file);
-			document.save(fichierPdf) ;//Saving the document dans le chemin voulu
-			document.close() ; //Closing the document
+			document = PDDocument.load(file);//copie du PDF initial
+			document.save(fichierPdf) ;//sauvegarde du pdf dans le dossier qu'on a choisit
+			document.close() ; //Fermeture du PDf
 		}catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//Loading an existing document
+	      File file = new File("C:/PdfBox_Examples/my_doc.pdf") ;
+	      PDDocument document = PDDocument.load(file) ;
+	       
+	      //Retrieving the pages of the document 
+	      PDPage page = document.getPage(1) ;
+	      PDPageContentStream contentStream = new PDPageContentStream(document, page) ;
+	      
+	      //Begin the Content stream 
+	      contentStream.beginText() ; 
+	       
+	      //Setting the font to the Content stream  
+	      contentStream.setFont(PDType1Font.TIMES_ROMAN, 12) ;
+
+	      //Setting the position for the line 
+	      contentStream.newLineAtOffset(25, 500) ;
+
+	      String text = "This is the sample document and we are adding content to it.";
+
+	      //Adding text in the form of string 
+	      contentStream.ShowText(text) ;      
+
+	      //Ending the content stream
+	      contentStream.endText() ;
+
+	      System.out.println("Content added") ;
+
+	      //Closing the content stream
+	      contentStream.close() ;
+
+	      //Saving the document
+	      document.save(new File("C:/PdfBox_Examples/new.pdf") );
+
+	      //Closing the document
+	      document.close();
+		
+		
 		//TODO voir comment ecrire dans un fichier
 		/**
 		static String getText(File pdfFile) throws IOException {
@@ -229,25 +267,6 @@ public abstract class DecisionJury{
 			return "Pas de stage";
 		}
 	}
-
-
-	/**
-	 * enStage recherche si l'etudiant est soit en stage ST09, soit en ST10, soit ST30
-	 * tabMots tableau de mots composant une ligne de texte à analyser
-	 * @return true si le tableau tabMots contient le stage "st09" ou "st10" ou "st30", sinon false
-	 */
-	/** TODO mettre un booleen si l'etudiant a fait en dernier semestre un stage
-	public boolean enStage(String[] tabMots){
-
-		if(trouveST09(tabMots) || isSt09())
-			return true;
-		if(trouveST10(tabMots) || isSt10())
-			return true;
-		if(trouveST30(tabMots) || isSt30())
-			return true;
-		return false;
-	}
-	 */
 
 	/**TODO  A voir si elle est utile d'après les regles, A Appeler quelque part
 	 * Methode qui compte les credits des modules ISI de l'etudiant
