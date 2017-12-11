@@ -264,12 +264,21 @@ public class IHMAvisJury extends JFrame{
 	 * Methode declenché lors de la decision de jury
 	 */
 	private void creationDecisionJury() {		
-		if(fileDecisionJury.exists()){
+		if(fileDecisionJury.exists()){ //on regarde si le csv de decision existe
 			int option = dialogEcrasmentFichier(fileDecisionJury); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-				DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
-				dialogDecisionJury(fileDecisionJury);
+				
+				if(fileDestPDF.exists()){
+					option = dialogEcrasmentFichier(fileDestPDF);
+					dialogDecisionJury(fileDecisionJury);
+					if(option == JOptionPane.OK_OPTION){
+						DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
+						dialogDecisionJury(fileDestPDF);
+					}
+				}
+				else
+					DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
 			}
 		}
 		else

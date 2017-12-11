@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
 
 import data.Etudiant;
 import ihm.IHMAvisJury;
@@ -24,7 +25,7 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 
-		switch (3) {
+		switch (1) {
 		case 1:
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -38,14 +39,7 @@ public class Launcher {
 			break;
 
 		case 2:
-			if ("LE".startsWith("LE08")){ //si on trouve un nom de module approchant
-				System.out.println("1");
-			}
-			if ("LE08".startsWith("LE")){ //si on trouve un nom de module approchant
-				System.out.println("1");
-			}
 			break;
-
 		case 3://Test des fichiers pour recuperer les etudiants
 			File file = new File("src/test/4etudiants.txt");//Fichier de test
 			File file2 = new File("src/test/testPV4.txt");//Fichier de test
