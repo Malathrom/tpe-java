@@ -9,6 +9,16 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDFont;
+import org.apache.pdfbox.pdmodel.font.PDType0Font;
+import org.apache.pdfbox.pdmodel.font.PDType1CFont;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.font.PDType3Font;
+import org.apache.pdfbox.util.Matrix;
 
 import java.io.PrintWriter;
 
@@ -92,6 +102,7 @@ public abstract class DecisionJury{
 
 		while (it.hasNext()) {
 			Etudiant etudiant = it.next();
+			//TODO si la methode etudiant.enStage retourne vrai alors dans le mesage il faut rajouter en stage
 			String out="";
 			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
 			out+=DecisionJury.dernierStage(etudiant)+";";
@@ -114,60 +125,94 @@ public abstract class DecisionJury{
 	public static void ecritureDecisionJuryPDF(){
 		//TODO - copier les pdf dans le dossier dans la fonctionecriturePDF puis essayer d’écrire les decisions
 		File file = new File(fichierSrcPdf) ;//Loading an existing document
-		PDDocument document;
+		PDDocument doc;
 		try {
-			document = PDDocument.load(file);//copie du PDF initial
-			document.save(fichierPdf) ;//sauvegarde du pdf dans le dossier qu'on a choisit
-			document.close() ; //Fermeture du PDf
+			doc = PDDocument.load(file);//copie du PDF initial
+			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
+
+			PDFont font = PDType1Font.HELVETICA_BOLD;
+			float fontSize = 7.0f;
+			PDPageContentStream contentStream = null;
+
+			List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
+			Iterator<Etudiant> it = etudiants.iterator();
+
+			for(PDPage page : doc.getPages() ){//parcourt les pages
+				Etudiant etudiant = it.next();
+				List<String> avisSem = DecisionJury.avisJury(etudiant); 
+				String avis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis
+
+				PDRectangle pageSize = page.getMediaBox();//TODO a voir ce que ca fait
+				System.out.println(pageSize);
+				float stringWidth = font.getStringWidth(avis)*fontSize/1000f;//TODO a voir ce que ca fait
+				System.out.println(stringWidth);
+
+				contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true);//on ajoute du contenu
+				contentStream.beginText();
+
+				int rotation = page.getRotation();
+
+				//TODO IMPORTANT C'est la position de la box vide que je dois trouver
+				int abscisse = 640;
+				int ordonnee = 340;
+				
+				contentStream.setFont(font, fontSize);
+				contentStream.setTextMatrix(Matrix.getRotateInstance(Math.PI / 2, ordonnee, abscisse));
+				contentStream.showText(avis);
+				contentStream.endText();
+				contentStream.close();
+			}
+
+			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
+			doc.close();//fermeture di document
+
 		}catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		//Loading an existing document
-	      File file = new File("C:/PdfBox_Examples/my_doc.pdf") ;
-	      PDDocument document = PDDocument.load(file) ;
-	       
-	      //Retrieving the pages of the document 
-	      PDPage page = document.getPage(1) ;
-	      PDPageContentStream contentStream = new PDPageContentStream(document, page) ;
-	      
-	      //Begin the Content stream 
-	      contentStream.beginText() ; 
-	       
-	      //Setting the font to the Content stream  
-	      contentStream.setFont(PDType1Font.TIMES_ROMAN, 12) ;
+		////
+		/*
+			 try (PDDocument doc = PDDocument.load(new File(file)))
+		        {
+		            PDFont font = PDType1Font.HELVETICA_BOLD;
+		            float fontSize = 36.0f;
 
-	      //Setting the position for the line 
-	      contentStream.newLineAtOffset(25, 500) ;
+		            for( PDPage page : doc.getPages() )
+		            {
+		                PDRectangle pageSize = page.getMediaBox();
+		                float stringWidth = font.getStringWidth( message )*fontSize/1000f;
+		                // calculate to center of the page
+		                int rotation = page.getRotation();
+		                boolean rotate = rotation == 90 || rotation == 270;
+		                float pageWidth = rotate ? pageSize.getHeight() : pageSize.getWidth();
+		                float pageHeight = rotate ? pageSize.getWidth() : pageSize.getHeight();
+		                float centerX = rotate ? pageHeight/2f : (pageWidth - stringWidth)/2f;
+		                float centerY = rotate ? (pageWidth - stringWidth)/2f : pageHeight/2f;
 
-	      String text = "This is the sample document and we are adding content to it.";
+		                // append the content to the existing stream
+		                try (PDPageContentStream contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true))
+		                {
+		                    contentStream.beginText();
+		                    // set font and font size
+		                    contentStream.setFont( font, fontSize );
+		                    // set text color to red
+		                    contentStream.setNonStrokingColor(255, 0, 0);
+		                    if (rotate)
+		                    {
+		                        // rotate the text according to the page rotation
+		                        contentStream.setTextMatrix(Matrix.getRotateInstance(Math.PI / 2, centerX, centerY));
+		                    }
+		                    else
+		                    {
+		                        contentStream.setTextMatrix(Matrix.getTranslateInstance(centerX, centerY));
+		                    }
+		                    contentStream.showText(message);
+		                    contentStream.endText();
+		                }
+		            }
 
-	      //Adding text in the form of string 
-	      contentStream.ShowText(text) ;      
+		            doc.save( outfile );
 
-	      //Ending the content stream
-	      contentStream.endText() ;
-
-	      System.out.println("Content added") ;
-
-	      //Closing the content stream
-	      contentStream.close() ;
-
-	      //Saving the document
-	      document.save(new File("C:/PdfBox_Examples/new.pdf") );
-
-	      //Closing the document
-	      document.close();
-		
-		
-		//TODO voir comment ecrire dans un fichier
-		/**
-		static String getText(File pdfFile) throws IOException {
-			PDDocument doc = PDDocument.load(pdfFile);
-			return new PDFTextStripper().getText(doc);
-		}
-		 */
+		 *//////////////
 	}
 
 	/**
