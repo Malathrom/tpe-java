@@ -1,11 +1,5 @@
 package operation;
 
-import java.util.Iterator;
-import java.util.List;
-import data.Etudiant;
-import data.Module;
-import io.LectureModules;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -13,6 +7,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import data.Etudiant;
+import data.Module;
 
 
 /**
@@ -64,9 +63,7 @@ public abstract class Statistiques {
 				pw.println(mod.getNom()+ ";" + stats.get(0) + ";" + stats.get(1) + ";" + stats.get(2) + ";" + pourcentReussite + ";" + stats.get(3) + ";" + stats.get(4) + ";" + stats.get(5) + ";" + stats.get(6) + ";" + stats.get(7) + ";" + stats.get(8) + ";" + stats.get(9));
 			}
 		}
-		pw.println("test");//TODO a enelever
-		pw.close();	//TODO a enelever
-
+		pw.close();
 	}
 
 	/**
