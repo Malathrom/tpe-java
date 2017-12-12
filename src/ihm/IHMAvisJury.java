@@ -39,10 +39,7 @@ import java.awt.Font;
  * @version 1.0
  */
 public class IHMAvisJury extends JFrame{
-
-	//TODO regarder mes anciennes interfaces pour placer, redimesionner la fenetres
-	//TODO voir si c’est possible de faire un aperçu d’un pdf dans un Panel en java
-
+	
 	private static final long serialVersionUID = 1L;
 
 	private JTextField sourceTXT, cibleCSV, sourcePDF, cibleStat;
@@ -308,7 +305,6 @@ public class IHMAvisJury extends JFrame{
 	 * Methode declenché lors de la generation des statistiques
 	 */
 	private void genererStatistique() {
-		//TODO on teste si la decision de jury a ete faite donc on teste su le fichier decision existe sinon on recreer la liste des etudiants du PDF
 		if(fileStats.exists()){
 			int option = dialogEcrasmentFichier(fileStats); //on demande si on veut l'ecraser
 			requestFocus();
@@ -431,7 +427,7 @@ public class IHMAvisJury extends JFrame{
 		fileDestPDF = new File(dirAvisJuryPDF.getAbsolutePath()+"/"+nomPDFDecisionJury);
 
 		//creation du fichier pour les stats
-		String nomStats = fileSourcePDF.getName().replace(".pdf", ".csv");//TODO a voir dans quel format sera le fichier de stat
+		String nomStats = fileSourcePDF.getName().replace(".pdf", ".csv");
 		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
 		cibleStat.setText(dirStats.getAbsolutePath()+"/"+nomStats);
 	}

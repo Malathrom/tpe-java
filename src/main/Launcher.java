@@ -112,26 +112,6 @@ public class Launcher {
 				document.save("src/test/fichier.pdf") ;
 				document.close() ;
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println("PDF created") ;  
-			break;
-		case 9://chargement d'un document 
-			try {
-				PDDocument.load(new File("/Users/lucasnoga/Desktop/UTT/TX/pdf jury/AvisJury/pdf/PV ISI 2.pdf"));
-
-				//Closing the document 
-				for (i=0; i<10; i++) {
-					//Creating a blank page 
-					PDPage blankPage = new PDPage() ;
-					//Adding the blank page to the document
-					//document.addPage( blankPage ) ;
-				} 
-				//document.save("src/test/fichier.pdf") ;
-				//document.close() ;
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println("PDF created") ;  

@@ -123,7 +123,6 @@ public abstract class DecisionJury{
 	 * Methode qui écrit les decisions de jury dans un fichier PDF
 	 */
 	public static void ecritureDecisionJuryPDF(){
-		//TODO - copier les pdf dans le dossier dans la fonctionecriturePDF puis essayer d’écrire les decisions
 		File file = new File(fichierSrcPdf) ;//Loading an existing document
 		PDDocument doc;
 		try {
@@ -143,16 +142,10 @@ public abstract class DecisionJury{
 				String avis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis
 
 				PDRectangle pageSize = page.getMediaBox();//TODO a voir ce que ca fait
-				System.out.println(pageSize);
-				float stringWidth = font.getStringWidth(avis)*fontSize/1000f;//TODO a voir ce que ca fait
-				System.out.println(stringWidth);
-
+				
 				contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true);//on ajoute du contenu
 				contentStream.beginText();
 
-				int rotation = page.getRotation();
-
-				//TODO IMPORTANT C'est la position de la box vide que je dois trouver
 				int abscisse = 640;
 				int ordonnee = 340;
 				
@@ -166,57 +159,13 @@ public abstract class DecisionJury{
 			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
 			doc.close();//fermeture di document
 
-		}catch (IOException e) {
+		}catch (IOException e){
 			e.printStackTrace();
 		}
-		////
-		/*
-			 try (PDDocument doc = PDDocument.load(new File(file)))
-		        {
-		            PDFont font = PDType1Font.HELVETICA_BOLD;
-		            float fontSize = 36.0f;
-
-		            for( PDPage page : doc.getPages() )
-		            {
-		                PDRectangle pageSize = page.getMediaBox();
-		                float stringWidth = font.getStringWidth( message )*fontSize/1000f;
-		                // calculate to center of the page
-		                int rotation = page.getRotation();
-		                boolean rotate = rotation == 90 || rotation == 270;
-		                float pageWidth = rotate ? pageSize.getHeight() : pageSize.getWidth();
-		                float pageHeight = rotate ? pageSize.getWidth() : pageSize.getHeight();
-		                float centerX = rotate ? pageHeight/2f : (pageWidth - stringWidth)/2f;
-		                float centerY = rotate ? (pageWidth - stringWidth)/2f : pageHeight/2f;
-
-		                // append the content to the existing stream
-		                try (PDPageContentStream contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true))
-		                {
-		                    contentStream.beginText();
-		                    // set font and font size
-		                    contentStream.setFont( font, fontSize );
-		                    // set text color to red
-		                    contentStream.setNonStrokingColor(255, 0, 0);
-		                    if (rotate)
-		                    {
-		                        // rotate the text according to the page rotation
-		                        contentStream.setTextMatrix(Matrix.getRotateInstance(Math.PI / 2, centerX, centerY));
-		                    }
-		                    else
-		                    {
-		                        contentStream.setTextMatrix(Matrix.getTranslateInstance(centerX, centerY));
-		                    }
-		                    contentStream.showText(message);
-		                    contentStream.endText();
-		                }
-		            }
-
-		            doc.save( outfile );
-
-		 *//////////////
 	}
 
 	/**
-	 * retourne le nombre de note obtenues pour un étudiant et semestre donné.
+	 * Retourne le nombre de note obtenues pour un étudiant et semestre donné.
 	 * @param etu l'etudiant a traiter
 	 * @param note la note que l'on veut compter
 	 * @param semestre le semestre
@@ -313,7 +262,7 @@ public abstract class DecisionJury{
 		}
 	}
 
-	/**TODO  A voir si elle est utile d'après les regles, A Appeler quelque part
+	/**
 	 * Methode qui compte les credits des modules ISI de l'etudiant
 	 * @return le nombre de credit pour les module ISI
 	 */

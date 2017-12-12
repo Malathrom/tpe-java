@@ -33,9 +33,8 @@ public abstract class Statistiques {
 			Iterator<Etudiant> it = etudiants.iterator();//TODO a enelever
 			
 			//TODO APPELLE LES METHODES POUR LES STATS----------------------------------------------------------------------------------------
-			pw.println(etudiants);
-			pw.println("test");//TODO a enelever
-			pw.close();	//TODO a enelever
+			pw.println(etudiants);//TODO a enelever
+			pw.close();
 
 		}
 	
