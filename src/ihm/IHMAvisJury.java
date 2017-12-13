@@ -39,7 +39,7 @@ import java.awt.Font;
  * @version 1.0
  */
 public class IHMAvisJury extends JFrame{
-	
+
 	private static final long serialVersionUID = 1L;
 
 	private JTextField sourceTXT, cibleCSV, sourcePDF, cibleStat;
@@ -216,6 +216,8 @@ public class IHMAvisJury extends JFrame{
 			@Override
 			public void caretUpdate(CaretEvent e) {
 				detectionPDF();
+				gestionFichier();//gere si le fichier est correcte
+
 			}
 		});
 
@@ -238,8 +240,12 @@ public class IHMAvisJury extends JFrame{
 		avisJury.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(avisJury.isEnabled())
-					creationDecisionJury();
+				if(avisJury.isEnabled()){
+					if(fileTXT.exists())
+						creationDecisionJury();
+					else
+						message.setText("<html><span color='red'>la conversion du .pdf en .txt n'a pas été faite</span></html>");
+				}
 			}
 		});
 
@@ -247,7 +253,10 @@ public class IHMAvisJury extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(statistique.isEnabled())
-					genererStatistique();
+					if(fileTXT.exists())
+						genererStatistique();
+					else
+						message.setText("<html><span color='red'>la conversion du .pdf en .txt n'a pas été faite</span></html>");
 			}
 		});
 
@@ -267,7 +276,7 @@ public class IHMAvisJury extends JFrame{
 			int option = dialogEcrasmentFichier(fileDecisionJury); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-				
+
 				if(fileDestPDF.exists()){
 					option = dialogEcrasmentFichier(fileDestPDF);
 					dialogDecisionJury(fileDecisionJury);
@@ -288,14 +297,13 @@ public class IHMAvisJury extends JFrame{
 	 * Methode qui detecte si le PDF est present est valable
 	 */
 	private void detectionPDF() {
-		//FAIRE LE FILEPDF.exist
 		if (sourcePDF.getText().equals("")){
 			lockButton();
 			message.setText("<html><span color='red'>Pas de PDF</span></html>");
 		}
 		else{
 			if(new File(sourcePDF.getText()).exists()){
-				message.setText("");
+				message.setText("<html><head><meta charset=\"UTF-8\"><span color='green'>Fichier PDF détecté</span></html>");
 				unlockButton();
 			}
 			else
@@ -432,6 +440,66 @@ public class IHMAvisJury extends JFrame{
 		String nomStats = fileSourcePDF.getName().replace(".pdf", ".csv");
 		fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
 		cibleStat.setText(dirStats.getAbsolutePath()+"/"+nomStats);
+	}
+
+	/**
+	 * Méthode qui gere les saisie au clavier pour les fichiers
+	 */
+	private void gestionFichier() {
+		//Recuperation du PDF choisi dans le JFileChooser
+
+		fileSourcePDF = new File(sourcePDF.getText());
+		detectionPDF();
+		if(fileSourcePDF.exists()){
+			//Creation du repertoire de decision jury
+			dirDatasTxt = new File(fileSourcePDF.getParent()+"/DatasTxt");//creation du repertoire d'avis de jury
+			if(!dirDatasTxt.exists())
+				dirDatasTxt.mkdir();
+
+			//Creation du repertoire de decision jury
+			dirAvisJury = new File(fileSourcePDF.getParent()+"/AvisJury");//creation du repertoire d'avis de jury
+			if(!dirAvisJury.exists())
+				dirAvisJury.mkdir();
+
+			//Creation du repertoire de decision jury CSV
+			dirAvisJuryCSV = new File(dirAvisJury.getAbsolutePath()+"/csv");//creation du repertoire pour les CSV
+			if(!dirAvisJuryCSV.exists())
+				dirAvisJuryCSV.mkdir();
+
+			//Creation du repertoire de decision jury PDF
+			dirAvisJuryPDF = new File(dirAvisJury.getAbsolutePath()+"/pdf");//creation du repertoire pour les PDF
+			if(!dirAvisJuryPDF.exists())
+				dirAvisJuryPDF.mkdir();
+
+			//Creation du repertoire de stat jury
+			dirStats = new File(fileSourcePDF.getParent()+"/Stats");//creation du repertoire d'avis de jury
+			if(!dirStats.exists())
+				dirStats.mkdir();
+
+			//creation du fichier txt pour les donnees des etudiants
+			String nomFichierTXT = fileSourcePDF.getName().replace(".pdf", ".txt");
+			fileTXT = new File(dirDatasTxt.getAbsolutePath()+"/"+nomFichierTXT);
+			sourceTXT.setText(fileTXT.getAbsolutePath()); 	
+
+			//creation du fichier de decision csv
+			String nomDecisionJury = fileSourcePDF.getName().replace(".pdf", ".csv");
+			fileDecisionJury = new File(dirAvisJuryCSV.getAbsolutePath()+"/"+nomDecisionJury);
+			cibleCSV.setText(fileDecisionJury.getAbsolutePath()); 
+
+			//creation du fichier de decision pdf
+			String nomPDFDecisionJury = fileSourcePDF.getName();
+			fileDestPDF = new File(dirAvisJuryPDF.getAbsolutePath()+"/"+nomPDFDecisionJury);
+
+			//creation du fichier pour les stats
+			String nomStats = fileSourcePDF.getName().replace(".pdf", ".csv");
+			fileStats = new File(dirStats.getAbsolutePath()+"/"+nomStats);
+			cibleStat.setText(dirStats.getAbsolutePath()+"/"+nomStats);
+		}
+		else{//si la source est pas bonne
+			sourceTXT.setText("fichier inconnue"); 	
+			cibleCSV.setText("fichier inconnue"); 
+			cibleStat.setText("fichier inconnue");
+		}
 	}
 
 	/**

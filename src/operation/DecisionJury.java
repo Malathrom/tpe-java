@@ -8,9 +8,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
@@ -111,58 +113,67 @@ public abstract class DecisionJury{
 		PDDocument doc;
 		try {
 			doc = new PDDocument();
-			//doc = PDDocument.load(file);//copie du PDF initial
 			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
+			doc.addPage(new PDPage());//on creer la premiere page
 
 			PDFont font = PDType1Font.HELVETICA_BOLD;
 			float fontSize = 7.0f;
+			int marginLeft = 10;
+			int marginBottom = 650;
 			PDPageContentStream contentStream = null;
 
+			int nbEtudiantPage = 25;
+			int numPage = 0;
 			List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
 			Iterator<Etudiant> it = etudiants.iterator();
-			int nombreEtu = etudiants.size();
 			List<Etudiant> etudiantsPage = new ArrayList<Etudiant>();
-			System.out.println(nombreEtu);
-			int nbEtudiantPage = 25;
+			List<String> decisionTab = new ArrayList<String>();
 
-			int i = 0;
-			do {
-				
-				List<String> decisionTab = new ArrayList<String>();
-				while (it.hasNext()) {
-					Etudiant etudiant = (Etudiant) it.next();
-					List<String> avisSem = DecisionJury.avisJury(etudiant);
-					String avis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis
-					decisionTab.add(etudiant.getNom() + " " + etudiant.getPrenom() + " : " + avis);
-				}
-				//Creation des pages
-				
-				for (String str : decisionTab) {
+			//Ajout du titre
+			String Titre = "Avis Etudiant ";
+			float fontSizeTitle = 22.0f;
+			PDPage page = doc.getPage(numPage);
+			contentStream = new PDPageContentStream(doc, page);
+			contentStream.beginText();// on commence l'ecriture des decision
+			contentStream.newLineAtOffset(200, 700);
+			contentStream.setFont(font, fontSizeTitle);
+			contentStream.showText(Titre);//Ajout du titre
+			contentStream.endText();
+			
+			//on prepare le text de decision
+			contentStream.beginText();// on commence l'ecriture des decision
+			contentStream.newLineAtOffset(marginLeft, marginBottom);
+			contentStream.setFont(font, fontSize);
+			contentStream.setLeading(20);
+			
+			int cptEtudiant = 0, cptTotal = 0;
+			while(it.hasNext()){				
+				Etudiant etudiant = it.next();
+				cptEtudiant++;
+				cptTotal++;
+				if(cptEtudiant >= nbEtudiantPage){//on on ajoute les etudiants sur la page courante
+					contentStream.endText();//on ferme le flux sur l'ancienne page 
+					contentStream.close();
+					doc.addPage(new PDPage());//on ajoute une nouvelle page
+					cptEtudiant=0;//le compteur sur cette page est donc remis a zero
+					page = doc.getPage(++numPage);// on change de page
 					
+					contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true);//on ajoute du contenu
+					contentStream.beginText();// on commence l'ecriture des decision
+					contentStream.newLineAtOffset(marginLeft, marginBottom);
+					contentStream.setFont(font, fontSize);
+					contentStream.setLeading(20);
 				}
-				//PDpage=newPage();
-				PDPage page = doc.getPage(0); //on recupere la page en cours
-				contentStream = new PDPageContentStream(doc, page);//on ajoute du contenu
-				contentStream.beginText();// on commence l'ecriture des decision
-				contentStream.newLineAtOffset(100, 700);
-				contentStream.setFont(font, fontSize);
-				contentStream.setLeading(20);
-				Iterator<String> itDecision = decisionTab.iterator();
-				while (itDecision.hasNext()) {
-					doc.addPage(new PDPage());
-					i++;
-					String string = (String) itDecision.next();
-					contentStream.showText(string);
-					contentStream.newLine();
-				}
-				contentStream.endText();
-				contentStream.close();
-			} while (etudiants.size()>nbEtudiantPage);//si plus de 25 etudiants a traiter on fait plusiuers page
-			
-			
+				System.out.println(etudiant.getNom());
+				List<String> avisSem = DecisionJury.avisJury(etudiant);
+				String lastAvis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis de l'etudiant
+				contentStream.showText(cptTotal+" : "+etudiant.getNom() + " " + etudiant.getPrenom() + " : " + lastAvis);	
+				contentStream.newLine();
+			}
+			contentStream.endText();
+			contentStream.close();
 			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
 			doc.close();//fermeture di document
-
 		}catch (IOException e){
 			e.printStackTrace();
 		}

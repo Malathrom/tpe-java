@@ -228,9 +228,7 @@ public abstract class RecherchePattern {
 			pos = modulesData.indexOf(recupereParcours);//on recupere la position
 			semestre = modulesData.get(pos+1);//on recupere le semestre
 			return Integer.valueOf(semestre);
-		}catch(NumberFormatException e){
-			e.printStackTrace();
-		}
+		}catch(NumberFormatException e){}
 		return 0;
 	}
 

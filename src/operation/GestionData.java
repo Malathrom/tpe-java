@@ -109,6 +109,7 @@ public class GestionData {
 	private static Etudiant ajoutEtudiant(List<String> dataEtudiant){
 		String nom = RecherchePattern.recupereNom(dataEtudiant);//on recupere le nom 
 		String prenom = RecherchePattern.recuperePrenom(dataEtudiant);// on recupere le prenom
+		System.out.println(nom);//TODO enlever
 		List<Module> modulesEtudiant = ajoutModulesEtudiant(dataEtudiant);//on recupere les UE
 		int credit = RecherchePattern.recupereTotalCredit(dataEtudiant);
 		nbEtudiant++;
@@ -173,7 +174,7 @@ public class GestionData {
 			}
 
 			//si toutes les valeurs sont ok alors on creer le module
-			if (nomModule != null && note != null && credit != 0 && parcours != null && semestre != 0) {
+			if (nomModule != null && note != null && credit != 0 && parcours != null) {
 				Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
 				mods.add(module);
 				//on reset les donnees pour le prochain module
