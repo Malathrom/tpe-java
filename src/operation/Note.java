@@ -1,5 +1,7 @@
 package operation;
-/** Note represente la note possible pour une UV*/
+/**
+ * Note represente la note possible pour une UV
+ */
 public enum Note{
 	A("A"),
 	B("B"),

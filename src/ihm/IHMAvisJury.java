@@ -164,7 +164,9 @@ public class IHMAvisJury extends JFrame{
 		lockButton();
 	}
 
-	/** Methode qui ajoute les listeners aux boutons*/
+	/**
+	 * Methode qui ajoute les listeners aux boutons
+	 */
 	private void addListener(){
 		this.setFocusable(true);
 		this.addMouseListener(new MouseAdapter() {//on donne le focus a la fenetre
@@ -343,7 +345,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * ChoixRepertoire permet de definir le repertoire le plus adequat pour le JFileChooser
+	 * choixRepertoire permet de definir le repertoire le plus adequat pour le JFileChooser
 	 */
 	private void choixRepertoire(){
 		String path = ""; //Chemin a parcourir
@@ -442,7 +444,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * Débloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la
+	 * Debloquer bouton empeche l'actiavtion des boutons tant que le chemin vers le pdf n'est pas la
 	 */
 	private void unlockButton() {
 		conversionPdf_Txt.setEnabled(true);
@@ -451,7 +453,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * Méthode affichant la boite de dialog pour demander l'ecrasement d'un fichier
+	 * Methode affichant la boite de dialog pour demander l'ecrasement d'un fichier
 	 * @param file le fichier qui doit etre ecraser
 	 * @return ok ou non
 	 */
@@ -463,7 +465,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * Méthode affichant la boite de dialog pour afficher le succes de la conversion du fichier
+	 * Methode affichant la boite de dialog pour afficher le succes de la conversion du fichier
 	 * @param file le fichier source de la conversion
 	 * @param file2 le fichier converti
 	 */
@@ -473,7 +475,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * Méthode affichant la boite de dialog pour afficher un fichier inexistant
+	 * Methode affichant la boite de dialog pour afficher un fichier inexistant
 	 * @param file le fichier inexistant
 	 */
 	private void dialogFichierInexistant(File file){
@@ -481,7 +483,7 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * Méthode affichant la boite de dialog pour afficher l'echec de la conversion du fichier
+	 * Methode affichant la boite de dialog pour afficher l'echec de la conversion du fichier
 	 * @param file le fichier source de la conversion
 	 * @param file2 le fichier non converti
 	 */
@@ -490,12 +492,10 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * Méthode affichant la boite de dialog pour demander l'ecrasement d'un fichier
+	 * Methode affichant la boite de dialog pour demander l'ecrasement d'un fichier
 	 * @param file le fichier qui doit etre ecraser
 	 */
 	private void dialogDecisionJury(File file) {
 		JOptionPane.showMessageDialog(null, "le fichier de decisionJury " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
-
 	}
-
 }

@@ -11,14 +11,8 @@ import java.util.List;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
-import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
-import org.apache.pdfbox.pdmodel.font.PDType0Font;
-import org.apache.pdfbox.pdmodel.font.PDType1CFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.pdmodel.font.PDType3Font;
-import org.apache.pdfbox.util.Matrix;
 
 import java.io.PrintWriter;
 
@@ -30,11 +24,6 @@ import io.LectureModules;
  * Classe qui gere les decisions de jury des etudiants 
  */
 public abstract class DecisionJury{
-
-	/**
-	 *  fichierTexte represente le fichier source PDF
-	 */
-	private static String fichierSrcPdf;
 
 	/*
 	 * fichierTexte represente le fichier qui contient les donnees des etudiants
@@ -62,7 +51,6 @@ public abstract class DecisionJury{
 	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
 	 */
 	public static void ecritureDecisionJury (String fichierSourcePDF, String nomFichierPDF, String nomFichierTexte, String nomFichierCSV){
-		fichierSrcPdf = fichierSourcePDF;
 		fichierPdf=nomFichierPDF;
 		fichierTexte=nomFichierTexte;
 		fichierCsv=nomFichierCSV;
@@ -102,7 +90,6 @@ public abstract class DecisionJury{
 
 		while (it.hasNext()) {
 			Etudiant etudiant = it.next();
-			//TODO si la methode etudiant.enStage retourne vrai alors dans le mesage il faut rajouter en stage
 			String out="";
 			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
 			out+=DecisionJury.dernierStage(etudiant)+";";
@@ -112,21 +99,19 @@ public abstract class DecisionJury{
 				out+= avisSem.get(i)+";";
 				i++;
 			}
-
 			pw.println(out);
 		}
-		pw.println(etudiants);
 		pw.close();	
 	}
 
 	/**
-	 * Methode qui écrit les decisions de jury dans un fichier PDF
+	 * Methode qui ecrit les decisions de jury dans un fichier PDF
 	 */
 	public static void ecritureDecisionJuryPDF(){
-		File file = new File(fichierSrcPdf) ;//Loading an existing document
 		PDDocument doc;
 		try {
-			doc = PDDocument.load(file);//copie du PDF initial
+			doc = new PDDocument();
+			//doc = PDDocument.load(file);//copie du PDF initial
 			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
 
 			PDFont font = PDType1Font.HELVETICA_BOLD;
@@ -135,27 +120,46 @@ public abstract class DecisionJury{
 
 			List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
 			Iterator<Etudiant> it = etudiants.iterator();
+			int nombreEtu = etudiants.size();
+			List<Etudiant> etudiantsPage = new ArrayList<Etudiant>();
+			System.out.println(nombreEtu);
+			int nbEtudiantPage = 25;
 
-			for(PDPage page : doc.getPages() ){//parcourt les pages
-				Etudiant etudiant = it.next();
-				List<String> avisSem = DecisionJury.avisJury(etudiant); 
-				String avis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis
-
-				PDRectangle pageSize = page.getMediaBox();//TODO a voir ce que ca fait
+			int i = 0;
+			do {
 				
-				contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true);//on ajoute du contenu
-				contentStream.beginText();
-
-				int abscisse = 640;
-				int ordonnee = 340;
+				List<String> decisionTab = new ArrayList<String>();
+				while (it.hasNext()) {
+					Etudiant etudiant = (Etudiant) it.next();
+					List<String> avisSem = DecisionJury.avisJury(etudiant);
+					String avis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis
+					decisionTab.add(etudiant.getNom() + " " + etudiant.getPrenom() + " : " + avis);
+				}
+				//Creation des pages
 				
+				for (String str : decisionTab) {
+					
+				}
+				//PDpage=newPage();
+				PDPage page = doc.getPage(0); //on recupere la page en cours
+				contentStream = new PDPageContentStream(doc, page);//on ajoute du contenu
+				contentStream.beginText();// on commence l'ecriture des decision
+				contentStream.newLineAtOffset(100, 700);
 				contentStream.setFont(font, fontSize);
-				contentStream.setTextMatrix(Matrix.getRotateInstance(Math.PI / 2, ordonnee, abscisse));
-				contentStream.showText(avis);
+				contentStream.setLeading(20);
+				Iterator<String> itDecision = decisionTab.iterator();
+				while (itDecision.hasNext()) {
+					doc.addPage(new PDPage());
+					i++;
+					String string = (String) itDecision.next();
+					contentStream.showText(string);
+					contentStream.newLine();
+				}
 				contentStream.endText();
 				contentStream.close();
-			}
-
+			} while (etudiants.size()>nbEtudiantPage);//si plus de 25 etudiants a traiter on fait plusiuers page
+			
+			
 			doc.save(fichierPdf);//sauvegarde du pdf dans le dossier qu'on a choisit
 			doc.close();//fermeture di document
 
@@ -297,7 +301,6 @@ public abstract class DecisionJury{
 		boolean avertissementNPML=false;
 		int i=0;
 		if (sem==1 || sem==2){
-
 			while(i<etu.getModules().size()){
 				if (etu.getModules().get(i).getSemestre()==1 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01"))){
 					avertissementNPML=true;
@@ -320,7 +323,6 @@ public abstract class DecisionJury{
 				}
 				i++;
 			}
-
 			if (LE03==false){
 				avertissementNPML=true;
 			}
@@ -365,8 +367,6 @@ public abstract class DecisionJury{
 					LE03valide=true;
 				}/* LE03 a été validé au semestre précédent*/
 				i++;
-
-
 			}
 			int nbUeRateesTotal=nbUeRatees+nbUeRateesCSTM;
 			if (nbUeRateesTotal==0){

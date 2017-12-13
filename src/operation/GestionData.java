@@ -11,7 +11,9 @@ import java.util.List;
 
 import data.Etudiant;
 import data.Module;
-/**GestionData gere les donnees des fichiers des etudiants*/
+/**
+ * GestionData gere les donnees des fichiers des etudiants
+ */
 public class GestionData {
 
 	/**
@@ -258,12 +260,6 @@ public class GestionData {
 	 */
 	private static List<Etudiant> suppressionDoublons(List<Etudiant> etudiants) {
 		List<Etudiant> listEtu = new ArrayList<Etudiant>();
-		/**foreach(Etudiant etudiant : etudiants) {
-			listEtu.add(etudiant);
-			while(etudiants.contains(etudiant)){//on supprime toutes les occurences de celui-ci
-				etudiants.remove(etudiant);
-			}
-		}*/
 		for (int i=0; i<etudiants.size(); i++) {
 			Etudiant etudiant = etudiants.get(i);
 			if (!listEtu.contains(etudiant))

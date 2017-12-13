@@ -32,7 +32,13 @@ public class Etudiant {
 	/**liste des modules fait par l'etudiant*/
 	private List<Module> modules = new ArrayList<Module>();
 
-	//TODO a commeneter
+	/**
+	 * @param nom le nom de l'etudiant
+	 * @param prenom le prenom de l'etudiant
+	 * @param modules les modules de l'etudaint
+	 * @param creditTotal le total des credit de l'etudiant
+	 * @param semestres le nombre de semestres
+	 */
 	public Etudiant(String nom, String prenom, List<Module> modules, int creditTotal, int semestres) {
 		setNom(nom);
 		setPrenom(prenom);
@@ -42,7 +48,10 @@ public class Etudiant {
 	}
 
 
-	//TODO a commeneter
+	/**
+	 * Methode pour savoir si l'etudiant est en stage dans son dernier semestre
+	 * @return si l'etudiant est en stage
+	 */
 	public boolean enStage(){
 		Iterator<Module> it = modules.iterator();
 		while(it.hasNext()){

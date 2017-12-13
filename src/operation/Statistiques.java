@@ -16,7 +16,6 @@ import data.Module;
 
 /**
  * Classe qui réunit toutes les methodes pour les statistiques.
- *
  */
 public abstract class Statistiques {	
 
@@ -41,7 +40,7 @@ public abstract class Statistiques {
 		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(nomFichierTexte));
 		Iterator<Etudiant> it = etudiants.iterator();
 
-		pw.println("Nom Ue;Total;Reussie;Raté;%Reussie;A;B;C;D;E;F;Reste;");
+		pw.println("Nom Ue;Total;Reussie;Raté;%Reussie;A;B;C;D;E;F;Reste");
 		ArrayList<Module> modules = new ArrayList<Module>();			
 		while(it.hasNext()){
 			Etudiant etu =it.next();
@@ -51,7 +50,6 @@ public abstract class Statistiques {
 				modules.add(mod);
 			}
 		}
-
 
 		Iterator<Module> it3 = modules.iterator();
 		while(it3.hasNext()){
@@ -142,7 +140,7 @@ public abstract class Statistiques {
 		}
 		int nbTotal = nbRate+nbReussie;
 		ArrayList<Integer> out = new ArrayList<Integer>();
-		out.addAll(Arrays.asList(nbTotal, nbReussie, nbRate, nbA, nbB, nbC, nbD, nbE, nbF, nbElse));
+		out.addAll(Arrays.asList(nbTotal, (nbReussie*100), nbRate, nbA, nbB, nbC, nbD, nbE, nbF, nbElse));
 		return out;
 	}
 }

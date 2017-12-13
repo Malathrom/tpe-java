@@ -11,10 +11,14 @@ import java.util.List;
 import data.Module;
 
 
-/**LectureModule permet de connaitre les modules d'ISI avec leur credit, leur categorie et leur type*/
+/**
+ * LectureModule permet de connaitre les modules d'ISI avec leur credit, leur categorie et leur type
+ */
 public class LectureModules {
 
-	/** file contient le chemin du fichier texte ou sont contenus les donnees sur les modules*/
+	/**
+	 * file contient le chemin du fichier texte ou sont contenus les donnees sur les modules
+	 */
 	private static String file = "src/files/modules.txt";
 
 

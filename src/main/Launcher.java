@@ -10,13 +10,15 @@ import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
 
 import data.Etudiant;
 import ihm.IHMAvisJury;
 import io.LectureModules;
 import operation.GestionData;
 
+/**
+ * Point d'entree du programme
+ */
 public class Launcher {
 
 	/**
@@ -42,11 +44,11 @@ public class Launcher {
 			break;
 		case 3://Test des fichiers pour recuperer les etudiants
 			File file = new File("src/test/4etudiants.txt");//Fichier de test
-			File file2 = new File("src/test/testPV4.txt");//Fichier de test
-			File file3 = new File("src/test/test1ETU.txt");//Fichier de test
-			File file4 = new File("src/test/PV ISI 2.txt");//Fichier de test 3
-			File file5 = new File("src/test/PV ISI 4.txt");
-			File file6 = new File("src/test/PV ISI 6.txt");
+			//File file2 = new File("src/test/testPV4.txt");//Fichier de test
+			//File file3 = new File("src/test/test1ETU.txt");//Fichier de test
+			//File file4 = new File("src/test/PV ISI 2.txt");//Fichier de test 3
+			//File file5 = new File("src/test/PV ISI 4.txt");
+			//File file6 = new File("src/test/PV ISI 6.txt");
 			List<Etudiant> etudiants = GestionData.listeEtudiant(file);//Test sur les fichiers etudiants
 			Iterator<Etudiant> it = etudiants.iterator();
 			while (it.hasNext()) {

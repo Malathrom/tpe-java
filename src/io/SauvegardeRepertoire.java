@@ -12,13 +12,19 @@ import java.util.List;
 
 import javax.swing.JFileChooser;
 
-/**SauvegardeRepertoire sauvegarde les repertoires parcouru dans le JFileChooser*/
+/**
+ * SauvegardeRepertoire sauvegarde les repertoires parcouru dans le JFileChooser
+ */
 public class SauvegardeRepertoire {
 
-	/**Ensemble des chemins deja parcouru*/
+	/**
+	 * Ensemble des chemins deja parcouru
+	 */
 	private static List<String> paths = new ArrayList<String>();
 
-	/**chemin vers le fichier contenant les paths*/
+	/**
+	 * chemin vers le fichier contenant les paths
+	 */
 	private static File pathFile = new File("src/files/paths.txt");
 
 	/**
@@ -63,16 +69,20 @@ public class SauvegardeRepertoire {
 		}
 	}
 
+	/** 
+	 * setter pour modifier les chemins de fichiers
+	 * @param paths les chemins
+	 */
 	public static void setPaths(List<String> paths) {
 		SauvegardeRepertoire.paths = paths;
 	}
 
+	/**
+	 * Getter pour recuperer le fichier ou sont contenu les chemins
+	 * @return les chemins
+	 */
 	public static File getPathFile() {
 		return pathFile;
-	}
-
-	public static void setPathFile(File pathFile) {
-		SauvegardeRepertoire.pathFile = pathFile;
 	}
 }
 

@@ -2,7 +2,9 @@ package data;
 
 import operation.Note;
 
-/**La classe module représente un module de l'UTT*/
+/**
+ * La classe module représente un module de l'UTT
+ */
 public class Module{
 	
 	/**Nom du module*/
