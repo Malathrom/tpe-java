@@ -122,7 +122,7 @@ public abstract class DecisionJury{
 			int marginBottom = 650;
 			PDPageContentStream contentStream = null;
 
-			int nbEtudiantPage = 25;
+			int nbEtudiantPage = 31;
 			int numPage = 0;
 			List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
 			Iterator<Etudiant> it = etudiants.iterator();
@@ -160,6 +160,7 @@ public abstract class DecisionJury{
 					
 					contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true);//on ajoute du contenu
 					contentStream.beginText();// on commence l'ecriture des decision
+					marginBottom = 750;
 					contentStream.newLineAtOffset(marginLeft, marginBottom);
 					contentStream.setFont(font, fontSize);
 					contentStream.setLeading(20);
