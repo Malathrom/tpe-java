@@ -21,8 +21,8 @@ public abstract class Statistiques {
 
 	/**
 	 * Ecrit dans un csv les statistiques sous forme de table.
-	 * @param nomFichierTexte
-	 * @param nomFichierStat
+	 * @param nomFichierTexte le fichier contenant les données des etudiants
+	 * @param nomFichierStat le fichier de sortie
 	 */
 	public static void ecritureStatistiques(String nomFichierTexte, String nomFichierStat){
 		File fileStat = new File(nomFichierStat);// on recupere le fichier de stat
@@ -88,7 +88,7 @@ public abstract class Statistiques {
 
 	/**
 	 * Renvois les statistiques concernant
-	 * @param etudiants
+	 * @param etudiants les etudiants traités
 	 * @param mod le module que l'on veut tester
 	 * @return 	un tableau le nombre total de fois qu'elle a été effectuée, 
 	 * le nombre de fois qu'elle a été réussie, le nb de fois qu'elle a été ratée,

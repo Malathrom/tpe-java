@@ -46,11 +46,11 @@ public abstract class DecisionJury{
 
 	/**
 	 * Méthode qui ecrit les decisions de jury dans le fichier PDF et CSV a partir des donnes du fichier Texte
-	 * @param nomFichierPDF le fichier PDF de sortie (résultat)
-	 * @param nomFichierTexte  le fichier texte à analyser contenant les donnees des etudiants
+	 * @param nomFichierTexte le fichier texte à analyser contenant les donnees des etudiants
+	 * @param nomFichierPDF  le fichier PDF de sortie (résultat)
 	 * @param nomFichierCSV le fichier CSV de sortie (résultat)
 	 */
-	public static void ecritureDecisionJury (String fichierSourcePDF, String nomFichierPDF, String nomFichierTexte, String nomFichierCSV){
+	public static void ecritureDecisionJury (String nomFichierTexte, String nomFichierPDF, String nomFichierCSV){
 		fichierPdf=nomFichierPDF;
 		fichierTexte=nomFichierTexte;
 		fichierCsv=nomFichierCSV;
@@ -284,17 +284,9 @@ public abstract class DecisionJury{
 	}	
 
 	/**
-	 * Retourne l'avis du jury pour un élève en particulier sous forme de string
-	 * @param etu l'étudiant choisis
-	 * @return l'avis de chaque semestre dans un tableau, chaque case représentant un semestre
-	 */
-
-
-
-	/**
 	 * Retourne si oui ou non il faut afficher un avertissement pour le NPML
 	 * @param etu l'etudiant choisis
-	 * @param sem
+	 * @param sem le semestre 
 	 * @return un booleen 
 	 */
 	public static boolean avertissementNPML(Etudiant etu, int sem){
@@ -329,8 +321,6 @@ public abstract class DecisionJury{
 		}
 		return avertissementNPML;
 	}
-
-
 
 	/**
 	 * Scan les modules d'un étudiant et affiche en réponse un string contenant l'avis jury.

@@ -272,16 +272,16 @@ public class IHMAvisJury extends JFrame{
 					option = dialogEcrasmentFichier(fileDestPDF);
 					dialogDecisionJury(fileDecisionJury);
 					if(option == JOptionPane.OK_OPTION){
-						DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
+						DecisionJury.ecritureDecisionJury(sourceTXT.getText(), fileDestPDF.getAbsolutePath(), cibleCSV.getText());
 						dialogDecisionJury(fileDestPDF);
 					}
 				}
 				else
-					DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
+					DecisionJury.ecritureDecisionJury(sourceTXT.getText(), fileDestPDF.getAbsolutePath(), cibleCSV.getText());
 			}
 		}
 		else
-			DecisionJury.ecritureDecisionJury(fileSourcePDF.getAbsolutePath(), fileDestPDF.getAbsolutePath(), sourceTXT.getText(), cibleCSV.getText());
+			DecisionJury.ecritureDecisionJury(sourceTXT.getText(), fileDestPDF.getAbsolutePath(), cibleCSV.getText());
 	}
 
 	/**
