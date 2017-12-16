@@ -40,14 +40,25 @@ public abstract class Statistiques {
 		List<Etudiant> etudiants = GestionData.listeEtudiant(new File(nomFichierTexte));
 		Iterator<Etudiant> it = etudiants.iterator();
 
-		pw.println("Nom Ue;Total;Reussie;Raté;%Reussie;A;B;C;D;E;F;Reste");
+		pw.println("Nom Ue;Total;Reussie;Ratee;%Reussie;A;B;C;D;E;F/FX;Autres");
 		ArrayList<Module> modules = new ArrayList<Module>();			
 		while(it.hasNext()){
 			Etudiant etu =it.next();
 			Iterator<Module> it2 = etu.getModules().iterator();
 			while(it2.hasNext()){
 				Module mod = it2.next();
-				modules.add(mod);
+				Iterator<Module> it3 = modules.iterator();
+				boolean existe= false;
+				while (it3.hasNext()){//cette boucle vérifie qu'il n'y a pas de doublons
+					Module mod2=it3.next();
+					if (mod2.getNom().equals(mod.getNom())){
+						existe=true;
+					}
+				}
+				if (!existe){
+					modules.add(mod);
+				}
+				
 			}
 		}
 
@@ -58,7 +69,7 @@ public abstract class Statistiques {
 			stats= pourcentUe(etudiants, mod);
 			if (stats.get(0)!=0){
 				float pourcentReussite=(float)stats.get(1)/stats.get(0);
-				pw.println(mod.getNom()+ ";" + stats.get(0) + ";" + stats.get(1) + ";" + stats.get(2) + ";" + pourcentReussite + ";" + stats.get(3) + ";" + stats.get(4) + ";" + stats.get(5) + ";" + stats.get(6) + ";" + stats.get(7) + ";" + stats.get(8) + ";" + stats.get(9));
+				pw.println(mod.getNom()+ ";" + stats.get(0) + ";" + stats.get(1) + ";" + stats.get(2) + ";" + pourcentReussite*100 + ";" + stats.get(3) + ";" + stats.get(4) + ";" + stats.get(5) + ";" + stats.get(6) + ";" + stats.get(7) + ";" + stats.get(8) + ";" + stats.get(9));
 			}
 		}
 		pw.close();
@@ -87,10 +98,10 @@ public abstract class Statistiques {
 	}
 
 	/**
-	 * Renvois les statistiques concernant
+	 * Renvois un tableau contenant des statistiques.
 	 * @param etudiants les etudiants traités
 	 * @param mod le module que l'on veut tester
-	 * @return 	un tableau le nombre total de fois qu'elle a été effectuée, 
+	 * @return 	un tableau : le nombre total de fois qu'elle a été effectuée, 
 	 * le nombre de fois qu'elle a été réussie, le nb de fois qu'elle a été ratée,
 	 * le nombre de chaque note de A à F. nbElse signifie tout autres notes (ex: ABS).
 	 */
@@ -140,7 +151,7 @@ public abstract class Statistiques {
 		}
 		int nbTotal = nbRate+nbReussie;
 		ArrayList<Integer> out = new ArrayList<Integer>();
-		out.addAll(Arrays.asList(nbTotal, (nbReussie*100), nbRate, nbA, nbB, nbC, nbD, nbE, nbF, nbElse));
+		out.addAll(Arrays.asList(nbTotal, nbReussie, nbRate, nbA, nbB, nbC, nbD, nbE, nbF, nbElse));
 		return out;
 	}
 }

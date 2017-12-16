@@ -377,7 +377,7 @@ public abstract class DecisionJury{
 					str+=", Excellent Semestre";
 				}
 				else if (((float)nbA+nbB)/nbUe>0.6){
-					str+=", Très Bon Semestre";
+					str+=", Tres Bon Semestre";
 				}
 				else if (((float)nbA+nbB)/nbUe>0.5){
 					str+=", Bon Semestre";
@@ -395,23 +395,23 @@ public abstract class DecisionJury{
 					str+=", Semestre Moyen";
 				}
 				else{
-					str+=", Semestre Médiocre";
+					str+=", Semestre Mediocre";
 				}
 			}
 			if (nbUeRateesTotal>=2){
-				str+="Poursuite avec Réserve";
+				str+="Poursuite avec Reserve";
 				if (nbUeRateesCSTM<=1){
 					str+=", Mauvais Semestre";
 				}
 				else{
-					str+=", Très Mauvais Semestre";
+					str+=", Tres Mauvais Semestre";
 				}
 			}
 			if (buleadm==false){
 				if(avertissementNPML){
-					str+=", Vos résultats en langues sont insuffisants pour obtenir le NPML en temps voulu, réagissez.";
+					str+=", Vos resultats en langues sont insuffisants pour obtenir le NPML en temps voulu, reagissez.";
 				}else if (LE03valide){
-					str+=", Attention, vous n'avez toujours pas validé votre NPML, indispensable pour être diplômé(e).";
+					str+=", Attention, vous n'avez toujours pas valide votre NPML, indispensable pour etre diplome(e).";
 				}
 			}
 
