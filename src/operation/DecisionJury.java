@@ -467,7 +467,7 @@ public abstract class DecisionJury{
 				str+=" Attention aux UE TM.";
 			}
 			if ((totalCategorie(etu, sem, "ME")+totalCategorie(etu, sem, "CT")+totalCategorie(etu, sem, "HT"))<8 && nbUeRateesMECT>0){
-				str+=" Attention aux UE ME/CT.";
+				str+=" Attention aux UE ME/CT."; 
 			}
 			
 			
