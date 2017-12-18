@@ -46,9 +46,9 @@ public abstract class Statistiques {
 			Etudiant etu =it.next();
 			Iterator<Module> it2 = etu.getModules().iterator();
 			while(it2.hasNext()){
+				boolean existe= false;
 				Module mod = it2.next();
 				Iterator<Module> it3 = modules.iterator();
-				boolean existe= false;
 				while (it3.hasNext()){//cette boucle vérifie qu'il n'y a pas de doublons
 					Module mod2=it3.next();
 					if (mod2.getNom().equals(mod.getNom())){
