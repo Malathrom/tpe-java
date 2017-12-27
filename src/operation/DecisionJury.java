@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -126,8 +125,6 @@ public abstract class DecisionJury{
 			int numPage = 0;
 			List<Etudiant> etudiants = GestionData.listeEtudiant(new File(fichierTexte));
 			Iterator<Etudiant> it = etudiants.iterator();
-			List<Etudiant> etudiantsPage = new ArrayList<Etudiant>();
-			List<String> decisionTab = new ArrayList<String>();
 
 			//Ajout du titre
 			String Titre = "Avis Etudiant ";
