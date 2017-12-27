@@ -102,6 +102,8 @@ public abstract class DecisionJury{
 			}
 			pw.println(out);
 		}
+
+		pw.println(etudiants);
 		pw.close();	
 	}
 
@@ -136,13 +138,13 @@ public abstract class DecisionJury{
 			contentStream.setFont(font, fontSizeTitle);
 			contentStream.showText(Titre);//Ajout du titre
 			contentStream.endText();
-			
+
 			//on prepare le text de decision
 			contentStream.beginText();// on commence l'ecriture des decision
 			contentStream.newLineAtOffset(marginLeft, marginBottom);
 			contentStream.setFont(font, fontSize);
 			contentStream.setLeading(20);
-			
+
 			int cptEtudiant = 0, cptTotal = 0;
 			while(it.hasNext()){				
 				Etudiant etudiant = it.next();
@@ -154,7 +156,7 @@ public abstract class DecisionJury{
 					doc.addPage(new PDPage());//on ajoute une nouvelle page
 					cptEtudiant=0;//le compteur sur cette page est donc remis a zero
 					page = doc.getPage(++numPage);// on change de page
-					
+
 					contentStream = new PDPageContentStream(doc, page, AppendMode.APPEND, true, true);//on ajoute du contenu
 					contentStream.beginText();// on commence l'ecriture des decision
 					marginBottom = 750;
@@ -194,6 +196,29 @@ public abstract class DecisionJury{
 		}
 		return nbNote;
 	}
+	
+	
+	/**
+	 * Retourne le total de crédit de la catégorie donnée en entrée ex: CS, TM...
+	 * La fonction retourne uniquement le total des semestres précédent au semestre donné en entrée.
+	 * @param etu l'etudiant etudié
+	 * @param semestre le semestre actuel
+	 * @param categorie ex : CS
+	 * @return Le total de crédit pour la categorie donnée.
+	 */
+	public static int totalCategorie(Etudiant etu, int semestre, String categorie){
+		int totalCS=0;
+		Iterator<Module> it = etu.getModules().iterator();
+		while(it.hasNext()){
+			Module mod = it.next();
+			if(mod.getSemestre()<semestre && mod.getCategorie().equals(categorie)){
+				totalCS+=mod.getCredit();
+			}
+		}
+		return totalCS;
+	}
+	
+	
 
 	/**
 	 * retourne le numero de semestre effectués pour un étudiant
@@ -348,8 +373,9 @@ public abstract class DecisionJury{
 			int nbD=compteNote(etu, Note.D, sem);
 			int nbE=compteNote(etu, Note.E, sem);
 			int nbUe=nombreUeSemestre(etu, sem);
-			int nbUeRatees=0, i=0, nbUeRateesCSTM=0;
-
+			int nbUeRatees=0, i=0, nbUeRateesCSTM=0, nbUeRateesCS=0, nbUeRateesTM=0, nbUeRateesMECT=0;
+			boolean ISI1=false;
+			boolean avertissementEtranger = true;
 			boolean avertissementNPML=avertissementNPML(etu, sem);
 			boolean LE03valide=false;
 			while(i<etu.getModules().size()){
@@ -359,58 +385,89 @@ public abstract class DecisionJury{
 				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie().equals("CS") || etu.getModules().get(i).getCategorie().equals("TM"))){
 					nbUeRateesCSTM++;
 				}
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && etu.getModules().get(i).getCategorie().equals("CS")){
+					nbUeRateesCS++;
+				}
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && etu.getModules().get(i).getCategorie().equals("TM")){
+					nbUeRateesTM++;
+				}
+				if (estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && (etu.getModules().get(i).getCategorie().equals("ME") || etu.getModules().get(i).getCategorie().equals("CT") || etu.getModules().get(i).getCategorie().equals("HT"))){
+					nbUeRateesMECT++;
+				}
+				
+				
 				if (!estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==sem && etu.getModules().get(i).getNom().equals("LE08")){
 					buleadm=true;
 				}
 				if(!estRatee(etu.getModules().get(i)) && etu.getModules().get(i).getSemestre()==(sem-1) && etu.getModules().get(i).getNom().equals("LE03")){
 					LE03valide=true;
 				}/* LE03 a été validé au semestre précédent*/
+				if(etu.getModules().get(i).getParcours().equals("ISI") && sem==1){
+					ISI1=true;
+				}
+				if(etu.getModules().get(i).getSemestre()<sem && etu.getModules().get(i).getNom().startsWith("UX")){
+					avertissementEtranger = false;
+				}
 				i++;
 			}
 			int nbUeRateesTotal=nbUeRatees+nbUeRateesCSTM;
 			if (nbUeRateesTotal==0){
 				str+="Poursuite Normale";
 				if (((float)nbA+nbB)/nbUe>0.7){
-					str+=", Excellent Semestre";
+					str+=", Excellent Semestre.";
 				}
 				else if (((float)nbA+nbB)/nbUe>0.6){
-					str+=", Très Bon Semestre";
+					str+=", Tres Bon Semestre.";
 				}
 				else if (((float)nbA+nbB)/nbUe>0.5){
-					str+=", Bon Semestre";
+					str+=", Bon Semestre.";
 				}
 				else if (((float)nbE+nbD)/nbUe<0.5){
-					str+=", Assez Bon Semestre";
+					str+=", Assez Bon Semestre.";
 				}
 				else{
-					str+=", Semestre Moyen";
+					str+=", Semestre Moyen.";
 				}
 			}
 			if (nbUeRateesTotal==1){
 				str+="Poursuite avec Conseil";
 				if (((float)nbE+nbD)/nbUe<0.5){
-					str+=", Semestre Moyen";
+					str+=", Semestre Moyen.";
 				}
 				else{
-					str+=", Semestre Médiocre";
+					str+=", Semestre Mediocre.";
 				}
 			}
 			if (nbUeRateesTotal>=2){
-				str+="Poursuite avec Réserve";
+				str+="Poursuite avec Reserve";
 				if (nbUeRateesCSTM<=1){
-					str+=", Mauvais Semestre";
+					str+=", Mauvais Semestre.";
 				}
 				else{
-					str+=", Très Mauvais Semestre";
+					str+=", Tres Mauvais Semestre.";
 				}
 			}
 			if (buleadm==false){
 				if(avertissementNPML){
-					str+=", Vos résultats en langues sont insuffisants pour obtenir le NPML en temps voulu, réagissez.";
+					str+=" Vos resultats en langues sont insuffisants pour obtenir le NPML en temps voulu, reagissez.";
 				}else if (LE03valide){
-					str+=", Attention, vous n'avez toujours pas validé votre NPML, indispensable pour être diplômé(e).";
+					str+=" Attention, vous n'avez toujours pas valide votre NPML, indispensable pour etre diplome(e).";
 				}
 			}
+			if (ISI1 && avertissementEtranger){
+				str+=" N'oubliez pas que pour etre diplome(e), vous devez passer un semestre a l'etranger.";
+			}
+			if (totalCategorie(etu, sem, "CS")<30 && nbUeRateesCS>0){
+				str+=" Attention aux UE CS.";
+			}
+			if (totalCategorie(etu, sem, "TM")<30 && nbUeRateesTM>0){
+				str+=" Attention aux UE TM.";
+			}
+			if ((totalCategorie(etu, sem, "ME")+totalCategorie(etu, sem, "CT")+totalCategorie(etu, sem, "HT"))<8 && nbUeRateesMECT>0){
+				str+=" Attention aux UE ME/CT."; 
+			}
+			
+			
 
 			sem++;
 			out.add(str);
