@@ -1,7 +1,5 @@
 package data;
 
-import operation.Note;
-
 /**
  * La classe module représente un module de l'UTT
  */

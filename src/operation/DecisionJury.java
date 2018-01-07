@@ -19,6 +19,7 @@ import java.io.PrintWriter;
 
 import data.Etudiant;
 import data.Module;
+import data.Note;
 import io.LectureModules;
 
 /**
@@ -103,7 +104,6 @@ public abstract class DecisionJury{
 			pw.println(out);
 		}
 
-		pw.println(etudiants);
 		pw.close();	
 	}
 

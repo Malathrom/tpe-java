@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 import data.Module;
+import data.Note;
 import io.LectureModules;
 
 /**

@@ -11,6 +11,7 @@ import java.util.List;
 
 import data.Etudiant;
 import data.Module;
+import data.Note;
 /**
  * GestionData gere les donnees des fichiers des etudiants
  */
