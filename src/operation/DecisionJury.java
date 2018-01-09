@@ -103,6 +103,7 @@ public abstract class DecisionJury{
 			}
 			pw.println(out);
 		}
+		//pw.println(etudiants);
 
 		pw.close();	
 	}
@@ -326,25 +327,25 @@ public abstract class DecisionJury{
 	public static boolean avertissementNPML(Etudiant etu, int sem){
 		boolean avertissementNPML=false;
 		int i=0;
-		if (sem==1 || sem==2){
+		if (sem==0 || sem==1){
 			while(i<etu.getModules().size()){
-				if (etu.getModules().get(i).getSemestre()==1 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01"))){
+				if (etu.getModules().get(i).getSemestre()==0 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01"))){
 					avertissementNPML=true;
 				}/* LE01(validé ou non) en ISI 1  */
-				if (etu.getModules().get(i).getSemestre()==2 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01") || etu.getModules().get(i).getNom().equals("LE02"))){
+				if (etu.getModules().get(i).getSemestre()==1 && etu.getModules().get(i).getParcours().equals("ISI") && (etu.getModules().get(i).getNom().equals("LE01") || etu.getModules().get(i).getNom().equals("LE02"))){
 					avertissementNPML=true;
 				}/* LE01 ou LE02 (validé ou non) en ISI 2  */
 				i++;
 			}
 		}
-		if (sem==3){
+		if (sem==2){
 			boolean LE03=false;
 			i=0;
 			while(i<etu.getModules().size()){
-				if (etu.getModules().get(i).getSemestre()==3 && etu.getModules().get(i).getParcours().equals("ISI") && etu.getModules().get(i).getNom().equals("LE03")){
+				if (etu.getModules().get(i).getSemestre()==2 && etu.getModules().get(i).getParcours().equals("ISI") && etu.getModules().get(i).getNom().equals("LE03")){
 					LE03=true;
 				}
-				if (etu.getModules().get(i).getSemestre()==3 && !etu.getModules().get(i).getParcours().equals("ISI")){
+				if (etu.getModules().get(i).getSemestre()==2 && !etu.getModules().get(i).getParcours().equals("ISI")){
 					LE03=true;
 				}
 				i++;
@@ -364,7 +365,7 @@ public abstract class DecisionJury{
 	public static List<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
 		int maxSem=maxSemestre(etu)+1;
-		int sem=1;
+		int sem=0;
 		boolean buleadm=false;
 		while(sem<maxSem){
 			String str="";

@@ -25,7 +25,7 @@ public class GestionData {
 	/*
 	 * nbSemestre indique le nombre de semestre qu'a fait l'etudiant
 	 */
-	private static int nbSemestres = 0; 
+	private static int nbSemestres = 1; 
 
 	/*
 	 * nbEtudiant indique le nombre d'etudiant que nous avons traité
@@ -154,7 +154,7 @@ public class GestionData {
 	private static List<Module> creationModulesSemestre(List<String> modulesData) {
 		List<Module> mods = new ArrayList<Module>();
 		String parcours = RecherchePattern.recupereParcours(modulesData);
-		int semestre = RecherchePattern.recupereSemestre(modulesData);
+		//int semestre = RecherchePattern.recupereSemestre(modulesData);
 		String nomModule = null;
 		Note note = null;
 		String categorie = null;
@@ -176,7 +176,7 @@ public class GestionData {
 
 			//si toutes les valeurs sont ok alors on creer le module
 			if (nomModule != null && note != null && credit != 0 && parcours != null) {
-				Module module = new Module(nomModule, note, credit, semestre, parcours, categorie);
+				Module module = new Module(nomModule, note, credit, nbSemestres, parcours, categorie);
 				mods.add(module);
 				//on reset les donnees pour le prochain module
 				nomModule = null;

@@ -58,26 +58,15 @@ public class IHMAvisJury extends JFrame{
 	}
 
 	/**
-	 * conversion d'un PDF en une chaine de caractères
-	 * @param pdfFile pointeur vers le fichier PDF 
-	 * @return Une chaine de caractères avec le texte du fichier PDF
-	 * @throws IOException erreur d'ouverture du PDF
-	 */
-	static String getText(File pdfFile) throws IOException {
-		PDDocument doc = PDDocument.load(pdfFile);
-		return new PDFTextStripper().getText(doc);
-	}
-
-	/**
 	 * conversion d'un fichier PDF en un fichier TXT
 	 * @param sourcePDF nom du fichier PDF
 	 * @param destinationTXT nom du fichier résultat TXT
 	 * @throws IOException erreur d'ouverture ou d'écriture
 	 */
-	static void maConversionPDFtoText (String sourcePDF, String destinationTXT) throws IOException{
+	static void ConvertirPDF (String sourcePDF, String destinationTXT) throws IOException{
 		BufferedWriter ecritureAvecBuffer= null;
 		try {
-			String text = getText(new File(sourcePDF));
+			String text = new PDFTextStripper().getText(PDDocument.load(new File(sourcePDF)));
 			ecritureAvecBuffer = new BufferedWriter(new FileWriter(destinationTXT));
 			ecritureAvecBuffer.write(text);
 		}
@@ -143,12 +132,12 @@ public class IHMAvisJury extends JFrame{
 		this.getContentPane().add(conversionPdf_Txt);
 
 		// Bouton pour la decisionJury 
-		avisJury = new JButton("Generer Avis Jury");
+		avisJury = new JButton("Générer avis jury");
 		avisJury.setBounds(296, 85, 176, 20);
 		this.getContentPane().add(avisJury);
 
 		// Bouton pour les statistiques
-		statistique = new JButton("Generer statistiques");
+		statistique = new JButton("Générer statistiques");
 		statistique.setBounds(300, 140, 176, 20);
 		this.getContentPane().add(statistique);
 
@@ -187,7 +176,7 @@ public class IHMAvisJury extends JFrame{
 					break;
 				case KeyEvent.VK_C:
 					if(conversionPdf_Txt.isEnabled())
-						convertirPDF();
+						validerConversionPDF();
 					break;
 				case KeyEvent.VK_A:
 					if(avisJury.isEnabled())
@@ -233,7 +222,7 @@ public class IHMAvisJury extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(conversionPdf_Txt.isEnabled())
-					convertirPDF();
+					validerConversionPDF();
 			}
 		});
 
@@ -276,13 +265,12 @@ public class IHMAvisJury extends JFrame{
 			int option = dialogEcrasmentFichier(fileDecisionJury); //on demande si on veut l'ecraser
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
-
-				if(fileDestPDF.exists()){
-					option = dialogEcrasmentFichier(fileDestPDF);
-					dialogDecisionJury(fileDecisionJury);
+				if(fileDestPDF.exists()){//si le fichier PDF de decision existe
+					option = dialogEcrasmentFichier(fileDestPDF);//on demande si on veut l'ecraser
+					dialogEcritureFichier(fileDecisionJury);
 					if(option == JOptionPane.OK_OPTION){
 						DecisionJury.ecritureDecisionJury(sourceTXT.getText(), fileDestPDF.getAbsolutePath(), cibleCSV.getText());
-						dialogDecisionJury(fileDestPDF);
+						dialogEcritureFichier(fileDestPDF);
 					}
 				}
 				else
@@ -320,7 +308,7 @@ public class IHMAvisJury extends JFrame{
 			requestFocus();
 			if(option == JOptionPane.OK_OPTION){
 				Statistiques.ecritureStatistiques(sourceTXT.getText(), fileStats.getAbsolutePath());
-				dialogDecisionJury(fileStats);
+				dialogEcritureFichier(fileStats);
 			}
 		}
 		else
@@ -330,7 +318,7 @@ public class IHMAvisJury extends JFrame{
 	/**
 	 * Méthode declenché lors de la conversion du PDF en TXT
 	 */
-	private void convertirPDF() {
+	private void validerConversionPDF() {
 		if (!(sourcePDF.getText()=="") && !(sourceTXT.getText()=="")){
 			try {
 				if(fileTXT.exists()){
@@ -338,12 +326,12 @@ public class IHMAvisJury extends JFrame{
 					int option = dialogEcrasmentFichier(fileTXT);
 					requestFocus();
 					if(option == JOptionPane.OK_OPTION){
-						maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+						ConvertirPDF(sourcePDF.getText(), sourceTXT.getText());
 						dialogSuccesConversionFichier(fileSourcePDF, fileTXT);
 					}
 				}
 				else
-					maConversionPDFtoText(sourcePDF.getText(), sourceTXT.getText());
+					ConvertirPDF(sourcePDF.getText(), sourceTXT.getText());
 			} catch (FileNotFoundException e2) {
 				dialogFichierInexistant(fileSourcePDF);
 			} catch (IOException e1) {
@@ -398,7 +386,7 @@ public class IHMAvisJury extends JFrame{
 		sourcePDF.setText(fileSourcePDF.getAbsolutePath());
 
 		//Creation du repertoire de decision jury
-		dirDatasTxt = new File(fileSourcePDF.getParent()+"/DatasTxt");//creation du repertoire d'avis de jury
+		dirDatasTxt = new File(fileSourcePDF.getParent()+"/DatasTXT");//creation du repertoire d'avis de jury
 		if(!dirDatasTxt.exists())
 			dirDatasTxt.mkdir();
 
@@ -446,13 +434,11 @@ public class IHMAvisJury extends JFrame{
 	 * Méthode qui gere les saisie au clavier pour les fichiers
 	 */
 	private void gestionFichier() {
-		//Recuperation du PDF choisi dans le JFileChooser
-
 		fileSourcePDF = new File(sourcePDF.getText());
 		detectionPDF();
 		if(fileSourcePDF.exists()){
 			//Creation du repertoire de decision jury
-			dirDatasTxt = new File(fileSourcePDF.getParent()+"/DatasTxt");//creation du repertoire d'avis de jury
+			dirDatasTxt = new File(fileSourcePDF.getParent()+"/DatasTXT");//creation du repertoire d'avis de jury
 			if(!dirDatasTxt.exists())
 				dirDatasTxt.mkdir();
 
@@ -496,9 +482,9 @@ public class IHMAvisJury extends JFrame{
 			cibleStat.setText(dirStats.getAbsolutePath()+"/"+nomStats);
 		}
 		else{//si la source est pas bonne
-			sourceTXT.setText("fichier inconnue"); 	
-			cibleCSV.setText("fichier inconnue"); 
-			cibleStat.setText("fichier inconnue");
+			sourceTXT.setText("fichier inconnu"); 	
+			cibleCSV.setText("fichier inconnu"); 
+			cibleStat.setText("fichier inconnu");
 		}
 	}
 
@@ -563,7 +549,7 @@ public class IHMAvisJury extends JFrame{
 	 * Methode affichant la boite de dialog pour demander l'ecrasement d'un fichier
 	 * @param file le fichier qui doit etre ecraser
 	 */
-	private void dialogDecisionJury(File file) {
-		JOptionPane.showMessageDialog(null, "le fichier de decisionJury " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
+	private void dialogEcritureFichier(File file) {
+		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
 	}
 }
