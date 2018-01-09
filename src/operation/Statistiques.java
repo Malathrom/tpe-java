@@ -59,7 +59,6 @@ public abstract class Statistiques {
 				if (!existe){
 					modules.add(mod);
 				}
-				
 			}
 		}
 

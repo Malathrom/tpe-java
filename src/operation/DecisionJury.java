@@ -82,7 +82,6 @@ public abstract class DecisionJury{
 
 		String entete="";
 		entete+="Nom;Prenom;Stage;";
-		//int j = 1;
 		int j =1, semSize= DecisionJury.maxSemestre(etudiants);
 		while (j<=semSize){
 			entete+="Avis Semestre "+(j)+";";
