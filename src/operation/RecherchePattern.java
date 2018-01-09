@@ -66,7 +66,7 @@ public abstract class RecherchePattern {
 	/**
 	 * regex pour le parcours du module
 	 */
-	private static String regexParcours = "ISI|TC|HC|SRT|MASTER";;
+	private static String regexParcours = "ISI|TC|HC|SRT|MASTER";
 
 	/**
 	 * recupereNom recherche avec un systeme de regex le nom de l'etudiant dans le fichier

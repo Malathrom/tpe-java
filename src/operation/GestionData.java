@@ -25,7 +25,7 @@ public class GestionData {
 	/*
 	 * nbSemestre indique le nombre de semestre qu'a fait l'etudiant
 	 */
-	private static int nbSemestres = 1; 
+	private static int nbSemestres = 0; 
 
 	/*
 	 * nbEtudiant indique le nombre d'etudiant que nous avons traité
@@ -134,6 +134,7 @@ public class GestionData {
 			}
 			if(enSemestre){//si on est dans la zone de semestres
 				if(RecherchePattern.rechercheFinSemestre(data)){//si on est a la fin du semestre
+					nbSemestres++; //on ajute un semestre a l'etudiant
 					modules.addAll(creationModulesSemestre(dataSemestreEtudiant));
 					dataSemestreEtudiant = new ArrayList<String>();// on reset les donnees
 					enSemestre=false;
@@ -186,7 +187,6 @@ public class GestionData {
 			}
 
 		}
-		nbSemestres++; //on ajute un semestre a l'etudiant
 		return mods;
 	}
 

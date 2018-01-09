@@ -82,9 +82,10 @@ public abstract class DecisionJury{
 
 		String entete="";
 		entete+="Nom;Prenom;Stage;";
-		int semSize= DecisionJury.avisJury(etudiants.get(0)).size(), j=0;
-		while (j<semSize){
-			entete+="Avis Semestre "+(j+1)+";";
+		//int j = 1;
+		int j =1, semSize= DecisionJury.maxSemestre(etudiants);
+		while (j<=semSize){
+			entete+="Avis Semestre "+(j)+";";
 			j++;
 		}
 		entete+="\n";
@@ -95,7 +96,7 @@ public abstract class DecisionJury{
 			String out="";
 			out=out+etudiant.getNom()+";"+etudiant.getPrenom()+";";
 			out+=DecisionJury.dernierStage(etudiant)+";";
-			int i=0;
+			int i=1;
 			List<String> avisSem= DecisionJury.avisJury(etudiant);
 			while(i<avisSem.size()){
 				out+= avisSem.get(i)+";";
@@ -219,14 +220,32 @@ public abstract class DecisionJury{
 		return totalCS;
 	}
 	
-	
-
 	/**
-	 * retourne le numero de semestre effectués pour un étudiant
+	 * retourne le nombre de semestre de l'étudiant qui en a fait le plus 
 	 * @param etu l'etudiant a traiter
 	 * @return le nombre de semestres effectués
 	 */
-	public static int maxSemestre(Etudiant etu){
+	public static int maxSemestre(List<Etudiant> etudiants){
+		int maxSemestre = 0, semLastModule = 0;
+		Iterator<Etudiant> it = etudiants.iterator();
+		while (it.hasNext()) {
+			Etudiant etudiant = (Etudiant) it.next();
+			 semLastModule = etudiant.getModules().get(etudiant.getModules().size()-1).getSemestre();//on recupere le semestre du dernier module
+			 System.out.println(etudiant.getNom() + " " + semLastModule);
+			 if(maxSemestre < semLastModule)//si c'est plus grand que pour les qutres etudiants on change
+				 maxSemestre = semLastModule;
+		}
+		System.out.println(maxSemestre);
+		return maxSemestre;
+		
+	}
+
+	/**
+	 * retourne le nombre de semestre effectués pour un étudiant
+	 * @param etu l'etudiant a traiter
+	 * @return le nombre de semestres effectués
+	 */
+	public static int nbSemestre(Etudiant etu){
 		int maxSem=0, i=0;
 		while(i<etu.getModules().size()){
 			if(etu.getModules().get(i).getSemestre()>maxSem){
@@ -364,7 +383,7 @@ public abstract class DecisionJury{
 	 */
 	public static List<String> avisJury(Etudiant etu){
 		ArrayList<String> out= new ArrayList<String>();
-		int maxSem=maxSemestre(etu)+1;
+		int maxSem=nbSemestre(etu)+1;
 		int sem=0;
 		boolean buleadm=false;
 		while(sem<maxSem){
