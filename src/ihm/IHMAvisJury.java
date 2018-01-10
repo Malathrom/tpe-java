@@ -192,6 +192,7 @@ public class IHMAvisJury extends JFrame{
 				default:
 					break;
 				}
+				requestFocusInWindow();//on redonne le focus a la fenetre
 			}
 			@Override
 			public void keyTyped(KeyEvent e) {}
@@ -223,6 +224,7 @@ public class IHMAvisJury extends JFrame{
 			public void mouseClicked(MouseEvent e) {
 				if(conversionPdf_Txt.isEnabled())
 					validerConversionPDF();
+				message.setText("");
 			}
 		});
 
@@ -230,10 +232,14 @@ public class IHMAvisJury extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(avisJury.isEnabled()){
-					if(fileTXT.exists())
+					if(fileTXT.exists()){
+						message.setText("");
 						creationDecisionJury();
-					else
+					}
+					else{
 						message.setText("<html><span color='red'>la conversion du .pdf en .txt n'a pas été faite</span></html>");
+						dialogFichierInexistant(fileTXT);
+					}
 				}
 			}
 		});
@@ -242,11 +248,15 @@ public class IHMAvisJury extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(statistique.isEnabled())
-					if(fileTXT.exists())
+					if(fileTXT.exists()){
+						message.setText("");
 						genererStatistique();
-					else
+					}
+					else{
 						message.setText("<html><span color='red'>la conversion du .pdf en .txt n'a pas été faite</span></html>");
-			}
+						dialogFichierInexistant(fileTXT);
+					}
+				}
 		});
 
 		exit.addMouseListener(new MouseAdapter() {
@@ -533,7 +543,7 @@ public class IHMAvisJury extends JFrame{
 	 * @param file le fichier inexistant
 	 */
 	private void dialogFichierInexistant(File file){
-		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\n'existe pas", "Erreur", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\n n'existe pas", "Erreur", JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
@@ -550,6 +560,11 @@ public class IHMAvisJury extends JFrame{
 	 * @param file le fichier qui doit etre ecraser
 	 */
 	private void dialogEcritureFichier(File file) {
-		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +" a été écrit", "Info", JOptionPane.INFORMATION_MESSAGE);
+		if(file.getPath()==fileDecisionJury.getPath()){
+			JOptionPane.showMessageDialog(null, "les décisions de jury ont été rendu dans le fichier " + file.getName(), "Info", JOptionPane.INFORMATION_MESSAGE);
+		}
+		else if(file.getPath()==fileStats.getPath()){
+			JOptionPane.showMessageDialog(null, "les statistiques ont été genéré dans le fichier " + file.getName(), "Info", JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
 }
