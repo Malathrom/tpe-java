@@ -165,7 +165,6 @@ public abstract class DecisionJury{
 					contentStream.setFont(font, fontSize);
 					contentStream.setLeading(20);
 				}
-				System.out.println(etudiant.getNom());
 				List<String> avisSem = DecisionJury.avisJury(etudiant);
 				String lastAvis = avisSem.get(avisSem.size()-1);//on recupere le dernier avis de l'etudiant
 				contentStream.showText(cptTotal+" : "+etudiant.getNom() + " " + etudiant.getPrenom() + " : " + lastAvis);	
@@ -230,11 +229,9 @@ public abstract class DecisionJury{
 		while (it.hasNext()) {
 			Etudiant etudiant = (Etudiant) it.next();
 			 semLastModule = etudiant.getModules().get(etudiant.getModules().size()-1).getSemestre();//on recupere le semestre du dernier module
-			 System.out.println(etudiant.getNom() + " " + semLastModule);
 			 if(maxSemestre < semLastModule)//si c'est plus grand que pour les qutres etudiants on change
 				 maxSemestre = semLastModule;
 		}
-		System.out.println(maxSemestre);
 		return maxSemestre;
 		
 	}

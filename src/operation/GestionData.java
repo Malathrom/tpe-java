@@ -110,7 +110,6 @@ public class GestionData {
 	private static Etudiant ajoutEtudiant(List<String> dataEtudiant){
 		String nom = RecherchePattern.recupereNom(dataEtudiant);//on recupere le nom 
 		String prenom = RecherchePattern.recuperePrenom(dataEtudiant);// on recupere le prenom
-		System.out.println(nom);//TODO enlever
 		List<Module> modulesEtudiant = ajoutModulesEtudiant(dataEtudiant);//on recupere les UE
 		int credit = RecherchePattern.recupereTotalCredit(dataEtudiant);
 		nbEtudiant++;

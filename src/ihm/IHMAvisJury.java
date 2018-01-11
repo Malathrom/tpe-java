@@ -543,7 +543,7 @@ public class IHMAvisJury extends JFrame{
 	 * @param file le fichier inexistant
 	 */
 	private void dialogFichierInexistant(File file){
-		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +"\n n'existe pas", "Erreur", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null, "le fichier " + file.getName() +" n'existe pas", "Erreur", JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
